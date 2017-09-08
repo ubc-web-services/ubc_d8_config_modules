@@ -1,0 +1,17 @@
+<?php
+
+
+/**
+ * Update configuration from file.
+ */
+function ubc_announcement_update_8001() {
+
+  $config_path = drupal_get_path('module', 'ubc_announcement') . '/config/install/field.field.node.announcement.body.yml';
+  $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
+  \Drupal::configFactory()
+    ->getEditable('field.field.node.announcement.body')
+    ->setData($data)
+    ->save(TRUE);
+
+  return 'The Field has been updated.';
+}
