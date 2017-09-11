@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+  enforced: 
+    module: 
+      - ubc_announcement
+id: node.field_announcement_category
+field_name: field_announcement_category
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: news
+      label: News
+    -
+      value: stories
+      label: Stories
+    -
+      value: press
+      label: 'Press Releases'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -3,17 +3,21 @@ status: true
 dependencies:
   config:
     - field.field.node.announcement.body
-    - field.field.node.announcement.field_test
+    - field.field.node.announcement.field_announcement_category
+    - field.field.node.announcement.field_external_link
+    - field.field.node.announcement.field_feature_image
+    - field.field.node.announcement.field_image_teaser
+    - field.field.node.announcement.field_supporting_content
+    - image.style.thumbnail
     - node.type.announcement
   module:
-    - field_layout
-    - layout_discovery
+    - image
+    - link
     - path
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
+  enforced: 
+    module: 
+      - ubc_announcement
 id: node.announcement.default
 targetEntityType: node
 bundle: announcement
@@ -21,7 +25,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 1
+    weight: 4
     region: content
     settings:
       rows: 9
@@ -30,13 +34,51 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_announcement_category:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_external_link:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_feature_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_image_teaser:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_supporting_content:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
   field_test:
     type: string_textfield
-    weight: 2
+    weight: 7
     region: content
     settings:
       size: 60
@@ -44,7 +86,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -52,14 +94,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 9
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
@@ -72,7 +114,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60

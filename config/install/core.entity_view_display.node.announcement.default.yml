@@ -3,17 +3,18 @@ status: true
 dependencies:
   config:
     - field.field.node.announcement.body
-    - field.field.node.announcement.field_test
+    - field.field.node.announcement.field_announcement_category
+    - field.field.node.announcement.field_external_link
+    - field.field.node.announcement.field_feature_image
+    - field.field.node.announcement.field_image_teaser
+    - field.field.node.announcement.field_supporting_content
     - node.type.announcement
   module:
-    - field_layout
-    - layout_discovery
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
+  enforced: 
+    module: 
+      - ubc_announcement
 id: node.announcement.default
 targetEntityType: node
 bundle: announcement
@@ -26,14 +27,11 @@ content:
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-  field_test:
-    type: string
-    weight: 1
-    region: content
-    label: visually_hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
 hidden:
+  field_announcement_category: true
+  field_external_link: true
+  field_feature_image: true
+  field_image_teaser: true
+  field_supporting_content: true
+  field_test: true
   links: true
-  

@@ -3,7 +3,7 @@ type: module
 description: This module defines the Announcement content type and its fields.
 package: UBC Web Services
 dependencies:
-  - node
+  - drupal:node
 version: '8.x-1.0'
 core: '8.x'
 project: 'ubc_announcement'

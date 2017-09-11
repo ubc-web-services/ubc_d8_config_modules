@@ -6,6 +6,9 @@ dependencies:
     - node.type.announcement
   module:
     - text
+  enforced: 
+    module: 
+      - ubc_announcement
 id: node.announcement.body
 field_name: body
 entity_type: node
