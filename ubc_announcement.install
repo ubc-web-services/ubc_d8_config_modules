@@ -15,18 +15,3 @@ function ubc_announcement_update_8001() {
 
   return 'The Announcement  has been updated.';
 }
-
-/**
- * Uninstall configuration from site.
- * https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Extension%21module.api.php/function/hook_uninstall/8.3.x
- */
- /*
-function ubc_announcement_uninstall() {
-  \Drupal::configFactory()
-    ->getEditable('field.storage.node.field_announcement_category')
-    ->getEditable('field.storage.node.field_external_link')
-    ->getEditable('field.storage.node.field_feature_image')
-    ->getEditable('field.storage.node.field_supporting_content')
-    ->delete();
-}
-*/
