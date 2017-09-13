@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: card_480x240
+label: 'Card 480x240'
+effects:
+  6c01ddb7-65b5-4717-919b-a0a9996c2a08:
+    uuid: 6c01ddb7-65b5-4717-919b-a0a9996c2a08
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 240

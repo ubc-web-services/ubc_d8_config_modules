@@ -1,0 +1,75 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - editor
+    - inline_responsive_images
+name: 'Filtered Text'
+format: filtered_text
+weight: 0
+filters:
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: 0
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid data-align data-caption data-responsive-image-style> <div class="accordion widget-accordion accordion__content accordion__tab card--one widget-card card first-image card__image-area first-content card__content first-footer card__footer card--two flex-grid flex-item second-image second-content second-footer card--three third-image third-content third-footer columns--2 row col-md-6 columns--2-1-2 col-md-4 col-md-8 columns--2-2-1 columns--3"> <button data-state class="widget-expandcollapse"> <span class="fa-angle-down fa"> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p class="text--lead text--uppercase text--lowercase">'
+      filter_html_help: false
+      filter_html_nofollow: false
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
+  filter_imagestyle:
+    id: filter_imagestyle
+    provider: inline_responsive_images
+    status: false
+    weight: 0
+    settings:
+      image_style_card_300x150: '0'
+      image_style_card_480x240: '0'
+      image_style_card_600x300: '0'
+      image_style_card_780x390: '0'
+      image_style_large: '0'
+      image_style_max_1200x1200: '0'
+      image_style_max_1300x1300: '0'
+      image_style_max_2600x2600: '0'
+      image_style_max_325x325: '0'
+      image_style_max_480x480: '0'
+      image_style_max_600x600: '0'
+      image_style_max_650x650: '0'
+      image_style_max_768x768: '0'
+      image_style_max_980x980: '0'
+      image_style_medium: '0'
+      image_style_thumbnail: '0'
+  filter_responsive_image_style:
+    id: filter_responsive_image_style
+    provider: inline_responsive_images
+    status: true
+    weight: 0
+    settings:
+      responsive_style_card: '1'
+      responsive_style_narrow: '1'
+      responsive_style_wide: '1'

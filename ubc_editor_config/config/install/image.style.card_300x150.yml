@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: card_300x150
+label: 'Card 300x150'
+effects:
+  61a65da2-79cc-4450-b252-74aed6f10edf:
+    uuid: 61a65da2-79cc-4450-b252-74aed6f10edf
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 150

@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: card_780x390
+label: 'Card 780x390'
+effects:
+  54c77fd8-2e22-4eee-89d5-335e6f31066f:
+    uuid: 54c77fd8-2e22-4eee-89d5-335e6f31066f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 780
+      height: 390
