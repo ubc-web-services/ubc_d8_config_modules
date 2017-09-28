@@ -1,0 +1,43 @@
+<?php
+
+
+/**
+ * Implements hook_install().
+ *
+ *
+ * @ingroup ubc_announcement_views
+ */
+ /*
+function ubc_announcement_views_install() {
+  
+}
+*/
+
+/**
+ * Implements hook_uninstall().
+ *
+ *
+ * @ingroup ubc_announcement_views
+ */
+ /*
+function ubc_announcement_views_uninstall() {
+  
+}
+*/
+
+/**
+ * Update configuration from file.
+ * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
+ */
+ /*
+function ubc_announcement_views_update_8001() {
+  $config_path = drupal_get_path('module', 'ubc_announcement_views') . '/config/install/views.view.announcements.yml';
+  $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
+  \Drupal::configFactory()
+    ->getEditable('views.view.announcements.yml')
+    ->setData($data)
+    ->save(TRUE);
+
+  return 'The Announcement views have been updated.';
+}
+*/

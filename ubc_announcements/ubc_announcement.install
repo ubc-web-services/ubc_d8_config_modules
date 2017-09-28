@@ -11,12 +11,14 @@
  *
  * @ingroup ubc_announcement
  */
+ /*
 function ubc_announcement_install() {
   // Do not allow the locked content type to be deleted.
   $locked = Drupal::state()->get('node.type.locked');
   $locked['announcement'] = 'announcement';
   Drupal::state()->set('node.type.locked', $locked);
 }
+*/
 
 /**
  * Implements hook_uninstall().
@@ -31,12 +33,14 @@ function ubc_announcement_install() {
  *
  * @ingroup ubc_announcement
  */
+ /*
 function ubc_announcement_uninstall() {
   // Allow announcement to be deleted.
   $locked = Drupal::state()->get('node.type.locked');
   unset($locked['announcement']);
   Drupal::state()->set('node.type.locked', $locked);
 }
+*/
 
 /**
  * Update configuration from file.

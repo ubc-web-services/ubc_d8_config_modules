@@ -4,10 +4,16 @@ dependencies:
   enforced:
     module:
       - ubc_announcement
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
 name: 'Announcement'
 type: announcement
 description: 'An <em>Announcement</em> is used to publish periodic, time-sensitive information. Announcements are not typically included in site menus, but are sorted, searched and filtered based on lists of teasers.'
 help: 'The help text'
 new_revision: true
 preview_mode: 1
-display_submitted: true
+display_submitted: false

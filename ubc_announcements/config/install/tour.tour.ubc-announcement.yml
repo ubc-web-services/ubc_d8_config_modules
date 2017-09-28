@@ -60,14 +60,6 @@ dependencies:
 id: ubc-announcement
 label: 'UBC Announcement Tour'
 module: ubc_announcement
-#routes:
-#  -
-#    route_name: 'node.add'
-#    route_name: 'entity.node.edit_form'
-#  - route_params: 'announcement'
-#paths:
-#  - node/add/announcement
-#  - node/edit/announcement
 routes:
   -
     route_name: node.add
@@ -78,68 +70,68 @@ routes:
     route_params:
       node_type: 'announcement'
 tips:
-  wow:
-    id: wow
+  welcome:
+    id: welcome
     plugin: text
-    label: Wow
+    label: Welcome to the Announcement Creation Page
     weight: -100
     attributes: null
-    body: 'Works?'
+    body: '<p>This guide will walk you through the main parts of the <strong>edit</strong> screen and explain what they do.</p>'
     location: top
-  still-working-:
-    id: still-working-
+  first:
+    id: first
     plugin: text
-    label: 'Still working?'
+    label: 'Announcement Title'
     weight: -99
     attributes:
       data-id: edit-title-0-value
-    body: 'This is required. Used for path. Make it so. Or  go to the <a href=''/admin/content?tour'' class=''button button--primary''>content tour</a>'
-    location: top
-  published-:
-    id: published-
+    body: '<p>This is the main title for the <em>announcement</em>. It is used to construct the URL (ie. <em>About Us</em> becomes <em>/about-us</em>) and should directly indicate what content will be found on this page.</p>'
+    location: bottom
+  second:
+    id: second
     plugin: text
-    label: 'Published?'
+    label: 'Announcement Category'
+    weight: -99
+    attributes:
+      data-id: edit-field-announcement-category-wrapper
+    body: '<p>The choices here allow you to assign a category to the <em>announcement</em>. This category is used to filter the announcements and group them with similar types (ie. News or Press Releases).</p>'
+    location: bottom
+  publish-settings:
+    id: publish-settings
+    plugin: text
+    label: 'Publish Settings'
     weight: -98
     attributes:
       data-id: edit-meta
-    body: 'Content metadata about it''s current status. You can also add information about any updates you make to the content in the textarea here. This will help in tracking changes between revisions.'
-    location: top
-  edit-menu:
-    id: edit-menu
-    plugin: text
-    label: 'Edit Menu'
-    weight: -97
-    attributes:
-      data-id: edit-menu
-    body: 'Add the page to the menu.'
-    location: top
-  path-settings:
-    id: path-settings
+    body: '<p>Metadata about the <em>announcement''s</em> current status. You can also add information about any updates you make to the content in the textarea here. This will help in tracking changes between revisions.</p>'
+    location: left
+#  menu-settings:
+#    id: menu-settings
+#    plugin: text
+#    label: 'Edit Menu'
+#    weight: -97
+#    attributes:
+#      data-id: edit-menu
+#    body: '<p>Add the <em>announcement</em> to the main menu.</p>'
+#    location: left
+  url-path-settings:
+    id: url-path-settings
     plugin: text
     label: 'Path Settings'
     weight: -96
     attributes:
       data-id: edit-path-settings
-    body: 'Here you can change the default path settings (usually menu trail, followed by the title).'
-    location: top
-  author-information:
-    id: author-information
+    body: '<p>Here you can override the default path settings (usually menu trail, followed by the title, ie. <em>/parent-page/page-title</em>).</p><p>The default settings are usually fine.</p>'
+    location: left
+  authoring-information:
+    id: authoring-information
     plugin: text
     label: 'Author information'
     weight: -95
     attributes:
       data-id: edit-author
-    body: 'Tracks who created the content and when.'
+    body: '<p>Metadata about who created the content and when.<p><p>This is often used for sorting content like <em>announcements</em>.</p>'
     location: left
-  publishing-options:
-    id: publishing-options
-    plugin: text
-    label: 'Publishing Options'
-    weight: -94
-    attributes:
-      data-id: edit-options
-    body: 'Additional, rarely-used options, such as promoted to front page and sticky at the top of lists.'
-    location: top
   save:
     id: save
     plugin: text
@@ -147,5 +139,5 @@ tips:
     weight: -93
     attributes:
       data-id: edit-actions
-    body: 'Save an publish.'
+    body: '<p>These options allow you to:</p><ul><li><em>Save and publish</em>, making your content immediately available on the site.</li><li><em>Save as ubpublished</em>, saving your content but not making it available on the site.</li><li><em>Preview</em>, allowing you to validate your changes before you save the content.</li></ul><p>Next, you can go to the <a href=''/admin/content?tour'' class=''button button--primary''>content tour</a>.</p>'
     location: top

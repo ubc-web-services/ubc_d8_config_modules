@@ -14,7 +14,7 @@ field_name: field_announcement_category
 entity_type: node
 bundle: announcement
 label: 'Announcement Category'
-description: 'Add a category to the news item. This will allow announcements to be grouped into searchable collections with other announcements of the same category.'
+description: 'Add a category to the announcement. This will allow announcements to be grouped into searchable collections with other announcements of the same category.'
 required: true
 translatable: false
 default_value: {  }

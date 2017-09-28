@@ -9,12 +9,12 @@ dependencies:
     - field.field.node.announcement.field_image_teaser
     - field.field.node.announcement.field_supporting_content
     - node.type.announcement
+  enforced:
+    module:
+      - ubc_announcement
   module:
     - text
     - user
-  enforced: 
-    module: 
-      - ubc_announcement
 id: node.announcement.default
 targetEntityType: node
 bundle: announcement

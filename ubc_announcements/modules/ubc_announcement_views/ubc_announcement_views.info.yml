@@ -1,0 +1,7 @@
+name: UBC Announcement Views
+type: module
+description: This module adds prebuilt views to the Announcement content type.
+package: UBC Web Services
+dependencies:
+  - ubc_announcement:ubc_announcement
+core: '8.x'
