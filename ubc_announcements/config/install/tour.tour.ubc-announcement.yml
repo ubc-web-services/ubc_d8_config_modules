@@ -91,7 +91,7 @@ tips:
     id: second
     plugin: text
     label: 'Announcement Category'
-    weight: -99
+    weight: -98
     attributes:
       data-id: edit-field-announcement-category-wrapper
     body: '<p>The choices here allow you to assign a category to the <em>announcement</em>. This category is used to filter the announcements and group them with similar types (ie. News or Press Releases).</p>'
@@ -100,7 +100,7 @@ tips:
     id: publish-settings
     plugin: text
     label: 'Publish Settings'
-    weight: -98
+    weight: -78
     attributes:
       data-id: edit-meta
     body: '<p>Metadata about the <em>announcement''s</em> current status. You can also add information about any updates you make to the content in the textarea here. This will help in tracking changes between revisions.</p>'
@@ -109,7 +109,7 @@ tips:
 #    id: menu-settings
 #    plugin: text
 #    label: 'Edit Menu'
-#    weight: -97
+#    weight: -77
 #    attributes:
 #      data-id: edit-menu
 #    body: '<p>Add the <em>announcement</em> to the main menu.</p>'
@@ -118,7 +118,7 @@ tips:
     id: url-path-settings
     plugin: text
     label: 'Path Settings'
-    weight: -96
+    weight: -76
     attributes:
       data-id: edit-path-settings
     body: '<p>Here you can override the default path settings (usually menu trail, followed by the title, ie. <em>/parent-page/page-title</em>).</p><p>The default settings are usually fine.</p>'
@@ -127,7 +127,7 @@ tips:
     id: authoring-information
     plugin: text
     label: 'Author information'
-    weight: -95
+    weight: -75
     attributes:
       data-id: edit-author
     body: '<p>Metadata about who created the content and when.<p><p>This is often used for sorting content like <em>announcements</em>.</p>'
@@ -136,7 +136,7 @@ tips:
     id: save
     plugin: text
     label: Save
-    weight: -93
+    weight: -74
     attributes:
       data-id: edit-actions
     body: '<p>These options allow you to:</p><ul><li><em>Save and publish</em>, making your content immediately available on the site.</li><li><em>Save as ubpublished</em>, saving your content but not making it available on the site.</li><li><em>Preview</em>, allowing you to validate your changes before you save the content.</li></ul><p>Next, you can go to the <a href=''/admin/content?tour'' class=''button button--primary''>content tour</a>.</p>'
