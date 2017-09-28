@@ -6,7 +6,7 @@ dependencies:
     - inline_responsive_images
 name: 'Filtered Text'
 format: filtered_text
-weight: 0
+weight: -20
 filters:
   editor_file_reference:
     id: editor_file_reference
