@@ -1,0 +1,9 @@
+name: UBC Page Content Type
+type: module
+description: This module defines a custom Page content type and its fields.
+package: UBC Web Services
+dependencies:
+  - drupal:node
+  - drupal:tour
+  - drupal:toolbar
+core: '8.x'

@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ubc_page.body
+    - field.field.node.ubc_page.field_page_supporting_content
+    - node.type.ubc_page
+  module:
+    - text
+    - user
+  enforced:
+    module:
+      - ubc_page
+id: node.ubc_page.default
+targetEntityType: node
+bundle: ubc_page
+mode: default
+content:
+  body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_page_supporting_content: true

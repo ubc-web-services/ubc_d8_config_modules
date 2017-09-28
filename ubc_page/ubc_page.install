@@ -1,0 +1,58 @@
+<?php
+
+
+/**
+ * Implements hook_install().
+ *
+ * We don't want users to be able to delete our announcement content
+ * type. So therefore we have to tell Drupal that this is the case. This
+ * can't be done in the content type's configuration YAML file, so we have to
+ * do it in code, here.
+ *
+ * @ingroup ubc_page
+ */
+ /*
+function ubc_page_install() {
+  // Do not allow the locked content type to be deleted.
+  $locked = Drupal::state()->get('node.type.locked');
+  $locked['announcement'] = 'announcement';
+  Drupal::state()->set('node.type.locked', $locked);
+}
+*/
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Our content types will live on in the Drupal installation, even after this
+ * module is uninstalled. This is a good thing, since it allows the user to
+ * make decisions about their fate. Therefore we should give the user the
+ * option of deleting them.
+ *
+ * Since we told Drupal that our announcement is locked, we now have
+ * to tell it to unlock.
+ *
+ * @ingroup ubc_page
+ */
+ /*
+function ubc_page_uninstall() {
+  // Allow announcement to be deleted.
+  $locked = Drupal::state()->get('node.type.locked');
+  unset($locked['announcement']);
+  Drupal::state()->set('node.type.locked', $locked);
+}
+*/
+
+/**
+ * Update configuration from file.
+ * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
+ */
+function ubc_page_update_8001() {
+  $config_path = drupal_get_path('module', 'ubc_page') . '/config/install/core.entity_form_display.node.ubc_page.default.yml';
+  $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
+  \Drupal::configFactory()
+    ->getEditable('core.entity_form_display.node.ubc_page.default.yml')
+    ->setData($data)
+    ->save(TRUE);
+
+  return 'The Announcement  has been updated.';
+}
