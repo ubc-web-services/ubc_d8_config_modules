@@ -8,8 +8,8 @@ dependencies:
   enforced: 
     module: 
       - ubc_announcement
-id: node.field_feature_image
-field_name: field_feature_image
+id: node.field_announcement_feature_image
+field_name: field_announcement_feature_image
 entity_type: node
 type: image
 settings:

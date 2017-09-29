@@ -2,17 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_external_link
-    - node.type.announcement
+    - field.storage.node.field_announcement_external_link
+    - node.type.ubc_announcement
   module:
     - link
   enforced: 
     module: 
       - ubc_announcement
-id: node.announcement.field_external_link
-field_name: field_external_link
+id: node.ubc_announcement.field_announcement_external_link
+field_name: field_announcement_external_link
 entity_type: node
-bundle: announcement
+bundle: ubc_announcement
 label: 'External Link'
 description: 'If you would like to link to an externally hosted announcement page instead of its own page, enter the URL here.'
 required: false
@@ -20,6 +20,6 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  link_type: 17
+  link_type: 16
   title: 1
 field_type: link

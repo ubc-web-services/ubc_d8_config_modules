@@ -3,16 +3,16 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_announcement_category
-    - node.type.announcement
+    - node.type.ubc_announcement
   module:
     - options
   enforced: 
     module: 
       - ubc_announcement
-id: node.announcement.field_announcement_category
+id: node.ubc_announcement.field_announcement_category
 field_name: field_announcement_category
 entity_type: node
-bundle: announcement
+bundle: ubc_announcement
 label: 'Announcement Category'
 description: 'Add a category to the announcement. This will allow announcements to be grouped into searchable collections with other announcements of the same category.'
 required: true

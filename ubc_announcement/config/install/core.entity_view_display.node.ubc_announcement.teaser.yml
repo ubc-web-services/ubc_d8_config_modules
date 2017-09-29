@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.ubc_announcement.body
+    - node.type.ubc_announcement
+  module:
+    - text
+    - user
+  enforced:
+    module:
+      - ubc_announcement
+id: node.ubc_announcement.teaser
+targetEntityType: node
+bundle: ubc_announcement
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 350
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

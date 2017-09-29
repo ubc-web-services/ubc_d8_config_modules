@@ -47,12 +47,12 @@ function ubc_announcement_uninstall() {
  * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
  */
 function ubc_announcement_update_8001() {
-  $config_path = drupal_get_path('module', 'ubc_announcement') . '/config/install/core.entity_form_display.node.announcement.default.yml';
+  $config_path = drupal_get_path('module', 'ubc_announcement') . '/config/install/core.entity_form_display.node.ubc_announcement.default.yml';
   $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
   \Drupal::configFactory()
-    ->getEditable('core.entity_form_display.node.announcement.default.yml')
+    ->getEditable('core.entity_form_display.node.ubc_announcement.default.yml')
     ->setData($data)
     ->save(TRUE);
 
-  return 'The Announcement  has been updated.';
+  return 'The Announcement has been updated.';
 }

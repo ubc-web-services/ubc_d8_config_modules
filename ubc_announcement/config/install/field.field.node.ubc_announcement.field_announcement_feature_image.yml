@@ -2,17 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_feature_image
-    - node.type.announcement
+    - field.storage.node.field_announcement_feature_image
+    - node.type.ubc_announcement
   module:
     - image
   enforced: 
     module: 
-      - ubc_announcement  
-id: node.announcement.field_feature_image
-field_name: field_feature_image
+      - ubc_announcement 
+id: node.ubc_announcement.field_announcement_feature_image
+field_name: field_announcement_feature_image
 entity_type: node
-bundle: announcement
+bundle: ubc_announcement
 label: 'Feature Image'
 description: 'Add a feature image to the announcement. Feature image must be at least 950x600.'
 required: false

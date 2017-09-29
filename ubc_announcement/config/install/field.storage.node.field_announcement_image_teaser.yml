@@ -6,8 +6,8 @@ dependencies:
   enforced:
     module:
       - ubc_announcement
-id: node.field_image_teaser
-field_name: field_image_teaser
+id: node.field_announcement_image_teaser
+field_name: field_announcement_image_teaser
 entity_type: node
 type: string
 settings:
