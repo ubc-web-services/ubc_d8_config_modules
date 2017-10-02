@@ -1,0 +1,78 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ubc_landing_page.body
+    - field.field.node.ubc_landing_page.field_landing_feature_image
+    - field.field.node.ubc_landing_page.field_landing_supporting
+    - image.style.thumbnail
+    - node.type.ubc_landing_page
+  module:
+    - image
+    - path
+    - text
+  enforced:
+    module:
+      - ubc_landing_page
+id: node.ubc_landing_page.default
+targetEntityType: node
+bundle: ubc_landing_page
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_landing_feature_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_landing_supporting:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

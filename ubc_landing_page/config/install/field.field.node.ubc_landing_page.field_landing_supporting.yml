@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_supporting
+    - node.type.ubc_landing_page
+  module:
+    - text
+  enforced:
+    module:
+      - ubc_landing_page
+id: node.ubc_landing_page.field_landing_supporting
+field_name: field_landing_supporting
+entity_type: node
+bundle: ubc_landing_page
+label: 'Supporting Content'
+description: 'Add additional supporting content to the page. This will appear in a region below or beside the primary content.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

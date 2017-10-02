@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ubc_landing_page.body
+    - field.field.node.ubc_landing_page.field_landing_feature_image
+    - field.field.node.ubc_landing_page.field_landing_supporting
+    - node.type.ubc_landing_page
+  module:
+    - image
+    - text
+    - user
+  enforced:
+    module:
+      - ubc_landing_page
+id: node.ubc_landing_page.default
+targetEntityType: node
+bundle: ubc_landing_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_landing_feature_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_landing_supporting: true
