@@ -1,0 +1,7 @@
+# Define default links for this module.
+ubc_layout_config.overview:
+  title: UBC Layout Form
+  description: A set of configuration choices for this site.
+  route_name: ubc_layout_config.overview
+  parent: system.admin_config_ui
+  weight: -9

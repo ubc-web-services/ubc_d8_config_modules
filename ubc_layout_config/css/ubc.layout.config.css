@@ -1,0 +1,52 @@
+/*
+.test-class {
+    background-color: #ccc;
+    color: #fff;
+    font-size: 30px;
+}
+
+#ubc-layout-modal-form {
+    background-color: orange;
+}
+*/
+
+input[type='color'] {
+    display: inline-block;
+    min-width: 100px;
+    height: 30px;
+}
+
+.normal-button {
+    color: #fff;
+    background-color: #002145;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-align: center;
+    min-width: 3em;
+}
+
+.strange-button {
+    color: #fff;
+    background-color: #444;
+    border: 1px solid #000;
+    padding: .5em 1em;
+    text-align: center;
+    min-width: 3em;
+}
+
+.other-button {
+    color: #fff;
+    background-color: orange;
+    border: 1px solid #444;
+    padding: .5em 1em;
+    text-align: center;
+}
+
+.wierd-button {
+    color: rgb(255, 244, 244);
+    background-color: rgb(112, 20, 20);
+    border: 1px solid #444;
+    padding: .5em 1em;
+    text-align: center;
+    border-radius: 3px;
+}

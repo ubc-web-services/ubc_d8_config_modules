@@ -1,0 +1,8 @@
+name: UBC Layout Configuration
+type: module
+description: This module allows editors to choose the layouts for specific content types.
+package: UBC Web Services
+#dependencies:
+#  - drupal:ckeditor 
+configure: ubc_layout_config.overview
+core: '8.x'
