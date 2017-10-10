@@ -51,26 +51,25 @@ function ubc_layout_config_help($route_name, RouteMatchInterface $route_match) {
       $suggestions[] = 'page__' . $activeLayout . '__' . $content_type; 
     }
   }
-  return $suggestions;
+  //return $suggestions;
   //$request = \Drupal::routeMatch()->getRouteObject();
   //kint($request);
 }
 
  // Add theme hook suggestions for node
  function ubc_layout_config_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  // add the array of types
+  $node_types = array('ubc_page', 'ubc_homepage', 'ubc_announcement', 'ubc_landing_page');
   // find the current node's type
-  $node = \Drupal::routeMatch()->getParameter('node');
-  $content_type = $node->bundle();
+  $node_type = $variables['elements']['#node']->getType();
   // load the active layout from the settings
-  $config = \Drupal::config('ubc_layout_config.' . $content_type . '_settings');
+  $config = \Drupal::config('ubc_layout_config.' . $node_type . '_settings');
   $activeLayout = $config->get('layout');
-  if (isset($activeLayout)) {
-    // add the suggestion
-    $suggestions[] = 'node__' . $activeLayout . '__' . $content_type; 
+  if (isset($activeLayout) && $variables['elements']['#view_mode'] == 'full' && in_array($node_type, $node_types)) {
+    $suggestions[] = 'node__' . $activeLayout . '__' . $node_type;
   }
-  return $suggestions;
+  //return $suggestions;
 }
-
 
 /**
  * Implements hook_form_alter().
@@ -79,7 +78,6 @@ function ubc_layout_config_form_alter(&$form, FormStateInterface $form_state, $f
   if (($form_id == 'ubc_layout_config_homepage') || ($form_id == 'ubc_layout_config_landing_page') || ($form_id == 'ubc_layout_config_announcement') || ($form_id == 'ubc_layout_config_page')) {
     // attach form-specific js
     $form['#attached']['library'][] = 'ubc_layout_config/layout_form';
-    //$form['#attached']['drupalSettings']['ubc_layout_config']['layout_form']['variable'] = 'value';
   return $form;
   }
 }
