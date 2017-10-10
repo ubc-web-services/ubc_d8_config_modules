@@ -1,3 +1,4 @@
+layout: stacked
 your_message: 'this is the title'
 favorite: red
 is_active: TRUE

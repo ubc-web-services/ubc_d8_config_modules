@@ -34,6 +34,20 @@ class Overview extends ControllerBase {
         */
         // Attributes are used by the core dialog libraries to invoke the modal.
         Link::createFromRoute(
+          $this->t('General Settings'),
+          'ubc_layout_config.ubc_general_settings',
+           [],
+           [
+             'attributes' => [
+               'class' => ['use-ajax'],
+               'data-dialog-type' => 'modal',
+               'data-dialog-options' => json_encode(array(
+                'width' => 600,
+              ))
+             ],
+           ]
+        ),
+        Link::createFromRoute(
           $this->t('Home Page Settings'),
           'ubc_layout_config.ubc_homepage_settings',
            [],
@@ -98,6 +112,8 @@ class Overview extends ControllerBase {
       '#type' => 'container',
       '#attributes' => ['id' => 'ubc-layout-message'],
     ];
+    // The message container is used to display a sample with the selected options
+    // applied. It is an empty tag that will be replaced by content.
     $content['preview'] = [
       '#type' => 'container',
       '#attributes' => ['id' => 'ubc-layout-preview'],

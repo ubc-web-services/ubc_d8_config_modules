@@ -71,11 +71,12 @@ function ubc_layout_config_help($route_name, RouteMatchInterface $route_match) {
   //return $suggestions;
 }
 
+
 /**
  * Implements hook_form_alter().
  */
 function ubc_layout_config_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if (($form_id == 'ubc_layout_config_homepage') || ($form_id == 'ubc_layout_config_landing_page') || ($form_id == 'ubc_layout_config_announcement') || ($form_id == 'ubc_layout_config_page')) {
+  if (($form_id == 'ubc_layout_config_general') || ($form_id == 'ubc_layout_config_homepage') || ($form_id == 'ubc_layout_config_landing_page') || ($form_id == 'ubc_layout_config_announcement') || ($form_id == 'ubc_layout_config_page')) {
     // attach form-specific js
     $form['#attached']['library'][] = 'ubc_layout_config/layout_form';
   return $form;

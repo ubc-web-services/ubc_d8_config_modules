@@ -1,4 +1,8 @@
 # Schema for the configuration files of the galactus theme.
+ubc_layout_config.ubc_general_settings:
+  type: theme_settings
+  label: 'ubc layout general settings'
+
 ubc_layout_config.ubc_homepage_settings:
   type: theme_settings
   label: 'ubc layout homepage settings'

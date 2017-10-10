@@ -6,6 +6,14 @@ ubc_layout_config.overview:
   requirements:
     _permission: 'administer site configuration'
 
+ubc_layout_config.ubc_general_settings:
+  path: 'admin/config/user-interface/ubc-layout/general-settings-form'
+  defaults:
+    _form:  '\Drupal\ubc_layout_config\Form\GeneralSettingsForm'
+    _title: 'UBC General Layout Options'
+  requirements:
+    _permission: 'administer site configuration'
+
 ubc_layout_config.ubc_homepage_settings:
   path: 'admin/config/user-interface/ubc-layout/homepage-form'
   defaults:
