@@ -1,0 +1,6 @@
+{
+  "name": "drupal/ubc_editor_config",
+  "description": "This module defines default configuration for Drupal's WYSIWYG, cKeditor.",
+  "type": "drupal-custom-module",
+  "require": {}
+}
