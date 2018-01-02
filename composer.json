@@ -1,0 +1,6 @@
+{
+  "name": "drupal/ubc_d8_config_modules",
+  "description": "Custom UBC Drupal8 Modules",
+  "type": "drupal-custom-module",
+  "require": {}
+}
