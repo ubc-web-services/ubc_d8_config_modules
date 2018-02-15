@@ -14,7 +14,7 @@ image_style_mappings:
     multiplier: 1x
     image_mapping_type: sizes
     image_mapping:
-      sizes: '(min-width: 769px) 600px, 100vw'
+      sizes: '(min-width: 600px) 780px, (min-width: 769px) 600px, 100vw'
       sizes_image_styles:
         - card_300x150
         - card_480x240
