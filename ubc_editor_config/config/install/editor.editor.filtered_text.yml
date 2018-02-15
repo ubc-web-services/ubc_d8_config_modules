@@ -5,6 +5,9 @@ dependencies:
     - filter.format.filtered_text
   module:
     - ckeditor
+  enforced:
+    module:
+      - ubc_editor_config
 format: filtered_text
 editor: ckeditor
 settings:
@@ -48,10 +51,10 @@ settings:
         -
           name: Layout
           items:
-            - bs3-2columns
-            - bs3-2columns-1-2
-            - bs3-2columns-2-1
-            - bs3-3columns
+            - flex-2columns-1-2
+            - flex-2columns
+            - flex-2columns-2-1
+            - flex-3columns
             - HorizontalRule
             - Table
         -

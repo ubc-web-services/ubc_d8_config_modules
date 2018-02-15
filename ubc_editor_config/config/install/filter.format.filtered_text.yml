@@ -4,6 +4,9 @@ dependencies:
   module:
     - editor
     - inline_responsive_images
+  enforced:
+    module:
+      - ubc_editor_config
 name: 'Filtered Text'
 format: filtered_text
 weight: -20

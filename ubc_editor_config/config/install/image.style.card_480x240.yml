@@ -1,6 +1,9 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: 
+  enforced:
+    module:
+      - ubc_editor_config
 name: card_480x240
 label: 'Card 480x240'
 effects:
