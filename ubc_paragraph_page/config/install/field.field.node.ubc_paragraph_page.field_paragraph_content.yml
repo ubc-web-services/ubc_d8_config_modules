@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph_content
+    - node.type.ubc_paragraph_page
+    - paragraphs.paragraphs_type.full_width_image
+    - paragraphs.paragraphs_type.image_gallery
+    - paragraphs.paragraphs_type.slideshow
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+  enforced:
+    module:
+      - ubc_paragraph_page
+id: node.ubc_paragraph_page.field_paragraph_content
+field_name: field_paragraph_content
+entity_type: node
+bundle: ubc_paragraph_page
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      full_width_image: full_width_image
+      image_gallery: image_gallery
+      slideshow: slideshow
+      text: text
+    target_bundles_drag_drop:
+      full_width_image:
+        enabled: true
+        weight: 7
+      image_gallery:
+        enabled: true
+        weight: 8
+      image_gallery_image:
+        weight: 9
+        enabled: false
+      slide:
+        weight: 10
+        enabled: false
+      slideshow:
+        enabled: true
+        weight: 11
+      text:
+        enabled: true
+        weight: 12
+field_type: entity_reference_revisions

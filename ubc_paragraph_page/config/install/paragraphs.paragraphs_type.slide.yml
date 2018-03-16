@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ubc_paragraph_page
+id: slide
+label: Slide
+icon_uuid: null
+description: 'Add an individual Slide to a Slideshow.'
+behavior_plugins: {  }

@@ -1,0 +1,18 @@
+# ubc_paragraph_page.libraries.yml
+
+### PHOTOSWIPE (gallery Library) [http://photoswipe.com] ###
+photoswipe:
+  css:
+    theme:
+      css/image.gallery.photoswipe.css: {}
+
+### Flexslider ###
+flexslider:
+  css:
+    theme:
+      css/flexslider.css: {}
+  js:
+    js/flexslider/jquery.flexslider-min.js: {}
+    js/slideshow.js: {}
+  dependencies:
+    - core/jquery

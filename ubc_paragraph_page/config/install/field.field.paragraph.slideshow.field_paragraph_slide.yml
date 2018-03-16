@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_slide
+    - paragraphs.paragraphs_type.slide
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - entity_reference_revisions
+  enforced:
+    module:
+      - ubc_paragraph_page
+id: paragraph.slideshow.field_paragraph_slide
+field_name: field_paragraph_slide
+entity_type: paragraph
+bundle: slideshow
+label: Slide
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      slide: slide
+    target_bundles_drag_drop:
+      full_width_image:
+        weight: 6
+        enabled: false
+      image_gallery:
+        weight: 7
+        enabled: false
+      slide:
+        enabled: true
+        weight: 8
+      slideshow:
+        weight: 9
+        enabled: false
+      text:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

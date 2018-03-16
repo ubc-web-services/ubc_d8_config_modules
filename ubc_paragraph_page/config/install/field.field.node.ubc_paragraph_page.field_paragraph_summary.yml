@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph_summary
+    - node.type.ubc_paragraph_page
+  module:
+    - text
+  enforced:
+    module:
+      - ubc_paragraph_page
+id: node.ubc_paragraph_page.field_paragraph_summary
+field_name: field_paragraph_summary
+entity_type: node
+bundle: ubc_paragraph_page
+label: Summary
+description: 'Add a summary of the page content, used for search results, teasers, etc.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
