@@ -60,7 +60,7 @@ dependencies:
   enforced:
     module:
       - ubc_paragraph_page
-id: ubc-page
+id: ubc-paragraph-page
 label: 'UBC Paragraph Page Tour'
 module: ubc_paragraph_page
 routes:
