@@ -3,7 +3,6 @@
   "description": "Custom UBC Drupal8 Modules",
   "type": "drupal-custom-module",
   "require": {
-  	
-  	
+    "drupal/inline_responsive_images": "^2.1"
   }
 }
