@@ -10,4 +10,3 @@ dependencies:
   - ubc_ckeditor_widgets:ubc_ckeditor_widgets
 version: '8.x-1.0'
 core: '8.x'
-project: 'ubc_editor_config'
