@@ -3,6 +3,7 @@
   "description": "Custom UBC Drupal8 Modules",
   "type": "drupal-module",
   "require": {
-    "drupal/inline_responsive_images": "^2.1"
+    "drupal/inline_responsive_images": "^2.1",
+    "ubc-web-services/ubc_ckeditor_widgets": "^1.0"
   }
 }
