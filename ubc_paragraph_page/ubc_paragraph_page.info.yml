@@ -7,6 +7,4 @@ dependencies:
   - drupal:tour
   - drupal:toolbar
   - paragraphs:paragraphs
-  - imce:imce
-  - field_group:field_group
 core: '8.x'
