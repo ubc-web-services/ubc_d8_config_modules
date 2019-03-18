@@ -9,5 +9,4 @@ dependencies:
   - paragraphs:paragraphs
   - imce:imce
   - field_group:field_group
-  - photoswipe:photoswipe
 core: '8.x'
