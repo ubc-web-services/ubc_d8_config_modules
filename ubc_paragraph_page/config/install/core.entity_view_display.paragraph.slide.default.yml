@@ -10,9 +10,9 @@ dependencies:
   module:
     - image
     - link
-  enforced:
-    module:
-      - ubc_paragraph_page
+  # enforced:
+  #   module:
+  #     - ubc_paragraph_page
 id: paragraph.slide.default
 targetEntityType: paragraph
 bundle: slide

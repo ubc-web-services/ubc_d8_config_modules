@@ -13,9 +13,9 @@ dependencies:
     - image
     - imce
     - link
-  enforced:
-    module:
-      - ubc_paragraph_page
+  # enforced:
+  #   module:
+  #     - ubc_paragraph_page
 id: paragraph.full_width_image.default
 targetEntityType: paragraph
 bundle: full_width_image

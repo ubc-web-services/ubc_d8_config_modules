@@ -57,9 +57,9 @@ status: true
 dependencies:
   module:
     - ubc_landing_page
-  enforced:
-    module:
-      - ubc_landing_page
+  # enforced:
+  #   module:
+  #     - ubc_landing_page
 id: ubc-landing-page
 label: 'UBC Landing Page Tour'
 module: ubc_landing_page

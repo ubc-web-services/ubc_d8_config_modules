@@ -6,9 +6,9 @@ dependencies:
     - paragraphs.paragraphs_type.full_width_image
   module:
     - image
-  enforced:
-    module:
-      - ubc_paragraph_page
+  # enforced:
+  #   module:
+  #     - ubc_paragraph_page
 id: paragraph.full_width_image.field_paragraph_image
 field_name: field_paragraph_image
 entity_type: paragraph

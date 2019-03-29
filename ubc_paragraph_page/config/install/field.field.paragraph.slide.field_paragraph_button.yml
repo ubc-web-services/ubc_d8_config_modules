@@ -6,9 +6,9 @@ dependencies:
     - paragraphs.paragraphs_type.slide
   module:
     - link
-  enforced:
-    module:
-      - ubc_paragraph_page
+  # enforced:
+  #   module:
+  #     - ubc_paragraph_page
 id: paragraph.slide.field_paragraph_button
 field_name: field_paragraph_button
 entity_type: paragraph

@@ -13,9 +13,9 @@ dependencies:
     - field_group
     - image
     - link
-  enforced:
-    module:
-      - ubc_paragraph_page
+  # enforced:
+  #   module:
+  #     - ubc_paragraph_page
 third_party_settings:
   field_group:
     group_wrapper:

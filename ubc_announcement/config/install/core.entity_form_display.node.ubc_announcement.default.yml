@@ -15,9 +15,9 @@ dependencies:
     - link
     - path
     - text
-  enforced:
-    module:
-      - ubc_announcement
+  #enforced:
+    #module:
+      #- ubc_announcement
 id: node.ubc_announcement.default
 targetEntityType: node
 bundle: ubc_announcement

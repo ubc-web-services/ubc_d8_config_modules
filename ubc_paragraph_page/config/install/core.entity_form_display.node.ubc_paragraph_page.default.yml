@@ -9,9 +9,9 @@ dependencies:
     - paragraphs
     - path
     - text
-  enforced:
-    module:
-      - ubc_paragraph_page
+  # enforced:
+  #   module:
+  #     - ubc_paragraph_page
 id: node.ubc_paragraph_page.default
 targetEntityType: node
 bundle: ubc_paragraph_page

@@ -10,9 +10,9 @@ dependencies:
     - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
-  enforced:
-    module:
-      - ubc_paragraph_page
+  # enforced:
+  #   module:
+  #     - ubc_paragraph_page
 id: node.ubc_paragraph_page.field_paragraph_content
 field_name: field_paragraph_content
 entity_type: node

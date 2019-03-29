@@ -7,9 +7,9 @@ dependencies:
     - paragraphs.paragraphs_type.image_gallery_image
   module:
     - entity_reference_revisions
-  enforced:
-    module:
-      - ubc_paragraph_page
+  # enforced:
+  #   module:
+  #     - ubc_paragraph_page
 id: paragraph.image_gallery.field_gallery_image
 field_name: field_gallery_image
 entity_type: paragraph

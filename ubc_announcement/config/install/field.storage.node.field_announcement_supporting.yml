@@ -4,9 +4,9 @@ dependencies:
   module:
     - node
     - text
-  enforced: 
-    module: 
-      - ubc_announcement
+  #enforced:
+    #module:
+      #- ubc_announcement
 id: node.field_announcement_supporting
 field_name: field_announcement_supporting
 entity_type: node

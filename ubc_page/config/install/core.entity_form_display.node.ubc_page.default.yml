@@ -8,9 +8,9 @@ dependencies:
   module:
     - path
     - text
-  enforced:
-    module:
-      - ubc_page
+  # enforced:
+  #   module:
+  #     - ubc_page
 id: node.ubc_page.default
 targetEntityType: node
 bundle: ubc_page

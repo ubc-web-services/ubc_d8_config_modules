@@ -8,9 +8,9 @@ dependencies:
   module:
     - text
     - user
-  enforced:
-    module:
-      - ubc_announcement
+  #enforced:
+    #module:
+      #- ubc_announcement
 id: node.ubc_announcement.teaser
 targetEntityType: node
 bundle: ubc_announcement

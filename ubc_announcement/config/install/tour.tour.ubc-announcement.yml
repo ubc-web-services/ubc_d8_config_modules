@@ -54,9 +54,9 @@
 #
 langcode: en
 status: true
-dependencies:
-  module:
-    - ubc_announcement
+#dependencies:
+  #module:
+    #- ubc_announcement
 id: ubc-announcement
 label: 'UBC Announcement Tour'
 module: ubc_announcement

@@ -6,9 +6,9 @@ dependencies:
     - paragraphs.paragraphs_type.image_gallery
   module:
     - options
-  enforced:
-    module:
-      - ubc_paragraph_page
+  # enforced:
+  #   module:
+  #     - ubc_paragraph_page
 id: paragraph.image_gallery.field_paragraph_bg_color
 field_name: field_paragraph_bg_color
 entity_type: paragraph

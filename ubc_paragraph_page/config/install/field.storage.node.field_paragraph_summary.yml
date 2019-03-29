@@ -4,9 +4,9 @@ dependencies:
   module:
     - node
     - text
-  enforced:
-    module:
-      - ubc_paragraph_page
+  # enforced:
+  #   module:
+  #     - ubc_paragraph_page
 id: node.field_paragraph_summary
 field_name: field_paragraph_summary
 entity_type: node

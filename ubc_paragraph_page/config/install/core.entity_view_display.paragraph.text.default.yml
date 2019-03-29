@@ -8,9 +8,9 @@ dependencies:
     - paragraphs.paragraphs_type.text
   module:
     - text
-  enforced:
-    module:
-      - ubc_paragraph_page
+  # enforced:
+  #   module:
+  #     - ubc_paragraph_page
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text

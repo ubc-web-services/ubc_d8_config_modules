@@ -57,9 +57,9 @@ status: true
 dependencies:
   module:
     - ubc_page
-  enforced:
-    module:
-      - ubc_page
+  # enforced:
+  #   module:
+  #     - ubc_page
 id: ubc-page
 label: 'UBC Page Tour'
 module: ubc_page

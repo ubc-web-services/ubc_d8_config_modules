@@ -6,9 +6,9 @@ dependencies:
     - paragraphs.paragraphs_type.text
   module:
     - options
-  enforced:
-    module:
-      - ubc_paragraph_page
+  # enforced:
+  #   module:
+  #     - ubc_paragraph_page
 id: paragraph.text.field_paragraph_layout
 field_name: field_paragraph_layout
 entity_type: paragraph

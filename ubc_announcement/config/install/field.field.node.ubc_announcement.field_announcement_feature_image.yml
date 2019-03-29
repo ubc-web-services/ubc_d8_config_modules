@@ -6,9 +6,9 @@ dependencies:
     - node.type.ubc_announcement
   module:
     - image
-  enforced: 
-    module: 
-      - ubc_announcement 
+  #enforced:
+    #module:
+      #- ubc_announcement
 id: node.ubc_announcement.field_announcement_feature_image
 field_name: field_announcement_feature_image
 entity_type: node

@@ -6,9 +6,9 @@ dependencies:
     - node.type.ubc_page
   module:
     - text
-  enforced:
-    module:
-      - ubc_page
+  # enforced:
+  #   module:
+  #     - ubc_page
 id: node.ubc_page.field_page_supporting_content
 field_name: field_page_supporting_content
 entity_type: node

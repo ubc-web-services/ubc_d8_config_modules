@@ -3,9 +3,9 @@ status: true
 dependencies:
   module:
     - menu_ui
-  enforced:
-    module:
-      - ubc_paragraph_page
+  # enforced:
+  #   module:
+  #     - ubc_paragraph_page
 third_party_settings:
   menu_ui:
     available_menus:

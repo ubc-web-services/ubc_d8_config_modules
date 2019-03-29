@@ -7,9 +7,9 @@ dependencies:
     - paragraphs.paragraphs_type.slideshow
   module:
     - entity_reference_revisions
-  enforced:
-    module:
-      - ubc_paragraph_page
+  # enforced:
+  #   module:
+  #     - ubc_paragraph_page
 id: paragraph.slideshow.field_paragraph_slide
 field_name: field_paragraph_slide
 entity_type: paragraph

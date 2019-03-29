@@ -10,9 +10,9 @@ dependencies:
     - image
     - text
     - user
-  enforced:
-    module:
-      - ubc_landing_page
+  # enforced:
+  #   module:
+  #     - ubc_landing_page
 id: node.ubc_landing_page.default
 targetEntityType: node
 bundle: ubc_landing_page

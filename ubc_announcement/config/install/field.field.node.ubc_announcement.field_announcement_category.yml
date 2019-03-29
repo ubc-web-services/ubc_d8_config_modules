@@ -6,9 +6,9 @@ dependencies:
     - node.type.ubc_announcement
   module:
     - options
-  enforced: 
-    module: 
-      - ubc_announcement
+  #enforced:
+    #module:
+      #- ubc_announcement
 id: node.ubc_announcement.field_announcement_category
 field_name: field_announcement_category
 entity_type: node

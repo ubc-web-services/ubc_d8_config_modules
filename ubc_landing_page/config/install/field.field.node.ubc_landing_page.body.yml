@@ -6,9 +6,9 @@ dependencies:
     - node.type.ubc_landing_page
   module:
     - text
-  enforced:
-    module:
-      - ubc_landing_page
+  # enforced:
+  #   module:
+  #     - ubc_landing_page
 id: node.ubc_landing_page.body
 field_name: body
 entity_type: node

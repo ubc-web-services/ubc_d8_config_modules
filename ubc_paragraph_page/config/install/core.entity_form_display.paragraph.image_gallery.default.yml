@@ -8,9 +8,9 @@ dependencies:
     - paragraphs.paragraphs_type.image_gallery
   module:
     - paragraphs
-  enforced:
-    module:
-      - ubc_paragraph_page
+  # enforced:
+  #   module:
+  #     - ubc_paragraph_page
 id: paragraph.image_gallery.default
 targetEntityType: paragraph
 bundle: image_gallery
