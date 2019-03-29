@@ -1,0 +1,5 @@
+name: UBC Tailwind CSS Library
+type: module
+description: This module adds the Tailwind Utility CSS framework, as configured for UBC.
+package: UBC Web Services
+core: '8.x'
