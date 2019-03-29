@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ubc_paragraph_entities
+id: text
+label: Text
+icon_uuid: null
+description: 'A simple text region.'
+behavior_plugins: {  }

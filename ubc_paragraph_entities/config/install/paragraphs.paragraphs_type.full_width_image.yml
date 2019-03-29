@@ -1,0 +1,12 @@
+uuid: 13cf63fe-c263-410b-8d4a-e47ca2acb595
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ubc_paragraph_entities
+id: full_width_image
+label: 'Full Width Image'
+icon_uuid: null
+description: 'Add a full width image.'
+behavior_plugins: {  }

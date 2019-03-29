@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ubc_paragraph_entities
+id: slideshow
+label: Slideshow
+icon_uuid: null
+description: 'Adds a slideshow slide.'
+behavior_plugins: {  }

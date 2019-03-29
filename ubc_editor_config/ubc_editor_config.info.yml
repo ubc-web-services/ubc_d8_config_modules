@@ -4,10 +4,6 @@ description: This module defines default configuration for Drupal's WYSIWYG, cKe
 package: UBC Web Services
 dependencies:
   - drupal:ckeditor
-  - drupal:breakpoint
-  - drupal:responsive_image
-  - inline_responsive_images:inline_responsive_images
   - ubc_ckeditor_widgets:ubc_ckeditor_widgets
-version: '8.x-1.0'
+  - ubc_image_styles:ubc_image_styles
 core: '8.x'
-project: 'ubc_editor_config'

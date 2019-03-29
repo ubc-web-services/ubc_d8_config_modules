@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideshow.field_paragraph_bg_color
+    - field.field.paragraph.slideshow.field_paragraph_layout
+    - field.field.paragraph.slideshow.field_paragraph_slide
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - entity_reference_revisions
+  enforced:
+    module:
+      - ubc_paragraph_entities
+id: paragraph.slideshow.default
+targetEntityType: paragraph
+bundle: slideshow
+mode: default
+content:
+  field_paragraph_slide:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_paragraph_bg_color: true
+  field_paragraph_layout: true

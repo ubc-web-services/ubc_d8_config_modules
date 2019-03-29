@@ -1,7 +1,0 @@
-name: UBC Landing Page Views
-type: module
-description: This module adds prebuilt views to the UBC Landing Page content type.
-package: UBC Web Services
-dependencies:
-  - ubc_landing_page:ubc_landing_page
-core: '8.x'

@@ -102,11 +102,11 @@ tips:
   third:
     id: third
     plugin: text
-    label: 'Secondary Page Content'
+    label: 'Custom Page Content'
     weight: -97
     attributes:
-      data-id: edit-field-page-supporting-content-wrapper
-    body: '<p>The secondary or supporting content for your <em>landing page</em> is entered here. Placement of this content will depend on the layout options chosen, but will be in an area of diminished importance.</p>'
+      data-id: edit-field-landing-custom-content-wrapper
+    body: '<p>The custom content for your <em>landing page</em> is entered here. Placement of this content will depend on the layout options chosen, but will be in an area of diminished importance.</p>'
     location: bottom
   publish-settings:
     id: publish-settings

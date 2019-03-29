@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ubc_paragraph_entities
+id: image_gallery
+label: 'Image Gallery'
+icon_uuid: null
+description: 'Insert an image gallery.'
+behavior_plugins: {  }

@@ -35,7 +35,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a href hreflang class="" data-*> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid data-align data-caption data-responsive-image-style> <div class="accordion widget-accordion accordion--closed accordion__content accordion__tab card--one widget-card card first-image card__image-area first-content card__content first-footer card__footer card--two flex-grid flex-1 flex-2 flex-item second-image second-content second-footer card--three third-image third-content third-footer columns--2 columns--2-1 columns--1-2 row col-md-6 columns--2-1-2 col-md-4 col-md-8 columns--2-2-1 columns--3 unit-icon unit-icon-* fa fa-* align-*" aria-*> <button data-state class="widget-expandcollapse"> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p class="text--lead text--uppercase text--lowercase">'
+      allowed_html: '<a href hreflang class="" data-*> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <img src alt data-*> <div class="accordion accordion--* accordion__* widget-accordion card card--* card__* widget-card first-image first-content first-footer second-image second-content second-footer third-image third-content third-footer flex flex-* columns--* row col-md-* unit-icon unit-icon-* fa fa-* align-*" aria-*> <button data-state class="widget-expandcollapse"> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p class="text--*"> <drupal-entity data-*>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_url:

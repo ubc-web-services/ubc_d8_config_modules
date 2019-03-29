@@ -68,7 +68,7 @@ settings:
     language:
       language_list: un
     stylescombo:
-      styles: "p.text--lead|Lead Text\r\np.text--uppercase|Uppercase Text\r\np.text--lowercase|Lowercase Text"
+      styles: "p.text-lead|Lead Text\r\np.text-uppercase|Uppercase Text\r\np.text-lowercase|Lowercase Text"
 image_upload:
   status: true
   scheme: public

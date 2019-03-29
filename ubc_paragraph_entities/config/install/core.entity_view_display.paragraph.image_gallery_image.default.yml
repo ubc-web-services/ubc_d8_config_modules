@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_gallery_image.field_paragraph_gallery_image
+    - paragraphs.paragraphs_type.image_gallery_image
+    - responsive_image.styles.narrow
+  module:
+    - responsive_image
+  enforced:
+    module:
+      - ubc_paragraph_entities
+id: paragraph.image_gallery_image.default
+targetEntityType: paragraph
+bundle: image_gallery_image
+mode: default
+content:
+  field_paragraph_gallery_image:
+    weight: 1
+    label: hidden
+    settings:
+      responsive_image_style: narrow
+      image_link: file
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+hidden: {  }
