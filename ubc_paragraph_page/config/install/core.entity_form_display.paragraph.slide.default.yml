@@ -9,12 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.slide
   module:
     - image
-    - imce
     - link
-  # enforced:
-  #   module:
-  #     - ubc_paragraph_page
-id: paragraph.slide.default
 targetEntityType: paragraph
 bundle: slide
 mode: default
@@ -40,13 +35,10 @@ content:
     settings:
       preview_image_style: thumbnail
       progress_indicator: throbber
-    third_party_settings:
-      imce:
-        enabled: true
+    third_party_settings: {  }
     type: image_image
     region: content
 hidden:
   created: true
   status: true
   uid: true
-

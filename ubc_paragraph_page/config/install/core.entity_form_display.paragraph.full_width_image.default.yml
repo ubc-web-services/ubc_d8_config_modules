@@ -11,11 +11,7 @@ dependencies:
     - paragraphs.paragraphs_type.full_width_image
   module:
     - image
-    - imce
     - link
-  # enforced:
-  #   module:
-  #     - ubc_paragraph_page
 id: paragraph.full_width_image.default
 targetEntityType: paragraph
 bundle: full_width_image
@@ -40,9 +36,7 @@ content:
     settings:
       preview_image_style: thumbnail
       progress_indicator: throbber
-    third_party_settings:
-      imce:
-        enabled: true
+    third_party_settings: {  }
     type: image_image
     region: content
   field_paragraph_layout:

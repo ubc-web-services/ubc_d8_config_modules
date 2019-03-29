@@ -4,11 +4,9 @@ dependencies:
   config:
     - field.field.paragraph.image_gallery_image.field_paragraph_gallery_image
     - paragraphs.paragraphs_type.image_gallery_image
+    - responsive_image.styles.narrow
   module:
-    - photoswipe
-  # enforced:
-  #   module:
-  #     - ubc_paragraph_page
+    - responsive_image
 id: paragraph.image_gallery_image.default
 targetEntityType: paragraph
 bundle: image_gallery_image
@@ -18,11 +16,9 @@ content:
     weight: 1
     label: hidden
     settings:
-      photoswipe_node_style: max_325x325
-      photoswipe_image_style: max_1300x1300
-      photoswipe_caption: alt
-      photoswipe_view_mode: default
+      responsive_image_style: narrow
+      image_link: file
     third_party_settings: {  }
-    type: photoswipe_field_formatter
+    type: responsive_image
     region: content
 hidden: {  }
