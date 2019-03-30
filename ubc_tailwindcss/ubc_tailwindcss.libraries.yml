@@ -2,5 +2,5 @@
 
 tailwindcss:
   css:
-    theme:
+    layout:
       css/ubc.tailwindcss.min.css: {}
