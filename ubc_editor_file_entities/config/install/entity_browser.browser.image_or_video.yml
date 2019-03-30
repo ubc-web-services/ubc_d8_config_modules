@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.media_assets
+  module:
+    - views
+name: image_or_video
+label: 'Image or Video'
+display: iframe
+display_configuration:
+  width: 100%
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  5de9f2bd-0eaa-4869-bbea-36cb073c12aa:
+    settings:
+      view: media_assets
+      view_display: entity_browser_1
+      submit_text: 'Select image or video'
+      auto_select: false
+    uuid: 5de9f2bd-0eaa-4869-bbea-36cb073c12aa
+    weight: 1
+    label: 'Select image or video'
+    id: view

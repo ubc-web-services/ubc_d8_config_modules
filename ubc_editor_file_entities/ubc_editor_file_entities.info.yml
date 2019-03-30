@@ -1,0 +1,19 @@
+name: UBC Editor File Entity Configuration
+type: module
+description: This module defines file entity configuration for Drupal's WYSIWYG, cKeditor.
+package: UBC Web Services
+dependencies:
+  - drupal:content_moderation
+  - drupal:crop
+  - drupal:dropzonejs
+  - drupal:dropzonejs_eb_widget
+  - drupal:embed
+  - drupal:entity_browser
+  - drupal:entity_browser_entity_form
+  - drupal:entity_embed
+  - drupal:field_group
+  - drupal:inline_entity_form
+  - drupal:responsive_image
+  - drupal:media
+  - ubc_editor_config:ubc_editor_config
+core: '8.x'

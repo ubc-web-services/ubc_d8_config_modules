@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.remote_video
+    - media.type.video
+  module:
+    - entity_embed
+    - media
+label: Video
+id: video
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles:
+    - remote_video
+    - video
+  display_plugins:
+    - 'view_mode:media.full'
+    - 'view_mode:media.preview'
+  entity_browser: video_select
+  entity_browser_settings:
+    display_review: false

@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+  module:
+    - entity_embed
+    - media
+label: Image
+id: image
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles:
+    - image
+  display_plugins:
+    - 'view_mode:media.full'
+    - 'view_mode:media.narrow'
+    - 'view_mode:media.preview'
+    - 'view_mode:media.square'
+  entity_browser: image_select
+  entity_browser_settings:
+    display_review: false
