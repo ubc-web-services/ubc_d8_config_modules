@@ -1,0 +1,38 @@
+ubc_card_stacked:
+  label: 'Card: Stacked'
+  category: 'UBC Layouts'
+  template: templates/ubc-card--stacked
+  default_region: content
+  regions:
+    image:
+      label: Image
+    title:
+      label: Title
+    content:
+      label: Content
+    link:
+      label: Link
+ubc_card_inline:
+  label: 'Card: Inline'
+  category: 'UBC Layouts'
+  template: templates/ubc-card--inline
+  default_region: content
+  regions:
+    image:
+      label: Image
+    title:
+      label: Title
+    content:
+      label: Content
+    link:
+      label: Link
+ubc_accordion:
+  label: 'Accordion'
+  category: 'UBC Layouts'
+  template: templates/ubc-accordion
+  default_region: content
+  regions:
+    title:
+      label: Title
+    content:
+      label: Content
