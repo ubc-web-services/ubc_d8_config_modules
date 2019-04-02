@@ -4,7 +4,7 @@ entity.content_item_entity.collection:
   title: 'Add / Edit Content Items'
   route_name: entity.content_item_entity.collection
   description: 'List Content Item entities'
-  parent: system.admin_structure
+  parent: system.admin_content
   weight: 100
 
 
