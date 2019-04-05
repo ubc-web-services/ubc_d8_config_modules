@@ -3,6 +3,14 @@ ubc_card_stacked:
   category: 'UBC Layouts'
   template: templates/ubc-card--stacked
   default_region: content
+  icon_map:
+    - [image]
+    - [image]
+    - [image]
+    - [title]
+    - [content]
+    - [content]
+    - [link]
   regions:
     image:
       label: Image
@@ -17,6 +25,11 @@ ubc_card_inline:
   category: 'UBC Layouts'
   template: templates/ubc-card--inline
   default_region: content
+  icon_map:
+    - [image, title, title]
+    - [image, content, content]
+    - [image, content, content]
+    - [image, link, link]
   regions:
     image:
       label: Image
@@ -31,6 +44,11 @@ ubc_accordion:
   category: 'UBC Layouts'
   template: templates/ubc-accordion
   default_region: content
+  icon_map:
+    - [title]
+    - [content]
+    - [content]
+    - [content]
   regions:
     title:
       label: Title
