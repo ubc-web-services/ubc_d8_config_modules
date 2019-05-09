@@ -1,9 +1,21 @@
 {{ attach_library('ubc_layouts/ubc_accordion') }}
-<div class="accordion accordion--closed">
-  <div class="accordion__tab uppercase" tabindex="0">
+{%
+  set classes = [
+    'accordion',
+    'accordion--closed',
+  ]
+%}
+{% if content %}
+<div{{ attributes.addClass(classes) }}>
+  {% if content.title %}
+  <div {{ region_attributes.title.addClass('accordion__tab', 'uppercase').setAttribute('tabindex', '0') }}>
     {{ content.title }}
   </div>
-  <div class="accordion__content clearfix" style="display: none;">
+  {% endif %}
+  {% if content.content %}
+  <div {{ region_attributes.content.addClass('accordion__content', 'clearfix') }}>
   {{ content.content }}
   </div>
+  {% endif %}
 </div>
+{% endif %}
