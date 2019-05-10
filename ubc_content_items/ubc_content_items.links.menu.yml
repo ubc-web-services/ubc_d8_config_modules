@@ -1,18 +1,13 @@
-
 # Content Item menu items definition
 entity.content_item_entity.collection:
   title: 'Add / Edit Content Items'
   route_name: entity.content_item_entity.collection
   description: 'List Content Item entities'
   parent: system.admin_content
-  weight: 100
-
 
 # Content Item type menu items definition
 entity.content_item_entity_type.collection:
-  title: 'Content Item type'
+  title: 'Content Item types'
   route_name: entity.content_item_entity_type.collection
   description: 'List Content Item type (bundles)'
   parent: system.admin_structure
-  weight: 99
-
