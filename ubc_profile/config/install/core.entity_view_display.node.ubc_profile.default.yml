@@ -1,0 +1,128 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ubc_profile.body
+    - field.field.node.ubc_profile.field_profile_accreditation
+    - field.field.node.ubc_profile.field_profile_department_unit
+    - field.field.node.ubc_profile.field_profile_email
+    - field.field.node.ubc_profile.field_profile_first_name
+    - field.field.node.ubc_profile.field_profile_image
+    - field.field.node.ubc_profile.field_profile_job_title
+    - field.field.node.ubc_profile.field_profile_last_name
+    - field.field.node.ubc_profile.field_profile_office
+    - field.field.node.ubc_profile.field_profile_phone
+    - node.type.ubc_profile
+  module:
+    - field_layout
+    - image
+    - layout_discovery
+    - simple_gmap
+    - telephone
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.ubc_profile.default
+targetEntityType: node
+bundle: ubc_profile
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_profile_accreditation:
+    weight: 106
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_profile_department_unit:
+    weight: 110
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_profile_email:
+    weight: 104
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_profile_first_name:
+    weight: 102
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_profile_image:
+    weight: 109
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_profile_job_title:
+    weight: 107
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_profile_last_name:
+    weight: 103
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_profile_office:
+    weight: 108
+    label: hidden
+    settings:
+      include_map: true
+      include_static_map: false
+      include_link: false
+      include_text: false
+      iframe_height: '200'
+      iframe_width: '200'
+      static_scale: 1
+      zoom_level: 14
+      link_text: 'View larger map'
+      map_type: m
+      langcode: en
+      apikey: ''
+    third_party_settings: {  }
+    type: simple_gmap
+    region: content
+  field_profile_phone:
+    weight: 105
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

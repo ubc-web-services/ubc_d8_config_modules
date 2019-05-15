@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_accreditation
+    - node.type.ubc_profile
+id: node.ubc_profile.field_profile_accreditation
+field_name: field_profile_accreditation
+entity_type: node
+bundle: ubc_profile
+label: Accreditation
+description: 'Add the relevant accreditations for the individual (ie. PhD, etc).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

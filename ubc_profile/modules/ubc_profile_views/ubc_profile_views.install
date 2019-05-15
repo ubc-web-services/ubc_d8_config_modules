@@ -1,0 +1,43 @@
+<?php
+
+
+/**
+ * Implements hook_install().
+ *
+ *
+ * @ingroup ubc_page_views
+ */
+ /*
+function ubc_page_views_install() {
+  
+}
+*/
+
+/**
+ * Implements hook_uninstall().
+ *
+ *
+ * @ingroup ubc_page_views
+ */
+ /*
+function ubc_page_views_uninstall() {
+  
+}
+*/
+
+/**
+ * Update configuration from file.
+ * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
+ */
+ /*
+function ubc_page_views_update_8001() {
+  $config_path = drupal_get_path('module', 'ubc_page_views') . '/config/install/views.view.ubc_page.yml';
+  $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
+  \Drupal::configFactory()
+    ->getEditable('views.view.ubc_page.yml')
+    ->setData($data)
+    ->save(TRUE);
+
+  return 'The UBC Page views have been updated.';
+}
+*/
