@@ -1,0 +1,7 @@
+name: UBC Profile Content Type - Extra Phone Field
+type: module
+description: This module extends the custom Profile content type and its fields.
+package: UBC Web Services
+dependencies:
+  - ubc_profile:ubc_profile
+core: '8.x'
