@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.node.ubc_page.body
-    - field.field.node.ubc_page.field_page_supporting_content
     - node.type.ubc_page
   module:
     - path
@@ -31,19 +30,24 @@ content:
     third_party_settings: {  }
     type: text_textarea_with_summary
     region: content
-  field_page_supporting_content:
-    weight: 5
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
+  created:
+    type: datetime_timestamp
+    weight: 2
     region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
     weight: 3
     region: content
     settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
     third_party_settings: {  }
   title:
     type: string_textfield
