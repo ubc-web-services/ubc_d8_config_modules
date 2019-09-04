@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: events
+label: Events
+type: 'canonical_entities:node'
+pattern: 'events/[node:title]-[node:field_event_start_date:date:custom:M-d-Y]'
+selection_criteria:
+  93b517bf-3a65-486c-b869-c50543c84c2c:
+    id: node_type
+    bundles:
+      ubc_event: ubc_event
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 93b517bf-3a65-486c-b869-c50543c84c2c
+selection_logic: and
+weight: -5
+relationships: {  }

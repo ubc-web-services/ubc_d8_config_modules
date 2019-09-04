@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_end_date
+    - node.type.ubc_event
+  module:
+    - datetime
+  # enforced:
+  #   module:
+  #     - ubc_event
+id: node.ubc_event.field_event_end_date
+field_name: field_event_end_date
+entity_type: node
+bundle: ubc_event
+label: 'Event End Date'
+description: 'Add the end date of the event. For single day events, both the <em>Event Start Date</em> and <em>Event End Date</em> should be the same.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
+

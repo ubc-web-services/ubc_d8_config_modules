@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_hide_start_time
+    - node.type.ubc_event
+  # enforced:
+  #   module:
+  #     - ubc_event
+id: node.ubc_event.field_event_hide_start_time
+field_name: field_event_hide_start_time
+entity_type: node
+bundle: ubc_event
+label: 'Hide Start Time?'
+description: 'By default, the <em>start time</em> will be shown beside the start date. Check this option to hide the time.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
