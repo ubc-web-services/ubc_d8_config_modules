@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ubc_page
+label: 'UBC Pages'
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parents]/[node:menu-link:title]'
+selection_criteria:
+  d93c785c-c486-4c8c-b055-e220c44a4519:
+    id: node_type
+    bundles:
+      ubc_page: ubc_page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: d93c785c-c486-4c8c-b055-e220c44a4519
+selection_logic: and
+weight: -5
+relationships: {  }
