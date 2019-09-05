@@ -67,10 +67,10 @@ function ubc_paragraph_entities_theme($existing, $type, $theme, $path){
  *
  */
 function ubc_paragraph_entities_theme_registry_alter(&$theme_registry) {
-  $module_path = drupal_get_path('module', 'ubc_paragraph_page') . '/templates';
+  $module_path = drupal_get_path('module', 'ubc_paragraph_entities') . '/templates';
   $template_objects = drupal_find_theme_templates($theme_registry, '.html.twig', $module_path);
   $paragraph_types = ubc_paragraph_entities_get_paragraph_types();
-  //$field_types = ubc_paragraph_page_get_field_types();
+  //$field_types = ubc_paragraph_entities_get_field_types();
 
   // 1. Loop through the paragraph types
   // 2. Check if each paragraph exists in the `$template_objects` array
