@@ -5,4 +5,5 @@ package: UBC Web Services
 dependencies:
   - drupal:node
   - drupal:toolbar
+  - drupal:address
 core: '8.x'
