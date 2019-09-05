@@ -14,7 +14,6 @@ dependencies:
     - field.field.node.ubc_event.field_event_private
     - field.field.node.ubc_event.field_event_start_date
     - field.field.node.ubc_event.field_event_title_over_image
-    - field.field.node.ubc_event.field_event_unit
     - node.type.ubc_event
   module:
     - address
@@ -33,105 +32,147 @@ bundle: ubc_event
 mode: default
 content:
   body:
-    label: hidden
-    type: text_default
-    weight: 2
-    settings: {  }
+    type: text_textarea_with_summary
+    weight: 10
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
     third_party_settings: {  }
     region: content
-  content_moderation_control:
-    weight: 0
+  created:
+    type: datetime_timestamp
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   field_event_category:
-    weight: 6
-    label: hidden
+    weight: 9
     settings:
-      link: true
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_autocomplete
     region: content
   field_event_end_date:
-    weight: 5
-    label: hidden
-    settings:
-      format_type: medium
-      timezone_override: ''
+    weight: 3
+    settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_event_image:
-    weight: 8
-    label: hidden
+  field_event_hide_end_time:
+    weight: 4
     settings:
-      image_style: ''
-      image_link: ''
+      display_label: true
     third_party_settings: {  }
-    type: image
+    type: boolean_checkbox
+    region: content
+  field_event_hide_start_time:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_event_image:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_event_link:
-    weight: 7
-    label: hidden
+    weight: 5
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
-    type: link
+    type: link_default
     region: content
   field_event_location:
-    weight: 9
-    label: hidden
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_event_map:
-    weight: 10
-    label: hidden
+    weight: 12
     settings:
-      include_map: true
-      apikey: ''
-      iframe_width: 100%
-      iframe_height: 100%
-      static_scale: 1
-      link_text: 'View larger map'
-      zoom_level: 14
-      map_type: m
-      langcode: en
-      include_static_map: false
-      include_link: false
-      include_text: false
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: simple_gmap
+    type: string_textfield
+    region: content
+  field_event_private:
+    weight: 13
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_event_start_date:
-    weight: 4
-    label: hidden
-    settings:
-      format_type: medium
-      timezone_override: ''
+    weight: 1
+    settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_event_unit:
-    weight: 3
-    label: hidden
+  field_event_title_over_image:
+    weight: 7
     settings:
-      link: true
+      display_label: true
     third_party_settings: {  }
-    type: entity_reference_label
+    type: boolean_checkbox
     region: content
-  links:
-    weight: 1
+  moderation_state:
+    type: moderation_state_default
+    weight: 20
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_event_hide_end_time: true
-  field_event_hide_start_time: true
-  field_event_private: true
-  field_event_title_over_image: true
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 19
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 17
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 14
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }
