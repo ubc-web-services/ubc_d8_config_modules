@@ -1,4 +1,4 @@
-name: UBC Date Formats Styles
+name: UBC Date Format Styles
 type: module
 description: This module defines a set of date formats used by other UBC config modules.
 package: UBC Web Services

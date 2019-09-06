@@ -1,23 +1,64 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.ubc_announcement
   module:
-    - node
-_core:
-  default_config_hash: EiB1-Hxawzet34Ws9gB-G3FfTkIPB7M8irqXDubBfJM
-id: ubc_announcements
-label: 'UBC Announcements'
-type: 'canonical_entities:node'
-pattern: 'news/[node:created:custom:F-m-Y]/[node:title]'
-selection_criteria:
-  9dfa452f-e3da-42d4-ba22-28eecd0e4171:
-    id: node_type
-    bundles:
-      ubc_announcement: ubc_announcement
-    negate: false
-    context_mapping:
-      node: node
-    uuid: 9dfa452f-e3da-42d4-ba22-28eecd0e4171
-selection_logic: and
-weight: -5
-relationships: {  }
+    - content_moderation
+id: ubc_announcement
+label: UBC Announcement
+type: content_moderation
+type_settings:
+  states:
+    archived:
+      published: false
+      default_revision: true
+      label: Archived
+      weight: 2
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: 0
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 1
+  transitions:
+    archived:
+      label: Archived
+      from:
+        - published
+      to: archived
+      weight: 2
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: 0
+      from:
+        - draft
+        - published
+    publish:
+      label: Publish
+      to: published
+      weight: 1
+      from:
+        - draft
+        - published
+    restore:
+      label: Restore
+      from:
+        - archived
+      to: published
+      weight: 4
+    restore_to_draft:
+      label: 'Restore to Draft'
+      from:
+        - archived
+      to: draft
+      weight: 3
+  entity_types:
+    node:
+      - ubc_announcement
+  default_moderation_state: draft

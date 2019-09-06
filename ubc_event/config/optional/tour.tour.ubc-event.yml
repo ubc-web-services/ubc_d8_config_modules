@@ -60,7 +60,7 @@ dependencies:
   # enforced:
   #   module:
   #     - ubc_event
-id: ubc-page
+id: ubc-event
 label: 'UBC Event Tour'
 module: ubc_event
 routes:
