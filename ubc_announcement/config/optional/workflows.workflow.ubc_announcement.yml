@@ -6,7 +6,7 @@ dependencies:
   module:
     - content_moderation
 id: ubc_announcement
-label: Announcement
+label: UBC Announcement
 type: content_moderation
 type_settings:
   states:
