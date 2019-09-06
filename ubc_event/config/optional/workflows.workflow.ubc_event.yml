@@ -5,7 +5,7 @@ dependencies:
     - node.type.ubc_event
   module:
     - content_moderation
-id: events
+id: ubc_event
 label: UBC Events
 type: content_moderation
 type_settings:
