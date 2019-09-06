@@ -174,7 +174,7 @@ tips:
   eleven:
     id: eleven
     plugin: text
-    label: 'Secondary Page Content'
+    label: 'Event Location'
     weight: -89
     attributes:
       data-id: edit-field-event-location-0
