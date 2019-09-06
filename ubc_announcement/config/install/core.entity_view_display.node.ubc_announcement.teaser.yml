@@ -4,6 +4,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.ubc_announcement.body
+    - field.field.node.ubc_announcement.field_announcement_category
+    - field.field.node.ubc_announcement.field_announcement_external_link
+    - field.field.node.ubc_announcement.field_announcement_feature_image
+    - field.field.node.ubc_announcement.field_announcement_image_teaser
     - node.type.ubc_announcement
   module:
     - text
@@ -24,7 +28,16 @@ content:
       trim_length: 350
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_announcement_category: true
+  field_announcement_external_link: true
+  field_announcement_feature_image: true
+  field_announcement_image_teaser: true

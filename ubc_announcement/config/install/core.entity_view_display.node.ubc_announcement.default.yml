@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.ubc_announcement.field_announcement_external_link
     - field.field.node.ubc_announcement.field_announcement_feature_image
     - field.field.node.ubc_announcement.field_announcement_image_teaser
-    - field.field.node.ubc_announcement.field_announcement_supporting
     - node.type.ubc_announcement
   module:
     - image
@@ -27,6 +26,11 @@ content:
     label: hidden
     type: text_default
     weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -71,5 +75,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_announcement_supporting: true
+hidden: {  }
