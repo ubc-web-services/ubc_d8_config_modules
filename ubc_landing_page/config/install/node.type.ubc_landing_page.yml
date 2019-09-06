@@ -14,7 +14,7 @@ third_party_settings:
     parent: 'main:'
 name: 'Landing Page'
 type: ubc_landing_page
-description: 'Use <em>Landing Pages</em> to create top tier pages, typically a main item within the primary navigation.'
+description: 'Use <em>Landing Pages</em> to create top tier pages, typically a main item within the primary navigation. Landing Pages are more flexible than simple <em>Pages</em>.'
 help: ''
 new_revision: true
 preview_mode: 1
