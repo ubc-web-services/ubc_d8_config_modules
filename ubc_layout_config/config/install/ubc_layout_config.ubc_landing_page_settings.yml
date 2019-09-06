@@ -1,7 +1,0 @@
-layout: stacked
-your_message: 'this is the title'
-favorite: red
-is_active: TRUE
-tests_taken:
-  SAT: ''
-  ACT: ACT
