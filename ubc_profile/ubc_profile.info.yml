@@ -3,8 +3,6 @@ type: module
 description: This module defines a custom Profile content type and its fields.
 package: UBC Web Services
 dependencies:
-  - drupal:field_layout
-  - drupal:layout_discovery
   - drupal:node
   - drupal:pathauto
   - drupal:tour

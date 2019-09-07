@@ -14,17 +14,11 @@ dependencies:
     - field.field.node.ubc_profile.field_profile_phone
     - node.type.ubc_profile
   module:
-    - field_layout
     - image
-    - layout_discovery
     - simple_gmap
     - telephone
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.ubc_profile.default
 targetEntityType: node
 bundle: ubc_profile

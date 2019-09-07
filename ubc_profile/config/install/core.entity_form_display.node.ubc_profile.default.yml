@@ -15,16 +15,11 @@ dependencies:
     - image.style.thumbnail
     - node.type.ubc_profile
   module:
-    - field_layout
+    - content_moderation
     - image
-    - layout_discovery
     - path
     - telephone
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.ubc_profile.default
 targetEntityType: node
 bundle: ubc_profile
@@ -117,6 +112,12 @@ content:
     third_party_settings: {  }
     type: telephone_default
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
     weight: 15
