@@ -1,0 +1,63 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.feature_image.field_paragraph_feature_caption
+    - field.field.paragraph.feature_image.field_paragraph_feature_image
+    - field.field.paragraph.feature_image.field_paragraph_feature_link
+    - field.field.paragraph.feature_image.field_paragraph_feature_title
+    - field.field.paragraph.feature_image.field_paragraph_feature_width
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.feature_image
+  module:
+    - image
+    - link
+  enforced:
+    module:
+      - ubc_paragraph_entities
+id: paragraph.feature_image.default
+targetEntityType: paragraph
+bundle: feature_image
+mode: default
+content:
+  field_paragraph_feature_caption:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_paragraph_feature_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_paragraph_feature_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_paragraph_feature_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_paragraph_feature_width:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

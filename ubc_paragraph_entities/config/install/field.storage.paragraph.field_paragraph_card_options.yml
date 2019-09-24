@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+  enforced:
+    module:
+      - ubc_paragraph_entities
+id: paragraph.field_paragraph_card_options
+field_name: field_paragraph_card_options
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: top-left
+      label: 'Text top left'
+    -
+      value: top-right
+      label: 'Text top right'
+    -
+      value: bottom-left
+      label: 'Text bottom left'
+    -
+      value: bottom-right
+      label: 'Text bottom right'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

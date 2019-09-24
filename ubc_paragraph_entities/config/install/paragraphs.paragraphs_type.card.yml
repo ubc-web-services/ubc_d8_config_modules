@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:7f66d63d-cd37-468d-857a-41195d78e374'
+  enforced:
+    module:
+      - ubc_paragraph_entities
+id: card
+label: Card
+icon_uuid: 7f66d63d-cd37-468d-857a-41195d78e374
+description: 'Add a content Card.'
+behavior_plugins: {  }

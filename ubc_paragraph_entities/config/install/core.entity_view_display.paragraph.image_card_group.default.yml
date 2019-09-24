@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_card_group.field_paragraph_image_card
+    - field.field.paragraph.image_card_group.field_paragraph_image_per_row
+    - paragraphs.paragraphs_type.image_card_group
+  module:
+    - entity_reference_revisions
+    - options
+  enforced:
+    module:
+      - ubc_paragraph_entities
+id: paragraph.image_card_group.default
+targetEntityType: paragraph
+bundle: image_card_group
+mode: default
+content:
+  field_paragraph_image_card:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_paragraph_image_per_row:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden: {  }

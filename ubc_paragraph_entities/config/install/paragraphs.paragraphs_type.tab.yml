@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:2ad93cba-a46b-4717-b6e8-9a701b984572'
+  enforced:
+    module:
+      - ubc_paragraph_entities
+id: tab
+label: Tab
+icon_uuid: 2ad93cba-a46b-4717-b6e8-9a701b984572
+description: 'Add a single Tab instance.'
+behavior_plugins: {  }

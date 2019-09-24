@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_number_per_row
+    - paragraphs.paragraphs_type.card_group
+  module:
+    - options
+  enforced:
+    module:
+      - ubc_paragraph_entities
+id: paragraph.card_group.field_paragraph_number_per_row
+field_name: field_paragraph_number_per_row
+entity_type: paragraph
+bundle: card_group
+label: 'Number per Row'
+description: 'Set the number of cards that should appear per row <em><small>note that they will be full width at screen sizes lower than 960px</small></em>'
+required: false
+translatable: false
+default_value:
+  -
+    value: md--auto-grid--full
+default_value_callback: ''
+settings: {  }
+field_type: list_string

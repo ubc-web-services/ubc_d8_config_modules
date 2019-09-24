@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:77c1cda9-624a-4080-92ec-10cbc5d1986d'
+  enforced:
+    module:
+      - ubc_paragraph_entities
+id: image_card
+label: 'Image Card'
+icon_uuid: 77c1cda9-624a-4080-92ec-10cbc5d1986d
+description: 'Add a single Image Card (a card with a full width image and text placed over top of the image).'
+behavior_plugins: {  }

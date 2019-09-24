@@ -5,14 +5,51 @@ dependencies:
     - field.field.node.ubc_landing_page.body
     - field.field.node.ubc_landing_page.field_landing_custom_content
     - field.field.node.ubc_landing_page.field_landing_feature_image
+    - field.field.node.ubc_landing_page.field_landing_image_teaser
+    - field.field.node.ubc_landing_page.field_landing_meta_tags
+    - field.field.node.ubc_landing_page.field_landing_teaser_second
     - image.style.thumbnail
     - node.type.ubc_landing_page
   module:
     - content_moderation
+    - field_group
     - image
+    - metatag
     - paragraphs
     - path
     - text
+third_party_settings:
+  field_group:
+    group_feature_area:
+      children:
+        - field_landing_feature_image
+        - group_feature_title_override
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+        open: false
+      label: 'Feature Area'
+      region: content
+    group_feature_title_override:
+      children:
+        - field_landing_image_teaser
+        - field_landing_teaser_second
+      parent_name: group_feature_area
+      weight: 8
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'By default the title will appear over top of the image when a feature image is added. If you wish to change this (for example, the title is too long or you want it to appear on two lines) , use the two text fields below.'
+        open: false
+        required_fields: true
+      label: 'Feature Title Override'
+      region: content
 id: node.ubc_landing_page.default
 targetEntityType: node
 bundle: ubc_landing_page
@@ -29,7 +66,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -46,22 +83,44 @@ content:
     third_party_settings: {  }
     region: content
   field_landing_feature_image:
-    weight: 1
+    weight: 6
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
+  field_landing_image_teaser:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_landing_meta_tags:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_landing_teaser_second:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   moderation_state:
     type: moderation_state_default
-    weight: 8
+    weight: 7
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -69,7 +128,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 8
     region: content
     third_party_settings: {  }
   title:
@@ -82,7 +141,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60

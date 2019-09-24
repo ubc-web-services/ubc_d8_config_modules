@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.custom_content
     - field.field.node.ubc_landing_page.body
     - field.field.node.ubc_landing_page.field_landing_custom_content
     - field.field.node.ubc_landing_page.field_landing_feature_image
@@ -10,40 +11,27 @@ dependencies:
     - field.field.node.ubc_landing_page.field_landing_teaser_second
     - node.type.ubc_landing_page
   module:
-    - metatag
-    - text
+    - entity_reference_revisions
     - user
-id: node.ubc_landing_page.default
+id: node.ubc_landing_page.custom_content
 targetEntityType: node
 bundle: ubc_landing_page
-mode: default
+mode: custom_content
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  content_moderation_control:
+  field_landing_custom_content:
+    type: entity_reference_revisions_entity_view
     weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_landing_meta_tags:
-    weight: 3
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: metatag_empty_formatter
-    region: content
-  links:
-    weight: 2
-    region: content
-    settings: {  }
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
 hidden:
-  field_landing_custom_content: true
+  body: true
+  content_moderation_control: true
   field_landing_feature_image: true
   field_landing_image_teaser: true
+  field_landing_meta_tags: true
   field_landing_teaser_second: true
+  links: true
