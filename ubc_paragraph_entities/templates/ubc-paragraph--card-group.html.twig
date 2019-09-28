@@ -41,12 +41,30 @@
 {%
   set classes = [
     'paragraph',
-    'relative',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    'md--auto-grid',
+    paragraph.field_paragraph_group_title ? 'title-right',
+    paragraph.field_paragraph_number_per_row.value|clean_class,
+    'my-4',
   ]
 %}
+{%
+  set title_classes = [
+    'text-ubc-blue',
+    'mb-0',
+    'w-full',
+    paragraph.field_paragraph_group_title ? 'text-right',
+  ]
+%}
+{%
+  set card_title = paragraph.field_paragraph_group_title.value
+%}
 {% block paragraph %}
+  {% if paragraph.field_paragraph_group_title.value|render %}
+    <h2{{ title_attributes.addClass(title_classes) }}>{{ card_title }}</h2>
+  {% endif %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
       {{ content }}

@@ -43,20 +43,50 @@
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    paragraph.field_paragraph_bgcolour_option.value ? paragraph.field_paragraph_bgcolour_option.value|clean_class,
-    paragraph.field_paragraph_width_option.value ? paragraph.field_paragraph_width_option.value|clean_class,
+    paragraph.field_paragraph_feature_options.value ?
+    paragraph.field_paragraph_feature_options.value|clean_class,
+    paragraph.field_paragraph_feature_width.value ? paragraph.field_paragraph_feature_width.value|clean_class,
     'my-8',
 
   ]
 %}
 {% set layoutAttributes = create_attribute() %}
+{% set figureAttributes = create_attribute() %}
+{%
+  set figure_classes = [
+    'relative',
+    'has-content--after',
+    paragraph.field_paragraph_feature_link.value or paragraph.field_paragraph_feature_title.value ? 'has-gradient',
+  ]
+%}
+{% set textPostion = field_paragraph_feature_options.value|clean_class %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% if paragraph.field_paragraph_width_option.value %}
     <div{{ layoutAttributes.addClass('container', 'mx-auto', 'p-4') }}>
     {% endif %}
     {% block content %}
-      {{ content }}
+      <figure{{ figureAttributes.addClass(figure_classes) }}>
+      {{ content.field_paragraph_feature_image.0 }}
+      {% if paragraph.field_paragraph_feature_link.value or paragraph.field_paragraph_feature_title.value %}
+       <div class="text-region w-full absolute z-10">
+        <div class="container mx-auto px-4 py-8">
+        {% if paragraph.field_paragraph_feature_title.value %}
+        <h2 class="text-white">{{ paragraph.field_paragraph_feature_title.value }}</h2>
+        {% endif %}
+        {% if paragraph.field_paragraph_feature_link.value %}
+        <p class="text-hug"><a href="{{ content.field_paragraph_feature_link[0]['#url'] }}" class="cta-button cta-button--underline cta-button--underline-neptune cta-button--light cta-button--underline-heavy mr-6">{{ content.field_paragraph_feature_link[0]['#title'] }} <svg role="presentation" class="unit-button__icon text-white" viewBox="0 0 19 19">
+            <use xlink:href="#icon-arrow-circle"></use>
+          </svg>
+        </a></p>
+        {% endif %}
+        </div>
+      </div>
+      {% endif %}
+      {% if paragraph.field_paragraph_feature_caption.value %}
+      <figcaption class="container mx-auto px-4">{{ paragraph.field_paragraph_feature_caption.value }}</figcaption>
+      {% endif %}
+      </figure>
     {% endblock %}
     {% if paragraph.field_paragraph_width_option.value %}
     </div>

@@ -38,35 +38,43 @@
  * @ingroup themeable
  */
 #}
+{% set card_attributes = create_attribute() %}
+{% set gradient_attributes = create_attribute() %}
 {%
   set classes = [
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    paragraph.field_paragraph_bg_color.value ? paragraph.field_paragraph_bg_color.value|clean_class,
+    'auto-grid__cell',
+    'my-8',
   ]
 %}
-{% set layoutAttributes = create_attribute() %}
-{% if paragraph.field_paragraph_layout.value %}
 {%
-  set layoutClass = [
-    paragraph.field_paragraph_layout.value|clean_class,
+  set card_classes = [
+    paragraph.field_paragraph_card_options.value|clean_class,
+    'ubc-card',
+    'block',
+    'ubc-card--image-w-overlay',
+    'ubc-card--shadow',
+    'hover--no-underline group',
   ]
 %}
-{% endif %}
-{{ attach_library('ubc_paragraph_page/flexslider') }}
+{% set bg_img = content.field_paragraph_card_image['0'] %}
+
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-    {% if paragraph.field_paragraph_layout.value %}
-    <div{{ layoutAttributes.addClass(layoutClass) }}>
-    {% endif %}
-    <div class="flexslider">
-    {% block content %}
-      {{ content }}
-    {% endblock %}
+<div{{ attributes.addClass(classes) }}>
+  {% block content %}
+  <a{{ card_attributes.addClass(card_classes) }} href="{{ paragraph.field_paragraph_card_link.0.url }}" title="{{ paragraph.field_paragraph_card_link.0.title }}">
+    <div class="ubc-card__media min-h-64 has-content--after bg-cover" style="background-image: url({{ bg_img }});">
+      <div class="ubc-card__media-content flex flex-wrap min-h-64 relative">
+        <div class="ubc-card__content w-full z-20">
+          <h2 class="card__title text-white border-b-2 border-white mb-2 uppercase text-base xl--text-xl text-hug group-hover--border-ubc-blue-cornflower inline-block has-content--after has-icon--arrow-circle">{{ paragraph.field_paragraph_card_title.value }}</h2>
+          <p class="text-hug">{{ paragraph.field_paragraph_card_text.value }}</p>
+        </div>
+      </div>
     </div>
-    {% if paragraph.field_paragraph_layout.value %}
-    </div>
-    {% endif %}
-  </div>
+  </a>
+  {# content #}
+  {% endblock %}
+</div>
 {% endblock paragraph %}

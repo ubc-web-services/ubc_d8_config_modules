@@ -49,7 +49,7 @@
 {% set layoutAttributes = create_attribute() %}
 {% if paragraph.field_paragraph_layout.value %}
 {%
-  set layoutClass = [
+  set layout_class = [
     paragraph.field_paragraph_layout.value|clean_class,
   ]
 %}
@@ -57,7 +57,7 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% if paragraph.field_paragraph_layout.value %}
-    <div{{ layoutAttributes.addClass(layoutClass) }}>
+    <div{{ layoutAttributes.addClass(layout_class) }}>
     {% endif %}
     {% block content %}
       <figure class="relative has-content--after has-gradient-top--after">
