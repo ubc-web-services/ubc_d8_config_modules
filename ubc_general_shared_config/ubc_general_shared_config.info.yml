@@ -1,0 +1,8 @@
+name: UBC General Shared Configuration
+type: module
+description: This module defines shared configuration items (ie. display modes, views, etc).
+package: UBC Web Services
+dependencies:
+  - drupal:node
+  - drupal:taxonomy
+core: '8.x'
