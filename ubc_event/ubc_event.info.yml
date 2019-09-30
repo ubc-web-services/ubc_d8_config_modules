@@ -4,6 +4,7 @@ description: This module defines a custom Event content type and its fields.
 package: UBC Web Services
 dependencies:
   - drupal:address
+  - drupal:content_moderation
   - drupal:datetime
   - drupal:field_group
   - drupal:metatag

@@ -4,6 +4,7 @@ description: This module defines a custom Profile content type and its fields.
 package: UBC Web Services
 dependencies:
   - drupal:auto_entitylabel
+  - drupal:content_moderation
   - drupal:field_group
   - drupal:metatag
   - drupal:node
