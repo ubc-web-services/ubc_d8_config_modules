@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: max_970x970
+label: 'Max 970x970'
+effects:
+  65b0e913-d2ef-4ba4-8f7b-443cb07f709c:
+    uuid: 65b0e913-d2ef-4ba4-8f7b-443cb07f709c
+    id: image_scale
+    weight: 1
+    data:
+      width: 970
+      height: 970
+      upscale: false

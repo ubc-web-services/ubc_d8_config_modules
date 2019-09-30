@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: max_640w
+label: 'Max 640w'
+effects:
+  8aae1731-b787-479b-b74f-c469ee7bf0a1:
+    uuid: 8aae1731-b787-479b-b74f-c469ee7bf0a1
+    id: image_scale
+    weight: 1
+    data:
+      width: 640
+      height: null
+      upscale: false

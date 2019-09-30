@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: square_600
+label: 'Square 600'
+effects:
+  0c723b83-50f2-44a8-a1bd-b1158de4a462:
+    uuid: 0c723b83-50f2-44a8-a1bd-b1158de4a462
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 600
+      anchor: center-center
