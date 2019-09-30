@@ -4,9 +4,6 @@ dependencies:
   module:
     - node
     - taxonomy
-  # enforced:
-  #   module:
-  #     - ubc_event
 id: node.field_event_category
 field_name: field_event_category
 entity_type: node

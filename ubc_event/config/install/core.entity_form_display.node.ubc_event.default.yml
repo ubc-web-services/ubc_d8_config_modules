@@ -5,35 +5,75 @@ dependencies:
     - field.field.node.ubc_event.body
     - field.field.node.ubc_event.field_event_category
     - field.field.node.ubc_event.field_event_end_date
-    - field.field.node.ubc_event.field_event_hide_end_time
-    - field.field.node.ubc_event.field_event_hide_start_time
     - field.field.node.ubc_event.field_event_image
+    - field.field.node.ubc_event.field_event_image_teaser
     - field.field.node.ubc_event.field_event_link
     - field.field.node.ubc_event.field_event_location
     - field.field.node.ubc_event.field_event_map
+    - field.field.node.ubc_event.field_event_meta_tags
     - field.field.node.ubc_event.field_event_private
     - field.field.node.ubc_event.field_event_start_date
-    - field.field.node.ubc_event.field_event_title_over_image
+    - field.field.node.ubc_event.field_event_tags
+    - field.field.node.ubc_event.field_event_teaser_second
     - image.style.thumbnail
     - node.type.ubc_event
-    - workflows.workflow.editorial
+    - workflows.workflow.ubc_event
   module:
     - address
     - content_moderation
     - datetime
-    - field_layout
+    - field_group
     - image
-    - layout_discovery
     - link
+    - metatag
     - path
     - text
-  # enforced:
-  #   module:
-  #     - ubc_event
 third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
+  field_group:
+    group_feature_area:
+      children:
+        - field_event_image
+        - group_feature_title_override
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+        open: false
+      label: 'Feature Area'
+      region: content
+    group_feature_title_override:
+      children:
+        - field_event_image_teaser
+        - field_event_teaser_second
+      parent_name: group_feature_area
+      weight: 9
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'By default the title will appear over top of the image when a feature image is added. If you wish to change this (for example, the title is too long or you want it to appear on two lines) , use the two text fields below.'
+        open: false
+        required_fields: true
+      label: 'Feature Title Override'
+      region: content
+    group_event_time:
+      children:
+        - field_event_start_date
+        - field_event_end_date
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Event Time'
+      region: content
 id: node.ubc_event.default
 targetEntityType: node
 bundle: ubc_event
@@ -41,7 +81,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 9
+    weight: 6
     settings:
       rows: 9
       summary_rows: 3
@@ -50,12 +90,12 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 15
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_event_category:
-    weight: 8
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
@@ -64,35 +104,29 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_event_end_date:
-    weight: 3
+    weight: 27
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_event_hide_end_time:
-    weight: 4
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_event_hide_start_time:
-    weight: 2
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_event_image:
-    weight: 5
+    weight: 6
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
+  field_event_image_teaser:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_event_link:
-    weight: 10
+    weight: 9
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -100,38 +134,51 @@ content:
     type: link_default
     region: content
   field_event_location:
-    weight: 11
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_event_map:
-    weight: 12
+    weight: 8
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_event_meta_tags:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   field_event_private:
-    weight: 13
+    weight: 3
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_event_start_date:
-    weight: 1
+    weight: 26
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_event_title_over_image:
-    weight: 6
-    settings:
-      display_label: true
+  field_event_tags:
+    weight: 1
+    settings: {  }
     third_party_settings: {  }
-    type: boolean_checkbox
+    type: options_select
+    region: content
+  field_event_teaser_second:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_event_unit:
     weight: 7
@@ -144,13 +191,13 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 20
+    weight: 16
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 18
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -158,21 +205,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 12
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 19
+    weight: 15
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 17
+    weight: 13
     region: content
     third_party_settings: {  }
   title:
@@ -185,7 +232,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 14
+    weight: 10
     settings:
       match_operator: CONTAINS
       size: 60

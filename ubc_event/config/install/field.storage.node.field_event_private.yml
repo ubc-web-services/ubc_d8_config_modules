@@ -3,9 +3,6 @@ status: true
 dependencies:
   module:
     - node
-  # enforced:
-  #   module:
-  #     - ubc_event
 id: node.field_event_private
 field_name: field_event_private
 entity_type: node

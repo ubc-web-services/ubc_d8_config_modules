@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_image_teaser
+    - node.type.ubc_event
+id: node.ubc_event.field_event_image_teaser
+field_name: field_event_image_teaser
+entity_type: node
+bundle: ubc_event
+label: 'Image Teaser'
+description: 'This is additional text that appears within the caption area of the feature image. It should be brief and encourage action.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

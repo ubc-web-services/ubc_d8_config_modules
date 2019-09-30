@@ -6,9 +6,6 @@ dependencies:
     - node.type.ubc_event
   module:
     - text
-  # enforced:
-  #   module:
-  #     - ubc_event
 id: node.ubc_event.body
 field_name: body
 entity_type: node

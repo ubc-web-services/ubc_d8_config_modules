@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.card_horizontal
     - field.field.node.ubc_event.body
     - field.field.node.ubc_event.field_event_category
     - field.field.node.ubc_event.field_event_end_date
@@ -15,34 +16,37 @@ dependencies:
     - field.field.node.ubc_event.field_event_start_date
     - field.field.node.ubc_event.field_event_tags
     - field.field.node.ubc_event.field_event_teaser_second
+    - image.style.max_640w
     - node.type.ubc_event
   module:
     - address
     - datetime
-    - link
-    - metatag
-    - simple_gmap
+    - image
     - text
     - user
-id: node.ubc_event.default
+id: node.ubc_event.card_horizontal
 targetEntityType: node
 bundle: ubc_event
-mode: default
+mode: card_horizontal
 content:
   body:
     label: hidden
-    type: text_default
-    weight: 1
-    settings: {  }
+    type: text_summary_or_trimmed
+    weight: 3
+    settings:
+      trim_length: 350
     third_party_settings: {  }
     region: content
-  content_moderation_control:
+  field_event_category:
     weight: 0
-    region: content
-    settings: {  }
+    label: hidden
+    settings:
+      link: false
     third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_event_end_date:
-    weight: 7
+    weight: 5
     label: hidden
     settings:
       timezone_override: ''
@@ -50,53 +54,23 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_event_link:
-    weight: 2
+  field_event_image:
+    type: image_url
+    weight: 1
+    region: content
     label: hidden
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      image_style: max_640w
     third_party_settings: {  }
-    type: link
-    region: content
   field_event_location:
-    weight: 3
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
-  field_event_map:
-    weight: 4
-    label: hidden
-    settings:
-      include_map: true
-      apikey: ''
-      iframe_width: 100%
-      iframe_height: 100%
-      static_scale: 1
-      link_text: 'View larger map'
-      zoom_level: 14
-      map_type: m
-      langcode: en
-      include_static_map: false
-      include_link: false
-      include_text: false
-    third_party_settings: {  }
-    type: simple_gmap
-    region: content
-  field_event_meta_tags:
-    type: metatag_empty_formatter
-    weight: 5
-    region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   field_event_start_date:
-    weight: 6
+    weight: 4
     label: hidden
     settings:
       timezone_override: ''
@@ -105,21 +79,19 @@ content:
     type: datetime_default
     region: content
   field_event_tags:
-    weight: 8
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
     type: entity_reference_label
+    weight: 6
     region: content
-  links:
-    weight: 9
-    region: content
-    settings: {  }
+    label: hidden
+    settings:
+      link: false
     third_party_settings: {  }
 hidden:
-  field_event_category: true
-  field_event_image: true
+  content_moderation_control: true
   field_event_image_teaser: true
+  field_event_link: true
+  field_event_map: true
+  field_event_meta_tags: true
   field_event_private: true
   field_event_teaser_second: true
+  links: true

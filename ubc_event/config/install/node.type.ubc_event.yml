@@ -3,16 +3,13 @@ status: true
 dependencies:
   module:
     - menu_ui
-  # enforced:
-  #   module:
-  #     - ubc_event
 third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
 name: Event
 type: ubc_event
-description: 'Use <em>Events</em> to publish details about upcoming or ongoing events. Events are not typically included in site menus, but are sorted, searched and filtered based on lists of teasers.'
+description: '''Use <em>Events</em> to publish details about upcoming or ongoing events. Events are not typically included in site menus, but are sorted, searched and filtered based on lists of teasers.'
 help: ''
 new_revision: true
 preview_mode: 1

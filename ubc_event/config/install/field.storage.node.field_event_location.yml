@@ -4,9 +4,6 @@ dependencies:
   module:
     - address
     - node
-  # enforced:
-  #   module:
-  #     - ubc_event
 id: node.field_event_location
 field_name: field_event_location
 entity_type: node

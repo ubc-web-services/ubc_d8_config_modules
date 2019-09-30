@@ -4,7 +4,7 @@ dependencies:
   module:
     - node
 id: events
-label: 'UBC Events'
+label: Events
 type: 'canonical_entities:node'
 pattern: 'events/[node:title]-[node:field_event_start_date:date:custom:M-d-Y]'
 selection_criteria:

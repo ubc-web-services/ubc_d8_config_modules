@@ -6,7 +6,7 @@ dependencies:
   module:
     - content_moderation
 id: ubc_event
-label: UBC Events
+label: 'UBC Events'
 type: content_moderation
 type_settings:
   states:

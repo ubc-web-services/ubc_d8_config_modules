@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_event_category
+    - field.storage.node.field_event_tags
     - node.type.ubc_event
-    - taxonomy.vocabulary.event_category
-id: node.ubc_event.field_event_category
-field_name: field_event_category
+    - taxonomy.vocabulary.tags
+id: node.ubc_event.field_event_tags
+field_name: field_event_tags
 entity_type: node
 bundle: ubc_event
-label: 'Event Category'
-description: 'Add categories to your event. These are typically used for identifying similar themes or topics in order to group like events.'
+label: Tags
+description: 'Add tags to group and categorize content.'
 required: false
 translatable: false
 default_value: {  }
@@ -19,7 +19,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      event_category: event_category
+      tags: tags
     sort:
       field: name
       direction: asc
