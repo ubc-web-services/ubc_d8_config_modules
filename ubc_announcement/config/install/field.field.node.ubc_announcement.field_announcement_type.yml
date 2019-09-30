@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_announcement_type
+    - node.type.ubc_announcement
+    - taxonomy.vocabulary.announcement_type
+id: node.ubc_announcement.field_announcement_type
+field_name: field_announcement_type
+entity_type: node
+bundle: ubc_announcement
+label: 'Announcement Type'
+description: 'Select the type of <em>Announcement</em> you are creating. This category will determine how it is filtered in lists, where it shows up in related content, etc.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      announcement_type: announcement_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

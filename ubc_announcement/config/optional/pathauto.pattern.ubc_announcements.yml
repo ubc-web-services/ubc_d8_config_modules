@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: EiB1-Hxawzet34Ws9gB-G3FfTkIPB7M8irqXDubBfJM
 id: ubc_announcements
 label: 'UBC Announcements'
 type: 'canonical_entities:node'

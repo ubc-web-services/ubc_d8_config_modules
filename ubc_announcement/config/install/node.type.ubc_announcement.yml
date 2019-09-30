@@ -3,9 +3,6 @@ status: true
 dependencies:
   module:
     - menu_ui
-  #enforced:
-    #module:
-      #- ubc_announcement
 third_party_settings:
   menu_ui:
     available_menus: {  }
@@ -16,4 +13,4 @@ description: 'Use <em>Announcements</em> to publish periodic, time-sensitive inf
 help: ''
 new_revision: true
 preview_mode: 1
-display_submitted: false
+display_submitted: true

@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.card_vertical
     - field.field.node.ubc_announcement.body
     - field.field.node.ubc_announcement.field_announcement_external_link
     - field.field.node.ubc_announcement.field_announcement_feature_image
@@ -10,15 +11,17 @@ dependencies:
     - field.field.node.ubc_announcement.field_announcement_tags
     - field.field.node.ubc_announcement.field_announcement_teaser_second
     - field.field.node.ubc_announcement.field_announcement_type
+    - image.style.max_640w
     - node.type.ubc_announcement
   module:
+    - image
     - link
     - text
     - user
-id: node.ubc_announcement.default
+id: node.ubc_announcement.card_vertical
 targetEntityType: node
 bundle: ubc_announcement
-mode: default
+mode: card_vertical
 content:
   body:
     label: hidden
@@ -27,11 +30,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  content_moderation_control:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_announcement_external_link:
     weight: 2
     label: visually_hidden
@@ -44,15 +42,15 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_announcement_tags:
-    weight: 4
-    label: inline
+  field_announcement_feature_image:
+    weight: 3
+    label: hidden
     settings:
-      link: true
+      image_style: max_640w
     third_party_settings: {  }
-    type: entity_reference_label
+    type: image_url
     region: content
-  field_announcement_type:
+  field_announcement_tags:
     weight: 5
     label: hidden
     settings:
@@ -61,12 +59,13 @@ content:
     type: entity_reference_label
     region: content
   links:
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_announcement_feature_image: true
+  content_moderation_control: true
   field_announcement_image_teaser: true
   field_announcement_meta_tags: true
   field_announcement_teaser_second: true
+  field_announcement_type: true

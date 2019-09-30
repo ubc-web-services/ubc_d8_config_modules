@@ -3,14 +3,13 @@ status: true
 dependencies:
   module:
     - node
-id: node.field_announcement_image_teaser
-field_name: field_announcement_image_teaser
+    - taxonomy
+id: node.field_announcement_type
+field_name: field_announcement_type
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

@@ -3,7 +3,13 @@ type: module
 description: This module defines the Announcement content type and its fields.
 package: UBC Web Services
 dependencies:
+  - drupal:field_group
+  - drupal:metatag
   - drupal:node
+  - drupal:responsive_image
+  - drupal:taxonomy
   - drupal:tour
   - drupal:toolbar
+  - drupal:tour
+  - ubc_image_styles:ubc_image_styles
 core: '8.x'

@@ -5,9 +5,6 @@ dependencies:
     - file
     - image
     - node
-  #enforced:
-    #module:
-      #- ubc_announcement
 id: node.field_announcement_feature_image
 field_name: field_announcement_feature_image
 entity_type: node

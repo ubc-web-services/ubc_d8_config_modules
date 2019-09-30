@@ -4,17 +4,17 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.ubc_announcement.body
-    - field.field.node.ubc_announcement.field_announcement_category
     - field.field.node.ubc_announcement.field_announcement_external_link
     - field.field.node.ubc_announcement.field_announcement_feature_image
     - field.field.node.ubc_announcement.field_announcement_image_teaser
+    - field.field.node.ubc_announcement.field_announcement_meta_tags
+    - field.field.node.ubc_announcement.field_announcement_tags
+    - field.field.node.ubc_announcement.field_announcement_teaser_second
+    - field.field.node.ubc_announcement.field_announcement_type
     - node.type.ubc_announcement
   module:
     - text
     - user
-  #enforced:
-    #module:
-      #- ubc_announcement
 id: node.ubc_announcement.teaser
 targetEntityType: node
 bundle: ubc_announcement
@@ -23,21 +23,25 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 0
     settings:
       trim_length: 350
     third_party_settings: {  }
     region: content
-  content_moderation_control:
-    weight: -20
-    settings: {  }
+  field_announcement_tags:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: false
     third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
-    region: content
 hidden:
-  field_announcement_category: true
+  content_moderation_control: true
   field_announcement_external_link: true
   field_announcement_feature_image: true
   field_announcement_image_teaser: true
+  field_announcement_meta_tags: true
+  field_announcement_teaser_second: true
+  field_announcement_type: true
+  links: true

@@ -6,9 +6,6 @@ dependencies:
     - node.type.ubc_announcement
   module:
     - image
-  #enforced:
-    #module:
-      #- ubc_announcement
 id: node.ubc_announcement.field_announcement_feature_image
 field_name: field_announcement_feature_image
 entity_type: node
@@ -24,7 +21,7 @@ settings:
   file_extensions: 'jpg jpeg'
   max_filesize: ''
   max_resolution: ''
-  min_resolution: 950x600
+  min_resolution: 1300x600
   alt_field: true
   alt_field_required: true
   title_field: false

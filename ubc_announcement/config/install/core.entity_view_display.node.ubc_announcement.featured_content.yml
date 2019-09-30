@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.featured_content
     - field.field.node.ubc_announcement.body
     - field.field.node.ubc_announcement.field_announcement_external_link
     - field.field.node.ubc_announcement.field_announcement_feature_image
@@ -11,62 +12,45 @@ dependencies:
     - field.field.node.ubc_announcement.field_announcement_teaser_second
     - field.field.node.ubc_announcement.field_announcement_type
     - node.type.ubc_announcement
+    - responsive_image.styles.hero_image
   module:
-    - link
-    - text
+    - responsive_image
     - user
-id: node.ubc_announcement.default
+id: node.ubc_announcement.featured_content
 targetEntityType: node
 bundle: ubc_announcement
-mode: default
+mode: featured_content
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  content_moderation_control:
+  field_announcement_feature_image:
     weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_announcement_external_link:
-    weight: 2
-    label: visually_hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
-  field_announcement_tags:
-    weight: 4
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_announcement_type:
-    weight: 5
     label: hidden
     settings:
-      link: false
+      responsive_image_style: hero_image
+      image_link: ''
     third_party_settings: {  }
-    type: entity_reference_label
+    type: responsive_image
     region: content
-  links:
-    weight: 3
+  field_announcement_image_teaser:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
-    settings: {  }
+  field_announcement_teaser_second:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
 hidden:
-  field_announcement_feature_image: true
-  field_announcement_image_teaser: true
+  body: true
+  content_moderation_control: true
+  field_announcement_external_link: true
   field_announcement_meta_tags: true
-  field_announcement_teaser_second: true
+  field_announcement_tags: true
+  field_announcement_type: true
+  links: true
