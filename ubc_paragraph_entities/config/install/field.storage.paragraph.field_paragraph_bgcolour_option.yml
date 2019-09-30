@@ -1,18 +1,21 @@
 langcode: en
 status: true
 dependencies:
-  module:
-    - options
-    - paragraphs
   enforced:
     module:
       - ubc_paragraph_entities
+  module:
+    - options
+    - paragraphs
 id: paragraph.field_paragraph_bgcolour_option
 field_name: field_paragraph_bgcolour_option
 entity_type: paragraph
 type: list_string
 settings:
   allowed_values:
+    -
+      value: bg-white
+      label: White
     -
       value: bg-grey-100
       label: 'Light Grey'
@@ -32,7 +35,7 @@ settings:
       value: bg-ubc-blue-cornflower
       label: 'UBC Blue: Cornflower'
     -
-      value: bg-ubc-blue-ploar
+      value: bg-ubc-blue-polar
       label: 'UBC Blue: Polar'
   allowed_values_function: ''
 module: options

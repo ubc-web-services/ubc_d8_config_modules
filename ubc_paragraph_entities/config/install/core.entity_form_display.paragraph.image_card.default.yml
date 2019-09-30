@@ -9,12 +9,12 @@ dependencies:
     - field.field.paragraph.image_card.field_paragraph_card_title
     - image.style.thumbnail
     - paragraphs.paragraphs_type.image_card
-  module:
-    - image
-    - link
   enforced:
     module:
       - ubc_paragraph_entities
+  module:
+    - image
+    - link
 id: paragraph.image_card.default
 targetEntityType: paragraph
 bundle: image_card

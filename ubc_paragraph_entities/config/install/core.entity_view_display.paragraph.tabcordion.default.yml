@@ -4,11 +4,11 @@ dependencies:
   config:
     - field.field.paragraph.tabcordion.field_paragraph_tab
     - paragraphs.paragraphs_type.tabcordion
-  module:
-    - entity_reference_revisions
   enforced:
     module:
       - ubc_paragraph_entities
+  module:
+    - entity_reference_revisions
 id: paragraph.tabcordion.default
 targetEntityType: paragraph
 bundle: tabcordion

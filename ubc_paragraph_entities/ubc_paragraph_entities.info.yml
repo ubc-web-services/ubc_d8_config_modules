@@ -4,10 +4,11 @@ description: This module defines a series of custom Paragraph entities and field
 package: UBC Web Services
 dependencies:
   - drupal:content_moderation
+  - drupal:field_group
   - drupal:node
+  - drupal:paragraphs
   - drupal:tour
   - drupal:toolbar
-  - paragraphs:paragraphs
-  - field_group:field_group
+  - drupal:twig_tweak
   - ubc_image_styles:ubc_image_styles
 core: '8.x'

@@ -6,11 +6,11 @@ dependencies:
     - field.field.paragraph.text.field_paragraph_text
     - field.field.paragraph.text.field_paragraph_width_option
     - paragraphs.paragraphs_type.text
-  module:
-    - text
   enforced:
     module:
       - ubc_paragraph_entities
+  module:
+    - text
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text

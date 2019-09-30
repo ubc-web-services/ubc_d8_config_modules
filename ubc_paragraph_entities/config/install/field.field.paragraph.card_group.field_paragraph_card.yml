@@ -5,11 +5,13 @@ dependencies:
     - field.storage.paragraph.field_paragraph_card
     - paragraphs.paragraphs_type.card
     - paragraphs.paragraphs_type.card_group
-  module:
-    - entity_reference_revisions
+    - paragraphs.paragraphs_type.icon_card
+    - paragraphs.paragraphs_type.image_card
   enforced:
     module:
       - ubc_paragraph_entities
+  module:
+    - entity_reference_revisions
 id: paragraph.card_group.field_paragraph_card
 field_name: field_paragraph_card
 entity_type: paragraph
@@ -26,6 +28,8 @@ settings:
     negate: 0
     target_bundles:
       card: card
+      icon_card: icon_card
+      image_card: image_card
     target_bundles_drag_drop:
       card:
         enabled: true
@@ -35,5 +39,23 @@ settings:
         enabled: false
       text:
         weight: 6
+        enabled: false
+      feature_image:
+        weight: 12
+        enabled: false
+      icon_card:
+        enabled: true
+        weight: 13
+      image_card:
+        enabled: true
+        weight: 14
+      image_card_group:
+        weight: 15
+        enabled: false
+      tab:
+        weight: 16
+        enabled: false
+      tabcordion:
+        weight: 17
         enabled: false
 field_type: entity_reference_revisions

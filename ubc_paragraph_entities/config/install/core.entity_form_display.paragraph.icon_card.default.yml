@@ -3,17 +3,17 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.icon_card.field_paragraph_icon_card_colour
+    - field.field.paragraph.icon_card.field_paragraph_icon_card_icon
     - field.field.paragraph.icon_card.field_paragraph_icon_card_layout
     - field.field.paragraph.icon_card.field_paragraph_icon_card_link
-    - field.field.paragraph.icon_card.field_paragraph_icon_card_svg
     - field.field.paragraph.icon_card.field_paragraph_icon_card_text
     - field.field.paragraph.icon_card.field_paragraph_icon_card_title
     - paragraphs.paragraphs_type.icon_card
-  module:
-    - link
   enforced:
     module:
       - ubc_paragraph_entities
+  module:
+    - link
 id: paragraph.icon_card.default
 targetEntityType: paragraph
 bundle: icon_card
@@ -21,6 +21,12 @@ mode: default
 content:
   field_paragraph_icon_card_colour:
     weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_paragraph_icon_card_icon:
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -38,12 +44,6 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
-    region: content
-  field_paragraph_icon_card_svg:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_paragraph_icon_card_text:
     weight: 4

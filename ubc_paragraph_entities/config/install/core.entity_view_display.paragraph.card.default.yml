@@ -7,44 +7,30 @@ dependencies:
     - field.field.paragraph.card.field_paragraph_card_layout
     - field.field.paragraph.card.field_paragraph_card_link
     - field.field.paragraph.card.field_paragraph_card_link_entire
+    - field.field.paragraph.card.field_paragraph_card_meta
     - field.field.paragraph.card.field_paragraph_card_text
     - field.field.paragraph.card.field_paragraph_card_title
-    - image.style.max_650x650
     - paragraphs.paragraphs_type.card
-  module:
-    - image
-    - link
-    - options
+    - responsive_image.styles.card
   enforced:
     module:
       - ubc_paragraph_entities
+  module:
+    - link
+    - responsive_image
 id: paragraph.card.default
 targetEntityType: paragraph
 bundle: card
 mode: default
 content:
-  field_paragraph_card_color:
-    weight: 7
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
   field_paragraph_card_image:
     weight: 0
     label: hidden
     settings:
-      image_style: max_650x650
+      responsive_image_style: card
       image_link: ''
     third_party_settings: {  }
-    type: image
-    region: content
-  field_paragraph_card_layout:
-    weight: 6
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
+    type: responsive_image
     region: content
   field_paragraph_card_link:
     weight: 3
@@ -58,15 +44,13 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_paragraph_card_link_entire:
+  field_paragraph_card_meta:
     weight: 4
     label: hidden
     settings:
-      format: boolean
-      format_custom_true: ''
-      format_custom_false: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: boolean
+    type: string
     region: content
   field_paragraph_card_text:
     weight: 1
@@ -83,4 +67,7 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  field_paragraph_card_color: true
+  field_paragraph_card_layout: true
+  field_paragraph_card_link_entire: true

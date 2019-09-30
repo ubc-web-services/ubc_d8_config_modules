@@ -11,8 +11,8 @@ id: paragraph.feature_image.field_paragraph_feature_caption
 field_name: field_paragraph_feature_caption
 entity_type: paragraph
 bundle: feature_image
-label: 'Feature Caption'
-description: 'Add a caption to the image. This will appear under the title, over top of the image.'
+label: 'Featurette Caption'
+description: 'Add a caption to the image. This will appear below the image, in small type.'
 required: false
 translatable: false
 default_value: {  }

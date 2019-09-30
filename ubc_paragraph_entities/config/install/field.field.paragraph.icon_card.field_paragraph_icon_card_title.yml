@@ -11,7 +11,7 @@ id: paragraph.icon_card.field_paragraph_icon_card_title
 field_name: field_paragraph_icon_card_title
 entity_type: paragraph
 bundle: icon_card
-label: 'Icon Card Title'
+label: 'Card Title'
 description: ''
 required: true
 translatable: false

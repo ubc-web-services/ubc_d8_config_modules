@@ -4,16 +4,16 @@ dependencies:
   config:
     - field.storage.paragraph.field_paragraph_icon_card_layout
     - paragraphs.paragraphs_type.icon_card
-  module:
-    - options
   enforced:
     module:
       - ubc_paragraph_entities
+  module:
+    - options
 id: paragraph.icon_card.field_paragraph_icon_card_layout
 field_name: field_paragraph_icon_card_layout
 entity_type: paragraph
 bundle: icon_card
-label: 'Icon Card layout'
+label: 'Card layout'
 description: 'Chose whether the icon should display on the left or the right.'
 required: true
 translatable: false

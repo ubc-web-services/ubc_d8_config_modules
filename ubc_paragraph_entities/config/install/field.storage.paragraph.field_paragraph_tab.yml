@@ -1,12 +1,12 @@
 langcode: en
 status: true
 dependencies:
-  module:
-    - entity_reference_revisions
-    - paragraphs
   enforced:
     module:
       - ubc_paragraph_entities
+  module:
+    - entity_reference_revisions
+    - paragraphs
 id: paragraph.field_paragraph_tab
 field_name: field_paragraph_tab
 entity_type: paragraph

@@ -2,13 +2,10 @@ langcode: en
 status: true
 dependencies:
   module:
-    - taxonomy
-  enforced:
-    module:
-      - ubc_paragraph_entities
-id: taxonomy_term.field_icon_class
-field_name: field_icon_class
-entity_type: taxonomy_term
+    - paragraphs
+id: paragraph.field_paragraph_card_meta
+field_name: field_paragraph_card_meta
+entity_type: paragraph
 type: string
 settings:
   max_length: 255

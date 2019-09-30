@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_title_right
+    - paragraphs.paragraphs_type.card_group
+id: paragraph.card_group.field_paragraph_title_right
+field_name: field_paragraph_title_right
+entity_type: paragraph
+bundle: card_group
+label: 'Display title on right'
+description: 'If you have added a title to the card group, this option will show the title aligned to the right instead of the left.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

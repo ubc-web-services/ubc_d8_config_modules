@@ -3,13 +3,15 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.card_group.field_paragraph_card
+    - field.field.paragraph.card_group.field_paragraph_group_title
     - field.field.paragraph.card_group.field_paragraph_number_per_row
+    - field.field.paragraph.card_group.field_paragraph_title_right
     - paragraphs.paragraphs_type.card_group
-  module:
-    - paragraphs
   enforced:
     module:
       - ubc_paragraph_entities
+  module:
+    - paragraphs
 id: paragraph.card_group.default
 targetEntityType: paragraph
 bundle: card_group
@@ -17,21 +19,36 @@ mode: default
 content:
   field_paragraph_card:
     type: entity_reference_paragraphs
-    weight: 1
+    weight: 3
     settings:
       title: Card
       title_plural: Cards
       edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: card
+      default_paragraph_type: _none
     third_party_settings: {  }
     region: content
-  field_paragraph_number_per_row:
+  field_paragraph_group_title:
     weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_paragraph_number_per_row:
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_paragraph_title_right:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
 hidden:
   created: true

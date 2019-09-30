@@ -11,7 +11,7 @@ id: paragraph.feature_image.field_paragraph_feature_title
 field_name: field_paragraph_feature_title
 entity_type: paragraph
 bundle: feature_image
-label: 'Feature Title'
+label: 'Featurette Title'
 description: ''
 required: false
 translatable: false

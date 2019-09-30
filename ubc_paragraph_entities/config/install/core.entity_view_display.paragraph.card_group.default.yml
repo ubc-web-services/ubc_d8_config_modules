@@ -3,14 +3,15 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.card_group.field_paragraph_card
+    - field.field.paragraph.card_group.field_paragraph_group_title
     - field.field.paragraph.card_group.field_paragraph_number_per_row
+    - field.field.paragraph.card_group.field_paragraph_title_right
     - paragraphs.paragraphs_type.card_group
-  module:
-    - entity_reference_revisions
-    - options
   enforced:
     module:
       - ubc_paragraph_entities
+  module:
+    - entity_reference_revisions
 id: paragraph.card_group.default
 targetEntityType: paragraph
 bundle: card_group
@@ -18,18 +19,14 @@ mode: default
 content:
   field_paragraph_card:
     type: entity_reference_revisions_entity_view
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
-  field_paragraph_number_per_row:
-    weight: 0
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
-hidden: {  }
+hidden:
+  field_paragraph_group_title: true
+  field_paragraph_number_per_row: true
+  field_paragraph_title_right: true

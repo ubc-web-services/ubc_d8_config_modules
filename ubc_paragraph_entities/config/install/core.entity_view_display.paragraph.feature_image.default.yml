@@ -5,17 +5,18 @@ dependencies:
     - field.field.paragraph.feature_image.field_paragraph_feature_caption
     - field.field.paragraph.feature_image.field_paragraph_feature_image
     - field.field.paragraph.feature_image.field_paragraph_feature_link
+    - field.field.paragraph.feature_image.field_paragraph_feature_options
     - field.field.paragraph.feature_image.field_paragraph_feature_title
     - field.field.paragraph.feature_image.field_paragraph_feature_width
     - image.style.max_1300x1300
     - paragraphs.paragraphs_type.feature_image
+  enforced:
+    module:
+      - ubc_paragraph_entities
   module:
     - image
     - link
     - options
-  enforced:
-    module:
-      - ubc_paragraph_entities
 id: paragraph.feature_image.default
 targetEntityType: paragraph
 bundle: feature_image
@@ -49,6 +50,13 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_paragraph_feature_options:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_paragraph_feature_title:
     weight: 1

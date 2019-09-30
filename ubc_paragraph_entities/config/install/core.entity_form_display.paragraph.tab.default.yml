@@ -5,11 +5,11 @@ dependencies:
     - field.field.paragraph.tab.field_paragraph_tab_content
     - field.field.paragraph.tab.field_paragraph_tab_title
     - paragraphs.paragraphs_type.tab
-  module:
-    - text
   enforced:
     module:
       - ubc_paragraph_entities
+  module:
+    - text
 id: paragraph.tab.default
 targetEntityType: paragraph
 bundle: tab

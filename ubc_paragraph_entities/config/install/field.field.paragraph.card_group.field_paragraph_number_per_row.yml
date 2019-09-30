@@ -4,11 +4,11 @@ dependencies:
   config:
     - field.storage.paragraph.field_paragraph_number_per_row
     - paragraphs.paragraphs_type.card_group
-  module:
-    - options
   enforced:
     module:
       - ubc_paragraph_entities
+  module:
+    - options
 id: paragraph.card_group.field_paragraph_number_per_row
 field_name: field_paragraph_number_per_row
 entity_type: paragraph

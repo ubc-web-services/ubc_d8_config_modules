@@ -7,16 +7,17 @@ dependencies:
     - field.field.paragraph.card.field_paragraph_card_layout
     - field.field.paragraph.card.field_paragraph_card_link
     - field.field.paragraph.card.field_paragraph_card_link_entire
+    - field.field.paragraph.card.field_paragraph_card_meta
     - field.field.paragraph.card.field_paragraph_card_text
     - field.field.paragraph.card.field_paragraph_card_title
     - image.style.thumbnail
     - paragraphs.paragraphs_type.card
-  module:
-    - image
-    - link
   enforced:
     module:
       - ubc_paragraph_entities
+  module:
+    - image
+    - link
 id: paragraph.card.default
 targetEntityType: paragraph
 bundle: card
@@ -29,7 +30,7 @@ content:
     type: options_select
     region: content
   field_paragraph_card_image:
-    weight: 3
+    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -43,7 +44,7 @@ content:
     type: options_select
     region: content
   field_paragraph_card_link:
-    weight: 5
+    weight: 6
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -51,14 +52,22 @@ content:
     type: link_default
     region: content
   field_paragraph_card_link_entire:
-    weight: 6
+    weight: 7
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_paragraph_card_meta:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_paragraph_card_text:
-    weight: 4
+    weight: 5
     settings:
       rows: 5
       placeholder: ''

@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'file:file:993d6c99-2455-498e-95ea-53f574a78659'
   enforced:
     module:
       - ubc_paragraph_entities
