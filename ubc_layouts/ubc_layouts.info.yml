@@ -1,8 +1,0 @@
-name: UBC Layout Library
-type: module
-description: This module adds a set of reusable layouts, as configured for UBC.
-package: UBC Web Services
-dependencies:
-  - drupal:layout_discovery
-  - drupal:field_layout
-core: '8.x'
