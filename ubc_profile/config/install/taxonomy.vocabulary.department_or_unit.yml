@@ -1,8 +1,6 @@
 langcode: en
 status: true
-dependencies:
-  config:
-    - node.type.ubc_profile
+dependencies: {  }
 name: 'Department or Unit'
 vid: department_or_unit
 description: 'Identifies the relevant Department or Unit within the organization'

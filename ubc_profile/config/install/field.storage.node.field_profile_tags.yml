@@ -3,13 +3,14 @@ status: true
 dependencies:
   module:
     - node
-    - telephone
-id: node.field_profile_phone
-field_name: field_profile_phone
+    - taxonomy
+id: node.field_profile_tags
+field_name: field_profile_tags
 entity_type: node
-type: telephone
-settings: {  }
-module: telephone
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: 1
 translatable: true

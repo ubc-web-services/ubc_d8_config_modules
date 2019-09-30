@@ -1,0 +1,7 @@
+name: UBC Profile Views
+type: module
+description: This module adds prebuilt views to the Profile content type.
+package: UBC Web Services
+dependencies:
+  - ubc_profiles:ubc_profiles
+core: '8.x'

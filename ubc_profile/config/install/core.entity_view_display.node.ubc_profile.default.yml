@@ -10,11 +10,15 @@ dependencies:
     - field.field.node.ubc_profile.field_profile_image
     - field.field.node.ubc_profile.field_profile_job_title
     - field.field.node.ubc_profile.field_profile_last_name
+    - field.field.node.ubc_profile.field_profile_meta_tags
     - field.field.node.ubc_profile.field_profile_office
     - field.field.node.ubc_profile.field_profile_phone
+    - field.field.node.ubc_profile.field_profile_tags
+    - image.style.square_400
     - node.type.ubc_profile
   module:
     - image
+    - metatag
     - simple_gmap
     - telephone
     - text
@@ -27,12 +31,17 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_profile_accreditation:
-    weight: 106
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
@@ -40,7 +49,7 @@ content:
     type: string
     region: content
   field_profile_department_unit:
-    weight: 110
+    weight: 4
     label: hidden
     settings:
       link: false
@@ -48,47 +57,38 @@ content:
     type: entity_reference_label
     region: content
   field_profile_email:
-    weight: 104
+    weight: 6
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_profile_first_name:
-    weight: 102
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_profile_image:
-    weight: 109
+    weight: 1
     label: hidden
     settings:
-      image_style: ''
+      image_style: square_400
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
   field_profile_job_title:
-    weight: 107
+    weight: 3
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_profile_last_name:
-    weight: 103
+  field_profile_meta_tags:
+    weight: 10
     label: hidden
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
-    type: string
+    type: metatag_empty_formatter
     region: content
   field_profile_office:
-    weight: 108
+    weight: 8
     label: hidden
     settings:
       include_map: true
@@ -107,16 +107,26 @@ content:
     type: simple_gmap
     region: content
   field_profile_phone:
-    weight: 105
+    weight: 7
     label: hidden
     settings:
       title: ''
     third_party_settings: {  }
     type: telephone_link
     region: content
+  field_profile_tags:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   links:
-    weight: 100
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_profile_first_name: true
+  field_profile_last_name: true
