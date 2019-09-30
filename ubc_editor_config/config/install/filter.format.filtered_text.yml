@@ -1,12 +1,15 @@
 langcode: en
 status: true
 dependencies:
-  module:
-    - editor
-    - inline_responsive_images
   enforced:
     module:
       - ubc_editor_config
+  module:
+    - editor
+    - editor_button_link
+    - entity_embed
+    - inline_responsive_images
+    - linkit
 name: 'Filtered Text'
 format: filtered_text
 weight: -20
@@ -15,64 +18,111 @@ filters:
     id: editor_file_reference
     provider: editor
     status: true
-    weight: 0
+    weight: -49
     settings: {  }
   filter_align:
     id: filter_align
     provider: filter
     status: true
-    weight: 0
+    weight: -48
     settings: {  }
   filter_caption:
     id: filter_caption
     provider: filter
     status: true
-    weight: 0
+    weight: -47
     settings: {  }
   filter_html:
     id: filter_html
     provider: filter
     status: true
-    weight: -10
+    weight: -50
     settings:
-      allowed_html: '<a name href hreflang class="" data-*> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <img src alt data-*> <div class="accordion accordion--* accordion__* widget-* card card--* card__* first-image first-content first-footer second-image second-content second-footer third-image third-content third-footer flex flex-* columns--* row col-md-* unit-icon unit-icon-* fa fa-* align-*" aria-*> <button data-* class="widget-*"> <table class="table-*"> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p class="text-*"> <u> <sub> <sup> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title>'
+      allowed_html: '<a name href hreflang class data-* target title> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id class> <h4 id class> <h5 id class> <h6 id class> <img src srcset alt title data-*> <div class="accordion accordion--* accordion__* align-* bg-* card card--* card__* clearfix col-md-* columns--* fa fa-* first-* flex flex-* md--flex-* group hover--* js-* min-* object-* row second-* text-* third-* ubc-card ubc-card__* ubc-card--* unit-* widget-*" aria-* hidden> <button data-* class="widget-* unit-* text-*"> <table class="table-*"> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p class="text-*"> <u> <sub> <sup> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title><svg class viewbox aria-*><use xlink:href>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_url:
     id: filter_url
     provider: filter
     status: true
-    weight: 0
+    weight: -45
     settings:
       filter_url_length: 72
   filter_imagestyle:
     id: filter_imagestyle
     provider: inline_responsive_images
     status: false
-    weight: 0
+    weight: -41
     settings:
       image_style_card_300x150: '0'
       image_style_card_480x240: '0'
       image_style_card_600x300: '0'
       image_style_card_780x390: '0'
+      image_style_crop_thumbnail: '0'
       image_style_large: '0'
-      image_style_max_1200x1200: '0'
+      image_style_linkit_result_thumbnail: '0'
       image_style_max_1300x1300: '0'
       image_style_max_2600x2600: '0'
       image_style_max_325x325: '0'
-      image_style_max_480x480: '0'
-      image_style_max_600x600: '0'
+      image_style_max_640w: '0'
       image_style_max_650x650: '0'
-      image_style_max_768x768: '0'
-      image_style_max_980x980: '0'
       image_style_medium: '0'
+      image_style_square_200: '0'
+      image_style_square_400: '0'
+      image_style_square_600: '0'
       image_style_thumbnail: '0'
   filter_responsive_image_style:
     id: filter_responsive_image_style
     provider: inline_responsive_images
     status: true
-    weight: 0
+    weight: -44
     settings:
       responsive_style_card: '1'
       responsive_style_narrow: '1'
       responsive_style_wide: '1'
+  entity_embed:
+    id: entity_embed
+    provider: entity_embed
+    status: true
+    weight: -46
+    settings: {  }
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: false
+    weight: -40
+    settings: {  }
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: false
+    weight: -42
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: false
+    weight: -39
+    settings: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: -43
+    settings: {  }
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: 0
+    settings:
+      title: true
+  editor_button_link_filter:
+    id: editor_button_link_filter
+    provider: editor_button_link
+    status: true
+    weight: 1
+    settings:
+      button_link_options: "|No Style\r\nunit-button|Unit Button\r\n"
+      button_link_size_options: "|Text Normal\r\ntext-xs unit-button--text-xs|Text Extra Small\r\ntext-sm unit-button--text-sm|Text Small\r\ntext-lg unit-button--text-lg|Text Large\r\ntext-xl unit-button--text-xl|Text XLarge\r\ntext-2xl unit-button--text-2xl| Text XXLarge"
+      button_link_style_options: "unit-button--light|Light Button\r\nunit-button--light unit-button--has-icon-right unit-button--editor|Light Button w arrow\r\nunit-button--mid|Neutral Button\r\nunit-button--mid unit-button--has-icon-right unit-button--editor|Neutral Button w arrow\r\nunit-button--dark|Dark Button\r\nunit-button--dark unit-button--has-icon-right unit-button--editor|Dark Button w arrow\r\nunit-button--simple unit-button--has-icon-right unit-button--editor|Simple Button\r\nunit-button--plain unit-button--has-icon-right unit-button--editor|Plain Button\r\nunit-button--transparent|Transparent Button\r\nunit-button--transparent unit-button--has-icon-right unit-button--editor|Transparent Button w arrow\r\nunit-button--light unit-button--light-gradient|Light Button w gradient\r\nunit-button--light unit-button--light-gradient unit-button--has-icon-right unit-button--editor|Light Button w gradient & arrow\r\nunit-button--dark unit-button--dark-gradient|Dark Button w gradient\r\nunit-button--dark unit-button--dark-gradient unit-button--has-icon-right unit-button--editor|Dark Button w gradient & arrow"
