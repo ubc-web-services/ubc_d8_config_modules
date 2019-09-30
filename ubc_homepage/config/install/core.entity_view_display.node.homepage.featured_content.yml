@@ -1,0 +1,76 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.featured_content
+    - field.field.node.homepage.body
+    - field.field.node.homepage.field_home_feature_image
+    - field.field.node.homepage.field_home_feature_image_link
+    - field.field.node.homepage.field_home_feature_title
+    - field.field.node.homepage.field_home_feature_title_second
+    - field.field.node.homepage.field_home_lower_cards
+    - field.field.node.homepage.field_home_meta_tags
+    - field.field.node.homepage.field_home_tab_content
+    - field.field.node.homepage.field_home_tab_titles
+    - field.field.node.homepage.field_home_upper_cards
+    - node.type.homepage
+    - responsive_image.styles.hero_image
+  module:
+    - link
+    - responsive_image
+    - user
+id: node.homepage.featured_content
+targetEntityType: node
+bundle: homepage
+mode: featured_content
+content:
+  content_moderation_control:
+    weight: -20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_home_feature_image:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: hero_image
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+  field_home_feature_image_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+  field_home_feature_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_home_feature_title_second:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  body: true
+  field_home_lower_cards: true
+  field_home_meta_tags: true
+  field_home_tab_content: true
+  field_home_tab_titles: true
+  field_home_upper_cards: true
+  links: true

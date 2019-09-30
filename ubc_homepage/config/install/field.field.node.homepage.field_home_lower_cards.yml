@@ -1,0 +1,51 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_home_lower_cards
+    - node.type.homepage
+    - paragraphs.paragraphs_type.card_group
+  module:
+    - entity_reference_revisions
+id: node.homepage.field_home_lower_cards
+field_name: field_home_lower_cards
+entity_type: node
+bundle: homepage
+label: 'Lower Cards'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      card_group: card_group
+    target_bundles_drag_drop:
+      card:
+        weight: 9
+        enabled: false
+      card_group:
+        enabled: true
+        weight: 10
+      feature_image:
+        weight: 11
+        enabled: false
+      icon_card:
+        weight: 12
+        enabled: false
+      image_card:
+        weight: 13
+        enabled: false
+      tab:
+        weight: 14
+        enabled: false
+      tabcordion:
+        weight: 15
+        enabled: false
+      text:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions
