@@ -4,19 +4,19 @@
 /**
  * Implements hook_install().
  *
- * We don't want users to be able to delete our ubc_page content
+ * We don't want users to be able to delete our ubc_general_shared_config content
  * type. So therefore we have to tell Drupal that this is the case. This
  * can't be done in the content type's configuration YAML file, so we have to
  * do it in code, here.
  *
- * @ingroup ubc_page
+ * @ingroup ubc_general_shared_config
  */
-function ubc_page_install() {
+/* function ubc_general_shared_config_install() {
   // Do not allow the locked content type to be deleted.
   $locked = Drupal::state()->get('node.type.locked');
-  $locked['ubc_page'] = 'ubc_page';
+  $locked['ubc_general_shared_config'] = 'ubc_general_shared_config';
   Drupal::state()->set('node.type.locked', $locked);
-}
+} */
 
 
 /**
@@ -27,30 +27,30 @@ function ubc_page_install() {
  * make decisions about their fate. Therefore we should give the user the
  * option of deleting them.
  *
- * Since we told Drupal that our ubc_page is locked, we now have
+ * Since we told Drupal that our ubc_general_shared_config is locked, we now have
  * to tell it to unlock.
  *
- * @ingroup ubc_page
+ * @ingroup ubc_general_shared_config
  */
-function ubc_page_uninstall() {
+/* function ubc_general_shared_config_uninstall() {
   // Allow announcement to be deleted.
   $locked = Drupal::state()->get('node.type.locked');
-  unset($locked['ubc_page']);
+  unset($locked['ubc_general_shared_config']);
   Drupal::state()->set('node.type.locked', $locked);
 }
-
+ */
 
 /**
  * Update configuration from file.
  * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
  */
-function ubc_page_update_8001() {
-  $config_path = drupal_get_path('module', 'ubc_page') . '/config/install/core.entity_form_display.node.ubc_page.default.yml';
+function ubc_general_shared_config_update_8001() {
+  $config_path = drupal_get_path('module', 'ubc_general_shared_config') . '/config/install/pathauto.pattern.taxonomy_terms.yml';
   $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
   \Drupal::configFactory()
-    ->getEditable('core.entity_form_display.node.ubc_page.default.yml')
+    ->getEditable('pathauto.pattern.taxonomy_terms.yml')
     ->setData($data)
     ->save(TRUE);
 
-  return 'The Page has been updated.';
+  return 'The Taxonomy path has been updated.';
 }
