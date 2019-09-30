@@ -7,9 +7,11 @@ dependencies:
     - field.field.node.ubc_landing_page.field_landing_feature_image
     - field.field.node.ubc_landing_page.field_landing_image_teaser
     - field.field.node.ubc_landing_page.field_landing_meta_tags
+    - field.field.node.ubc_landing_page.field_landing_tags
     - field.field.node.ubc_landing_page.field_landing_teaser_second
     - image.style.thumbnail
     - node.type.ubc_landing_page
+    - workflows.workflow.ubc_landing_page
   module:
     - content_moderation
     - field_group
@@ -25,14 +27,14 @@ third_party_settings:
         - field_landing_feature_image
         - group_feature_title_override
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: details
       format_settings:
         id: ''
         classes: ''
         description: ''
-        required_fields: true
         open: false
+        required_fields: true
       label: 'Feature Area'
       region: content
     group_feature_title_override:
@@ -40,7 +42,7 @@ third_party_settings:
         - field_landing_image_teaser
         - field_landing_teaser_second
       parent_name: group_feature_area
-      weight: 8
+      weight: 10
       format_type: details
       format_settings:
         id: ''
@@ -56,26 +58,26 @@ bundle: ubc_landing_page
 mode: default
 content:
   body:
-    type: text_textarea_with_summary
-    weight: 2
+    weight: 3
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    type: text_textarea_with_summary
     region: content
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   field_landing_custom_content:
     type: entity_reference_paragraphs
-    weight: 3
+    weight: 4
     settings:
-      title: 'Custom Content Region'
-      title_plural: 'Custom Content Regions'
+      title: Paragraph
+      title_plural: Paragraphs
       edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
@@ -83,7 +85,7 @@ content:
     third_party_settings: {  }
     region: content
   field_landing_feature_image:
-    weight: 6
+    weight: 9
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -91,7 +93,7 @@ content:
     type: image_image
     region: content
   field_landing_image_teaser:
-    weight: 7
+    weight: 10
     settings:
       size: 60
       placeholder: ''
@@ -99,13 +101,19 @@ content:
     type: string_textfield
     region: content
   field_landing_meta_tags:
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
     region: content
+  field_landing_tags:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_landing_teaser_second:
-    weight: 8
+    weight: 11
     settings:
       size: 60
       placeholder: ''
@@ -114,13 +122,13 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 7
+    weight: 8
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -128,7 +136,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 9
     region: content
     third_party_settings: {  }
   title:
@@ -141,7 +149,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60

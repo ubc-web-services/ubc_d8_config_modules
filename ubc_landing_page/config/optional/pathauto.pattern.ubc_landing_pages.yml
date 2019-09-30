@@ -8,14 +8,14 @@ label: 'UBC Landing Pages'
 type: 'canonical_entities:node'
 pattern: '[node:menu-link:parents]/[node:title]'
 selection_criteria:
-  f7ee8ae9-cef0-4c22-be06-315f7056f0de:
+  2f18fa62-503d-4bdb-b34d-f99a583455ca:
     id: node_type
     bundles:
       ubc_landing_page: ubc_landing_page
     negate: false
     context_mapping:
       node: node
-    uuid: f7ee8ae9-cef0-4c22-be06-315f7056f0de
+    uuid: 2f18fa62-503d-4bdb-b34d-f99a583455ca
 selection_logic: and
 weight: -5
 relationships: {  }

@@ -9,7 +9,7 @@ field_name: field_landing_teaser_second
 entity_type: node
 bundle: ubc_landing_page
 label: 'Image Teaser - second line'
-description: 'This is the second line of the tagline that appears over the feature image.'
+description: 'This is additional text that appears within the caption area of the feature image. It should be brief and encourage action.'
 required: false
 translatable: false
 default_value: {  }

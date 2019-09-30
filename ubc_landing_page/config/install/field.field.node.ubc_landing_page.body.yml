@@ -5,7 +5,15 @@ dependencies:
     - field.storage.node.body
     - node.type.ubc_landing_page
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    filtered_text: filtered_text
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
 id: node.ubc_landing_page.body
 field_name: body
 entity_type: node
@@ -17,5 +25,5 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  display_summary: true
+  display_summary: false
 field_type: text_with_summary
