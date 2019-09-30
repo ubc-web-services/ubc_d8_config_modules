@@ -1,0 +1,56 @@
+<?php
+
+
+/**
+ * Implements hook_install().
+ *
+ * We don't want users to be able to delete our ubc_user_roles content
+ * type. So therefore we have to tell Drupal that this is the case. This
+ * can't be done in the content type's configuration YAML file, so we have to
+ * do it in code, here.
+ *
+ * @ingroup ubc_user_roles
+ */
+/* function ubc_user_roles_install() {
+  // Do not allow the locked content type to be deleted.
+  $locked = Drupal::state()->get('node.type.locked');
+  $locked['ubc_user_roles'] = 'ubc_user_roles';
+  Drupal::state()->set('node.type.locked', $locked);
+} */
+
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Our content types will live on in the Drupal installation, even after this
+ * module is uninstalled. This is a good thing, since it allows the user to
+ * make decisions about their fate. Therefore we should give the user the
+ * option of deleting them.
+ *
+ * Since we told Drupal that our ubc_user_roles is locked, we now have
+ * to tell it to unlock.
+ *
+ * @ingroup ubc_user_roles
+ */
+/* function ubc_user_roles_uninstall() {
+  // Allow announcement to be deleted.
+  $locked = Drupal::state()->get('node.type.locked');
+  unset($locked['ubc_user_roles']);
+  Drupal::state()->set('node.type.locked', $locked);
+} */
+
+
+/**
+ * Update configuration from file.
+ * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
+ */
+function ubc_user_roles_update_8001() {
+  $config_path = drupal_get_path('module', 'ubc_user_roles') . '/config/install/user.role.content_creator.yml';
+  $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
+  \Drupal::configFactory()
+    ->getEditable('user.role.content_creator.yml')
+    ->setData($data)
+    ->save(TRUE);
+
+  return 'The Role has been updated.';
+}
