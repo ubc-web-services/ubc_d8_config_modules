@@ -64,7 +64,7 @@
 {% block paragraph %}
 <div{{ attributes.addClass(classes) }}>
   {% block content %}
-  <a{{ card_attributes.addClass(card_classes) }} href="{{ paragraph.field_paragraph_card_link.0.url }}" title="{{ paragraph.field_paragraph_card_link.0.title }}">
+  <a{{ card_attributes.addClass(card_classes) }} href="{{ paragraph.field_paragraph_card_link.0.url }}">
     <div class="ubc-card__media min-h-64 has-content--after bg-cover" style="background-image: url({{ bg_img }});">
       <div class="ubc-card__media-content flex flex-wrap min-h-64 relative">
         <div class="ubc-card__content w-full z-20">

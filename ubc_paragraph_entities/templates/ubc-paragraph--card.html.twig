@@ -72,7 +72,7 @@
       {% if card_link == false %}
         <div{{ card_attributes.addClass(card_classes) }}>
       {% else %}
-        <a{{ card_attributes.addClass(card_classes) }} href="{{ paragraph.field_paragraph_card_link.0.url }}" title="{{ paragraph.field_paragraph_card_link.0.title }}">
+        <a{{ card_attributes.addClass(card_classes) }} href="{{ paragraph.field_paragraph_card_link.0.url }}">
       {% endif %}
       {% if current_layout == 'ubc-card--vert' %}
         <div class="ubc-card__media">
