@@ -54,6 +54,14 @@ settings:
             - flex-2columns-2-1
             - flex-3columns
         -
+          name: Widgets
+          items:
+            - accordiontoggle
+            - accordion
+            - card-one
+            - card-two
+            - card-three
+        -
           name: Tools
           items:
             - A11ychecker
@@ -63,14 +71,6 @@ settings:
             - Maximize
             - ShowBlocks
             - Source
-        -
-          name: Widgets
-          items:
-            - accordiontoggle
-            - accordion
-            - card-one
-            - card-two
-            - card-three
   plugins:
     stylescombo:
       styles: "p.text-hug|Text Hug (remove top spacing)\r\np.text-lead.text-ubc-blue-cobalt|Lead Text\r\np.text-uppercase|Uppercase Text\r\np.text-lowercase|Lowercase Text\r\np.font-semibold|Semibold Text\r\np.text-grey-700|Grey Text\r\np.text-grey-700.text-uppercase.text-sm.text-hug|Cite, Footnote Text"
