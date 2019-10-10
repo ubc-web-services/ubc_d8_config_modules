@@ -36,11 +36,20 @@ settings:
       feature_image:
         enabled: true
         weight: 11
+      a11y_paragraphs_tabs_panel:
+        weight: 12
+        enabled: false
       icon_card:
         weight: 12
         enabled: false
+      a11y_paragraphs_tabs_wrapper:
+        weight: 13
+        enabled: false
       image_card:
         weight: 13
+        enabled: false
+      a11y_paragraphs_tab_content:
+        weight: 14
         enabled: false
       tab:
         weight: 15

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'ADMIN - Icon Settings'
+vid: admin_icon_settings
+description: 'Adds icon references that can be selected'
+weight: 0

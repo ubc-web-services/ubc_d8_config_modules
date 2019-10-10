@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.card.field_paragraph_card_color
+    - field.field.paragraph.card.field_paragraph_card_colour
     - field.field.paragraph.card.field_paragraph_card_image
-    - field.field.paragraph.card.field_paragraph_card_layout
     - field.field.paragraph.card.field_paragraph_card_link
     - field.field.paragraph.card.field_paragraph_card_link_entire
     - field.field.paragraph.card.field_paragraph_card_meta
+    - field.field.paragraph.card.field_paragraph_card_style
     - field.field.paragraph.card.field_paragraph_card_text
     - field.field.paragraph.card.field_paragraph_card_title
     - paragraphs.paragraphs_type.card
@@ -23,6 +23,15 @@ targetEntityType: paragraph
 bundle: card
 mode: default
 content:
+  field_paragraph_card_colour:
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
   field_paragraph_card_image:
     weight: 0
     label: hidden
@@ -52,6 +61,14 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_paragraph_card_style:
+    weight: 5
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_paragraph_card_text:
     weight: 1
     label: hidden
@@ -68,6 +85,4 @@ content:
     type: string
     region: content
 hidden:
-  field_paragraph_card_color: true
-  field_paragraph_card_layout: true
   field_paragraph_card_link_entire: true

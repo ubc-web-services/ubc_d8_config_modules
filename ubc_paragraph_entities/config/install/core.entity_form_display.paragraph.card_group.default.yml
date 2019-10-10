@@ -11,7 +11,25 @@ dependencies:
     module:
       - ubc_paragraph_entities
   module:
+    - field_group
     - paragraphs
+third_party_settings:
+  field_group:
+    group_optional_title:
+      children:
+        - field_paragraph_group_title
+        - field_paragraph_title_right
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: 'Optional Group Title'
+      region: content
 id: paragraph.card_group.default
 targetEntityType: paragraph
 bundle: card_group
@@ -19,7 +37,7 @@ mode: default
 content:
   field_paragraph_card:
     type: entity_reference_paragraphs
-    weight: 3
+    weight: 2
     settings:
       title: Card
       title_plural: Cards
@@ -30,7 +48,7 @@ content:
     third_party_settings: {  }
     region: content
   field_paragraph_group_title:
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -38,13 +56,13 @@ content:
     type: string_textfield
     region: content
   field_paragraph_number_per_row:
-    weight: 2
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_paragraph_title_right:
-    weight: 1
+    weight: 2
     settings:
       display_label: true
     third_party_settings: {  }

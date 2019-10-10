@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'ADMIN - Background Color Settings'
+vid: admin_background_color_settings
+description: 'Adds background color classes that can be selected'
+weight: 0

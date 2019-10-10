@@ -4,9 +4,9 @@ dependencies:
   config:
     - field.field.paragraph.image_card.field_paragraph_card_image
     - field.field.paragraph.image_card.field_paragraph_card_link
-    - field.field.paragraph.image_card.field_paragraph_card_options
     - field.field.paragraph.image_card.field_paragraph_card_text
     - field.field.paragraph.image_card.field_paragraph_card_title
+    - field.field.paragraph.image_card.field_paragraph_position_setting
     - image.style.max_650x650
     - paragraphs.paragraphs_type.image_card
   enforced:
@@ -15,7 +15,6 @@ dependencies:
   module:
     - image
     - link
-    - options
 id: paragraph.image_card.default
 targetEntityType: paragraph
 bundle: image_card
@@ -41,13 +40,6 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_paragraph_card_options:
-    weight: 4
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
   field_paragraph_card_text:
     weight: 2
     label: hidden
@@ -62,5 +54,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_paragraph_position_setting:
+    weight: 5
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
 hidden: {  }

@@ -5,9 +5,9 @@ dependencies:
     - field.field.paragraph.feature_image.field_paragraph_feature_caption
     - field.field.paragraph.feature_image.field_paragraph_feature_image
     - field.field.paragraph.feature_image.field_paragraph_feature_link
-    - field.field.paragraph.feature_image.field_paragraph_feature_options
     - field.field.paragraph.feature_image.field_paragraph_feature_title
-    - field.field.paragraph.feature_image.field_paragraph_feature_width
+    - field.field.paragraph.feature_image.field_paragraph_position_setting
+    - field.field.paragraph.feature_image.field_paragraph_width_settings
     - image.style.max_1300x1300
     - paragraphs.paragraphs_type.feature_image
   enforced:
@@ -16,7 +16,6 @@ dependencies:
   module:
     - image
     - link
-    - options
 id: paragraph.feature_image.default
 targetEntityType: paragraph
 bundle: feature_image
@@ -51,13 +50,6 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_paragraph_feature_options:
-    weight: 5
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_paragraph_feature_title:
     weight: 1
     label: hidden
@@ -66,11 +58,20 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_paragraph_feature_width:
-    weight: 2
+  field_paragraph_position_setting:
+    weight: 6
     label: hidden
-    settings: {  }
+    settings:
+      link: false
     third_party_settings: {  }
-    type: list_default
+    type: entity_reference_label
+    region: content
+  field_paragraph_width_settings:
+    weight: 7
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
 hidden: {  }

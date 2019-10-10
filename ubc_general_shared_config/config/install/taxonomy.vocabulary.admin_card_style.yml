@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'ADMIN - Card Style'
+vid: admin_card_style
+description: 'Adds card style classes that can be selected'
+weight: 0

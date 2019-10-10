@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.admin_icon_position.field_class
+    - taxonomy.vocabulary.admin_icon_position
+id: taxonomy_term.admin_icon_position.default
+targetEntityType: taxonomy_term
+bundle: admin_icon_position
+mode: default
+content:
+  field_class:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  description: true

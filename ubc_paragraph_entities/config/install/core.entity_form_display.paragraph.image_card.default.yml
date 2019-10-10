@@ -4,9 +4,9 @@ dependencies:
   config:
     - field.field.paragraph.image_card.field_paragraph_card_image
     - field.field.paragraph.image_card.field_paragraph_card_link
-    - field.field.paragraph.image_card.field_paragraph_card_options
     - field.field.paragraph.image_card.field_paragraph_card_text
     - field.field.paragraph.image_card.field_paragraph_card_title
+    - field.field.paragraph.image_card.field_paragraph_position_setting
     - image.style.thumbnail
     - paragraphs.paragraphs_type.image_card
   enforced:
@@ -36,12 +36,6 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_paragraph_card_options:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_paragraph_card_text:
     weight: 3
     settings:
@@ -57,6 +51,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_paragraph_position_setting:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
 hidden:
   created: true

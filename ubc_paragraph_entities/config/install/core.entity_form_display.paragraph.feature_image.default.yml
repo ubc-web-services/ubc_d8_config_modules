@@ -5,9 +5,9 @@ dependencies:
     - field.field.paragraph.feature_image.field_paragraph_feature_caption
     - field.field.paragraph.feature_image.field_paragraph_feature_image
     - field.field.paragraph.feature_image.field_paragraph_feature_link
-    - field.field.paragraph.feature_image.field_paragraph_feature_options
     - field.field.paragraph.feature_image.field_paragraph_feature_title
-    - field.field.paragraph.feature_image.field_paragraph_feature_width
+    - field.field.paragraph.feature_image.field_paragraph_position_setting
+    - field.field.paragraph.feature_image.field_paragraph_width_settings
     - image.style.thumbnail
     - paragraphs.paragraphs_type.feature_image
   enforced:
@@ -22,7 +22,7 @@ bundle: feature_image
 mode: default
 content:
   field_paragraph_feature_caption:
-    weight: 3
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -30,7 +30,7 @@ content:
     type: string_textfield
     region: content
   field_paragraph_feature_image:
-    weight: 1
+    weight: 2
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -38,28 +38,28 @@ content:
     type: image_image
     region: content
   field_paragraph_feature_link:
-    weight: 4
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
-  field_paragraph_feature_options:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_paragraph_feature_title:
-    weight: 2
+    weight: 3
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_paragraph_feature_width:
+  field_paragraph_position_setting:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_paragraph_width_settings:
     weight: 0
     settings: {  }
     third_party_settings: {  }

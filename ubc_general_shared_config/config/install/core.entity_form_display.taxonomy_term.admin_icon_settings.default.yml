@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.admin_icon_settings.field_id
+    - taxonomy.vocabulary.admin_icon_settings
+id: taxonomy_term.admin_icon_settings.default
+targetEntityType: taxonomy_term
+bundle: admin_icon_settings
+mode: default
+content:
+  field_id:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
