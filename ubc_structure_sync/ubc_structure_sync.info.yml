@@ -1,0 +1,8 @@
+name: UBC Structure Sync
+type: module
+description: This module defines shared settings not normally captured via configuration management (taxonomy terms, block settings) and imports them via the Structure Symnc module.
+package: UBC Web Services
+dependencies:
+  - drupal:structure_sync
+  - ubc_general_shared_config:ubc_general_shared_config
+core: '8.x'

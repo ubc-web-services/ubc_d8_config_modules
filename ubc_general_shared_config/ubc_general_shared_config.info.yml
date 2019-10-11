@@ -4,6 +4,5 @@ description: This module defines shared configuration items (ie. display modes, 
 package: UBC Web Services
 dependencies:
   - drupal:node
-  - drupal:structure_sync
   - drupal:taxonomy
 core: '8.x'
