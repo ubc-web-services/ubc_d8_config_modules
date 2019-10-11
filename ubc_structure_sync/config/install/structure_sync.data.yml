@@ -9,6 +9,7 @@
       description__format: null
       weight: '1'
       parent: '0'
+      uuid: eadeac76-0b45-42ed-a96d-86fe9f6cfe99
       field_class:
         -
           value: bg-grey-100
@@ -21,6 +22,7 @@
       description__format: null
       weight: '2'
       parent: '0'
+      uuid: 6aea3ba9-9d75-44d9-94e2-29b28521115b
       field_class:
         -
           value: bg-ubc-blue
@@ -33,6 +35,7 @@
       description__format: null
       weight: '4'
       parent: '0'
+      uuid: cfc2a716-7830-457c-8334-39617cb5b86c
       field_class:
         -
           value: bg-ubc-blue-cobalt
@@ -45,6 +48,7 @@
       description__format: null
       weight: '6'
       parent: '0'
+      uuid: b752a5cb-5012-4c9d-9ad7-12169257ce49
       field_class:
         -
           value: bg-ubc-blue-cornflower
@@ -57,6 +61,7 @@
       description__format: null
       weight: '5'
       parent: '0'
+      uuid: 601e7f94-8a48-4e6e-8304-d3027460a9db
       field_class:
         -
           value: bg-ubc-blue-neptune
@@ -69,6 +74,7 @@
       description__format: null
       weight: '7'
       parent: '0'
+      uuid: 5a23b29e-90de-495c-b8a6-5399342aa2a0
       field_class:
         -
           value: bg-ubc-blue-polar
@@ -81,6 +87,7 @@
       description__format: null
       weight: '3'
       parent: '0'
+      uuid: e48b177d-1e68-4dbb-acd2-4cdb18eef672
       field_class:
         -
           value: bg-ubc-blue-sea
@@ -93,6 +100,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 0025a19f-3180-4a19-a17e-dc3388646069
       field_class:
         -
           value: bg-white
@@ -106,6 +114,7 @@
       description__format: null
       weight: '2'
       parent: '0'
+      uuid: ccadfe6f-ba0b-413c-91d9-c51fbfb414a0
       field_class:
         -
           value: ubc-card--horiz-media
@@ -118,6 +127,7 @@
       description__format: null
       weight: '3'
       parent: '0'
+      uuid: 2ca6a208-c3cb-44d5-823d-84f79ee1e8a4
       field_class:
         -
           value: ubc-card--horiz-media-r
@@ -130,6 +140,7 @@
       description__format: null
       weight: '1'
       parent: '0'
+      uuid: cac34cd7-1218-4480-902c-25d3daf9437d
       field_class:
         -
           value: ubc-card--vert
@@ -142,6 +153,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 86003a6b-38e0-4a63-9a45-70b3613f89b3
       field_class:
         -
           value: ubc-card--basic
@@ -155,6 +167,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 82a6c870-8a30-40d7-b153-d71852475b31
       field_class:
         -
           value: ubc-card--horiz
@@ -167,6 +180,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 0026370a-ba12-4634-ac4e-7372805930ba
       field_class:
         -
           value: ubc-card--horiz-rev
@@ -180,6 +194,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: f868f48b-ce3a-4e8b-9149-91cec03fa153
       field_id:
         -
           value: icon-alert
@@ -192,6 +207,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: faf69f66-d16f-4d86-96a4-10a7f34fcecd
       field_id:
         -
           value: icon-arrow
@@ -204,6 +220,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: be6025fa-93c1-4d54-8e82-7dd2233fbf6e
       field_id:
         -
           value: icon-arrow-circle
@@ -216,6 +233,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 19ac055c-74f0-457b-8dd5-4e722ca35336
       field_id:
         -
           value: icon-caret
@@ -228,6 +246,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: fee5d7c4-62f5-444d-8f3f-def7b81f169c
       field_id:
         -
           value: icon-cart
@@ -240,6 +259,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 35211ea7-2160-4a0e-a743-546860ddd25d
       field_id:
         -
           value: icon-clock
@@ -252,6 +272,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 1164cb21-03aa-489d-8bae-6e6a08d3f94c
       field_id:
         -
           value: icon-discussion
@@ -264,6 +285,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 1a9bd5a1-d941-4453-ad43-9ad907eb9924
       field_id:
         -
           value: icon-facebook
@@ -276,6 +298,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 94ed3146-4ba1-4695-92ce-36658f36daf1
       field_id:
         -
           value: icon-home
@@ -288,6 +311,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 56a6153b-c540-4963-809f-3915878c0286
       field_id:
         -
           value: icon-info
@@ -300,6 +324,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 68bc4695-49dd-4f3e-889b-76bd6f00778e
       field_id:
         -
           value: icon-instagram
@@ -312,6 +337,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 3094dc4a-c682-46b3-a417-57953c4a65d3
       field_id:
         -
           value: icon-linkedin
@@ -324,6 +350,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: ff6ed67f-8c5d-4877-9406-a23e07c54438
       field_id:
         -
           value: icon-location
@@ -336,6 +363,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: f59e83ba-45cf-49ec-a156-8f00370c529c
       field_id:
         -
           value: icon-mail
@@ -348,6 +376,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: a580556f-fc1c-4a9a-9923-3612b9904674
       field_id:
         -
           value: icon-minus
@@ -360,6 +389,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 8c3eeb53-8607-49f5-bfd7-14e516af876f
       field_id:
         -
           value: icon-pencil
@@ -372,6 +402,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 44b73cde-2ee2-4fbd-8016-1bc58f5ac381
       field_id:
         -
           value: icon-phone
@@ -384,6 +415,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: a66e0b2d-750c-4cdf-bb7d-5e9ae30e6c20
       field_id:
         -
           value: icon-play
@@ -396,6 +428,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: af02972c-a518-4e39-b39e-bff4788cbb0e
       field_id:
         -
           value: icon-plus
@@ -408,6 +441,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 8b095a3e-1b70-4aab-8959-be77544295c7
       field_id:
         -
           value: icon-rss
@@ -420,6 +454,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 4e45fd65-3e12-41b5-b2f1-88ffa6a4d733
       field_id:
         -
           value: icon-search
@@ -432,6 +467,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 79b3fce5-4fb9-47c4-bf71-757c0f19995f
       field_id:
         -
           value: icon-settings
@@ -444,6 +480,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 0fb7355b-7574-4e07-8d54-ebaa8a368667
       field_id:
         -
           value: icon-speech
@@ -456,6 +493,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 6c368a79-08c2-4858-85bd-0145aab0282c
       field_id:
         -
           value: icon-star
@@ -468,6 +506,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: b7ff8e76-6144-4b3a-aef3-77faa1b6c380
       field_id:
         -
           value: icon-twitter
@@ -480,6 +519,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 6fabd750-cb89-4f80-8fc3-265e0b92bf9f
       field_id:
         -
           value: icon-user
@@ -492,6 +532,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 1dbcc076-5cc3-4075-a629-e2c25a3aa066
       field_id:
         -
           value: icon-vimeo
@@ -504,6 +545,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 5966b66a-4b41-4e95-8bf9-67fadc982939
       field_id:
         -
           value: icon-youtube
@@ -517,6 +559,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: d7e4555d-a5e8-4602-b277-50b540410508
       field_class:
         -
           value: text-bottom-left
@@ -529,6 +572,7 @@
       description__format: null
       weight: '1'
       parent: '0'
+      uuid: 6a083ad1-00fd-43b4-93ed-7f3c55ab3c20
       field_class:
         -
           value: text-bottom-right
@@ -541,6 +585,7 @@
       description__format: null
       weight: '2'
       parent: '0'
+      uuid: 90b71416-5a85-45bc-b5e0-b6d046167e88
       field_class:
         -
           value: text-top-left
@@ -553,6 +598,7 @@
       description__format: null
       weight: '3'
       parent: '0'
+      uuid: 3230c451-b064-4e7e-ab81-f4052fb6cefa
       field_class:
         -
           value: text-top-right
@@ -566,6 +612,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: ac6a9021-5797-4dd2-992d-d9cd961b6e47
       field_class:
         -
           value: full-bleed
@@ -578,6 +625,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 06dc6058-6e8f-4d07-b3af-6519c81f9c02
       field_class:
         -
           value: w-narrow
@@ -591,6 +639,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: c805d640-47da-4871-8451-343e0d7cd640
     -
       vid: announcement_type
       tid: '6'
@@ -600,6 +649,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 79b13409-6a4c-455a-bedf-e8e154fa9eb4
     -
       vid: announcement_type
       tid: '4'
@@ -609,6 +659,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 5adb6603-88eb-4d35-94bf-6966452fd03f
   department_or_unit:
     -
       vid: department_or_unit
@@ -619,6 +670,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: addfa520-0f68-42a7-8002-ce0935616db7
   event_category:
     -
       vid: event_category
@@ -629,6 +681,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 7e24c13f-1ade-4a54-97c4-3c2931a3b25a
     -
       vid: event_category
       tid: '8'
@@ -638,6 +691,7 @@
       description__format: null
       weight: '0'
       parent: '0'
+      uuid: 28fc7fe9-5d1a-4bf7-b247-c6d08bbfc12a
   tags:
     -
       vid: tags
@@ -648,6 +702,7 @@
       description__format: filtered_text
       weight: '0'
       parent: '0'
+      uuid: 54476c6d-6dd3-4d25-8360-614d665cc925
     -
       vid: tags
       tid: '12'
@@ -657,6 +712,7 @@
       description__format: filtered_text
       weight: '0'
       parent: '0'
+      uuid: 1538813f-ed23-4378-9ff5-49479c445b84
     -
       vid: tags
       tid: '11'
@@ -666,6 +722,7 @@
       description__format: filtered_text
       weight: '0'
       parent: '0'
+      uuid: 6a920eff-3f6a-4f52-815c-048631ce77ac
     -
       vid: tags
       tid: '10'
@@ -675,10 +732,12 @@
       description__format: filtered_text
       weight: '0'
       parent: '0'
+      uuid: 07120536-bc15-4cde-a763-3a78fce01a92
 blocks:
   -
     info: Quicklinks
     langcode: en
+    uuid: de0f98bc-ff09-45ec-b6a1-2dd3fdb9bddf
     bundle: quicklinks_block
     revision_id: null
     rev_id_current: null
