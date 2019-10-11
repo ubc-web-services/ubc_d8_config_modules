@@ -1,4 +1,3 @@
-uuid: 69e374cc-d6a9-428e-bf98-baf1e26c9920
 langcode: en
 status: true
 dependencies:
@@ -51,7 +50,7 @@ display:
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
+          expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
@@ -478,6 +477,18 @@ display:
       display_extenders: {  }
       block_description: 'Content: Announcement list view'
       display_description: ''
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Search
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: false
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      defaults:
+        exposed_form: false
     cache_metadata:
       max-age: -1
       contexts:
