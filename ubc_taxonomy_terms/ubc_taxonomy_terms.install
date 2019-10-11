@@ -1,0 +1,96 @@
+<?php
+
+use Drupal\taxonomy\Entity\Term;
+/**
+ * Implements hook_install().
+ *
+ * We don't want users to be able to delete our ubc_taxonomy_terms content
+ * type. So therefore we have to tell Drupal that this is the case. This
+ * can't be done in the content type's configuration YAML file, so we have to
+ * do it in code, here.
+ *
+ * @ingroup ubc_taxonomy_terms
+ */
+/* function ubc_taxonomy_terms_install() {
+  // Do not allow the locked content type to be deleted.
+  $locked = Drupal::state()->get('node.type.locked');
+  $locked['ubc_taxonomy_terms'] = 'ubc_taxonomy_terms';
+  Drupal::state()->set('node.type.locked', $locked);
+} */
+function ubc_taxonomy_terms_install() {
+  $vocab = 'admin_background_color_settings';
+  $items = [
+    'White',
+    'Light Grey',
+    'UBC Blue',
+    'UBC Blue: Sea',
+    'UBC Blue: Cobalt',
+    'UBC Blue: Neptune',
+    'UBC Blue: Cornflower',
+    'UBC Blue: Polar',
+  ];
+  foreach ($items as $item) {
+    $term = Term::create(array(
+      'parent' => array(),
+      'name' => $item,
+      'vid' => $vocab,
+      //'field_class' => [$url],
+    ))->save();
+  }
+}
+
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Our content types will live on in the Drupal installation, even after this
+ * module is uninstalled. This is a good thing, since it allows the user to
+ * make decisions about their fate. Therefore we should give the user the
+ * option of deleting them.
+ *
+ * Since we told Drupal that our ubc_taxonomy_terms is locked, we now have
+ * to tell it to unlock.
+ *
+ * @ingroup ubc_taxonomy_terms
+ */
+/* function ubc_taxonomy_terms_uninstall() {
+  // Allow announcement to be deleted.
+  $locked = Drupal::state()->get('node.type.locked');
+  unset($locked['ubc_taxonomy_terms']);
+  Drupal::state()->set('node.type.locked', $locked);
+}
+ */
+
+/**
+ * Update configuration from file.
+ * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
+ * https://www.jeffgeerling.com/blog/2017/add-set-taxonomy-terms-custom-drupal-modules-update-hook
+ */
+function ubc_taxonomy_terms_update_8001() {
+}
+
+/**
+ * ADD tags.
+ * https://www.jeffgeerling.com/blog/2017/add-set-taxonomy-terms-custom-drupal-modules-update-hook
+ */
+/* function ubc_taxonomy_terms_update_8002() {
+  $vocab = 'admin_background_color_settings';
+  $items = [
+    'White',
+    'Light Grey',
+    'UBC Blue',
+    'UBC Blue: Sea',
+    'UBC Blue: Cobalt',
+    'UBC Blue: Neptune',
+    'UBC Blue: Cornflower',
+    'UBC Blue: Polar',
+  ];
+  foreach ($items as $item) {
+    $term = Term::create(array(
+      'parent' => array(),
+      'name' => $item,
+      'vid' => $vocab,
+      //'field_class' => [$url],
+    ))->save();
+  }
+} */
