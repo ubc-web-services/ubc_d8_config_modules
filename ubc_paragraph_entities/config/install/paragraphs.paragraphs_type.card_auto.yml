@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: card_auto
+label: 'Card (auto)'
+icon_uuid: null
+description: 'Adds a card by selecting from existing content.'
+behavior_plugins: {  }
