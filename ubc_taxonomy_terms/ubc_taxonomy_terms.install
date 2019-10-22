@@ -4,39 +4,132 @@ use Drupal\taxonomy\Entity\Term;
 /**
  * Implements hook_install().
  *
- * We don't want users to be able to delete our ubc_taxonomy_terms content
- * type. So therefore we have to tell Drupal that this is the case. This
- * can't be done in the content type's configuration YAML file, so we have to
- * do it in code, here.
+ * We want to seed our taxonomies with some terms, so we do that here.
  *
  * @ingroup ubc_taxonomy_terms
  */
-/* function ubc_taxonomy_terms_install() {
-  // Do not allow the locked content type to be deleted.
-  $locked = Drupal::state()->get('node.type.locked');
-  $locked['ubc_taxonomy_terms'] = 'ubc_taxonomy_terms';
-  Drupal::state()->set('node.type.locked', $locked);
-} */
 function ubc_taxonomy_terms_install() {
-  $vocab = 'admin_background_color_settings';
-  $items = [
-    'White',
-    'Light Grey',
-    'UBC Blue',
-    'UBC Blue: Sea',
-    'UBC Blue: Cobalt',
-    'UBC Blue: Neptune',
-    'UBC Blue: Cornflower',
-    'UBC Blue: Polar',
-  ];
-  foreach ($items as $item) {
+  // Background Colour Classes
+  $bgvocab = 'admin_background_color_settings';
+  $bgitems = array(
+    'White' => 'bg-white',
+    'Light Grey' => 'bg-grey-100',
+    'UBC Blue' => 'bg-ubc-blue',
+    'UBC Blue: Sea' => 'bg-ubc-blue-sea',
+    'UBC Blue: Cobalt' => 'bg-ubc-blue-cobalt',
+    'UBC Blue: Neptune' => 'bg-ubc-blue-neptune',
+    'UBC Blue: Cornflower' => 'bg-ubc-blue-cornflower',
+    'UBC Blue: Polar' => 'bg-ubc-blue-polar',
+  );
+  foreach ($bgitems as $key => $value) {
     $term = Term::create(array(
       'parent' => array(),
-      'name' => $item,
-      'vid' => $vocab,
-      //'field_class' => [$url],
+      'name' =>$key,
+      'vid' => $bgvocab,
+      'field_class' => $value,
     ))->save();
   }
+  // Card Style Classes
+  $cardvocab = 'admin_card_style';
+  $carditems = array(
+    'Vertical, no image displayed' => 'ubc-card--basic',
+    'Vertical, image top' => 'ubc-card--vert',
+    'Horizontal, Image left' => 'ubc-card--horiz-media',
+    'Horizontal, Image right' => 'ubc-card--horiz-media-r',
+  );
+  foreach ($carditems as $key => $value) {
+    $term = Term::create(array(
+      'parent' => array(),
+      'name' =>$key,
+      'vid' => $cardvocab,
+      'field_class' => $value,
+    ))->save();
+  }
+  // Icon Position Classes
+  $iposvocab = 'admin_icon_position';
+  $ipositems = array(
+    'Icon left' => 'ubc-card--horiz',
+    'Icon right' => 'ubc-card--horiz-rev',
+  );
+  foreach ($ipositems as $key => $value) {
+    $term = Term::create(array(
+      'parent' => array(),
+      'name' =>$key,
+      'vid' => $iposvocab,
+      'field_class' => $value,
+    ))->save();
+  }
+  // Icon Classes
+  $iconvocab = 'admin_icon_settings';
+  $iconitems = array(
+    'Alert' => 'icon-alert',
+    'Arrow' => 'icon-arrow',
+    'Arrow in circle' => 'icon-arrow-circle',
+    'Caret' => 'icon-caret',
+    'Cart' => 'icon-cart',
+    'Clock' => 'icon-clock',
+    'Discussion' => 'icon-discussion',
+    'Facebook' => 'icon-facebook',
+    'Home' => 'icon-home',
+    'Info' => 'icon-info',
+    'Instagram' => 'icon-instagram',
+    'LinkedIn' => 'icon-linkedin',
+    'Location marker' => 'icon-location',
+    'Mail' => 'icon-mail',
+    'Minus sign' => 'icon-minus',
+    'Pencil' => 'icon-pencil',
+    'Phone' => 'icon-phone',
+    'Play button' => 'icon-play',
+    'Plus sign' => 'icon-plus',
+    'RSS' => 'icon-rss',
+    'Search' => 'icon-search',
+    'Settings (gear)' => 'icon-settings',
+    'Speech' => 'icon-speech',
+    'Star' => 'icon-star',
+    'Twitter' => 'icon-twitter',
+    'User' => 'icon-user',
+    'Vimeo' => 'icon-vimeo',
+    'YouTube' => 'icon-youtube',
+  );
+  foreach ($iconitems as $key => $value) {
+    $term = Term::create(array(
+      'parent' => array(),
+      'name' =>$key,
+      'vid' => $iconvocab,
+      'field_class' => $value,
+    ))->save();
+  }
+  // Text Position Classes
+  $textvocab = 'admin_postion_settings';
+  $textitems = array(
+    'Text Bottom Left' => 'text-bottom-left',
+    'Text Bottom Right' => 'text-bottom-right',
+    'Text Top Left' => 'text-top-left',
+    'Text Top Right' => 'text-top-right',
+  );
+  foreach ($textitems as $key => $value) {
+    $term = Term::create(array(
+      'parent' => array(),
+      'name' =>$key,
+      'vid' => $textvocab,
+      'field_class' => $value,
+    ))->save();
+  }
+  // Text Position Classes
+  $widthvocab = 'admin_width_settings';
+  $widthitems = array(
+    'Full Bleed' => 'full-bleed',
+    'Narrow' => 'w-narrow',
+  );
+  foreach ($widthitems as $key => $value) {
+    $term = Term::create(array(
+      'parent' => array(),
+      'name' =>$key,
+      'vid' => $widthvocab,
+      'field_class' => $value,
+    ))->save();
+  }
+
 }
 
 
@@ -54,7 +147,6 @@ function ubc_taxonomy_terms_install() {
  * @ingroup ubc_taxonomy_terms
  */
 /* function ubc_taxonomy_terms_uninstall() {
-  // Allow announcement to be deleted.
   $locked = Drupal::state()->get('node.type.locked');
   unset($locked['ubc_taxonomy_terms']);
   Drupal::state()->set('node.type.locked', $locked);
