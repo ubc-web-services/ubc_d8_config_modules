@@ -31,13 +31,8 @@ settings:
             - BulletedList
             - NumberedList
             - JustifyLeft
+            - JustifyCenter
             - JustifyRight
-        -
-          name: Media
-          items:
-            - file
-            - private_file
-            - image
         -
           name: Style
           items:
@@ -53,6 +48,7 @@ settings:
             - flex-2columns-1-2
             - flex-2columns-2-1
             - flex-3columns
+            - DrupalMediaLibrary
         -
           name: Widgets
           items:

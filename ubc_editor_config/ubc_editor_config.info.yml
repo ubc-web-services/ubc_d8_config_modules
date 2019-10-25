@@ -5,7 +5,6 @@ package: UBC Web Services
 dependencies:
   - drupal:ckeditor
   - drupal:editor_button_link
-  - drupal:entity_embed
   - drupal:inline_responsive_images
   - drupal:linkit
   - ubc_ckeditor_widgets:ubc_ckeditor_widgets
