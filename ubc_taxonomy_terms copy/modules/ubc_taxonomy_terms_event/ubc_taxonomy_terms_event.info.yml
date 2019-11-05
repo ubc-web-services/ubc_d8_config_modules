@@ -1,0 +1,7 @@
+name: UBC Taxonomy Terms - Events
+type: module
+description: This module creates taxonomy terms for the Event Category taxonomy, as these are not captured via configuration management.
+package: UBC Web Services
+dependencies:
+  - ubc_general_shared_config:ubc_general_shared_config
+core: '8.x'
