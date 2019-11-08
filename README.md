@@ -58,23 +58,23 @@ This assumes you've installed Drupal using the Standard installation profile
 
 ### Enable and set themes
 
-```lando drush theme:enable adminimal_theme && lando drush theme:enable octopus && lando drush config-set system.theme admin adminimal_theme -y && lando drush config-set system.theme default octopus -y```
+```lando drush theme:enable claro && lando drush theme:enable octopus && lando drush config-set system.theme admin claro -y && lando drush config-set system.theme default octopus -y```
 
 ### Enable contrib modules and disable some core ones
 
-```lando drush en address, admin_toolbar_links_access_filter, admin_toolbar_tools, adminimal_admin_toolbar, allowed_formats, anchor_link, antibot, auto_entitylabel, ckeditor_a11ychecker, content_moderation, crop, ctools, datetime_range, editor_advanced_link, editor_button_link, entity_reference_revisions, entity_tasks, field_group, ga, image_widget_crop, inline_entity_form, inline_responsive_images, linkit, media, media_library, menu_block, metatag, pathauto, paragraphs, simple_gmap, simple_sitemap, smtp, telephone, token, twig_tweak, webform, webform_ui, workflows -y```
+```lando drush en address, admin_toolbar_links_access_filter, admin_toolbar_tools, adminimal_admin_toolbar, allowed_formats, anchor_link, antibot, auto_entitylabel, ckeditor_a11ychecker, content_moderation, crop, ctools, datetime_range, editor_advanced_link, editor_button_link, entity_reference_revisions, entity_tasks, field_group, ga, image_widget_crop, inline_responsive_images, linkit, media,menu_block, metatag, pathauto, paragraphs, simple_gmap, simple_sitemap, smtp, telephone, token, twig_tweak, webform, webform_ui, workflows -y```
 
 ### Enable custom modules for general settings
 
-```lando drush en ubc_ckeditor_widgets, ubc_date_formats, ubc_editor_config, ubc_image_styles, ubc_paragraph_entities, ubc_general_shared_config -y```
+```lando drush en ubc_ckeditor_widgets, ubc_date_formats, ubc_editor_config, ubc_media_entities, ubc_image_styles, ubc_paragraph_entities, ubc_general_shared_config -y```
 
 ### Enable custom content type modules
 
-```lando drush en ubc_editor_file_entities, ubc_announcement, ubc_homepage, ubc_event, ubc_landing_page, ubc_page, ubc_profile -y```
+```lando drush en ubc_announcement, ubc_homepage, ubc_event, ubc_landing_page, ubc_page, ubc_profile -y```
 
 ### Enable User Role and Views modules last, once all the pieces are in place.
 
-```lando drush en ubc_announcement_views, ubc_homepage_views, ubc_event_views, ubc_landing_page_views, ubc_profile_views, ubc_taxonomy_terms, ubc_user_roles -y```
+```lando drush en ubc_announcement_views, ubc_homepage_views, ubc_event_views, ubc_landing_page_views, ubc_profile_views, ubc_user_roles -y```
 
 ### POST INSTALL
 
