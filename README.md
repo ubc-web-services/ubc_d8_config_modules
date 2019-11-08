@@ -70,7 +70,7 @@ This assumes you've installed Drupal using the Standard installation profile
 
 ### Enable custom content type modules
 
-```lando drush en ubc_announcement, ubc_homepage, ubc_event, ubc_landing_page, ubc_page, ubc_profile -y```
+```lando drush en ubc_announcement, ubc_homepage, ubc_event, ubc_landing_page, ubc_page, ubc_profile, ubc_taxonomy_terms_admin, ubc_taxonomy_terms_announcement, ubc_taxonomy_terms_department, ubc_taxonomy_terms_event -y```
 
 ### Enable User Role and Views modules last, once all the pieces are in place.
 
