@@ -2,7 +2,7 @@ entity.content_item_entity.add_form:
   route_name: entity.content_item_entity.add_page
   title: 'Add Content Item'
   appears_on:
-    - entity.content_item_entity.collection
+    - system.admin_content
 entity.content_item_entity_type.add_form:
   route_name: entity.content_item_entity_type.add_form
   title: 'Add Content Item type'
