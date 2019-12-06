@@ -9,4 +9,5 @@ dependencies:
   - drupal:linkit
   - ubc_ckeditor_widgets:ubc_ckeditor_widgets
   - ubc_image_styles:ubc_image_styles
+  - ubc_media_entities:ubc_media_entities
 core: '8.x'

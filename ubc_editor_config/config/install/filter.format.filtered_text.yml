@@ -13,6 +13,7 @@ dependencies:
     - inline_responsive_images
     - linkit
     - media
+    - ubc_media_entities
 name: 'Filtered Text'
 format: filtered_text
 weight: -20
