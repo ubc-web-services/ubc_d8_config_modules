@@ -1,5 +1,0 @@
-name: 'UBC Share Block'
-type: module
-description: 'This module adds a block of share links for various social media platforms.'
-core: 8.x
-package: 'UBC Web Services'
