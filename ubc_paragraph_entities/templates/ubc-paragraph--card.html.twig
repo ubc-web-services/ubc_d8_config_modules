@@ -50,8 +50,8 @@
 %}
 {%
   set card_classes = [
-    paragraph.field_paragraph_card_color.value|clean_class,
-    paragraph.field_paragraph_card_layout.value|clean_class,
+    paragraph.field_paragraph_card_color.0.entity.field_class.value|clean_class,
+    paragraph.field_paragraph_card_style.0.entity.field_class.value|clean_class,
     'ubc-card ubc-card--shadow text-black hover--no-underline group'
   ]
 %}
@@ -60,7 +60,7 @@
   set card_link = paragraph.field_paragraph_card_link_entire.0.value
 %}
 {%
-  set current_layout = paragraph.field_paragraph_card_layout.value
+  set current_layout = paragraph.field_paragraph_card_style.0.entity.field_class.value
 %}
 {%
   set bg_img = file_url(content.field_paragraph_card_image['#items'].entity.uri.value|image_style('max_650x650'))

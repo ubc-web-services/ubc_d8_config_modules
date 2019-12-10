@@ -43,9 +43,9 @@
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    paragraph.field_paragraph_feature_options.value ?
-    paragraph.field_paragraph_feature_options.value|clean_class,
-    paragraph.field_paragraph_feature_width.value ? paragraph.field_paragraph_feature_width.value|clean_class,
+    paragraph.field_paragraph_position_setting.0.entity.field_class.value ?
+    paragraph.field_paragraph_position_setting.0.entity.field_class.value|clean_class,
+    paragraph.field_paragraph_width_settings.0.entity.field_class.value ? paragraph.field_paragraph_width_settings.0.entity.field_class.value|clean_class,
     'my-8',
 
   ]
@@ -59,10 +59,10 @@
     paragraph.field_paragraph_feature_link.value or paragraph.field_paragraph_feature_title.value ? 'has-gradient',
   ]
 %}
-{% set textPostion = field_paragraph_feature_options.value|clean_class %}
+{% set textPostion = field_paragraph_position_setting.0.entity.field_class.value|clean_class %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-    {% if paragraph.field_paragraph_width_option.value %}
+    {% if paragraph.field_paragraph_width_settings.0.entity.field_class.value %}
     <div{{ layoutAttributes.addClass('container', 'mx-auto', 'p-4') }}>
     {% endif %}
     {% block content %}
@@ -88,7 +88,7 @@
       {% endif %}
       </figure>
     {% endblock %}
-    {% if paragraph.field_paragraph_width_option.value %}
+    {% if paragraph.field_paragraph_width_settings.0.entity.field_class.value %}
     </div>
     {% endif %}
   </div>

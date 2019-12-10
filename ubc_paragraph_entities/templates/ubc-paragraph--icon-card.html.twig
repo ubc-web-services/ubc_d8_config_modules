@@ -50,8 +50,8 @@
 %}
 {%
   set card_classes = [
-    paragraph.field_paragraph_icon_card_colour.value|clean_class,
-    paragraph.field_paragraph_icon_card_layout.value|clean_class,
+    paragraph.field_paragraph_card_colour.0.entity.field_class.value|clean_class,
+    paragraph.field_paragraph_icon_layout.0.entity.field_class.value|clean_class,
     'ubc-card ubc-card--horiz ubc-card--shadow hover--no-underline group'
   ]
 %}
@@ -73,7 +73,7 @@
       {% if card_link == true %}
         <div class="ubc-card__media min-h-64 flex">
           <svg role="presentation" class="inline-block h-24 w-24 self-center mx-auto stroke-w-1">
-            <use xlink:href="#{{ paragraph.field_paragraph_icon_card_icon.value }}"></use>
+            <use xlink:href="#{{ paragraph.field_paragraph_icon.0.entity.field_id.value }}"></use>
           </svg>
         </div>
         {% endif %}
