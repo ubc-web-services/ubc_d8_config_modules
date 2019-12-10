@@ -74,13 +74,11 @@
       {% else %}
       <a{{ card_attributes.addClass(card_classes) }} href="{{ paragraph.field_paragraph_icon_card_link.0.url }}">
       {% endif %}
-      {% if card_link == true %}
         <div class="ubc-card__media min-h-64 flex">
           <svg role="presentation" class="inline-block h-24 w-24 self-center mx-auto stroke-w-1">
             <use xlink:href="#{{ paragraph.field_paragraph_icon.0.entity.field_id.value }}"></use>
           </svg>
         </div>
-        {% endif %}
         <div class="ubc-card__content self-center">
           <h2 class="card__title">{{ paragraph.field_paragraph_icon_card_title.value }}</h2>
           <p class="text-hug">{{ paragraph.field_paragraph_icon_card_text.value }}</p>
