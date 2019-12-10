@@ -50,9 +50,13 @@
 %}
 {%
   set card_classes = [
-    paragraph.field_paragraph_card_color.0.entity.field_class.value|clean_class,
+    'ubc-card',
     paragraph.field_paragraph_card_style.0.entity.field_class.value|clean_class,
-    'ubc-card ubc-card--shadow text-black hover--no-underline group'
+    paragraph.field_paragraph_card_colour.0.entity.field_class.value|clean_class,
+    'ubc-card--shadow',
+    'text-black',
+    'hover--no-underline',
+    'group'
   ]
 %}
 {# set variable to tell us if the link entire card option is enabled #}
