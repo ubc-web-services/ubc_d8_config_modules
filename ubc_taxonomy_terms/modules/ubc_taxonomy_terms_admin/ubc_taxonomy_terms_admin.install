@@ -56,7 +56,7 @@ function ubc_taxonomy_terms_admin_install() {
       'parent' => array(),
       'name' =>$key,
       'vid' => $iposvocab,
-      'field_class' => $value,
+      'field_id' => $value,
     ))->save();
   }
   // Icon Classes
