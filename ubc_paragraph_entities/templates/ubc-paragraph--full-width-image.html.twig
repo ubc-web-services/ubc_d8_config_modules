@@ -43,28 +43,31 @@
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    paragraph.field_paragraph_bg_color.value ? paragraph.field_paragraph_bg_color.value|clean_class,
+    paragraph.field_paragraph_width_settings.0.entity.field_class.value ? paragraph.field_paragraph_width_settings.0.entity.field_class.value|clean_class,
   ]
 %}
 {% set layoutAttributes = create_attribute() %}
-{% if paragraph.field_paragraph_layout.value %}
+{% if paragraph.field_paragraph_width_settings.0.entity.field_class.value %}
 {%
   set layout_class = [
-    paragraph.field_paragraph_layout.value|clean_class,
+    paragraph.field_paragraph_width_settings.0.entity.field_class.value|clean_class,
   ]
+%}
+{%
+  set text_position = paragraph.field_paragraph_position_setting.0.entity.field_class.value|clean_class
 %}
 {% endif %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-    {% if paragraph.field_paragraph_layout.value %}
+    {% if paragraph.field_paragraph_width_settings.0.entity.field_class.value%}
     <div{{ layoutAttributes.addClass(layout_class) }}>
     {% endif %}
     {% block content %}
       <figure class="relative has-content--after has-gradient-top--after">
       {{ content.field_paragraph_image.0 }}
       {% if paragraph.field_paragraph_button.value or paragraph.field_paragraph_title.value %}
-       <div class="absolute pin z-10">
-        <div class="container mx-auto px-4">
+       <div class="absolute pin z-10 {{ text_position }}">
+        <div class="container mx-auto px-4 ">
         {% if paragraph.field_paragraph_title.value %}
         <h2 class="text-white">{{ paragraph.field_paragraph_title.value }}</h2>
         {% endif %}
@@ -77,12 +80,12 @@
         </div>
       </div>
       {% endif %}
-      {% if paragraph.field_paragraph_layout.value %}
+      {% if paragraph.field_paragraph_width_settings.0.entity.field_class.value %}
       <figcaption class="container mx-auto px-4">{{ paragraph.field_image_caption.value }}</figcaption>
       {% endif %}
       </figure>
     {% endblock %}
-    {% if paragraph.field_paragraph_layout.value %}
+    {% if paragraph.field_paragraph_width_settings.0.entity.field_class.value %}
     </div>
     {% endif %}
   </div>
