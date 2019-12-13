@@ -11,4 +11,5 @@ dependencies:
   - drupal:toolbar
   - drupal:twig_tweak
   - ubc_image_styles:ubc_image_styles
+  - ubc_taxonomy_terms_admin:ubc_taxonomy_terms_admin
 core: '8.x'

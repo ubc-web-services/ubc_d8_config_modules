@@ -1,17 +1,15 @@
 /**
  * @file
- * Javascript functionality for Flexslider.
+ * Javascript functionality for slideshow.
  */
 
 (function ($, Drupal) {
 
   'use strict';
 
-  Drupal.behaviors.flexslider = {
+  Drupal.behaviors.slideshow = {
     attach: function (context) {
-      $('.flexslider').flexslider({
-        animation: "slide"
-      });
+
     }
   };
 

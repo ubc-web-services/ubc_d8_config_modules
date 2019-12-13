@@ -14,22 +14,6 @@ function ubc_paragraph_entities_theme_suggestions_paragraph_alter(&$suggestions,
 }
 
 /**
- * Implements HOOK_theme_suggestions_HOOK_alter
- */
-function ubc_paragraph_entities_theme_suggestions_field_alter(array &$suggestions, array $variables, $hook) {
-  $field = $variables['element']['#field_name'];
-  if( $field == 'field_paragraph_slide' ) {
-    $suggestions[] = 'ubc_field__field_paragraph_slide';
-  }
-  if( $field == 'field_gallery_image' ) {
-    $suggestions[] = 'ubc_field__field_gallery_image';
-  }
-  if( $field == 'field_paragraph_gallery_image' ) {
-    $suggestions[] = 'ubc_field__field_paragraph_gallery_image';
-  }
-}
-
-/**
  * Implments HOOK_theme()
  *
  * Register a template for each paragraph and field type
@@ -48,16 +32,6 @@ function ubc_paragraph_entities_theme($existing, $type, $theme, $path){
   // Register custom Paragraph bundle template fallback
   $theme_templates['ubc_paragraph'] = [
     'base hook' => 'paragraph'
-  ];
-  // Register custom Paragraph field wrappers
-  $theme_templates['ubc_field__field_paragraph_slide'] = [
-    'base hook' => 'field',
-  ];
-  $theme_templates['ubc_field__field_gallery_image'] = [
-    'base hook' => 'field',
-  ];
-  $theme_templates['ubc_field__field_paragraph_gallery_image'] = [
-    'base hook' => 'field',
   ];
   return $theme_templates;
 }
