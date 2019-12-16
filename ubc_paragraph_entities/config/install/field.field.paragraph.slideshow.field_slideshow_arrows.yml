@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slideshow_arrows
+    - paragraphs.paragraphs_type.slideshow
+id: paragraph.slideshow.field_slideshow_arrows
+field_name: field_slideshow_arrows
+entity_type: paragraph
+bundle: slideshow
+label: 'Slideshow Arrows'
+description: 'Setting to append arrows next / previous arrows. Defaults to <b>true</b>'
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

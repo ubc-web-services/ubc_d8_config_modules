@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slideshow_interval
+    - paragraphs.paragraphs_type.slideshow
+id: paragraph.slideshow.field_slideshow_interval
+field_name: field_slideshow_interval
+entity_type: paragraph
+bundle: slideshow
+label: 'Slideshow Interval'
+description: 'Autoplay interval in milliseconds. Defaults to <b>3000</b>.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 3000
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

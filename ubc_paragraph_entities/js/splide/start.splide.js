@@ -1,5 +1,5 @@
 new Splide( '.splide', {
-  type : 'loop',
+  type : 'fade',
   speed : 300,
   autoplay: true,
   interval: 3000,

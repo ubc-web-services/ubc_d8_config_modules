@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slideshow_direction
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - options
+id: paragraph.slideshow.field_slideshow_direction
+field_name: field_slideshow_direction
+entity_type: paragraph
+bundle: slideshow
+label: 'Slideshow Direction'
+description: 'Slider direction. Defaults to <b>Left to right</b>.'
+required: true
+translatable: false
+default_value:
+  -
+    value: ltr
+default_value_callback: ''
+settings: {  }
+field_type: list_string

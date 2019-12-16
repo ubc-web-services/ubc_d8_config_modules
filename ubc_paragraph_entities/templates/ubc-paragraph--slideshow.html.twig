@@ -46,9 +46,23 @@
     'splide',
   ]
 %}
+{%
+  set slideoptions = {
+    'arrows': paragraph.field_slideshow_arrows.value ? true : false,
+    'autoplay': paragraph.field_slideshow_autoplay.value ? true : false,
+    'pagination': paragraph.field_slideshow_pagination.value ? true : false,
+    'type': paragraph.field_slideshow_type.value,
+    'direction': paragraph.field_slideshow_direction.value,
+    'interval': paragraph.field_slideshow_interval.value,
+    'speed': paragraph.field_slideshow_speed.value,
+    'perMove': paragraph.field_slides_per_move.value,
+    'perPage': paragraph.field_slides_per_page.value,
+    'heightRatio': paragraph.field_slideshow_ratio.value
+  }
+%}
 {% block paragraph %}
 {{ attach_library('ubc_paragraph_entities/splide') }}
-  <section{{ attributes.addClass(classes) }}>
+  <section{{ attributes.addClass(classes) }} data-splide='{{ slideoptions |json_encode }}'>
     <div class="splide__track">
       <ul class="splide__list">
       {% block content %}

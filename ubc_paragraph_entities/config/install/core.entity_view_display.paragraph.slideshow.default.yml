@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideshow.field_slide
+    - field.field.paragraph.slideshow.field_slides_per_move
+    - field.field.paragraph.slideshow.field_slides_per_page
+    - field.field.paragraph.slideshow.field_slideshow_arrows
+    - field.field.paragraph.slideshow.field_slideshow_autoplay
+    - field.field.paragraph.slideshow.field_slideshow_direction
+    - field.field.paragraph.slideshow.field_slideshow_interval
+    - field.field.paragraph.slideshow.field_slideshow_pagination
+    - field.field.paragraph.slideshow.field_slideshow_ratio
+    - field.field.paragraph.slideshow.field_slideshow_speed
+    - field.field.paragraph.slideshow.field_slideshow_type
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - entity_reference_revisions
+id: paragraph.slideshow.default
+targetEntityType: paragraph
+bundle: slideshow
+mode: default
+content:
+  field_slide:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_slides_per_move: true
+  field_slides_per_page: true
+  field_slideshow_arrows: true
+  field_slideshow_autoplay: true
+  field_slideshow_direction: true
+  field_slideshow_interval: true
+  field_slideshow_pagination: true
+  field_slideshow_ratio: true
+  field_slideshow_speed: true
+  field_slideshow_type: true
