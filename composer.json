@@ -4,6 +4,6 @@
   "type": "drupal-module",
   "require": {
     "drupal/inline_responsive_images": "^2.1",
-    "ubc-web-services/ubc_ckeditor_widgets": "1.0-beta1"
+    "ubc-web-services/ubc_ckeditor_widgets": "^1.0-beta1"
   }
 }
