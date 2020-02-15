@@ -14,3 +14,4 @@ dependencies:
   - ubc_image_styles:ubc_image_styles
   - ubc_paragraph_entities:ubc_paragraph_entities
 core: '8.x'
+core_version_requirement: ^8 || ^9

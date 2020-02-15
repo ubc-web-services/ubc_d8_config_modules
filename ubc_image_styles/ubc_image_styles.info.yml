@@ -7,3 +7,4 @@ dependencies:
   - drupal:responsive_image
   - inline_responsive_images:inline_responsive_images
 core: '8.x'
+core_version_requirement: ^8 || ^9
