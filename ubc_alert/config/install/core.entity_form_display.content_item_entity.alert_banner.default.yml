@@ -1,0 +1,69 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.content_item_entity.alert_banner.field_alert_icon
+    - field.field.content_item_entity.alert_banner.field_alert_message
+    - field.field.content_item_entity.alert_banner.field_alert_title
+    - field.field.content_item_entity.alert_banner.field_alert_type
+    - field.field.content_item_entity.alert_banner.field_display_until
+    - ubc_content_items.content_item_entity_type.alert_banner
+  module:
+    - datetime
+    - maxlength
+    - text
+id: content_item_entity.alert_banner.default
+targetEntityType: content_item_entity
+bundle: alert_banner
+mode: default
+content:
+  field_alert_icon:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_alert_message:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_alert_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 400
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+    type: string_textfield
+    region: content
+  field_alert_type:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_display_until:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'For administration use only - this will not be visible.'
+    third_party_settings:
+      maxlength:
+        maxlength_js: null
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+hidden:
+  user_id: true

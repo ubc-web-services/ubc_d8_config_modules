@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.content_item_entity.field_alert_icon
+    - taxonomy.vocabulary.admin_icon_settings
+    - ubc_content_items.content_item_entity_type.alert_banner
+id: content_item_entity.alert_banner.field_alert_icon
+field_name: field_alert_icon
+entity_type: content_item_entity
+bundle: alert_banner
+label: 'Alert icon'
+description: 'Add an optional icon to the message. Defaults to the <em>Alert</em> icon.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      admin_icon_settings: admin_icon_settings
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

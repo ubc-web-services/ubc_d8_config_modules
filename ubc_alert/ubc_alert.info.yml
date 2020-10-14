@@ -1,0 +1,12 @@
+name: UBC Alert
+type: module
+description: This module defines an Alert content item and view.
+package: UBC Web Services
+dependencies:
+  - drupal:ckeditor
+  - drupal:editor_button_link
+  - drupal:auto_entitylabel
+  - drupal:views
+  - ubc_taxonomy_terms_admin:ubc_taxonomy_terms_admin
+  - ubc_content_items:ubc_content_items
+core: '8.x'

@@ -1,0 +1,6 @@
+status: 1
+pattern: 'Alert: [content_item_entity:field_alert_title], [content_item_entity:created]'
+escape: false
+dependencies:
+  config:
+    - ubc_content_items.content_item_entity_type.alert_banner

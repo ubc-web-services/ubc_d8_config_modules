@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - ubc_content_items
+id: content_item_entity.field_alert_type
+field_name: field_alert_type
+entity_type: content_item_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: error
+      label: 'Error message (red)'
+    -
+      value: warning
+      label: 'Warning message (yellow)'
+    -
+      value: success
+      label: 'Success message (green)'
+    -
+      value: status
+      label: 'Status message (blue)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

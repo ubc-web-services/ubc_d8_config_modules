@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.content_item_entity.field_alert_message
+    - ubc_content_items.content_item_entity_type.alert_banner
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    filtered_text: filtered_text
+    plain_text: '0'
+id: content_item_entity.alert_banner.field_alert_message
+field_name: field_alert_message
+entity_type: content_item_entity
+bundle: alert_banner
+label: 'Alert message'
+description: 'Add the alert text. This field has limited formatting options.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
