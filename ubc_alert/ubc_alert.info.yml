@@ -10,3 +10,4 @@ dependencies:
   - ubc_taxonomy_terms_admin:ubc_taxonomy_terms_admin
   - ubc_content_items:ubc_content_items
 core: '8.x'
+core_version_requirement: ^8 || ^9
