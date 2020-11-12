@@ -42,24 +42,14 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_event_date:
-    weight: 10
-    label: above
+    weight: 0
+    label: hidden
     settings:
       separator: '-'
       format_type: medium
       timezone_override: ''
     third_party_settings: {  }
     type: daterange_default
-    region: content
-  field_event_is_ongoing:
-    weight: 11
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
     region: content
   field_event_link:
     weight: 2
@@ -96,6 +86,7 @@ content:
       include_static_map: false
       include_link: false
       include_text: false
+      iframe_title: ''
     third_party_settings: {  }
     type: simple_gmap
     region: content
@@ -107,7 +98,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_event_tags:
-    weight: 8
+    weight: 6
     label: inline
     settings:
       link: true
@@ -115,7 +106,7 @@ content:
     type: entity_reference_label
     region: content
   links:
-    weight: 9
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -123,5 +114,6 @@ hidden:
   field_event_category: true
   field_event_image: true
   field_event_image_teaser: true
+  field_event_is_ongoing: true
   field_event_private: true
   field_event_teaser_second: true
