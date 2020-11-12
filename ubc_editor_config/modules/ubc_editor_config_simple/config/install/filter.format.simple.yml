@@ -1,0 +1,96 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - editor_button_link
+    - inline_responsive_images
+    - linkit
+    - media
+name: Simple
+format: simple
+weight: 0
+filters:
+  editor_button_link_filter:
+    id: editor_button_link_filter
+    provider: editor_button_link
+    status: true
+    weight: 1
+    settings:
+      button_link_options: "|No Style\r\nunit-button|Unit Button"
+      button_link_size_options: "|Text Normal\r\ntext-xs xxl--text-base|Text Extra Small\r\ntext-sm  xxl--text-lg|Text Small\r\ntext-lg  xxl--text-3xl|Text Large\r\ntext-xl xxl--text-4xl|Text XLarge\r\ntext-2xl xxl--text-5xl| Text XXLarge"
+      button_link_style_options: "unit-button--light|Light Button\r\nunit-button--light unit-button--has-icon-right unit-button--editor|Light Button w arrow\r\nunit-button--mid|Neutral Button\r\nunit-button--mid unit-button--has-icon-right unit-button--editor|Neutral Button w arrow\r\nunit-button--dark|Dark Button\r\nunit-button--dark unit-button--has-icon-right unit-button--editor|Dark Button w arrow\r\nunit-button--simple unit-button--has-icon-right unit-button--editor|Simple Button\r\nunit-button--plain unit-button--has-icon-right unit-button--editor|Plain Button\r\nunit-button--transparent|Transparent Button\r\nunit-button--transparent unit-button--has-icon-right unit-button--editor|Transparent Button w arrow\r\nunit-button--light unit-button--light-gradient|Light Button w gradient\r\nunit-button--light unit-button--light-gradient unit-button--has-icon-right unit-button--editor|Light Button w gradient & arrow\r\nunit-button--dark unit-button--dark-gradient|Dark Button w gradient\r\nunit-button--dark unit-button--dark-gradient unit-button--has-icon-right unit-button--editor|Dark Button w gradient & arrow"
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<a name href hreflang data-* target aria-* class=""> <em> <strong> <code> <ul type> <ol start type> <li> <h3 id class=""> <h4 id class=""> <h5 id class=""> <h6 id class=""> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title> <drupal-media data-entity-type data-entity-uuid alt data-align data-caption and data-view-mode class=""> <button aria-* data-* class="js-* accordion* widget-*"> <br>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_imagestyle:
+    id: filter_imagestyle
+    provider: inline_responsive_images
+    status: false
+    weight: 0
+    settings:
+      image_style_card_300x150: '0'
+      image_style_card_480x240: '0'
+      image_style_card_600x300: '0'
+      image_style_card_780x390: '0'
+      image_style_card_almost_square_380: '0'
+      image_style_card_almost_square_640: '0'
+      image_style_crop_thumbnail: '0'
+      image_style_large: '0'
+      image_style_linkit_result_thumbnail: '0'
+      image_style_max_1300x1300: '0'
+      image_style_max_2600x2600: '0'
+      image_style_max_325x325: '0'
+      image_style_max_640w: '0'
+      image_style_max_650x650: '0'
+      image_style_max_970x970: '0'
+      image_style_media_library: '0'
+      image_style_medium: '0'
+      image_style_square_200: '0'
+      image_style_square_400: '0'
+      image_style_square_600: '0'
+      image_style_test: '0'
+      image_style_thumbnail: '0'
+      image_style_vertical_card_crop: '0'
+      image_style_vertical_card_crop_320: '0'
+      image_style_vertical_card_crop_640: '0'
+  filter_responsive_image_style:
+    id: filter_responsive_image_style
+    provider: inline_responsive_images
+    status: false
+    weight: 0
+    settings:
+      responsive_style_card: '0'
+      responsive_style_card_focal_point: '0'
+      responsive_style_hero_image: '0'
+      responsive_style_narrow: '0'
+      responsive_style_vertical_card: '0'
+      responsive_style_wide: '0'
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: 0
+    settings:
+      title: true
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }
