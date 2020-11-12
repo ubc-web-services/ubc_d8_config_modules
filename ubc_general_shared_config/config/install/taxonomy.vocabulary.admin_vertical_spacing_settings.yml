@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'ADMIN - Vertical Spacing Settings'
+vid: admin_vertical_spacing_settings
+description: 'Adds vertical spacing options'
+weight: 0

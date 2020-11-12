@@ -20,6 +20,7 @@ function ubc_taxonomy_terms_admin_install() {
     'UBC Blue: Neptune' => 'bg-ubc-blue-neptune',
     'UBC Blue: Cornflower' => 'bg-ubc-blue-cornflower',
     'UBC Blue: Polar' => 'bg-ubc-blue-polar',
+    'None' => 'no-style',
   );
   foreach ($bgitems as $key => $value) {
     $term = Term::create(array(
@@ -32,10 +33,10 @@ function ubc_taxonomy_terms_admin_install() {
   // Card Style Classes
   $cardvocab = 'admin_card_style';
   $carditems = array(
-    'Vertical, no image displayed' => 'ubc-card--basic',
-    'Vertical, image top' => 'ubc-card--vert',
     'Horizontal, Image left' => 'ubc-card--horiz-media',
     'Horizontal, Image right' => 'ubc-card--horiz-media-r',
+    'Vertical, image top' => 'ubc-card--vert',
+    'Vertical, no image displayed' => 'ubc-card--basic ubc-card--no-img',
   );
   foreach ($carditems as $key => $value) {
     $term = Term::create(array(
@@ -115,17 +116,33 @@ function ubc_taxonomy_terms_admin_install() {
       'field_class' => $value,
     ))->save();
   }
-  // Text Position Classes
+  // Horizontal Width Classes
   $widthvocab = 'admin_width_settings';
   $widthitems = array(
-    'Full Bleed' => 'full-bleed',
-    'Narrow' => 'w-narrow',
+    'Contained (default)' => 'container mx-auto',
+    'Narrow' => 'container px-4 mx-auto md--px-0 md--max-w-5xl',
   );
   foreach ($widthitems as $key => $value) {
     $term = Term::create(array(
       'parent' => array(),
       'name' =>$key,
       'vid' => $widthvocab,
+      'field_class' => $value,
+    ))->save();
+  }
+  // Vertical Spacing Classes
+  $vspacevocab = 'admin_vertical_spacing_settings';
+  $vspacevocab = array(
+    'Loose' => 'py-16',
+    'None' => 'py-0',
+    'Normal' => 'py-12',
+    'Tight' => 'py-6',
+  );
+  foreach ($vspacevocab as $key => $value) {
+    $term = Term::create(array(
+      'parent' => array(),
+      'name' =>$key,
+      'vid' => $vspacevocab,
       'field_class' => $value,
     ))->save();
   }
