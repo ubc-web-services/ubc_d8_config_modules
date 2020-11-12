@@ -4,21 +4,21 @@ dependencies:
   config:
     - field.field.node.ubc_event.body
     - field.field.node.ubc_event.field_event_category
-    - field.field.node.ubc_event.field_event_end_date
+    - field.field.node.ubc_event.field_event_date
     - field.field.node.ubc_event.field_event_image
     - field.field.node.ubc_event.field_event_image_teaser
+    - field.field.node.ubc_event.field_event_is_ongoing
     - field.field.node.ubc_event.field_event_link
     - field.field.node.ubc_event.field_event_location
     - field.field.node.ubc_event.field_event_map
     - field.field.node.ubc_event.field_event_meta_tags
     - field.field.node.ubc_event.field_event_private
-    - field.field.node.ubc_event.field_event_start_date
     - field.field.node.ubc_event.field_event_tags
     - field.field.node.ubc_event.field_event_teaser_second
     - node.type.ubc_event
   module:
     - address
-    - datetime
+    - datetime_range
     - link
     - metatag
     - simple_gmap
@@ -41,14 +41,25 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_event_end_date:
-    weight: 7
-    label: hidden
+  field_event_date:
+    weight: 10
+    label: above
     settings:
+      separator: '-'
+      format_type: medium
       timezone_override: ''
-      format_type: date_readable
     third_party_settings: {  }
-    type: datetime_default
+    type: daterange_default
+    region: content
+  field_event_is_ongoing:
+    weight: 11
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_event_link:
     weight: 2
@@ -95,15 +106,6 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  field_event_start_date:
-    weight: 6
-    label: hidden
-    settings:
-      timezone_override: ''
-      format_type: date_readable
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_event_tags:
     weight: 8
     label: inline
