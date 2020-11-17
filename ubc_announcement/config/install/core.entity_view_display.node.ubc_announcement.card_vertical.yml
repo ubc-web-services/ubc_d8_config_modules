@@ -11,11 +11,11 @@ dependencies:
     - field.field.node.ubc_announcement.field_announcement_tags
     - field.field.node.ubc_announcement.field_announcement_teaser_second
     - field.field.node.ubc_announcement.field_announcement_type
-    - image.style.max_640w
     - node.type.ubc_announcement
+    - responsive_image.styles.card_focal_point
   module:
-    - image
     - link
+    - responsive_image
     - text
     - user
 id: node.ubc_announcement.card_vertical
@@ -25,9 +25,10 @@ mode: card_vertical
 content:
   body:
     label: hidden
-    type: text_default
+    type: text_summary_or_trimmed
     weight: 1
-    settings: {  }
+    settings:
+      trim_length: 350
     third_party_settings: {  }
     region: content
   field_announcement_external_link:
@@ -46,9 +47,10 @@ content:
     weight: 3
     label: hidden
     settings:
-      image_style: max_640w
+      responsive_image_style: card_focal_point
+      image_link: ''
     third_party_settings: {  }
-    type: image_url
+    type: responsive_image
     region: content
   field_announcement_tags:
     weight: 5
@@ -64,7 +66,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  content_moderation_control: true
   field_announcement_image_teaser: true
   field_announcement_meta_tags: true
   field_announcement_teaser_second: true

@@ -1,3 +1,4 @@
+uuid: c5edd563-283f-43fc-92d9-48b9160f895d
 langcode: en
 status: true
 dependencies:
@@ -15,6 +16,8 @@ dependencies:
   module:
     - text
     - user
+_core:
+  default_config_hash: 6g7tEhCR834aHQRT083hDx0FuIo-Ff_Vx6vyNkLes7w
 id: node.ubc_announcement.teaser
 targetEntityType: node
 bundle: ubc_announcement

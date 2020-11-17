@@ -1,3 +1,4 @@
+uuid: ba4c3428-7056-4308-809c-d9093f87f6c7
 langcode: en
 status: true
 dependencies:
@@ -16,6 +17,8 @@ dependencies:
   module:
     - responsive_image
     - user
+_core:
+  default_config_hash: wmQSNtLkSRLxzn8xsOigtr7ydoZWGYE4yR704ni6p2U
 id: node.ubc_announcement.featured_content
 targetEntityType: node
 bundle: ubc_announcement

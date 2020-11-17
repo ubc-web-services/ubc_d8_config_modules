@@ -11,7 +11,7 @@ field_name: field_announcement_feature_image
 entity_type: node
 bundle: ubc_announcement
 label: 'Feature Image'
-description: 'Add a feature image to the announcement. Feature image must be at least 950x600.'
+description: 'Add a feature image to the announcement. Feature image must be at least 1300x600.'
 required: false
 translatable: false
 default_value: {  }

@@ -14,21 +14,24 @@ dependencies:
     - node.type.ubc_announcement
     - workflows.workflow.ubc_announcement
   module:
-    - content_moderation
+    - allowed_formats
     - field_group
-    - image
+    - focal_point
     - link
+    - maxlength
     - metatag
     - path
+    - scheduler
     - text
 third_party_settings:
   field_group:
     group_feature_area:
       children:
         - field_announcement_feature_image
-        - group_feature_title_override
+        - field_announcement_image_teaser
+        - field_announcement_teaser_second
       parent_name: ''
-      weight: 4
+      weight: 1
       format_type: details
       format_settings:
         id: ''
@@ -40,18 +43,19 @@ third_party_settings:
       region: content
     group_feature_title_override:
       children:
-        - field_announcement_image_teaser
-        - field_announcement_teaser_second
-      parent_name: group_feature_area
-      weight: 7
+        - field_announcement_type
+        - field_announcement_category
+        - field_announcement_tags
+      parent_name: ''
+      weight: 6
       format_type: details
       format_settings:
-        description: 'By default the title will appear over top of the image when a feature image is added. If you wish to change this (for example, the title is too long or you want it to appear on two lines) , use the two text fields below.'
+        description: ''
         required_fields: true
         id: ''
         classes: ''
         open: false
-      label: 'Feature Title Override'
+      label: Metadata
       region: content
 id: node.ubc_announcement.default
 targetEntityType: node
@@ -60,21 +64,32 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 5
+    weight: 2
     settings:
       rows: 9
-      summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
+      summary_rows: 3
+      show_summary: false
+    third_party_settings:
+      maxlength:
+        maxlength_js: null
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_summary: 250
+        maxlength_js_label_summary: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: false
+        maxlength_js_truncate_html: false
+      allowed_formats:
+        hide_help: '0'
+        hide_guidelines: '0'
     region: content
   created:
     type: datetime_timestamp
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_announcement_external_link:
-    weight: 6
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -86,11 +101,13 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+      preview_link: true
+      offsets: '50,50'
     third_party_settings: {  }
-    type: image_image
+    type: image_focal_point
     region: content
   field_announcement_image_teaser:
-    weight: 27
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -98,19 +115,20 @@ content:
     type: string_textfield
     region: content
   field_announcement_meta_tags:
-    weight: 12
-    settings: {  }
+    weight: 13
+    settings:
+      sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
     region: content
   field_announcement_tags:
-    weight: 1
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_announcement_teaser_second:
-    weight: 28
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -118,20 +136,25 @@ content:
     type: string_textfield
     region: content
   field_announcement_type:
-    weight: 2
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  moderation_state:
-    type: moderation_state_default
-    weight: 10
-    settings: {  }
-    region: content
-    third_party_settings: {  }
   path:
     type: path
     weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -139,7 +162,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 12
     region: content
     third_party_settings: {  }
   title:
@@ -149,15 +172,30 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      maxlength:
+        maxlength_js: 255
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
   uid:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 9
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 17
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   promote: true
