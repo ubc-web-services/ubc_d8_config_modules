@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: card_focal_point_lg
+label: 'Card, focal point, lg'
+effects:
+  beab74e9-6a1a-429d-9561-3bb17f97c824:
+    uuid: beab74e9-6a1a-429d-9561-3bb17f97c824
+    id: focal_point_crop
+    weight: 1
+    data:
+      width: 640
+      height: 556
+      crop_type: focal_point
