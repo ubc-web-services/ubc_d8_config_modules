@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bulk_upload_images
+label: 'Bulk Upload Images'
+media_types:
+  image: image
+  audio: 0
+  document: 0
+  file: 0
+  private_file: 0
+  remote_video: 0
+  video: 0
+show_alt: null
+show_title: null
+form_mode: ''

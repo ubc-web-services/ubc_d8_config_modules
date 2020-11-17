@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bulk_upload_documents
+label: 'Bulk Upload Documents'
+media_types:
+  document: document
+  audio: 0
+  file: 0
+  image: 0
+  private_file: 0
+  remote_video: 0
+  video: 0
+show_alt: null
+show_title: null
+form_mode: ''
