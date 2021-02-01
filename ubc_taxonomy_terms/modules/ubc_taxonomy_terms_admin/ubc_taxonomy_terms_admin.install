@@ -13,6 +13,9 @@ function ubc_taxonomy_terms_admin_install() {
   $bgvocab = 'admin_background_color_settings';
   $bgitems = array(
     'White' => 'bg-white',
+    'Unit Primary' => 'bg-unit-primary',
+    'Unit Secondary' => 'bg-unit-secondary',
+    'Unit Accent' => 'bg-unit-accent',
     'Light Grey' => 'bg-grey-100',
     'UBC Blue' => 'bg-ubc-blue',
     'UBC Blue: Sea' => 'bg-ubc-blue-sea',
