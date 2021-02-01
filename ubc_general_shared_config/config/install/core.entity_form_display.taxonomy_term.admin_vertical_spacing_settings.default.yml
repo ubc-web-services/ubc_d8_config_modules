@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.admin_vertical_spacing_settings.field_class
-    - taxonomy.vocabulary.admin_postion_settings
+    - taxonomy.vocabulary.admin_vertical_spacing_settings
 id: taxonomy_term.admin_vertical_spacing_settings.default
 targetEntityType: taxonomy_term
 bundle: admin_vertical_spacing_settings
