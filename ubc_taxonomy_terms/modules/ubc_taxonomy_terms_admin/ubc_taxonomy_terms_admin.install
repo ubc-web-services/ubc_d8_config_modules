@@ -135,13 +135,13 @@ function ubc_taxonomy_terms_admin_install() {
   }
   // Vertical Spacing Classes
   $vspacevocab = 'admin_vertical_spacing_settings';
-  $vspacevocab = array(
+  $vspaceitems = array(
     'Loose' => 'py-16',
     'None' => 'py-0',
     'Normal' => 'py-12',
     'Tight' => 'py-6',
   );
-  foreach ($vspacevocab as $key => $value) {
+  foreach ($vspaceitems as $key => $value) {
     $term = Term::create(array(
       'parent' => array(),
       'name' =>$key,
