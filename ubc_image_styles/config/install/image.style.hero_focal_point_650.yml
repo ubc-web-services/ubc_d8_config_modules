@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_focal_point_650
+label: 'Hero, focal point, 650'
+effects:
+  43c9f282-4fd9-4324-b7fd-8a4f48a42f14:
+    uuid: 43c9f282-4fd9-4324-b7fd-8a4f48a42f14
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 650
+      height: 300
+      crop_type: focal_point

@@ -19,7 +19,7 @@ content:
     region: content
     label: hidden
     settings:
-      responsive_image_style: wide
+      responsive_image_style: hero_image
       image_link: ''
     third_party_settings: {  }
 hidden:

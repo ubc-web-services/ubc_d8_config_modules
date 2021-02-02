@@ -4,6 +4,7 @@ description: This module defines a custom Landing Page content type and its fiel
 package: UBC Web Services
 dependencies:
   - drupal:field_group
+  - drupal:focal_point
   - drupal:metatag
   - drupal:node
   - drupal:paragraphs

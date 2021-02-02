@@ -10,7 +10,7 @@ dependencies:
     - field.field.node.ubc_announcement.field_announcement_tags
     - field.field.node.ubc_announcement.field_announcement_teaser_second
     - field.field.node.ubc_announcement.field_announcement_type
-    - image.style.thumbnail
+    - image.style.medium
     - node.type.ubc_announcement
   module:
     - allowed_formats
@@ -101,10 +101,10 @@ content:
   field_announcement_feature_image:
     weight: 5
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      preview_image_style: medium
       preview_link: true
       offsets: '50,50'
+      progress_indicator: throbber
     third_party_settings: {  }
     type: image_focal_point
     region: content

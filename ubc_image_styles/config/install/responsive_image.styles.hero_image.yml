@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.max_1300x1300
-    - image.style.max_325x325
-    - image.style.max_650x650
-    - image.style.max_970x970
+    - image.style.hero_focal_point_1300
+    - image.style.hero_focal_point_325
+    - image.style.hero_focal_point_650
+    - image.style.hero_focal_point_970
 id: hero_image
 label: 'Hero Image'
 image_style_mappings:
@@ -16,9 +16,9 @@ image_style_mappings:
     image_mapping:
       sizes: 100vw
       sizes_image_styles:
-        - max_1300x1300
-        - max_325x325
-        - max_650x650
-        - max_970x970
+        - hero_focal_point_325
+        - hero_focal_point_1300
+        - hero_focal_point_650
+        - hero_focal_point_970
 breakpoint_group: responsive_image
-fallback_image_style: max_325x325
+fallback_image_style: hero_focal_point_325

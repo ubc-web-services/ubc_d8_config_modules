@@ -12,18 +12,18 @@ dependencies:
     - field.field.node.homepage.field_home_tab_content
     - field.field.node.homepage.field_home_tab_titles
     - field.field.node.homepage.field_home_upper_cards
-    - image.style.thumbnail
+    - image.style.medium
     - node.type.homepage
   module:
     - allowed_formats
     - field_group
+    - focal_point
     - link
     - maxlength
     - metatag
     - paragraphs
     - path
     - scheduler
-    - svg_image
     - text
 third_party_settings:
   field_group:
@@ -121,10 +121,12 @@ content:
   field_home_feature_image:
     weight: 2
     settings:
+      preview_image_style: medium
+      preview_link: true
+      offsets: '50,50'
       progress_indicator: throbber
-      preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
+    type: image_focal_point
     region: content
   field_home_feature_image_link:
     weight: 5
