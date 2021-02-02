@@ -48,7 +48,6 @@ The custom modules included are:
 - **UBC Profile Extend** *[ubc_profile_extend]*: Provides a sample implemention dor adding an additional field to the UBC Profile content type. This is meant to serve as a model of non-core additions to content types
 - **UBC Profile Views** *[ubc_profile_views]*: Provides views specific to the UBC Profile content type
 - **UBC Share Block** *[ubc_share_block]*: **Work in progress**. Provides a custom block type for adding share links to various social media networks
-- **UBC Tailwind CSS** *[ubc_tailwind_css]*: **Work in progress**. Provides a set of shared utility classes that can be used on any UBC-Branded website
 - **UBC User Roles** *[ubc_user_roles]*: Provides a set of user roles and their associated permsissions
 
 
@@ -58,19 +57,19 @@ This assumes you've installed Drupal using the Standard installation profile
 
 ### Enable and set themes
 
-```lando drush theme:enable claro && lando drush theme:enable octopus && lando drush config-set system.theme admin claro -y && lando drush config-set system.theme default octopus -y```
+```lando drush theme:enable gin && lando drush theme:enable kraken && lando drush config-set system.theme admin gin -y && lando drush config-set system.theme default kraken -y```
 
-### Enable contrib modules and disable some core ones
+### Enable contrib modules
 
-```lando drush en address, admin_toolbar_links_access_filter, admin_toolbar_tools, adminimal_admin_toolbar, allowed_formats, anchor_link, antibot, auto_entitylabel, ckeditor_a11ychecker, content_moderation, crop, ctools, datetime_range, editor_advanced_link, editor_button_link, entity_reference_revisions, entity_tasks, field_group, ga, image_widget_crop, inline_responsive_images, linkit, media, media_library, menu_block, metatag, pathauto, paragraphs, simple_gmap, simple_sitemap, smtp, telephone, token, twig_tweak, webform, webform_ui, workflows -y```
+```lando drush en address, admin_toolbar_links_access_filter, admin_toolbar_tools, allowed_formats, anchor_link, antibot, auto_entitylabel, block_exclude_pages, chosen, ckeditor_a11ychecker, crop, ctools, datetime_range, devel, devel_generate, editor_advanced_link, editor_button_link, entity_reference_revisions, field_group, file_delete, focal_point, formtips, gin_toolbar, google_analytics, image_widget_crop, inline_responsive_images, linkit, linkit_media_library, maxlength, media, media_bulk_upload, media_entity_file_replace, media_library, menu_block, metatag, optional_end_date, pathauto, paragraphs, redirect, responsive_table_filter, scheduler, simple_gmap, simple_sitemap, smtp, svg_image, telephone, text_summary_options, token, twig_tweak, webform, webform_ui -y```
 
 ### Enable custom modules for general settings
 
-```lando drush en ubc_ckeditor_widgets, ubc_date_formats, ubc_editor_config, ubc_image_styles, ubc_media_entities, ubc_paragraph_entities, ubc_general_shared_config -y```
+```lando drush en ubc_ckeditor_widgets, ubc_chosen_style_tweaks, ubc_date_formats, ubc_editor_config, ubc_image_styles, ubc_media_entities, ubc_paragraph_entities, ubc_general_shared_config -y```
 
 ### Enable custom content type modules
 
-```lando drush en ubc_announcement, ubc_homepage, ubc_event, ubc_landing_page, ubc_page, ubc_profile, ubc_taxonomy_terms_admin, ubc_taxonomy_terms_announcement, ubc_taxonomy_terms_department, ubc_taxonomy_terms_event -y```
+```lando drush en ubc_announcement, ubc_homepage, ubc_event, ubc_landing_page, ubc_page, ubc_profile, ubc_taxonomy_terms_announcement, ubc_taxonomy_terms_department, ubc_taxonomy_terms_event -y```
 
 ### Enable User Role and Views modules last, once all the pieces are in place.
 
@@ -78,11 +77,19 @@ This assumes you've installed Drupal using the Standard installation profile
 
 ### POST INSTALL
 
-GO to:
+#### Use devel generate to remove all page and article nodes as a safeguard
+
+```lando drush genc --kill --types=article 0 0 && lando drush genc --kill --types=page 0 0```
+
+#### Delete unused content types by going to:
 
 - /admin/structure/types/manage/article/delete
 - /admin/structure/types/manage/page/delete
-(TODO: these (below) could probably be run via drush)
-- /admin/config/content/formats/manage/full_html/disable
-- /admin/config/content/formats/manage/restricted_html/disable
-- /admin/config/content/formats/manage/basic_html/disable
+
+#### Disable unused text formats
+
+```lando drush config-set editor.editor.basic_html status 0 -y && lando drush config-set filter.format.basic_html status 0 -y && lando drush config-set editor.editor.full_html status 0 -y && lando drush config-set filter.format.full_html status 0 -y``
+
+#### Uninstall some infrequently used modules (need to delete Article and Comment types first)
+
+```lando drush pmu color, comment -y```
