@@ -88,7 +88,7 @@ This assumes you've installed Drupal using the Standard installation profile
 
 #### Disable unused text formats
 
-```lando drush config-set editor.editor.basic_html status 0 -y && lando drush config-set filter.format.basic_html status 0 -y && lando drush config-set editor.editor.full_html status 0 -y && lando drush config-set filter.format.full_html status 0 -y``
+```lando drush config-set editor.editor.basic_html status 0 -y && lando drush config-set filter.format.basic_html status 0 -y && lando drush config-set editor.editor.full_html status 0 -y && lando drush config-set filter.format.full_html status 0 -y```
 
 #### Uninstall some infrequently used modules (need to delete Article and Comment types first)
 
