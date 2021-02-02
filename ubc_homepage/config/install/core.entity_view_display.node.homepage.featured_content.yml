@@ -24,11 +24,6 @@ targetEntityType: node
 bundle: homepage
 mode: featured_content
 content:
-  content_moderation_control:
-    weight: -20
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_home_feature_image:
     weight: 0
     label: hidden

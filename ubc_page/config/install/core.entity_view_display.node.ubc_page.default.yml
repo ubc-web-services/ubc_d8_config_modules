@@ -21,11 +21,6 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  content_moderation_control:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_page_meta_tags:
     weight: 3
     label: hidden

@@ -38,7 +38,6 @@ content:
       image_style: max_650x650
     third_party_settings: {  }
 hidden:
-  content_moderation_control: true
   field_landing_custom_content: true
   field_landing_image_teaser: true
   field_landing_meta_tags: true

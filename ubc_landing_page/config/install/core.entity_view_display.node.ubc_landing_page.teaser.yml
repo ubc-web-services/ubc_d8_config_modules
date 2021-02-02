@@ -51,7 +51,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  content_moderation_control: true
   field_landing_image_teaser: true
   field_landing_meta_tags: true
   field_landing_teaser_second: true

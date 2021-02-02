@@ -26,11 +26,6 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  content_moderation_control:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_landing_meta_tags:
     type: metatag_empty_formatter
     weight: 2

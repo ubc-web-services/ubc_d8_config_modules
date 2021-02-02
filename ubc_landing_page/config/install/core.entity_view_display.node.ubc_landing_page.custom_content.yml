@@ -29,7 +29,6 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
-  content_moderation_control: true
   field_landing_feature_image: true
   field_landing_image_teaser: true
   field_landing_meta_tags: true

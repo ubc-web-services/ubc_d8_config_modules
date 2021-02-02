@@ -47,7 +47,6 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
-  content_moderation_control: true
   field_landing_custom_content: true
   field_landing_meta_tags: true
   field_landing_tags: true
