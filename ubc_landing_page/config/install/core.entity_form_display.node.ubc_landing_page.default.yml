@@ -13,10 +13,11 @@ dependencies:
     - node.type.ubc_landing_page
   module:
     - field_group
-    - image
     - metatag
     - paragraphs
     - path
+    - scheduler
+    - svg_image
     - text
 third_party_settings:
   field_group:
@@ -50,6 +51,21 @@ third_party_settings:
         required_fields: true
       label: 'Feature Title Override'
       region: content
+    group_metadata:
+      children:
+        - field_landing_tags
+      parent_name: ''
+      weight: 5
+      format_type: details_sidebar
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: true
+        required_fields: true
+        weight: -100
+      label: Metadata
 id: node.ubc_landing_page.default
 targetEntityType: node
 bundle: ubc_landing_page
@@ -61,12 +77,13 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     type: text_textarea_with_summary
     region: content
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -100,7 +117,8 @@ content:
     region: content
   field_landing_meta_tags:
     weight: 10
-    settings: {  }
+    settings:
+      sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
     region: content
@@ -120,7 +138,13 @@ content:
     region: content
   path:
     type: path
-    weight: 7
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -141,12 +165,24 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 13
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   promote: true
