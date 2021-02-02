@@ -1,6 +1,0 @@
-# ubc_tailwindcss.libraries.yml
-
-tailwindcss:
-  css:
-    layout:
-      css/ubc.tailwindcss.min.css: {}
