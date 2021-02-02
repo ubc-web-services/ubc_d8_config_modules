@@ -17,11 +17,31 @@ dependencies:
     - image.style.thumbnail
     - node.type.ubc_profile
   module:
-    - image
+    - field_group
     - metatag
     - path
+    - scheduler
+    - svg_image
     - telephone
     - text
+third_party_settings:
+  field_group:
+    group_metadata:
+      children:
+        - field_profile_department_unit
+        - field_profile_tags
+      parent_name: ''
+      weight: 12
+      format_type: details_sidebar
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: true
+        required_fields: true
+        weight: -100
+      label: Metadata
 id: node.ubc_profile.default
 targetEntityType: node
 bundle: ubc_profile
@@ -34,11 +54,12 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
   created:
     type: datetime_timestamp
-    weight: 13
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -56,6 +77,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
@@ -101,7 +123,8 @@ content:
     region: content
   field_profile_meta_tags:
     weight: 19
-    settings: {  }
+    settings:
+      sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
     region: content
@@ -128,7 +151,7 @@ content:
     region: content
   path:
     type: path
-    weight: 16
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -136,21 +159,27 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 15
     region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 21
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 17
+    weight: 18
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 16
     region: content
     third_party_settings: {  }
   title:
@@ -163,11 +192,23 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 12
+    weight: 13
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 22
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden: {  }
