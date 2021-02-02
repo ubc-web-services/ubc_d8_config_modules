@@ -4,21 +4,20 @@
 /**
  * Implements hook_install().
  *
- * We don't want users to be able to delete our announcement content
+ * We don't want users to be able to delete our ubc_page content
  * type. So therefore we have to tell Drupal that this is the case. This
  * can't be done in the content type's configuration YAML file, so we have to
  * do it in code, here.
  *
  * @ingroup ubc_page
  */
- /*
 function ubc_page_install() {
   // Do not allow the locked content type to be deleted.
   $locked = Drupal::state()->get('node.type.locked');
-  $locked['announcement'] = 'announcement';
+  $locked['ubc_page'] = 'ubc_page';
   Drupal::state()->set('node.type.locked', $locked);
 }
-*/
+
 
 /**
  * Implements hook_uninstall().
@@ -28,19 +27,18 @@ function ubc_page_install() {
  * make decisions about their fate. Therefore we should give the user the
  * option of deleting them.
  *
- * Since we told Drupal that our announcement is locked, we now have
+ * Since we told Drupal that our ubc_page is locked, we now have
  * to tell it to unlock.
  *
  * @ingroup ubc_page
  */
- /*
 function ubc_page_uninstall() {
   // Allow announcement to be deleted.
   $locked = Drupal::state()->get('node.type.locked');
-  unset($locked['announcement']);
+  unset($locked['ubc_page']);
   Drupal::state()->set('node.type.locked', $locked);
 }
-*/
+
 
 /**
  * Update configuration from file.
@@ -54,5 +52,5 @@ function ubc_page_update_8001() {
     ->setData($data)
     ->save(TRUE);
 
-  return 'The Announcement  has been updated.';
+  return 'The Page has been updated.';
 }

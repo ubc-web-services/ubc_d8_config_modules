@@ -3,9 +3,6 @@ status: true
 dependencies:
   module:
     - node
-  enforced:
-    module:
-      - ubc_announcement
 id: node.field_announcement_image_teaser
 field_name: field_announcement_image_teaser
 entity_type: node

@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tabcordion.field_paragraph_tab
+    - paragraphs.paragraphs_type.tabcordion
+  enforced:
+    module:
+      - ubc_paragraph_entities
+  module:
+    - paragraphs
+id: paragraph.tabcordion.default
+targetEntityType: paragraph
+bundle: tabcordion
+mode: default
+content:
+  field_paragraph_tab:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Tab
+      title_plural: Tabs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: tab
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_date
+    - node.type.ubc_event
+  module:
+    - datetime_range
+id: node.ubc_event.field_event_date
+field_name: field_event_date
+entity_type: node
+bundle: ubc_event
+label: 'Event Date'
+description: 'Choose the start date of the event. This will also determine the order of the event in a group of events. You can also choose an optional end date.<br />Time is required and should be entered as <code>hh:mm:ss</code> (e.g. <b>12:00:00</b>)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

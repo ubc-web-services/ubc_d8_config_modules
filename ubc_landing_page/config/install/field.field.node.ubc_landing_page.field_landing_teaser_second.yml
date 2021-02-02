@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_teaser_second
+    - node.type.ubc_landing_page
+id: node.ubc_landing_page.field_landing_teaser_second
+field_name: field_landing_teaser_second
+entity_type: node
+bundle: ubc_landing_page
+label: 'Image Teaser - second line'
+description: 'This is additional text that appears within the caption area of the feature image. It should be brief and encourage action.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

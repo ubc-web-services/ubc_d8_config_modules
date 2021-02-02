@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ubc_paragraph_entities
+id: tabcordion
+label: Tabcordion
+icon_uuid: 993d6c99-2455-498e-95ea-53f574a78659
+description: 'Add a set of Tabs that become Accordions on small screen sizes.'
+behavior_plugins: {  }

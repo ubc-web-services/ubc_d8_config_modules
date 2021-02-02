@@ -1,0 +1,26 @@
+name: UBC Event Content Type
+type: module
+description: This module defines a custom Event content type and its fields.
+package: UBC Web Services
+dependencies:
+  - drupal:address
+  - drupal:datetime_range
+  - drupal:field_group
+  - drupal:focal_point
+  - drupal:link
+  - drupal:maxlength
+  - drupal:metatag
+  - drupal:node
+  - drupal:optional_end_date
+  - drupal:path
+  - drupal:responsive_image
+  - drupal:scheduler
+  - drupal:simple_gmap
+  - drupal:taxonomy
+  - drupal:text_summary_options
+  - drupal:toolbar
+  - drupal:tour
+  - ubc_date_formats:ubc_date_formats
+  - ubc_image_styles:ubc_image_styles
+core: '8.x'
+core_version_requirement: ^8 || ^9

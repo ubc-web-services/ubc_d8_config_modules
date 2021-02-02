@@ -1,0 +1,15 @@
+name: UBC Paragraph Entities
+type: module
+description: This module defines a series of custom Paragraph entities and fields.
+package: UBC Web Services
+dependencies:
+  - drupal:field_group
+  - drupal:node
+  - drupal:paragraphs
+  - drupal:tour
+  - drupal:toolbar
+  - drupal:twig_tweak
+  - ubc_image_styles:ubc_image_styles
+  - ubc_taxonomy_terms_admin:ubc_taxonomy_terms_admin
+core: '8.x'
+core_version_requirement: ^8 || ^9

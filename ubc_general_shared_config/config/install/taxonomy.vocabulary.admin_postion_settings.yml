@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'ADMIN - Postion Settings'
+vid: admin_postion_settings
+description: 'Adds positioning classes that can be selected'
+weight: 0

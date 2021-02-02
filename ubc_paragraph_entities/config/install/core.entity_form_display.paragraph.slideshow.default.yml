@@ -1,0 +1,130 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideshow.field_slide
+    - field.field.paragraph.slideshow.field_slides_per_move
+    - field.field.paragraph.slideshow.field_slides_per_page
+    - field.field.paragraph.slideshow.field_slideshow_arrows
+    - field.field.paragraph.slideshow.field_slideshow_autoplay
+    - field.field.paragraph.slideshow.field_slideshow_direction
+    - field.field.paragraph.slideshow.field_slideshow_interval
+    - field.field.paragraph.slideshow.field_slideshow_pagination
+    - field.field.paragraph.slideshow.field_slideshow_ratio
+    - field.field.paragraph.slideshow.field_slideshow_speed
+    - field.field.paragraph.slideshow.field_slideshow_type
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_slide_settings:
+      children:
+        - field_slideshow_type
+        - field_slideshow_direction
+        - field_slideshow_speed
+        - field_slideshow_interval
+        - field_slideshow_autoplay
+        - field_slideshow_arrows
+        - field_slideshow_pagination
+        - field_slideshow_ratio
+        - field_slides_per_page
+        - field_slides_per_move
+        - field_starting_slide
+      parent_name: ''
+      weight: 0
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'Adjust the relevant slide settings for this specific slideshow. All settings are optional'
+        open: false
+        required_fields: true
+      label: 'Slideshow Settings'
+id: paragraph.slideshow.default
+targetEntityType: paragraph
+bundle: slideshow
+mode: default
+content:
+  field_slide:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_slides_per_move:
+    weight: 11
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_slides_per_page:
+    weight: 10
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_slideshow_arrows:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_slideshow_autoplay:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_slideshow_direction:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_slideshow_interval:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_slideshow_pagination:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_slideshow_ratio:
+    weight: 8
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_slideshow_speed:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_slideshow_type:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+hidden:
+  created: true
+  status: true

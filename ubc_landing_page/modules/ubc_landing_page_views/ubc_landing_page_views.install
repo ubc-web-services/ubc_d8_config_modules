@@ -9,7 +9,7 @@
  */
  /*
 function ubc_landing_page_views_install() {
-  
+
 }
 */
 
@@ -21,7 +21,7 @@ function ubc_landing_page_views_install() {
  */
  /*
 function ubc_landing_page_views_uninstall() {
-  
+
 }
 */
 
@@ -31,13 +31,13 @@ function ubc_landing_page_views_uninstall() {
  */
  /*
 function ubc_landing_page_views_update_8001() {
-  $config_path = drupal_get_path('module', 'ubc_landing_page_views') . '/config/install/views.view.ubc_landing_page.yml';
+  $config_path = drupal_get_path('module', 'ubc_landing_page_views') . '/config/install/views.view.announcements.yml';
   $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
   \Drupal::configFactory()
-    ->getEditable('views.view.ubc_landing_page.yml')
+    ->getEditable('views.view.announcements.yml')
     ->setData($data)
     ->save(TRUE);
 
-  return 'The UBC Page views have been updated.';
+  return 'The Announcement views have been updated.';
 }
 */

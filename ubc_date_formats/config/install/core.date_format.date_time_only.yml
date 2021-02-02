@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: date_time_only
+label: 'Date: Time only'
+locked: false
+pattern: 'g:ia'

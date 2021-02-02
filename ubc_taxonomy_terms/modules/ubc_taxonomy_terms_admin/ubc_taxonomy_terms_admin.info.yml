@@ -1,0 +1,8 @@
+name: UBC Taxonomy Terms - Admin
+type: module
+description: This module creates taxonomy terms used for admin settings, as they are not captured via configuration management.
+package: UBC Web Services
+dependencies:
+  - ubc_general_shared_config:ubc_general_shared_config
+core: '8.x'
+core_version_requirement: ^8 || ^9

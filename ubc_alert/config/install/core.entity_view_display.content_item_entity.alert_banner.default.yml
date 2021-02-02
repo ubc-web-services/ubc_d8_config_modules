@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.content_item_entity.alert_banner.field_alert_icon
+    - field.field.content_item_entity.alert_banner.field_alert_message
+    - field.field.content_item_entity.alert_banner.field_alert_title
+    - field.field.content_item_entity.alert_banner.field_alert_type
+    - field.field.content_item_entity.alert_banner.field_display_until
+    - ubc_content_items.content_item_entity_type.alert_banner
+  module:
+    - options
+    - text
+id: content_item_entity.alert_banner.default
+targetEntityType: content_item_entity
+bundle: alert_banner
+mode: default
+content:
+  field_alert_icon:
+    weight: 3
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_alert_message:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_alert_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_alert_type:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden:
+  field_display_until: true
+  name: true
+  user_id: true

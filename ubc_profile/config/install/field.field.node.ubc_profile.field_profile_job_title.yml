@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_job_title
+    - node.type.ubc_profile
+id: node.ubc_profile.field_profile_job_title
+field_name: field_profile_job_title
+entity_type: node
+bundle: ubc_profile
+label: 'Job Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

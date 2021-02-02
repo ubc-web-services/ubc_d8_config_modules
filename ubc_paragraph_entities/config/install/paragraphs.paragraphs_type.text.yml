@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ubc_paragraph_entities
+id: text
+label: Text
+icon_uuid: 14d6fa9f-8ff6-46ba-ba89-2ba3a9dc9413
+description: 'Add an Open Text field.'
+behavior_plugins: {  }

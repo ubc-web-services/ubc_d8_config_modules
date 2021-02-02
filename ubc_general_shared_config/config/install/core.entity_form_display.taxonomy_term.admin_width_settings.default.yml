@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.admin_width_settings.field_class
+    - taxonomy.vocabulary.admin_width_settings
+id: taxonomy_term.admin_width_settings.default
+targetEntityType: taxonomy_term
+bundle: admin_width_settings
+mode: default
+content:
+  field_class:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

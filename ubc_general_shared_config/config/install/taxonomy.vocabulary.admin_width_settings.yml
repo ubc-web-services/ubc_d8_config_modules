@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'ADMIN - Width Settings'
+vid: admin_width_settings
+description: 'Adds width classes that can be selected'
+weight: 0

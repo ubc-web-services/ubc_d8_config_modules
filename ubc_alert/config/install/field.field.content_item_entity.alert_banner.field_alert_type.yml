@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.content_item_entity.field_alert_type
+    - ubc_content_items.content_item_entity_type.alert_banner
+  module:
+    - options
+id: content_item_entity.alert_banner.field_alert_type
+field_name: field_alert_type
+entity_type: content_item_entity
+bundle: alert_banner
+label: 'Alert Type'
+description: 'Select a style for the message, based on the severity of the notification.'
+required: true
+translatable: false
+default_value:
+  -
+    value: warning
+default_value_callback: ''
+settings: {  }
+field_type: list_string

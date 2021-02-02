@@ -1,0 +1,14 @@
+name: UBC User Role Configuration
+type: module
+description: This module defines User Roles and permissions configuration.
+package: UBC Web Services
+dependencies:
+  - ubc_announcement:ubc_announcement
+  - ubc_media_entities:ubc_media_entities
+  - ubc_event:ubc_event
+  - ubc_homepage:ubc_homepage
+  - ubc_landing_page:ubc_landing_page
+  - ubc_page:ubc_page
+  - ubc_profile:ubc_profile
+core: '8.x'
+core_version_requirement: ^8 || ^9

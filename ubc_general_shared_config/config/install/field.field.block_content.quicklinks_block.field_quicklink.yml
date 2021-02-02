@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.quicklinks_block
+    - field.storage.block_content.field_quicklink
+  module:
+    - link
+id: block_content.quicklinks_block.field_quicklink
+field_name: field_quicklink
+entity_type: block_content
+bundle: quicklinks_block
+label: Quicklink
+description: 'Add links to either internal or external pages and resources.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

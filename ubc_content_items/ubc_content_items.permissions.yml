@@ -1,0 +1,30 @@
+add content item entities:
+  title: 'Create new Content Item entities'
+
+administer content item entities:
+  title: 'Administer Content Item entities'
+  description: 'Allow to access the administration form to configure Content Item entities.'
+  restrict access: true
+
+delete content item entities:
+  title: 'Delete Content Item entities'
+
+edit content item entities:
+  title: 'Edit Content Item entities'
+
+view published content item entities:
+  title: 'View published Content Item entities'
+
+view unpublished content item entities:
+  title: 'View unpublished Content Item entities'
+
+view all content item revisions:
+  title: 'View all Content Item revisions'
+
+revert all content item revisions:
+  title: 'Revert all Content Item revisions'
+  description: 'Role requires permission <em>view Content Item revisions</em> and <em>edit rights</em> for content item entities in question or <em>administer content item entities</em>.'
+
+delete all content item revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Content Item revisions</em> and <em>delete rights</em> for content item entities in question or <em>administer content item entities</em>.'

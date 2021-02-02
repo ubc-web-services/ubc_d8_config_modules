@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ubc_landing_pages
+label: 'UBC Landing Pages'
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parents]/[node:title]'
+selection_criteria:
+  2f18fa62-503d-4bdb-b34d-f99a583455ca:
+    id: node_type
+    bundles:
+      ubc_landing_page: ubc_landing_page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 2f18fa62-503d-4bdb-b34d-f99a583455ca
+selection_logic: and
+weight: -5
+relationships: {  }

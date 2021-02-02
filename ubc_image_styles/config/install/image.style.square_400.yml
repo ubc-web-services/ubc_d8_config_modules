@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: square_400
+label: 'Square 400'
+effects:
+  d8803269-fc79-48c9-ba51-56b836b4e951:
+    uuid: d8803269-fc79-48c9-ba51-56b836b4e951
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 400
+      anchor: center-center

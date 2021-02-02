@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Profile
+type: ubc_profile
+description: 'Use <em>Profiles</em> to add a staff or faculty profile to the site. Profiles are not typically included in site menus, but are sorted, searched and filtered based on lists of teasers.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

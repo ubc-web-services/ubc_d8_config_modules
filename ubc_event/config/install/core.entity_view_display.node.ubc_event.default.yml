@@ -1,0 +1,119 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ubc_event.body
+    - field.field.node.ubc_event.field_event_category
+    - field.field.node.ubc_event.field_event_date
+    - field.field.node.ubc_event.field_event_image
+    - field.field.node.ubc_event.field_event_image_teaser
+    - field.field.node.ubc_event.field_event_is_ongoing
+    - field.field.node.ubc_event.field_event_link
+    - field.field.node.ubc_event.field_event_location
+    - field.field.node.ubc_event.field_event_map
+    - field.field.node.ubc_event.field_event_meta_tags
+    - field.field.node.ubc_event.field_event_private
+    - field.field.node.ubc_event.field_event_tags
+    - field.field.node.ubc_event.field_event_teaser_second
+    - node.type.ubc_event
+  module:
+    - address
+    - datetime_range
+    - link
+    - metatag
+    - simple_gmap
+    - text
+    - user
+id: node.ubc_event.default
+targetEntityType: node
+bundle: ubc_event
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_event_date:
+    weight: 0
+    label: hidden
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_event_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_event_location:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_event_map:
+    weight: 4
+    label: hidden
+    settings:
+      include_map: true
+      apikey: ''
+      iframe_width: 100%
+      iframe_height: 100%
+      static_scale: 1
+      link_text: 'View larger map'
+      zoom_level: 14
+      map_type: m
+      langcode: en
+      include_static_map: false
+      include_link: false
+      include_text: false
+      iframe_title: ''
+    third_party_settings: {  }
+    type: simple_gmap
+    region: content
+  field_event_meta_tags:
+    type: metatag_empty_formatter
+    weight: 5
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_event_tags:
+    weight: 6
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_event_category: true
+  field_event_image: true
+  field_event_image_teaser: true
+  field_event_is_ongoing: true
+  field_event_private: true
+  field_event_teaser_second: true

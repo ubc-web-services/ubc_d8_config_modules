@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slideshow_pagination
+    - paragraphs.paragraphs_type.slideshow
+id: paragraph.slideshow.field_slideshow_pagination
+field_name: field_slideshow_pagination
+entity_type: paragraph
+bundle: slideshow
+label: 'Slideshow Pagination'
+description: 'Setting to append pagination(indicator dots). Defaults to <b>true</b>'
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

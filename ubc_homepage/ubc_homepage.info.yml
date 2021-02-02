@@ -1,0 +1,17 @@
+name: UBC Homepage Content Type
+type: module
+description: This module defines a custom Homepage content type and its fields.
+package: UBC Web Services
+dependencies:
+  - drupal:field_group
+  - drupal:focal_point
+  - drupal:metatag
+  - drupal:node
+  - drupal:paragraphs
+  - drupal:responsive_image
+  - drupal:taxonomy
+  - drupal:toolbar
+  - ubc_image_styles:ubc_image_styles
+  - ubc_paragraph_entities:ubc_paragraph_entities
+core: '8.x'
+core_version_requirement: ^8 || ^9

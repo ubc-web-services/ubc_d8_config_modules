@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'ADMIN - Icon Position'
+vid: admin_icon_position
+description: 'Adds icon card layout classes'
+weight: 0

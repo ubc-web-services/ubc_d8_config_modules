@@ -4,9 +4,6 @@ dependencies:
   module:
     - link
     - node
-  enforced: 
-    module: 
-      - ubc_announcement
 id: node.field_announcement_external_link
 field_name: field_announcement_external_link
 entity_type: node

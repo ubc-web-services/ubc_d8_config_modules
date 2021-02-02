@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_meta_tags
+    - node.type.ubc_profile
+  module:
+    - metatag
+id: node.ubc_profile.field_profile_meta_tags
+field_name: field_profile_meta_tags
+entity_type: node
+bundle: ubc_profile
+label: 'Meta Tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

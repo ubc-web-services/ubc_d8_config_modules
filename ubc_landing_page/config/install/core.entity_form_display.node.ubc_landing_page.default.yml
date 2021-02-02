@@ -3,58 +3,166 @@ status: true
 dependencies:
   config:
     - field.field.node.ubc_landing_page.body
+    - field.field.node.ubc_landing_page.field_landing_custom_content
     - field.field.node.ubc_landing_page.field_landing_feature_image
-    - field.field.node.ubc_landing_page.field_landing_supporting
-    - image.style.thumbnail
+    - field.field.node.ubc_landing_page.field_landing_image_teaser
+    - field.field.node.ubc_landing_page.field_landing_meta_tags
+    - field.field.node.ubc_landing_page.field_landing_tags
+    - field.field.node.ubc_landing_page.field_landing_teaser_second
+    - image.style.medium
     - node.type.ubc_landing_page
   module:
-    - image
+    - field_group
+    - focal_point
+    - maxlength
+    - metatag
+    - paragraphs
     - path
+    - scheduler
     - text
-  enforced:
-    module:
-      - ubc_landing_page
+third_party_settings:
+  field_group:
+    group_feature_area:
+      children:
+        - field_landing_feature_image
+        - group_feature_title_override
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Feature Area'
+      region: content
+    group_feature_title_override:
+      children:
+        - field_landing_image_teaser
+        - field_landing_teaser_second
+      parent_name: group_feature_area
+      weight: 10
+      format_type: details
+      format_settings:
+        description: 'By default the title will appear over top of the image when a feature image is added. If you wish to change this (for example, the title is too long or you want it to appear on two lines) , use the two text fields below.'
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Feature Title Override'
+      region: content
+    group_metadata:
+      children:
+        - field_landing_tags
+      parent_name: ''
+      weight: 5
+      format_type: details_sidebar
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: true
+        required_fields: true
+        weight: -100
+      label: Metadata
 id: node.ubc_landing_page.default
 targetEntityType: node
 bundle: ubc_landing_page
 mode: default
 content:
   body:
-    type: text_textarea_with_summary
-    weight: 2
+    weight: 3
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
+    type: text_textarea_with_summary
     region: content
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_landing_feature_image:
-    weight: 1
+  field_landing_custom_content:
+    type: entity_reference_paragraphs
+    weight: 4
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
     third_party_settings: {  }
-    type: image_image
     region: content
-  field_landing_supporting:
-    weight: 3
+  field_landing_feature_image:
+    weight: 9
     settings:
-      rows: 5
-      placeholder: ''
+      preview_image_style: medium
+      preview_link: true
+      offsets: '50,50'
+      progress_indicator: throbber
     third_party_settings: {  }
-    type: text_textarea
+    type: image_focal_point
+    region: content
+  field_landing_image_teaser:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 255
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+    type: string_textfield
+    region: content
+  field_landing_meta_tags:
+    weight: 10
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_landing_tags:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_landing_teaser_second:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 255
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+    type: string_textfield
     region: content
   path:
     type: path
-    weight: 6
+    weight: 8
     region: content
     settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -63,15 +171,30 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      maxlength:
+        maxlength_js: 255
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 13
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   promote: true

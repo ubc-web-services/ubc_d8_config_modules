@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text.field_paragraph_card_colour
+    - field.field.paragraph.text.field_paragraph_text
+    - field.field.paragraph.text.field_paragraph_width_settings
+    - paragraphs.paragraphs_type.text
+  enforced:
+    module:
+      - ubc_paragraph_entities
+  module:
+    - text
+id: paragraph.text.default
+targetEntityType: paragraph
+bundle: text
+mode: default
+content:
+  field_paragraph_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_paragraph_card_colour: true
+  field_paragraph_width_settings: true

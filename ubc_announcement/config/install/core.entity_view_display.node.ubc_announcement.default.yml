@@ -3,21 +3,18 @@ status: true
 dependencies:
   config:
     - field.field.node.ubc_announcement.body
-    - field.field.node.ubc_announcement.field_announcement_category
     - field.field.node.ubc_announcement.field_announcement_external_link
     - field.field.node.ubc_announcement.field_announcement_feature_image
     - field.field.node.ubc_announcement.field_announcement_image_teaser
-    - field.field.node.ubc_announcement.field_announcement_supporting
+    - field.field.node.ubc_announcement.field_announcement_meta_tags
+    - field.field.node.ubc_announcement.field_announcement_tags
+    - field.field.node.ubc_announcement.field_announcement_teaser_second
+    - field.field.node.ubc_announcement.field_announcement_type
     - node.type.ubc_announcement
   module:
-    - image
     - link
-    - options
     - text
     - user
-  enforced:
-    module:
-      - ubc_announcement
 id: node.ubc_announcement.default
 targetEntityType: node
 bundle: ubc_announcement
@@ -26,19 +23,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 0
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_announcement_category:
-    weight: 2
-    label: visually_hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   field_announcement_external_link:
-    weight: 3
+    weight: 1
     label: visually_hidden
     settings:
       trim_length: 80
@@ -49,27 +39,29 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_announcement_feature_image:
+  field_announcement_tags:
+    weight: 3
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_announcement_type:
     weight: 4
     label: hidden
     settings:
-      image_style: ''
-      image_link: ''
+      link: false
     third_party_settings: {  }
-    type: image
-    region: content
-  field_announcement_image_teaser:
-    weight: 5
-    label: visually_hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
+    type: entity_reference_label
     region: content
   links:
-    weight: 0
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_announcement_supporting: true
+  field_announcement_feature_image: true
+  field_announcement_image_teaser: true
+  field_announcement_meta_tags: true
+  field_announcement_teaser_second: true

@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - ubc_content_items
+id: content_item_entity.field_alert_icon
+field_name: field_alert_icon
+entity_type: content_item_entity
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

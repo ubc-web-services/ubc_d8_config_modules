@@ -1,7 +1,0 @@
-name: UBC Page Views
-type: module
-description: This module adds prebuilt views to the UBC Page content type.
-package: UBC Web Services
-dependencies:
-  - ubc_page:ubc_page
-core: '8.x'

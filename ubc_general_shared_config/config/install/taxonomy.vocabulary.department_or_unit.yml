@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Department or Unit'
+vid: department_or_unit
+description: 'Identifies the relevant Department or Unit within the organization'
+weight: 0

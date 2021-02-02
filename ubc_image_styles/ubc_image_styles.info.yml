@@ -1,0 +1,11 @@
+name: UBC Image Styles
+type: module
+description: This module defines a set of image styles used by other UBC config modules.
+package: UBC Web Services
+dependencies:
+  - drupal:breakpoint
+  - drupal:focal_point
+  - drupal:responsive_image
+  - inline_responsive_images:inline_responsive_images
+core: '8.x'
+core_version_requirement: ^8 || ^9

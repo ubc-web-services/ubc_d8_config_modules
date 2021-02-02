@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_meta_tags
+    - node.type.ubc_event
+  module:
+    - metatag
+id: node.ubc_event.field_event_meta_tags
+field_name: field_event_meta_tags
+entity_type: node
+bundle: ubc_event
+label: 'Meta Tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.content_item_entity.field_display_until
+    - ubc_content_items.content_item_entity_type.alert_banner
+  module:
+    - datetime
+id: content_item_entity.alert_banner.field_display_until
+field_name: field_display_until
+entity_type: content_item_entity
+bundle: alert_banner
+label: 'Display until'
+description: 'Add the date and time that the message should be disabled and no longer appear. If left blank, the message will continue to appear until the <em>Alert</em> is unpublished. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

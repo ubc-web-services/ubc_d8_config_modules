@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: date_readable_w_time
+label: 'Date: readable w time'
+locked: false
+pattern: 'F j, Y - g:ia'

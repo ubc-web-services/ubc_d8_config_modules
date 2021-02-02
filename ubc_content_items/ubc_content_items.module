@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains ubc_content_items.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ubc_content_items_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ubc_content_items module.
+    case 'help.page.ubc_content_items':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A module to provide custom content entities.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ubc_content_items_theme($existing, $type, $theme, $path) {
+  $theme = [];
+  $theme['content_item_entity'] = [
+    'render element' => 'elements',
+    'file' => 'content_item_entity.page.inc',
+    'template' => 'content_item_entity',
+  ];
+  $theme['content_item_entity_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'content_item_entity.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function ubc_content_items_theme_suggestions_content_item_entity(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#content_item_entity'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'content_item_entity__' . $sanitized_view_mode;
+  $suggestions[] = 'content_item_entity__' . $entity->bundle();
+  $suggestions[] = 'content_item_entity__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'content_item_entity__' . $entity->id();
+  $suggestions[] = 'content_item_entity__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

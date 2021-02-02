@@ -1,0 +1,11 @@
+# ubc_paragraph_entities.libraries.yml
+
+### Splide (slideshow Library) [https://splidejs.com]
+splide:
+  css:
+    theme:
+      css/splide/splide-core.min.css: {}
+      css/splide/splide.custom.css: {}
+  js:
+    js/splide/splide.min.js: {}
+    js/splide/start.splide.js: {}

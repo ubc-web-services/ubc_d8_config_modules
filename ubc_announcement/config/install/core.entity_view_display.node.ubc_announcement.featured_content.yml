@@ -1,0 +1,59 @@
+uuid: ba4c3428-7056-4308-809c-d9093f87f6c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.featured_content
+    - field.field.node.ubc_announcement.body
+    - field.field.node.ubc_announcement.field_announcement_external_link
+    - field.field.node.ubc_announcement.field_announcement_feature_image
+    - field.field.node.ubc_announcement.field_announcement_image_teaser
+    - field.field.node.ubc_announcement.field_announcement_meta_tags
+    - field.field.node.ubc_announcement.field_announcement_tags
+    - field.field.node.ubc_announcement.field_announcement_teaser_second
+    - field.field.node.ubc_announcement.field_announcement_type
+    - node.type.ubc_announcement
+    - responsive_image.styles.hero_image
+  module:
+    - responsive_image
+    - user
+_core:
+  default_config_hash: wmQSNtLkSRLxzn8xsOigtr7ydoZWGYE4yR704ni6p2U
+id: node.ubc_announcement.featured_content
+targetEntityType: node
+bundle: ubc_announcement
+mode: featured_content
+content:
+  field_announcement_feature_image:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: hero_image
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+  field_announcement_image_teaser:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_announcement_teaser_second:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  body: true
+  content_moderation_control: true
+  field_announcement_external_link: true
+  field_announcement_meta_tags: true
+  field_announcement_tags: true
+  field_announcement_type: true
+  links: true

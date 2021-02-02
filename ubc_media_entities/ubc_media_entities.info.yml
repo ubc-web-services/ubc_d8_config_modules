@@ -1,0 +1,13 @@
+name: UBC Media Entity Configuration
+type: module
+description: This module defines the shared file entity configuration.
+package: UBC Web Services
+dependencies:
+  - drupal:crop
+  - drupal:field_group
+  - drupal:responsive_image
+  - drupal:media
+  - drupal:media_bulk_upload
+  - ubc_editor_config:ubc_editor_config
+core: '8.x'
+core_version_requirement: ^8 || ^9

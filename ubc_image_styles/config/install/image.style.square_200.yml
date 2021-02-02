@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: square_200
+label: 'Square 200'
+effects:
+  7492bb39-1db2-461d-9ef5-c89f8648f09a:
+    uuid: 7492bb39-1db2-461d-9ef5-c89f8648f09a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 200
+      anchor: center-center

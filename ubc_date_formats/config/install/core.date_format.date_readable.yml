@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: date_readable
+label: 'Date: readable'
+locked: false
+pattern: 'F j, Y'

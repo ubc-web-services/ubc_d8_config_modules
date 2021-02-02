@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_category
+    - node.type.ubc_event
+    - taxonomy.vocabulary.event_category
+id: node.ubc_event.field_event_category
+field_name: field_event_category
+entity_type: node
+bundle: ubc_event
+label: 'Event Category'
+description: 'Add categories to your event. These are typically used for identifying similar themes or topics in order to group like events.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      event_category: event_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

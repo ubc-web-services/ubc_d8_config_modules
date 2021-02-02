@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_is_ongoing
+    - node.type.ubc_event
+id: node.ubc_event.field_event_is_ongoing
+field_name: field_event_is_ongoing
+entity_type: node
+bundle: ubc_event
+label: 'Event is ongoing'
+description: 'This option allows you to set an event as <em>Ongoing</em>, which will override the default sort order and ignore the date display. Note that you will still use the DATE field to set a day for these to expire. For far future dates, you can choose sometime days, months or years in advance and it will continue to sit above dated upcoming events and fall off the list when the date set is passed.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

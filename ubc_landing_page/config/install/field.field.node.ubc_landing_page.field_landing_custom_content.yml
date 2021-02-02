@@ -1,0 +1,66 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_custom_content
+    - node.type.ubc_landing_page
+    - paragraphs.paragraphs_type.card_group
+    - paragraphs.paragraphs_type.feature_image
+    - paragraphs.paragraphs_type.tabcordion
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: node.ubc_landing_page.field_landing_custom_content
+field_name: field_landing_custom_content
+entity_type: node
+bundle: ubc_landing_page
+label: 'Custom Content Regions'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      card_group: card_group
+      feature_image: feature_image
+      tabcordion: tabcordion
+      text: text
+    target_bundles_drag_drop:
+      card_group:
+        enabled: true
+        weight: 10
+      feature_image:
+        enabled: true
+        weight: 11
+      a11y_paragraphs_tabs_panel:
+        weight: 12
+        enabled: false
+      icon_card:
+        weight: 12
+        enabled: false
+      a11y_paragraphs_tabs_wrapper:
+        weight: 13
+        enabled: false
+      image_card:
+        weight: 13
+        enabled: false
+      a11y_paragraphs_tab_content:
+        weight: 14
+        enabled: false
+      tab:
+        weight: 15
+        enabled: false
+      tabcordion:
+        enabled: true
+        weight: 16
+      text:
+        enabled: true
+        weight: 17
+      card:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

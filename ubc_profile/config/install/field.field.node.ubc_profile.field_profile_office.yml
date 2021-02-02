@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_office
+    - node.type.ubc_profile
+id: node.ubc_profile.field_profile_office
+field_name: field_profile_office
+entity_type: node
+bundle: ubc_profile
+label: Office
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -6,15 +6,12 @@ dependencies:
     - node.type.ubc_announcement
   module:
     - image
-  enforced: 
-    module: 
-      - ubc_announcement 
 id: node.ubc_announcement.field_announcement_feature_image
 field_name: field_announcement_feature_image
 entity_type: node
 bundle: ubc_announcement
 label: 'Feature Image'
-description: 'Add a feature image to the announcement. Feature image must be at least 950x600.'
+description: 'Add a feature image to the announcement. Feature image must be at least 1300x600.'
 required: false
 translatable: false
 default_value: {  }
@@ -24,7 +21,7 @@ settings:
   file_extensions: 'jpg jpeg'
   max_filesize: ''
   max_resolution: ''
-  min_resolution: 950x600
+  min_resolution: 1300x600
   alt_field: true
   alt_field_required: true
   title_field: false

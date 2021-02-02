@@ -1,0 +1,7 @@
+name: 'UBC Content Items'
+type: module
+description: 'A module to provide custom content entities.'
+core: 8.x
+package: 'UBC Web Services'
+dependencies:
+  - content_moderation

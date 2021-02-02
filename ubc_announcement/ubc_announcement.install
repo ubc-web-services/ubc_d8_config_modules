@@ -11,14 +11,13 @@
  *
  * @ingroup ubc_announcement
  */
- /*
 function ubc_announcement_install() {
   // Do not allow the locked content type to be deleted.
   $locked = Drupal::state()->get('node.type.locked');
-  $locked['announcement'] = 'announcement';
+  $locked['ubc_announcement'] = 'ubc_announcement';
   Drupal::state()->set('node.type.locked', $locked);
 }
-*/
+
 
 /**
  * Implements hook_uninstall().
@@ -28,19 +27,18 @@ function ubc_announcement_install() {
  * make decisions about their fate. Therefore we should give the user the
  * option of deleting them.
  *
- * Since we told Drupal that our announcement is locked, we now have
+ * Since we told Drupal that our ubc_announcement is locked, we now have
  * to tell it to unlock.
  *
  * @ingroup ubc_announcement
  */
- /*
 function ubc_announcement_uninstall() {
-  // Allow announcement to be deleted.
+  // Allow ubc_announcement to be deleted.
   $locked = Drupal::state()->get('node.type.locked');
-  unset($locked['announcement']);
+  unset($locked['ubc_announcement']);
   Drupal::state()->set('node.type.locked', $locked);
 }
-*/
+
 
 /**
  * Update configuration from file.
