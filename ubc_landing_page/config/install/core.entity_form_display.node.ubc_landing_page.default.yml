@@ -13,6 +13,7 @@ dependencies:
     - node.type.ubc_landing_page
   module:
     - field_group
+    - maxlength
     - metatag
     - paragraphs
     - path
@@ -44,11 +45,11 @@ third_party_settings:
       weight: 10
       format_type: details
       format_settings:
+        description: 'By default the title will appear over top of the image when a feature image is added. If you wish to change this (for example, the title is too long or you want it to appear on two lines) , use the two text fields below.'
+        open: true
+        required_fields: true
         id: ''
         classes: ''
-        description: 'By default the title will appear over top of the image when a feature image is added. If you wish to change this (for example, the title is too long or you want it to appear on two lines) , use the two text fields below.'
-        open: false
-        required_fields: true
       label: 'Feature Title Override'
       region: content
     group_metadata:
@@ -112,7 +113,10 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      maxlength:
+        maxlength_js: 255
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
     type: string_textfield
     region: content
   field_landing_meta_tags:
@@ -133,7 +137,10 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      maxlength:
+        maxlength_js: 255
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
     type: string_textfield
     region: content
   path:
@@ -162,7 +169,10 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      maxlength:
+        maxlength_js: 255
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
   uid:
     type: entity_reference_autocomplete
     weight: 6
