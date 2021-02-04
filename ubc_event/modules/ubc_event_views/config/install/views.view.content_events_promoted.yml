@@ -53,11 +53,14 @@ display:
           items_per_page: 4
           offset: 0
       style:
-        type: default
+        type: html_list
         options:
-          row_class: 'auto-grid__inner mb-8 md--mb-0'
+          row_class: 'mb-8 md--mb-0 md--w-1/2 lg--w-1/4'
           default_row_class: false
           uses_fields: false
+          type: ul
+          wrapper_class: item-list
+          class: 'md--flex md--flex-wrap'
       row:
         type: 'entity:node'
         options:
