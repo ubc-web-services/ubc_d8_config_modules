@@ -42,8 +42,8 @@ function ubc_content_items_theme($existing, $type, $theme, $path) {
 }
 
 /**
-* Implements hook_theme_suggestions_HOOK().
-*/
+ * Implements hook_theme_suggestions_HOOK().
+ */
 function ubc_content_items_theme_suggestions_content_item_entity(array $variables) {
   $suggestions = [];
   $entity = $variables['elements']['#content_item_entity'];

@@ -4,7 +4,6 @@ namespace Drupal\ubc_content_items;
 
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Entity\Routing\AdminHtmlRouteProvider;
-use Symfony\Component\Routing\Route;
 
 /**
  * Provides routes for Content Item type entities.
@@ -21,7 +20,6 @@ class ContentItemEntityTypeHtmlRouteProvider extends AdminHtmlRouteProvider {
     $collection = parent::getRoutes($entity_type);
 
     // Provide your custom entity routes here.
-
     return $collection;
   }
 

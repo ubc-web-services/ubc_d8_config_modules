@@ -8,4 +8,3 @@ entity.content_item_entity_type.add_form:
   title: 'Add Content Item type'
   appears_on:
     - entity.content_item_entity_type.collection
-
