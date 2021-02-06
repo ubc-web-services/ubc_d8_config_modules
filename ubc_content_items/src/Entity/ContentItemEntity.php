@@ -53,6 +53,11 @@ use Drupal\user\UserInterface;
  *     "langcode" = "langcode",
  *     "status" = "status",
  *   },
+ *   revision_metadata_keys = {
+ *     "revision_user" = "revision_user",
+ *     "revision_created" = "revision_created",
+ *     "revision_log_message" = "revision_log_message"
+ *   },
  *   links = {
  *     "canonical" = "/admin/structure/content_item_entity/{content_item_entity}",
  *     "add-page" = "/admin/structure/content_item_entity/add",

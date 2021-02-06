@@ -30,6 +30,17 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  *     "label" = "label",
  *     "uuid" = "uuid"
  *   },
+ *   revision_metadata_keys = {
+ *     "revision_user" = "revision_user",
+ *     "revision_created" = "revision_created",
+ *     "revision_log_message" = "revision_log_message"
+ *   },
+ *   config_export = {
+ *     "id",
+ *     "label",
+ *     "description",
+ *     "weight"
+ *   },
  *   links = {
  *     "canonical" = "/admin/structure/content_item_entity_type/{content_item_entity_type}",
  *     "add-form" = "/admin/structure/content_item_entity_type/add",
