@@ -3,6 +3,7 @@ type: module
 description: This module defines shared configuration items (ie. display modes, taxonomies, etc).
 package: UBC Web Services
 dependencies:
+  - drupal:block_content
   - drupal:node
   - drupal:taxonomy
 core: '8.x'
