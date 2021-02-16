@@ -3,9 +3,16 @@ type: module
 description: This module defines a series of custom Paragraph entities and fields.
 package: UBC Web Services
 dependencies:
+  - drupal:entity_reference_revisions
   - drupal:field_group
+  - drupal:image
+  - drupal:link
   - drupal:node
+  - drupal:options
   - drupal:paragraphs
+  - drupal:responsive_image
+  - drupal:taxonomy
+  - drupal:text
   - drupal:tour
   - drupal:toolbar
   - drupal:twig_tweak
