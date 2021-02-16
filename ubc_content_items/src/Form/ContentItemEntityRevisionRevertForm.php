@@ -57,7 +57,7 @@ class ContentItemEntityRevisionRevertForm extends ConfirmFormBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('entity.manager')->getStorage('content_item_entity'),
+      $container->get('entity_type.manager')->getStorage('content_item_entity'),
       $container->get('date.formatter')
     );
   }
