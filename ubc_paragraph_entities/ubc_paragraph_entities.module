@@ -8,7 +8,6 @@ function ubc_paragraph_entities_theme_suggestions_paragraph_alter(&$suggestions,
   $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
   $type = $entity->getType();
 
-  $suggestions[] = 'ubc_paragraph';
   $suggestions[] = 'ubc_paragraph__' . $type;
   $suggestions[] = 'ubc_paragraph__' . $type . '__' . $sanitized_view_mode;
 }
