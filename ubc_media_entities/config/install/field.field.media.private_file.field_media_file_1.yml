@@ -18,7 +18,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: 'media-uploads/files/[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'txt rtf doc docx ppt pptx xls xlsx pdf pdfx'
+  file_extensions: 'doc docx ppt pptx xls xlsx pdf odf odg odp ods odt key numbers pages'
   max_filesize: ''
   description_field: false
   handler: 'default:file'
