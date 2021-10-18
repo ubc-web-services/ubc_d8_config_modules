@@ -53,17 +53,17 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 4
+          items_per_page: 3
           offset: 0
       style:
         type: html_list
         options:
-          row_class: 'mb-8 md--mb-0 md--w-1/2 lg--w-1/4'
+          row_class: ''
           default_row_class: false
           uses_fields: false
-          type: ul
+          type: ol
           wrapper_class: item-list
-          class: 'md--flex md--flex-wrap'
+          class: 'grid grid-cols-1 gap-8 pl-0 list-none md--grid-cols-3'
       row:
         type: 'entity:node'
         options:

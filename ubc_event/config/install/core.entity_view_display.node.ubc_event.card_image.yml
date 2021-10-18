@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.card_image
     - field.field.node.ubc_event.body
     - field.field.node.ubc_event.field_event_category
     - field.field.node.ubc_event.field_event_date
@@ -13,46 +14,44 @@ dependencies:
     - field.field.node.ubc_event.field_event_meta_tags
     - field.field.node.ubc_event.field_event_private
     - field.field.node.ubc_event.field_event_tags
+    - responsive_image.styles.card_focal_point
     - node.type.ubc_event
   module:
-    - address
     - datetime_range
     - link
-    - metatag
-    - text
+    - responsive_image
     - user
-id: node.ubc_event.default
+id: node.ubc_event.card_image
 targetEntityType: node
 bundle: ubc_event
-mode: default
+mode: card_image
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 1
+  content_moderation_control:
+    weight: 0
+    region: content
     settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_event_category:
-    type: entity_reference_label
-    weight: 5
-    region: content
-    label: hidden
-    settings:
-      link: false
     third_party_settings: {  }
   field_event_date:
     weight: 0
     label: hidden
     settings:
-      separator: '-'
-      format_type: medium
       timezone_override: ''
+      format_type: date_readable
+      separator: '-'
     third_party_settings: {  }
     type: daterange_default
     region: content
-  field_event_link:
+  field_event_image:
+    type: responsive_image
     weight: 2
+    region: content
+    label: hidden
+    settings:
+      responsive_image_style: card_focal_point
+      image_link: ''
+    third_party_settings: {  }
+  field_event_link:
+    weight: 1
     label: hidden
     settings:
       trim_length: 80
@@ -63,36 +62,13 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_event_location:
-    weight: 3
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: address_default
-    region: content
-  field_event_meta_tags:
-    type: metatag_empty_formatter
-    weight: 4
-    region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-  field_event_tags:
-    weight: 6
-    label: hidden
-    settings:
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  links:
-    weight: 7
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
-  content_moderation_control: true
-  field_event_image: true
+  body: true
+  field_event_category: true
   field_event_is_ongoing: true
+  field_event_location: true
   field_event_map: true
+  field_event_meta_tags: true
   field_event_private: true
+  field_event_tags: true
+  links: true

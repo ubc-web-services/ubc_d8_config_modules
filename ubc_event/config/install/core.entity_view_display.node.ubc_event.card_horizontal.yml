@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.ubc_event.field_event_category
     - field.field.node.ubc_event.field_event_date
     - field.field.node.ubc_event.field_event_image
-    - field.field.node.ubc_event.field_event_image_teaser
     - field.field.node.ubc_event.field_event_is_ongoing
     - field.field.node.ubc_event.field_event_link
     - field.field.node.ubc_event.field_event_location
@@ -15,12 +14,13 @@ dependencies:
     - field.field.node.ubc_event.field_event_meta_tags
     - field.field.node.ubc_event.field_event_private
     - field.field.node.ubc_event.field_event_tags
-    - field.field.node.ubc_event.field_event_teaser_second
-    - image.style.max_640w
+    - image.style.square_focal_point_600
     - node.type.ubc_event
   module:
     - address
-    - image
+    - datetime_range
+    - link
+    - svg_image
     - text
     - user
 id: node.ubc_event.card_horizontal
@@ -31,50 +31,59 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 3
+    weight: 2
     settings:
       trim_length: 350
     third_party_settings: {  }
     region: content
-  field_event_category:
-    weight: 0
+  field_event_date:
+    type: daterange_default
+    weight: 4
+    region: content
     label: hidden
     settings:
-      link: false
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
     third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_event_image:
-    type: image_url
-    weight: 1
+    type: image
+    weight: 0
     region: content
     label: hidden
     settings:
-      image_style: max_640w
+      image_style: square_focal_point_600
+      image_link: ''
+      svg_render_as_image: true
+      svg_attributes:
+        width: null
+        height: null
+    third_party_settings: {  }
+  field_event_link:
+    type: link
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
   field_event_location:
-    weight: 2
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
-  field_event_tags:
-    type: entity_reference_label
-    weight: 6
-    region: content
-    label: hidden
-    settings:
-      link: false
-    third_party_settings: {  }
 hidden:
   content_moderation_control: true
-  field_event_date: true
-  field_event_image_teaser: true
+  field_event_category: true
   field_event_is_ongoing: true
-  field_event_link: true
   field_event_map: true
   field_event_meta_tags: true
   field_event_private: true
-  field_event_teaser_second: true
+  field_event_tags: true
   links: true

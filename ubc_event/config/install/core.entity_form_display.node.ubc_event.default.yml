@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.ubc_event.field_event_category
     - field.field.node.ubc_event.field_event_date
     - field.field.node.ubc_event.field_event_image
-    - field.field.node.ubc_event.field_event_image_teaser
     - field.field.node.ubc_event.field_event_is_ongoing
     - field.field.node.ubc_event.field_event_link
     - field.field.node.ubc_event.field_event_location
@@ -14,13 +13,13 @@ dependencies:
     - field.field.node.ubc_event.field_event_meta_tags
     - field.field.node.ubc_event.field_event_private
     - field.field.node.ubc_event.field_event_tags
-    - field.field.node.ubc_event.field_event_teaser_second
     - image.style.medium
     - node.type.ubc_event
   module:
     - address
     - allowed_formats
     - datetime_range
+    - datetimehideseconds
     - field_group
     - focal_point
     - link
@@ -31,22 +30,6 @@ dependencies:
     - text
 third_party_settings:
   field_group:
-    group_feature_area:
-      children:
-        - field_event_image
-        - field_event_image_teaser
-        - field_event_teaser_second
-      parent_name: ''
-      weight: 1
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        required_fields: true
-        open: false
-      label: 'Feature Area'
-      region: content
     group_event_time:
       children:
         - field_event_date
@@ -65,9 +48,8 @@ third_party_settings:
       children:
         - field_event_category
         - field_event_tags
-        - field_event_private
       parent_name: ''
-      weight: 7
+      weight: 6
       format_type: details_sidebar
       region: content
       format_settings:
@@ -105,7 +87,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -118,11 +100,13 @@ content:
   field_event_date:
     weight: 11
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      datetimehideseconds:
+        hide: true
     type: daterange_default
     region: content
   field_event_image:
-    weight: 6
+    weight: 1
     settings:
       preview_image_style: medium
       progress_indicator: throbber
@@ -130,17 +114,6 @@ content:
       offsets: '50,50'
     third_party_settings: {  }
     type: image_focal_point
-    region: content
-  field_event_image_teaser:
-    weight: 7
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings:
-      maxlength:
-        maxlength_js: 255
-        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
-    type: string_textfield
     region: content
   field_event_is_ongoing:
     weight: 12
@@ -150,7 +123,7 @@ content:
     type: boolean_checkbox
     region: content
   field_event_link:
-    weight: 6
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -166,47 +139,18 @@ content:
     third_party_settings: {  }
     type: address_default
     region: content
-  field_event_map:
-    weight: 5
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings:
-      maxlength:
-        maxlength_js: 255
-        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
-    type: string_textfield
-    region: content
   field_event_meta_tags:
-    weight: 15
+    weight: 13
     settings:
       sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
-    region: content
-  field_event_private:
-    weight: 14
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
     region: content
   field_event_tags:
     weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_event_teaser_second:
-    weight: 8
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings:
-      maxlength:
-        maxlength_js: 255
-        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
-    type: string_textfield
     region: content
   field_event_unit:
     weight: 7
@@ -220,7 +164,7 @@ content:
     region: content
   path:
     type: path
-    weight: 12
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -228,17 +172,17 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 9
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 16
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 20
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -246,14 +190,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 12
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
@@ -269,7 +213,7 @@ content:
         maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
   uid:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -279,14 +223,16 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 17
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 18
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_event_map: true
+  field_event_private: true
   moderation_state: true

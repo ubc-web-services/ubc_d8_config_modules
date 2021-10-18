@@ -1,3 +1,4 @@
+uuid: f1c17a7b-3167-41ae-95e3-5274d36b907e
 langcode: en
 status: true
 dependencies:
@@ -15,6 +16,8 @@ dependencies:
     - taxonomy
     - text
     - user
+_core:
+  default_config_hash: Ibk49DA3dFc821lLwaGZcYGRnnYHqWxcwLKBiNBfdFI
 id: content_event_list
 label: 'Content: Event list'
 module: views
@@ -76,11 +79,15 @@ display:
             offset_label: Offset
           quantity: 9
       style:
-        type: default
+        type: html_list
         options:
+          grouping: {  }
           row_class: ''
           default_row_class: false
           uses_fields: true
+          type: ol
+          wrapper_class: item-list
+          class: 'grid grid-cols-1 gap-8 pl-0 list-none'
       row:
         type: 'entity:node'
         options:

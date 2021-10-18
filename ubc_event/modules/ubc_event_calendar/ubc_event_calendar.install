@@ -1,0 +1,43 @@
+<?php
+
+
+/**
+ * Implements hook_install().
+ *
+ *
+ * @ingroup ubc_event_calendar
+ */
+ /*
+function ubc_event_calendar_install() {
+
+}
+*/
+
+/**
+ * Implements hook_uninstall().
+ *
+ *
+ * @ingroup ubc_event_calendar
+ */
+ /*
+function ubc_event_calendar_uninstall() {
+
+}
+*/
+
+/**
+ * Update configuration from file.
+ * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
+ */
+ /*
+function ubc_event_calendar_update_8001() {
+  $config_path = drupal_get_path('module', 'ubc_event_calendar') . '/config/install/views.view.announcements.yml';
+  $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
+  \Drupal::configFactory()
+    ->getEditable('views.view.announcements.yml')
+    ->setData($data)
+    ->save(TRUE);
+
+  return 'The Event views have been updated.';
+}
+*/
