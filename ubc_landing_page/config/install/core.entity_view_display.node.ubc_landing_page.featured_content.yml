@@ -6,10 +6,8 @@ dependencies:
     - field.field.node.ubc_landing_page.body
     - field.field.node.ubc_landing_page.field_landing_custom_content
     - field.field.node.ubc_landing_page.field_landing_feature_image
-    - field.field.node.ubc_landing_page.field_landing_image_teaser
     - field.field.node.ubc_landing_page.field_landing_meta_tags
     - field.field.node.ubc_landing_page.field_landing_tags
-    - field.field.node.ubc_landing_page.field_landing_teaser_second
     - node.type.ubc_landing_page
     - responsive_image.styles.hero_image
   module:
@@ -28,22 +26,6 @@ content:
     settings:
       responsive_image_style: hero_image
       image_link: ''
-    third_party_settings: {  }
-  field_landing_image_teaser:
-    type: string
-    weight: 1
-    region: content
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  field_landing_teaser_second:
-    type: string
-    weight: 2
-    region: content
-    label: hidden
-    settings:
-      link_to_entity: false
     third_party_settings: {  }
 hidden:
   body: true

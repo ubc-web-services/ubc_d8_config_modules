@@ -6,7 +6,7 @@ dependencies:
 id: ubc_landing_pages
 label: 'UBC Landing Pages'
 type: 'canonical_entities:node'
-pattern: '[node:menu-link:parents]/[node:title]'
+pattern: '[node:menu-link:parents:join-path]/[node:title]'
 selection_criteria:
   2f18fa62-503d-4bdb-b34d-f99a583455ca:
     id: node_type
