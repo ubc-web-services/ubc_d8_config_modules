@@ -5,10 +5,8 @@ dependencies:
     - field.field.node.ubc_landing_page.body
     - field.field.node.ubc_landing_page.field_landing_custom_content
     - field.field.node.ubc_landing_page.field_landing_feature_image
-    - field.field.node.ubc_landing_page.field_landing_image_teaser
     - field.field.node.ubc_landing_page.field_landing_meta_tags
     - field.field.node.ubc_landing_page.field_landing_tags
-    - field.field.node.ubc_landing_page.field_landing_teaser_second
     - image.style.medium
     - node.type.ubc_landing_page
   module:
@@ -22,36 +20,6 @@ dependencies:
     - text
 third_party_settings:
   field_group:
-    group_feature_area:
-      children:
-        - field_landing_feature_image
-        - group_feature_title_override
-      parent_name: ''
-      weight: 2
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        open: false
-        required_fields: true
-      label: 'Feature Area'
-      region: content
-    group_feature_title_override:
-      children:
-        - field_landing_image_teaser
-        - field_landing_teaser_second
-      parent_name: group_feature_area
-      weight: 10
-      format_type: details
-      format_settings:
-        description: 'By default the title will appear over top of the image when a feature image is added. If you wish to change this (for example, the title is too long or you want it to appear on two lines) , use the two text fields below.'
-        open: true
-        required_fields: true
-        id: ''
-        classes: ''
-      label: 'Feature Title Override'
-      region: content
     group_metadata:
       children:
         - field_landing_tags
@@ -110,17 +78,6 @@ content:
     third_party_settings: {  }
     type: image_focal_point
     region: content
-  field_landing_image_teaser:
-    weight: 10
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings:
-      maxlength:
-        maxlength_js: 255
-        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
-    type: string_textfield
-    region: content
   field_landing_meta_tags:
     weight: 10
     settings:
@@ -133,17 +90,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_landing_teaser_second:
-    weight: 11
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings:
-      maxlength:
-        maxlength_js: 255
-        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
-    type: string_textfield
     region: content
   path:
     type: path

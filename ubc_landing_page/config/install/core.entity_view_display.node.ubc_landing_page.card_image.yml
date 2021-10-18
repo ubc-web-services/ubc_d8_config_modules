@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.card_horizontal
+    - core.entity_view_mode.node.card_image
     - field.field.node.ubc_landing_page.body
     - field.field.node.ubc_landing_page.field_landing_custom_content
     - field.field.node.ubc_landing_page.field_landing_feature_image
@@ -12,21 +12,12 @@ dependencies:
     - responsive_image.styles.card_focal_point
   module:
     - responsive_image
-    - text
     - user
-id: node.ubc_landing_page.card_horizontal
+id: node.ubc_landing_page.card_image
 targetEntityType: node
 bundle: ubc_landing_page
-mode: card_horizontal
+mode: card_image
 content:
-  body:
-    weight: 1
-    label: hidden
-    settings:
-      trim_length: 350
-    third_party_settings: {  }
-    type: text_summary_or_trimmed
-    region: content
   field_landing_feature_image:
     type: responsive_image
     weight: 0
@@ -37,6 +28,7 @@ content:
       image_link: ''
     third_party_settings: {  }
 hidden:
+  body: true
   field_landing_custom_content: true
   field_landing_meta_tags: true
   field_landing_tags: true
