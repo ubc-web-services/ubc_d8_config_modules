@@ -24,7 +24,7 @@ third_party_settings:
       children:
         - field_landing_tags
       parent_name: ''
-      weight: 5
+      weight: 4
       format_type: details_sidebar
       region: content
       format_settings:
@@ -41,7 +41,7 @@ bundle: ubc_landing_page
 mode: default
 content:
   body:
-    weight: 3
+    weight: 2
     settings:
       rows: 9
       summary_rows: 3
@@ -52,13 +52,13 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   field_landing_custom_content:
     type: entity_reference_paragraphs
-    weight: 4
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -69,7 +69,7 @@ content:
     third_party_settings: {  }
     region: content
   field_landing_feature_image:
-    weight: 9
+    weight: 1
     settings:
       preview_image_style: medium
       preview_link: true
@@ -79,7 +79,7 @@ content:
     type: image_focal_point
     region: content
   field_landing_meta_tags:
-    weight: 10
+    weight: 9
     settings:
       sidebar: true
     third_party_settings: {  }
@@ -93,13 +93,13 @@ content:
     region: content
   path:
     type: path
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 11
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -107,7 +107,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 8
     region: content
     third_party_settings: {  }
   title:
@@ -123,7 +123,7 @@ content:
         maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
@@ -133,12 +133,12 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 12
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 13
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
