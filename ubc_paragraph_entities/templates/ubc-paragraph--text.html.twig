@@ -38,28 +38,41 @@
  * @ingroup themeable
  */
 #}
+
+{% set layout_attributes = create_attribute() %}
 {%
   set classes = [
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     paragraph.field_paragraph_card_colour.0.entity.field_class.value ? paragraph.field_paragraph_card_colour.0.entity.field_class.value|clean_class,
-    paragraph.field_paragraph_width_settings.0.entity.field_class.value ? paragraph.field_paragraph_width_settings.0.entity.field_class.value|clean_class,
-    'my-8',
-
+    paragraph.field_region_vertical_spacing.0.entity.field_class.value ? paragraph.field_region_vertical_spacing.0.entity.field_class.value|clean_class,
+    paragraph.field_region_vertical_spacing.1.entity.field_class.value ? paragraph.field_region_vertical_spacing.1.entity.field_class.value|clean_class,
   ]
 %}
-{% set layoutAttributes = create_attribute() %}
+{%
+  set layout_classes = [
+    paragraph.field_paragraph_width_settings.0.entity.field_class.value ? paragraph.field_paragraph_width_settings.0.entity.field_class.value,
+    'text-formatted',
+    'first-child--mt-0',
+    'flow-root',
+  ]
+%}
+{% if paragraph.field_paragraph_width_settings.0.entity.field_class.value is empty %}
+  {%
+    set padding_classes = [
+      'px-5',
+      'md--px-4',
+    ]
+  %}
+{% endif %}
+
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-    {% if paragraph.field_paragraph_width_settings.0.entity.field_class.value %}
-    <div{{ layoutAttributes.addClass('container', 'mx-auto', 'p-4') }}>
-    {% endif %}
+    <div{{ layout_attributes.addClass(layout_classes, padding_classes) }}>
     {% block content %}
       {{ content }}
     {% endblock %}
-    {% if paragraph.field_paragraph_width_settings.0.entity.field_class.value %}
     </div>
-    {% endif %}
   </div>
 {% endblock paragraph %}

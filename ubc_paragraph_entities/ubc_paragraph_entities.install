@@ -4,6 +4,7 @@
  * Update configuration from file.
  * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
  */
+/*
 function ubc_paragraph_entities_update_8001() {
   $config_path = drupal_get_path('module', 'ubc_paragraph_entities') . '/config/install/core.entity_form_display.paragraph.full_width_image.default.yml';
   $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
@@ -14,3 +15,4 @@ function ubc_paragraph_entities_update_8001() {
 
   return 'The Full Width Image entity has been updated.';
 }
+*/

@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.text.field_paragraph_card_colour
     - field.field.paragraph.text.field_paragraph_text
     - field.field.paragraph.text.field_paragraph_width_settings
+    - field.field.paragraph.text.field_region_vertical_spacing
     - paragraphs.paragraphs_type.text
   enforced:
     module:
@@ -26,3 +27,4 @@ content:
 hidden:
   field_paragraph_card_colour: true
   field_paragraph_width_settings: true
+  field_region_vertical_spacing: true

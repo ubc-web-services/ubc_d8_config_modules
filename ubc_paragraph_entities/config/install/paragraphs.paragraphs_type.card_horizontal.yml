@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: card_horizontal
+label: 'Card: Horizontal'
+icon_uuid: null
+icon_default: null
+description: 'Adds a card in the horizontal orientation'
+behavior_plugins: {  }

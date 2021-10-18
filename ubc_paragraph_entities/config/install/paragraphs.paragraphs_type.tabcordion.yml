@@ -7,5 +7,6 @@ dependencies:
 id: tabcordion
 label: Tabcordion
 icon_uuid: 993d6c99-2455-498e-95ea-53f574a78659
+icon_default: null
 description: 'Add a set of Tabs that become Accordions on small screen sizes.'
 behavior_plugins: {  }

@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_paragraph_title_right
     - paragraphs.paragraphs_type.card_group
+_core:
+  default_config_hash: GV7j5D31ewjPN8PDko-1_0GmoDxL7Byf_BRHTFPvgWc
 id: paragraph.card_group.field_paragraph_title_right
 field_name: field_paragraph_title_right
 entity_type: paragraph

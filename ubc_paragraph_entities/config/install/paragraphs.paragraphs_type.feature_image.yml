@@ -7,5 +7,6 @@ dependencies:
 id: feature_image
 label: Featurette
 icon_uuid: null
+icon_default: null
 description: 'Add a Featurette (a large image region with optional, title, text, image credits / caption and link).'
 behavior_plugins: {  }

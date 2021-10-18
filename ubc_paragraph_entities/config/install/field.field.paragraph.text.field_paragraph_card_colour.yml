@@ -6,7 +6,7 @@ dependencies:
     - paragraphs.paragraphs_type.text
     - taxonomy.vocabulary.admin_background_color_settings
   content:
-    - 'taxonomy_term:admin_background_color_settings:0025a19f-3180-4a19-a17e-dc3388646069'
+    - 'taxonomy_term:admin_background_color_settings:7cf8f2e7-13bd-484d-9517-cb65b72c9d3a'
 id: paragraph.text.field_paragraph_card_colour
 field_name: field_paragraph_card_colour
 entity_type: paragraph
@@ -17,7 +17,7 @@ required: true
 translatable: true
 default_value:
   -
-    target_uuid: 0025a19f-3180-4a19-a17e-dc3388646069
+    target_uuid: 7cf8f2e7-13bd-484d-9517-cb65b72c9d3a
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'

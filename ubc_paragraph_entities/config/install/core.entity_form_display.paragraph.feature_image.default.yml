@@ -14,8 +14,8 @@ dependencies:
     module:
       - ubc_paragraph_entities
   module:
-    - image
     - link
+    - svg_image
 id: paragraph.feature_image.default
 targetEntityType: paragraph
 bundle: feature_image

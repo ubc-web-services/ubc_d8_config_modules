@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_region_width
+    - paragraphs.paragraphs_type.tabcordion
+    - taxonomy.vocabulary.admin_width_settings
+id: paragraph.tabcordion.field_region_width
+field_name: field_region_width
+entity_type: paragraph
+bundle: tabcordion
+label: 'Region Width'
+description: 'If you would like to adjust the width of the content, you can select these options.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      admin_width_settings: admin_width_settings
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

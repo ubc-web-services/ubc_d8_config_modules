@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_card_colour
+    - paragraphs.paragraphs_type.card_horizontal
+    - taxonomy.vocabulary.admin_background_color_settings
+  content:
+    - 'taxonomy_term:admin_background_color_settings:eab5db90-3d90-462a-ac08-39377d2303cc'
+id: paragraph.card_horizontal.field_paragraph_card_colour
+field_name: field_paragraph_card_colour
+entity_type: paragraph
+bundle: card_horizontal
+label: 'Card Colour'
+description: 'Add an optional background colour to the card (defaults to white).'
+required: true
+translatable: true
+default_value:
+  -
+    target_uuid: eab5db90-3d90-462a-ac08-39377d2303cc
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      admin_background_color_settings: admin_background_color_settings
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

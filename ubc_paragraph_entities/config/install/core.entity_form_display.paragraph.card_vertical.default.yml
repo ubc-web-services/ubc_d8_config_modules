@@ -1,0 +1,71 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.card_vertical.field_paragraph_card_colour
+    - field.field.paragraph.card_vertical.field_paragraph_card_image
+    - field.field.paragraph.card_vertical.field_paragraph_card_link
+    - field.field.paragraph.card_vertical.field_paragraph_card_text
+    - field.field.paragraph.card_vertical.field_paragraph_card_title
+    - image.style.medium
+    - paragraphs.paragraphs_type.card_vertical
+  module:
+    - focal_point
+    - link
+    - maxlength
+id: paragraph.card_vertical.default
+targetEntityType: paragraph
+bundle: card_vertical
+mode: default
+content:
+  field_paragraph_card_colour:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_paragraph_card_image:
+    weight: 2
+    settings:
+      preview_image_style: medium
+      preview_link: true
+      offsets: '50,50'
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: image_focal_point
+    region: content
+  field_paragraph_card_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_paragraph_card_text:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 500
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: true
+        maxlength_js_truncate_html: false
+    type: string_textarea
+    region: content
+  field_paragraph_card_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 255
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

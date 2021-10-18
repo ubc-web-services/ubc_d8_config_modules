@@ -4,5 +4,6 @@ dependencies: {  }
 id: slide
 label: Slide
 icon_uuid: null
+icon_default: null
 description: 'A single slideshow slide, formatted as an image, with an optional title, link and caption caption.'
 behavior_plugins: {  }

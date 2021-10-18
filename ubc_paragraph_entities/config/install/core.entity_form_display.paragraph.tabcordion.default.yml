@@ -3,6 +3,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.tabcordion.field_paragraph_tab
+    - field.field.paragraph.tabcordion.field_region_vertical_spacing
+    - field.field.paragraph.tabcordion.field_region_width
     - paragraphs.paragraphs_type.tabcordion
   enforced:
     module:
@@ -16,7 +18,7 @@ mode: default
 content:
   field_paragraph_tab:
     type: entity_reference_paragraphs
-    weight: 0
+    weight: 2
     settings:
       title: Tab
       title_plural: Tabs
@@ -25,6 +27,18 @@ content:
       form_display_mode: default
       default_paragraph_type: tab
     third_party_settings: {  }
+    region: content
+  field_region_vertical_spacing:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_region_width:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
 hidden:
   created: true

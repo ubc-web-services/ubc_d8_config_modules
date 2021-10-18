@@ -14,7 +14,7 @@ bundle: slide
 mode: default
 content:
   field_slide_image:
-    weight: 2
+    weight: 0
     label: hidden
     settings:
       responsive_image_style: hero_image
@@ -23,11 +23,11 @@ content:
     type: responsive_image
     region: content
   field_slide_title:
-    weight: 3
+    type: string
+    weight: 1
+    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
-    region: content
 hidden: {  }
