@@ -12,9 +12,9 @@ function ubc_taxonomy_terms_event_install() {
   // Add announcement types
   $vocab = 'event_category';
   $items = array(
-    'Category 1',
-    'Category 2',
-    'Another Category',
+    'Sample event type 1',
+    'Sample event type 2',
+    'Sample event type 3',
   );
   foreach ($items as $item) {
     $term = Term::create(array(

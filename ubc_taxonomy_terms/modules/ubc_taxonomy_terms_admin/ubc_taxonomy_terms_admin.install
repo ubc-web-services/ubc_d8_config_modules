@@ -15,6 +15,7 @@ function ubc_taxonomy_terms_admin_install() {
     'White' => 'bg-white',
     'Unit Primary' => 'bg-unit-primary',
     'Unit Secondary' => 'bg-unit-secondary',
+    'Unit Tertiary' => 'bg-unit-tertiary',
     'Unit Accent' => 'bg-unit-accent',
     'Light Grey' => 'bg-grey-100',
     'UBC Blue' => 'bg-ubc-blue',
@@ -33,36 +34,7 @@ function ubc_taxonomy_terms_admin_install() {
       'field_class' => $value,
     ))->save();
   }
-  // Card Style Classes
-  $cardvocab = 'admin_card_style';
-  $carditems = array(
-    'Horizontal, Image left' => 'ubc-card--horiz-media',
-    'Horizontal, Image right' => 'ubc-card--horiz-media-r',
-    'Vertical, image top' => 'ubc-card--vert',
-    'Vertical, no image displayed' => 'ubc-card--basic ubc-card--no-img',
-  );
-  foreach ($carditems as $key => $value) {
-    $term = Term::create(array(
-      'parent' => array(),
-      'name' =>$key,
-      'vid' => $cardvocab,
-      'field_class' => $value,
-    ))->save();
-  }
-  // Icon Position Classes
-  $iposvocab = 'admin_icon_position';
-  $ipositems = array(
-    'Icon left' => 'ubc-card--horiz',
-    'Icon right' => 'ubc-card--horiz-rev',
-  );
-  foreach ($ipositems as $key => $value) {
-    $term = Term::create(array(
-      'parent' => array(),
-      'name' =>$key,
-      'vid' => $iposvocab,
-      'field_class' => $value,
-    ))->save();
-  }
+
   // Icon Classes
   $iconvocab = 'admin_icon_settings';
   $iconitems = array(
@@ -103,13 +75,20 @@ function ubc_taxonomy_terms_admin_install() {
       'field_id' => $value,
     ))->save();
   }
+
   // Text Position Classes
   $textvocab = 'admin_postion_settings';
   $textitems = array(
-    'Text Bottom Left' => 'text-bottom-left',
-    'Text Bottom Right' => 'text-bottom-right',
-    'Text Top Left' => 'text-top-left',
-    'Text Top Right' => 'text-top-right',
+    'Text Top Left' => 'text-left',
+    'Text Top Center' => 'text-center',
+    'Text Top Right' => 'text-right',
+    'Text Middle Left' => 'place-content-center text-left',
+    'Text Middle Center' => 'place-content-center text-center',
+    'Text Middle Right' => 'place-content-center text-right',
+    'Text Bottom Left' => 'mt-auto text-left',
+    'Text Bottom Center' => 'mt-auto text-center',
+    'Text Bottom Right' => 'mt-auto text-right',
+
   );
   foreach ($textitems as $key => $value) {
     $term = Term::create(array(
@@ -119,10 +98,11 @@ function ubc_taxonomy_terms_admin_install() {
       'field_class' => $value,
     ))->save();
   }
+
   // Horizontal Width Classes
   $widthvocab = 'admin_width_settings';
   $widthitems = array(
-    'Contained (default)' => 'container mx-auto',
+    'Contained' => 'container px-4 mx-auto md--px-0',
     'Narrow' => 'container px-4 mx-auto md--px-0 md--max-w-5xl',
   );
   foreach ($widthitems as $key => $value) {
@@ -133,6 +113,7 @@ function ubc_taxonomy_terms_admin_install() {
       'field_class' => $value,
     ))->save();
   }
+
   // Vertical Spacing Classes
   $vspacevocab = 'admin_vertical_spacing_settings';
   $vspaceitems = array(
@@ -146,6 +127,24 @@ function ubc_taxonomy_terms_admin_install() {
       'parent' => array(),
       'name' =>$key,
       'vid' => $vspacevocab,
+      'field_class' => $value,
+    ))->save();
+  }
+
+  // # Per Row settings
+  $perrowvocab = 'admin_number_of_items_per_row';
+  $perrowitems = array(
+    'One' => 'md--grid-cols-1',
+    'Two' => 'md--grid-cols-2',
+    'Three' => 'md--grid-cols-3',
+    'Four' => 'md--grid-cols-4',
+    'Five' => 'md--grid-cols-5',
+  );
+  foreach ($perrowitems as $key => $value) {
+    $term = Term::create(array(
+      'parent' => array(),
+      'name' =>$key,
+      'vid' => $perrowvocab,
       'field_class' => $value,
     ))->save();
   }

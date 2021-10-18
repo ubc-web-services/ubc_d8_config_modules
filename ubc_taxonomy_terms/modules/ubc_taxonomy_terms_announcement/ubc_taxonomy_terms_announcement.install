@@ -13,6 +13,8 @@ function ubc_taxonomy_terms_announcement_install() {
   $vocab = 'announcement_type';
   $items = array(
     'Articles',
+    'Blog',
+    'News',
     'Press Releases',
     'Stories',
   );
