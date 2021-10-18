@@ -1,0 +1,8 @@
+name: UBC Custom Block Types
+type: module
+description: This module defines several custom block types
+package: UBC Web Services
+dependencies:
+  - drupal:block_content
+core: '8.x'
+core_version_requirement: ^8 || ^9

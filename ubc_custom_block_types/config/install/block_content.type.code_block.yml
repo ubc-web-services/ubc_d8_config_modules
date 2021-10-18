@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: code_block
+label: 'Code block'
+revision: 0
+description: 'This is a block that contains no user enterable content - it is entirely controlled by a template'

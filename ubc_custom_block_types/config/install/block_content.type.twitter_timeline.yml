@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: twitter_timeline
+label: 'Twitter Timeline'
+revision: 0
+description: 'Adds a Twitter timeline from the provided account name'
