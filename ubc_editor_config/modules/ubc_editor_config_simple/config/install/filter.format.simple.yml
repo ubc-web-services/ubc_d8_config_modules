@@ -16,9 +16,9 @@ filters:
     status: true
     weight: 1
     settings:
-      button_link_options: "|No Style\r\nunit-button|Unit Button"
-      button_link_size_options: "|Text Normal\r\ntext-xs xxl--text-base|Text Extra Small\r\ntext-sm  xxl--text-lg|Text Small\r\ntext-lg  xxl--text-3xl|Text Large\r\ntext-xl xxl--text-4xl|Text XLarge\r\ntext-2xl xxl--text-5xl| Text XXLarge"
-      button_link_style_options: "unit-button--light|Light Button\r\nunit-button--light unit-button--has-icon-right unit-button--editor|Light Button w arrow\r\nunit-button--mid|Neutral Button\r\nunit-button--mid unit-button--has-icon-right unit-button--editor|Neutral Button w arrow\r\nunit-button--dark|Dark Button\r\nunit-button--dark unit-button--has-icon-right unit-button--editor|Dark Button w arrow\r\nunit-button--simple unit-button--has-icon-right unit-button--editor|Simple Button\r\nunit-button--plain unit-button--has-icon-right unit-button--editor|Plain Button\r\nunit-button--transparent|Transparent Button\r\nunit-button--transparent unit-button--has-icon-right unit-button--editor|Transparent Button w arrow\r\nunit-button--light unit-button--light-gradient|Light Button w gradient\r\nunit-button--light unit-button--light-gradient unit-button--has-icon-right unit-button--editor|Light Button w gradient & arrow\r\nunit-button--dark unit-button--dark-gradient|Dark Button w gradient\r\nunit-button--dark unit-button--dark-gradient unit-button--has-icon-right unit-button--editor|Dark Button w gradient & arrow"
+      button_link_options: "|No Style\r\nunit-button|Unit Button\r\nunit-button unit-button--block|Full width Unit Button\r\n"
+      button_link_size_options: "|Text Normal\r\ntext-xs unit-button--text-xs|Text Extra Small\r\ntext-sm unit-button--text-sm|Text Small\r\ntext-lg unit-button--text-lg|Text Large\r\ntext-xl unit-button--text-xl|Text XLarge\r\ntext-2xl unit-button--text-2xl| Text XXLarge"
+      button_link_style_options: "|Default Style\r\nunit-button--light|Light Button\r\nunit-button--dark|Dark Button\r\nunit-button--simple|Simple Button\r\nunit-button--transparent|Transparent Button"
   filter_url:
     id: filter_url
     provider: filter
@@ -32,7 +32,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a name href hreflang data-* target aria-* class=""> <em> <strong> <code> <ul type> <ol start type> <li> <h3 id class=""> <h4 id class=""> <h5 id class=""> <h6 id class=""> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title> <drupal-media data-entity-type data-entity-uuid alt data-align data-caption and data-view-mode class=""> <button aria-* data-* class="js-* accordion* widget-*"> <br>'
+      allowed_html: '<a name href id hreflang data-* target aria-* class=""> <br> <button data-* class="widget-* unit-* text-*"> <em> <strong> <code> <ul type> <ol start type> <li> <h2 id> <h3 id class=""> <h4 id class=""> <h5 id class=""> <h6 id class=""> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title class="">'
       filter_html_help: true
       filter_html_nofollow: false
   filter_imagestyle:
@@ -45,9 +45,16 @@ filters:
       image_style_card_480x240: '0'
       image_style_card_600x300: '0'
       image_style_card_780x390: '0'
-      image_style_card_almost_square_380: '0'
-      image_style_card_almost_square_640: '0'
+      image_style_card_focal_point_lg: '0'
+      image_style_card_focal_point_sm: '0'
       image_style_crop_thumbnail: '0'
+      image_style_hero_focal_point_1300: '0'
+      image_style_hero_focal_point_2600: '0'
+      image_style_hero_focal_point_325: '0'
+      image_style_hero_focal_point_650: '0'
+      image_style_hero_focal_point_970: '0'
+      image_style_icon_large: '0'
+      image_style_icon_small: '0'
       image_style_large: '0'
       image_style_linkit_result_thumbnail: '0'
       image_style_max_1300x1300: '0'
@@ -61,11 +68,9 @@ filters:
       image_style_square_200: '0'
       image_style_square_400: '0'
       image_style_square_600: '0'
-      image_style_test: '0'
+      image_style_square_focal_point_600: '0'
       image_style_thumbnail: '0'
-      image_style_vertical_card_crop: '0'
-      image_style_vertical_card_crop_320: '0'
-      image_style_vertical_card_crop_640: '0'
+      image_style_wide: '0'
   filter_responsive_image_style:
     id: filter_responsive_image_style
     provider: inline_responsive_images
@@ -76,7 +81,6 @@ filters:
       responsive_style_card_focal_point: '0'
       responsive_style_hero_image: '0'
       responsive_style_narrow: '0'
-      responsive_style_vertical_card: '0'
       responsive_style_wide: '0'
   linkit:
     id: linkit
