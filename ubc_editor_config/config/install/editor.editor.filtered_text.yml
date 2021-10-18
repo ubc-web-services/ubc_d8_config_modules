@@ -50,9 +50,9 @@ settings:
           items:
             - HorizontalRule
             - Table
-            - column-options-widget
-            - column3-options-widget
-            - column4-options-widget
+            - column-two-options-widget
+            - column-three-options-widget
+            - column-four-options-widget
             - color-box-widget
             - DrupalMediaLibrary
         -
