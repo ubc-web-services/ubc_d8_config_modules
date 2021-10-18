@@ -15,7 +15,6 @@ description: 'A list of the latest announcements'
 tag: ''
 base_table: node_field_data
 base_field: nid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -57,9 +56,9 @@ display:
         type: html_list
         options:
           row_class: ''
-          default_row_class: true
+          default_row_class: false
           uses_fields: false
-          type: ul
+          type: ol
           wrapper_class: 'item-list list-unstyled'
           class: ''
       row:
@@ -125,6 +124,8 @@ display:
           id: status
           expose:
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
           group: 1
         type:
           id: type
@@ -135,6 +136,9 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
       sorts:
         created:
           id: created
@@ -162,7 +166,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: '<h3 class="heading-five uppercase text-ubc-blue-cobalt">Latest News</h3>'
+          content: '<h3 class="uppercase heading-five text-ubc-blue-cobalt">Latest News</h3>'
           plugin_id: text_custom
       footer: {  }
       empty: {  }
@@ -171,7 +175,7 @@ display:
       display_extenders: {  }
       use_more: true
       use_more_always: true
-      use_more_text: 'VIEW THEM ALL'
+      use_more_text: 'View all'
       link_url: announcements
       link_display: custom_url
       css_class: 'px-8 pt-2 pb-6 shadow-md hover--shadow-lg bg-white mt-8'
@@ -267,7 +271,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: '<h3 class="heading-five uppercase text-ubc-blue-cobalt">Latest News</h3>'
+          content: '<h3 class="uppercase heading-five text-ubc-blue-cobalt">Latest News</h3>'
           plugin_id: text_custom
       display_description: ''
     cache_metadata:

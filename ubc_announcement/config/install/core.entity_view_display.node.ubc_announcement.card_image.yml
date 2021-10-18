@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.card_vertical
+    - core.entity_view_mode.node.card_image
     - field.field.node.ubc_announcement.body
     - field.field.node.ubc_announcement.field_announcement_external_link
     - field.field.node.ubc_announcement.field_announcement_feature_image
@@ -14,23 +14,14 @@ dependencies:
   module:
     - link
     - responsive_image
-    - text
     - user
-id: node.ubc_announcement.card_vertical
+id: node.ubc_announcement.card_image
 targetEntityType: node
 bundle: ubc_announcement
-mode: card_vertical
+mode: card_image
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 1
-    settings:
-      trim_length: 350
-    third_party_settings: {  }
-    region: content
   field_announcement_external_link:
-    weight: 2
+    weight: 0
     label: visually_hidden
     settings:
       trim_length: 80
@@ -42,27 +33,17 @@ content:
     type: link
     region: content
   field_announcement_feature_image:
-    weight: 3
+    type: responsive_image
+    weight: 1
+    region: content
     label: hidden
     settings:
       responsive_image_style: card_focal_point
       image_link: ''
     third_party_settings: {  }
-    type: responsive_image
-    region: content
-  field_announcement_tags:
-    weight: 5
-    label: hidden
-    settings:
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  links:
-    weight: 4
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  body: true
   field_announcement_meta_tags: true
+  field_announcement_tags: true
   field_announcement_type: true
+  links: true

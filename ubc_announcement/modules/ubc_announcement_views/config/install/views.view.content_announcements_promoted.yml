@@ -14,7 +14,6 @@ description: 'A block of promoted announcements as cards'
 tag: ''
 base_table: node_field_data
 base_field: nid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -50,17 +49,17 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 4
+          items_per_page: 3
           offset: 0
       style:
         type: html_list
         options:
-          row_class: 'mb-8 md--mb-0 md--w-1/2 lg--w-1/4'
+          row_class: ''
           default_row_class: false
           uses_fields: false
-          type: ul
+          type: ol
           wrapper_class: item-list
-          class: 'md--flex md--flex-wrap'
+          class: 'grid grid-cols-1 gap-8 pl-0 list-none sm--grid-cols-3'
       row:
         type: 'entity:node'
         options:
@@ -125,6 +124,8 @@ display:
           id: status
           expose:
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
           group: 1
         type:
           id: type
@@ -151,6 +152,8 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -189,6 +192,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -243,7 +248,7 @@ display:
     display_options:
       display_extenders: {  }
       block_hide_empty: true
-      block_description: 'Content: Promoted Event cards'
+      block_description: 'Content: Promoted Announcement cards'
       display_description: ''
       allow:
         items_per_page: true
