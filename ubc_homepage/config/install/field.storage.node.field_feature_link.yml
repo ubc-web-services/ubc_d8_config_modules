@@ -4,8 +4,8 @@ dependencies:
   module:
     - link
     - node
-id: node.field_home_feature_image_link
-field_name: field_home_feature_image_link
+id: node.field_feature_link
+field_name: field_feature_link
 entity_type: node
 type: link
 settings: {  }

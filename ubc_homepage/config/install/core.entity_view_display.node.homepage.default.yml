@@ -3,20 +3,13 @@ status: true
 dependencies:
   config:
     - field.field.node.homepage.body
+    - field.field.node.homepage.field_feature_link
+    - field.field.node.homepage.field_feature_text
     - field.field.node.homepage.field_home_feature_image
-    - field.field.node.homepage.field_home_feature_image_link
-    - field.field.node.homepage.field_home_feature_title
-    - field.field.node.homepage.field_home_feature_title_second
-    - field.field.node.homepage.field_home_lower_cards
     - field.field.node.homepage.field_home_meta_tags
-    - field.field.node.homepage.field_home_tab_content
-    - field.field.node.homepage.field_home_tab_titles
-    - field.field.node.homepage.field_home_upper_cards
+    - field.field.node.homepage.field_homepage_custom_content
     - node.type.homepage
   module:
-    - entity_reference_revisions
-    - image
-    - link
     - metatag
     - text
     - user
@@ -32,86 +25,20 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_home_feature_image:
-    weight: 4
-    label: hidden
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_home_feature_image_link:
-    weight: 5
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
-  field_home_feature_title:
-    weight: 6
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_home_feature_title_second:
-    weight: 7
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_home_lower_cards:
-    type: entity_reference_revisions_entity_view
-    weight: 10
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    region: content
   field_home_meta_tags:
-    weight: 8
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
-  field_home_tab_content:
-    weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_home_tab_titles:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_home_upper_cards:
-    type: entity_reference_revisions_entity_view
-    weight: 9
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    region: content
   links:
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_feature_link: true
+  field_feature_text: true
+  field_home_feature_image: true
+  field_homepage_custom_content: true

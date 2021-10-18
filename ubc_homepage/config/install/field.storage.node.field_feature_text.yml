@@ -3,15 +3,13 @@ status: true
 dependencies:
   module:
     - node
-id: node.field_home_feature_title_second
-field_name: field_home_feature_title_second
+    - text
+id: node.field_feature_text
+field_name: field_feature_text
 entity_type: node
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true

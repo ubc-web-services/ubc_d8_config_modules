@@ -2,24 +2,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_home_tab_content
+    - field.storage.node.field_feature_text
     - node.type.homepage
   module:
     - allowed_formats
     - text
 third_party_settings:
   allowed_formats:
+    simple: simple
     filtered_text: '0'
-    basic_html: '0'
     restricted_html: '0'
-    full_html: '0'
     plain_text: '0'
-id: node.homepage.field_home_tab_content
-field_name: field_home_tab_content
+id: node.homepage.field_feature_text
+field_name: field_feature_text
 entity_type: node
 bundle: homepage
-label: 'Tab Content'
-description: 'Add content to the three tabbed regions below the feature image.'
+label: 'Feature Text'
+description: 'This field can only have very limited text - excessive text will be removed'
 required: true
 translatable: false
 default_value: {  }

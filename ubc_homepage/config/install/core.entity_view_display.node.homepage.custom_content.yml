@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.custom_content
     - field.field.node.homepage.body
     - field.field.node.homepage.field_feature_link
     - field.field.node.homepage.field_feature_text
@@ -11,29 +11,26 @@ dependencies:
     - field.field.node.homepage.field_homepage_custom_content
     - node.type.homepage
   module:
-    - text
+    - entity_reference_revisions
     - user
-id: node.homepage.teaser
+id: node.homepage.custom_content
 targetEntityType: node
 bundle: homepage
-mode: teaser
+mode: custom_content
 content:
-  body:
+  field_homepage_custom_content:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: content
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
 hidden:
+  body: true
   field_feature_link: true
   field_feature_text: true
   field_home_feature_image: true
   field_home_meta_tags: true
-  field_homepage_custom_content: true
+  links: true

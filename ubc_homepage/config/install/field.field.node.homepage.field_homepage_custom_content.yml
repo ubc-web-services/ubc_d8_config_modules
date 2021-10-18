@@ -1,0 +1,66 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_homepage_custom_content
+    - node.type.homepage
+    - paragraphs.paragraphs_type.card_group
+    - paragraphs.paragraphs_type.slideshow
+    - paragraphs.paragraphs_type.tabcordion
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: node.homepage.field_homepage_custom_content
+field_name: field_homepage_custom_content
+entity_type: node
+bundle: homepage
+label: 'Homepage Custom Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      card_group: card_group
+      slideshow: slideshow
+      tabcordion: tabcordion
+      text: text
+    target_bundles_drag_drop:
+      card_group:
+        enabled: true
+        weight: 15
+      card_horizontal:
+        weight: 16
+        enabled: false
+      card_vertical:
+        weight: 17
+        enabled: false
+      feature_image:
+        weight: 18
+        enabled: false
+      icon_card:
+        weight: 19
+        enabled: false
+      image_card:
+        weight: 20
+        enabled: false
+      slide:
+        weight: 22
+        enabled: false
+      slideshow:
+        enabled: true
+        weight: 23
+      tab:
+        weight: 24
+        enabled: false
+      tabcordion:
+        enabled: true
+        weight: 25
+      text:
+        enabled: true
+        weight: 26
+field_type: entity_reference_revisions
