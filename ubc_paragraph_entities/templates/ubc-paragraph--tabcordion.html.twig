@@ -38,52 +38,50 @@
  * @ingroup themeable
  */
 #}
+{% set layout_attributes = create_attribute() %}
 {%
   set classes = [
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     'tabcordion',
+    paragraph.field_region_vertical_spacing.0.entity.field_class.value ? paragraph.field_region_vertical_spacing.0.entity.field_class.value|clean_class,
+    paragraph.field_region_vertical_spacing.1.entity.field_class.value ? paragraph.field_region_vertical_spacing.1.entity.field_class.value|clean_class,
+  ]
+%}
+{%
+  set layout_classes = [
+    paragraph.field_region_width.0.entity.field_class.value ? paragraph.field_region_width.0.entity.field_class.value,
   ]
 %}
 
+{% if paragraph.field_region_width.0.entity.field_class.value is empty %}
+  {%
+    set padding_classes = [
+      'px-5',
+      'md--px-4',
+    ]
+  %}
+{% endif %}
+
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-    <ul class="tabcordion__links">
-      {% for key, value in paragraph.field_paragraph_tab.value %}
-        {% set tabid = paragraph.field_paragraph_tab[key].entity.id() %}
-        {% if key == 0 %}
-        <li class="tabcordion__tab js-tabcordion__trigger is-active" data-tab="tab-{{ tabid }}">
-          <button>
-            {{ paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_title.value }}
-          </button>
-        </li>
-        {% else %}
-        <li class="tabcordion__tab js-tabcordion__trigger" data-tab="tab-{{ tabid }}">
-          <button>
-            {{ paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_title.value }}
-          </button>
-        </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-    <div class="tabcordion__content-wrapper">
-      {% for key, value in paragraph.field_paragraph_tab.value %}
-        {% set tabid = paragraph.field_paragraph_tab[key].entity.id() %}
-        {% if key == 0 %}
-          <a class="tabcordion__heading js-tabcordion__trigger is-active" data-tab="tab-{{ tabid }}" href="#tab-{{ tabid }}" id="tab-{{ tabid }}">{{ paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_title.value }}</a>
-          <div data-content="tab-{{ tabid }}" class="tabcordion__content is-active">
-            {{ paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_content.value|raw }}
-          </div>
-        {% else %}
-          <a class="tabcordion__heading js-tabcordion__trigger" data-tab="tab-{{ tabid }}" href="#tab-{{ tabid }}" id="tab-{{ tabid }}">{{ paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_title.value }}</a>
-          <div data-content="tab-{{ tabid }}" class="tabcordion__content">
-            {{ paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_content.value|raw }}
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-    {% endblock %}
-  </div>
+<div{{ attributes.addClass(classes) }}>
+  <tabs{{ layout_attributes.addClass(layout_classes, padding_classes) }}>
+  {% for key, value in paragraph.field_paragraph_tab.value %}
+    {% set tabid = paragraph.field_paragraph_tab[key].entity.id() %}
+    {% set tabtitle = paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_title.value %}
+    {% set tabcontent = paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_content.value|check_markup(paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_content.format) %}
+
+    {% if key == 0 %}
+    <tab name="{{ tabtitle }}" class="flow-root text-formatted" :selected="true">
+      {{ tabcontent }}
+    </tab>
+    {% else %}
+    <tab name="{{ tabtitle }}" class="flow-root text-formatted">
+      {{ tabcontent }}
+    </tab>
+    {% endif %}
+  {% endfor %}
+  </tabs>
+</div>
 {% endblock paragraph %}

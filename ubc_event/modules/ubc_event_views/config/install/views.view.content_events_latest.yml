@@ -59,7 +59,7 @@ display:
           row_class: ''
           default_row_class: true
           uses_fields: false
-          type: ul
+          type: ol
           wrapper_class: 'item-list list-unstyled'
           class: ''
       row:
@@ -297,7 +297,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: '<h3 class="heading-five uppercase text-ubc-blue-cobalt">Latest Events</h3>'
+          content: '<h3 class="uppercase heading-five text-ubc-blue-cobalt">Latest Events</h3>'
           plugin_id: text_custom
       footer: {  }
       empty: {  }
@@ -306,7 +306,7 @@ display:
       display_extenders: {  }
       use_more: true
       use_more_always: true
-      use_more_text: 'VIEW THEM ALL'
+      use_more_text: 'View all'
       link_url: events
       link_display: custom_url
       css_class: 'px-8 pt-2 pb-6 shadow-md hover--shadow-lg bg-white mt-8'

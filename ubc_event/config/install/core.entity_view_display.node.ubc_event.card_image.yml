@@ -1,0 +1,74 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card_image
+    - field.field.node.ubc_event.body
+    - field.field.node.ubc_event.field_event_category
+    - field.field.node.ubc_event.field_event_date
+    - field.field.node.ubc_event.field_event_image
+    - field.field.node.ubc_event.field_event_is_ongoing
+    - field.field.node.ubc_event.field_event_link
+    - field.field.node.ubc_event.field_event_location
+    - field.field.node.ubc_event.field_event_map
+    - field.field.node.ubc_event.field_event_meta_tags
+    - field.field.node.ubc_event.field_event_private
+    - field.field.node.ubc_event.field_event_tags
+    - responsive_image.styles.card_focal_point
+    - node.type.ubc_event
+  module:
+    - datetime_range
+    - link
+    - responsive_image
+    - user
+id: node.ubc_event.card_image
+targetEntityType: node
+bundle: ubc_event
+mode: card_image
+content:
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_event_date:
+    weight: 0
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: date_readable
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_event_image:
+    type: responsive_image
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      responsive_image_style: card_focal_point
+      image_link: ''
+    third_party_settings: {  }
+  field_event_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  body: true
+  field_event_category: true
+  field_event_is_ongoing: true
+  field_event_location: true
+  field_event_map: true
+  field_event_meta_tags: true
+  field_event_private: true
+  field_event_tags: true
+  links: true

@@ -17,9 +17,8 @@ dependencies:
     - image.style.square_400
     - node.type.ubc_profile
   module:
-    - image
     - metatag
-    - simple_gmap
+    - svg_image
     - telephone
     - text
     - user
@@ -64,6 +63,10 @@ content:
     settings:
       image_style: square_400
       image_link: ''
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
     third_party_settings: {  }
     type: image
     region: content
@@ -86,20 +89,9 @@ content:
     weight: 8
     label: hidden
     settings:
-      include_map: true
-      include_static_map: false
-      include_link: false
-      include_text: false
-      iframe_height: '200'
-      iframe_width: '200'
-      static_scale: 1
-      zoom_level: 14
-      link_text: 'View larger map'
-      map_type: m
-      langcode: en
-      apikey: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: simple_gmap
+    type: string
     region: content
   field_profile_phone:
     weight: 7
@@ -111,9 +103,9 @@ content:
     region: content
   field_profile_tags:
     weight: 11
-    label: above
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content

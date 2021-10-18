@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.twitter_timeline
+    - field.storage.block_content.field_twitter_account
+id: block_content.twitter_timeline.field_twitter_account
+field_name: field_twitter_account
+entity_type: block_content
+bundle: twitter_timeline
+label: 'Twitter Account'
+description: 'Add the Twitter Account name to create a Twitter Timeline for that account'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

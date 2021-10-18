@@ -7,5 +7,6 @@ dependencies:
 id: card_group
 label: 'Card Group'
 icon_uuid: 39b1eaf3-e3a3-4bad-a546-2b077f5e5007
+icon_default: null
 description: 'Add several Cards in a grid layout.'
 behavior_plugins: {  }

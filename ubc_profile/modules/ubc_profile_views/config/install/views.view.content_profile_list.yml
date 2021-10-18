@@ -234,7 +234,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: "<h2>No results</h2>\r\n<p>There are no results to your search. Please revise your search and try again.</p><p>If you're still unable to find what you're looking for, please contact us at 604-822-8111, or via email at <a href=\"mailto:hr.info@ubc.ca\" title=\"Contact UBC Human Resources via email\">hr.info@ubc.ca</a>.</p>"
+          content: "<h2>No results</h2>\r\n<p>There are no results to your search. Please revise your search and try again.</p>"
           plugin_id: text_custom
       relationships: {  }
       arguments: {  }

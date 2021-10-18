@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_number_per_row
+    - paragraphs.paragraphs_type.card_group
+    - taxonomy.vocabulary.admin_number_of_items_per_row
+  content:
+    - 'taxonomy_term:admin_number_of_items_per_row:6e674b67-2b89-4a53-8f82-be82c67cfa5f'
+id: paragraph.card_group.field_number_per_row
+field_name: field_number_per_row
+entity_type: paragraph
+bundle: card_group
+label: 'Number per row'
+description: 'Choose the number of items that should appear per row'
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 6e674b67-2b89-4a53-8f82-be82c67cfa5f
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      admin_number_of_items_per_row: admin_number_of_items_per_row
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

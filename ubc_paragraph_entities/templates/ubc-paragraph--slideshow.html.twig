@@ -38,37 +38,63 @@
  * @ingroup themeable
  */
 #}
+{% set layout_attributes = create_attribute() %}
+{% set header_attributes = create_attribute() %}
+{% set title_attributes = create_attribute() %}
 {%
   set classes = [
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    'splide',
+    paragraph.field_region_vertical_spacing.0.entity.field_class.value ? paragraph.field_region_vertical_spacing.0.entity.field_class.value|clean_class,
+    paragraph.field_region_vertical_spacing.1.entity.field_class.value ? paragraph.field_region_vertical_spacing.1.entity.field_class.value|clean_class,
   ]
 %}
 {%
-  set slideoptions = {
-    'arrows': paragraph.field_slideshow_arrows.value ? true : false,
-    'autoplay': paragraph.field_slideshow_autoplay.value ? true : false,
-    'pagination': paragraph.field_slideshow_pagination.value ? true : false,
-    'type': paragraph.field_slideshow_type.value,
-    'direction': paragraph.field_slideshow_direction.value,
-    'interval': paragraph.field_slideshow_interval.value,
-    'speed': paragraph.field_slideshow_speed.value,
-    'perMove': paragraph.field_slides_per_move.value,
-    'perPage': paragraph.field_slides_per_page.value,
-    'heightRatio': paragraph.field_slideshow_ratio.value
-  }
+  set layout_classes = [
+    paragraph.field_region_width.0.entity.field_class.value ? paragraph.field_region_width.0.entity.field_class.value,
+  ]
 %}
+{%
+  set header_classes = [
+    '',
+  ]
+%}
+{%
+  set title_classes = [
+    'mt-0',
+    'pb-2',
+    'h3',
+  ]
+%}
+
+{% if paragraph.field_region_width.0.entity.field_class.value is empty %}
+  {%
+    set padding_classes = [
+      'px-5',
+      'md--px-4',
+    ]
+  %}
+{% endif %}
+{# add as variable to prevent multiple calls #}
+{%
+  set region_title = paragraph.field_paragraph_group_title.value
+%}
+
 {% block paragraph %}
-{{ attach_library('ubc_paragraph_entities/splide') }}
-  <section{{ attributes.addClass(classes) }} data-splide='{{ slideoptions |json_encode }}'>
-    <div class="splide__track">
-      <ul class="splide__list">
+<section{{ attributes.addClass(classes) }}>
+  {% if region_title|length > 0 %}
+  <header{{ header_attributes.addClass(header_classes, layout_classes,padding_classes) }}>
+    <h2{{ title_attributes.addClass(title_classes) }}>{{ region_title }}</h2>
+  </header>
+  {% endif %}
+  <div{{ layout_attributes.addClass(layout_classes) }}>
+    <tiny-slider speed="200" items="1" slide-by="page"
+      mouse-drag center auto-width gutter="0" edge-padding="0">
       {% block content %}
-        {{ content }}
+        {{ content.field_slide }}
       {% endblock %}
-      </ul>
-    </div>
-  </section>
+    </tiny-slider>
+  </div>
+</section>
 {% endblock paragraph %}

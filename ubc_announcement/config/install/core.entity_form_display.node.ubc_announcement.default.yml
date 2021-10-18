@@ -5,10 +5,8 @@ dependencies:
     - field.field.node.ubc_announcement.body
     - field.field.node.ubc_announcement.field_announcement_external_link
     - field.field.node.ubc_announcement.field_announcement_feature_image
-    - field.field.node.ubc_announcement.field_announcement_image_teaser
     - field.field.node.ubc_announcement.field_announcement_meta_tags
     - field.field.node.ubc_announcement.field_announcement_tags
-    - field.field.node.ubc_announcement.field_announcement_teaser_second
     - field.field.node.ubc_announcement.field_announcement_type
     - image.style.medium
     - node.type.ubc_announcement
@@ -24,22 +22,6 @@ dependencies:
     - text
 third_party_settings:
   field_group:
-    group_feature_area:
-      children:
-        - field_announcement_feature_image
-        - field_announcement_image_teaser
-        - field_announcement_teaser_second
-      parent_name: ''
-      weight: 1
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        required_fields: true
-        open: false
-      label: 'Feature Area'
-      region: content
     group_feature_title_override:
       children:
         - field_announcement_type
@@ -108,17 +90,6 @@ content:
     third_party_settings: {  }
     type: image_focal_point
     region: content
-  field_announcement_image_teaser:
-    weight: 6
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings:
-      maxlength:
-        maxlength_js: 255
-        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
-    type: string_textfield
-    region: content
   field_announcement_meta_tags:
     weight: 13
     settings:
@@ -131,17 +102,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_announcement_teaser_second:
-    weight: 7
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings:
-      maxlength:
-        maxlength_js: 255
-        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
-    type: string_textfield
     region: content
   field_announcement_type:
     weight: 4

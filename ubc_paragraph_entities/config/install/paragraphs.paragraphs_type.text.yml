@@ -7,5 +7,6 @@ dependencies:
 id: text
 label: Text
 icon_uuid: 14d6fa9f-8ff6-46ba-ba89-2ba3a9dc9413
+icon_default: null
 description: 'Add an Open Text field.'
 behavior_plugins: {  }

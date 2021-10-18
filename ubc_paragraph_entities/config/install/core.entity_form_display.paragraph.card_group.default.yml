@@ -2,10 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.card_group.field_number_per_row
     - field.field.paragraph.card_group.field_paragraph_card
     - field.field.paragraph.card_group.field_paragraph_group_title
-    - field.field.paragraph.card_group.field_paragraph_number_per_row
     - field.field.paragraph.card_group.field_paragraph_title_right
+    - field.field.paragraph.card_group.field_paragraph_width_settings
+    - field.field.paragraph.card_group.field_region_vertical_spacing
     - paragraphs.paragraphs_type.card_group
   enforced:
     module:
@@ -18,9 +20,8 @@ third_party_settings:
     group_optional_title:
       children:
         - field_paragraph_group_title
-        - field_paragraph_title_right
       parent_name: ''
-      weight: 1
+      weight: 3
       format_type: details
       format_settings:
         description: ''
@@ -35,14 +36,20 @@ targetEntityType: paragraph
 bundle: card_group
 mode: default
 content:
+  field_number_per_row:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_paragraph_card:
     type: entity_reference_paragraphs
-    weight: 2
+    weight: 4
     settings:
       title: Card
       title_plural: Cards
       edit_mode: closed
-      add_mode: dropdown
+      add_mode: button
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
@@ -55,19 +62,19 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_paragraph_number_per_row:
-    weight: 0
+  field_paragraph_width_settings:
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_paragraph_title_right:
+  field_region_vertical_spacing:
     weight: 2
-    settings:
-      display_label: true
+    settings: {  }
     third_party_settings: {  }
-    type: boolean_checkbox
+    type: options_select
     region: content
 hidden:
   created: true
+  field_paragraph_title_right: true
   status: true

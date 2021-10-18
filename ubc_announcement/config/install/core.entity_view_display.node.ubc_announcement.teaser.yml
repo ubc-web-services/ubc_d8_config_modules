@@ -1,4 +1,3 @@
-uuid: c5edd563-283f-43fc-92d9-48b9160f895d
 langcode: en
 status: true
 dependencies:
@@ -7,17 +6,13 @@ dependencies:
     - field.field.node.ubc_announcement.body
     - field.field.node.ubc_announcement.field_announcement_external_link
     - field.field.node.ubc_announcement.field_announcement_feature_image
-    - field.field.node.ubc_announcement.field_announcement_image_teaser
     - field.field.node.ubc_announcement.field_announcement_meta_tags
     - field.field.node.ubc_announcement.field_announcement_tags
-    - field.field.node.ubc_announcement.field_announcement_teaser_second
     - field.field.node.ubc_announcement.field_announcement_type
     - node.type.ubc_announcement
   module:
     - text
     - user
-_core:
-  default_config_hash: 6g7tEhCR834aHQRT083hDx0FuIo-Ff_Vx6vyNkLes7w
 id: node.ubc_announcement.teaser
 targetEntityType: node
 bundle: ubc_announcement
@@ -43,8 +38,6 @@ hidden:
   content_moderation_control: true
   field_announcement_external_link: true
   field_announcement_feature_image: true
-  field_announcement_image_teaser: true
   field_announcement_meta_tags: true
-  field_announcement_teaser_second: true
   field_announcement_type: true
   links: true

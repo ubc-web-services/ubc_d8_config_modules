@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card_image
+    - field.field.node.ubc_announcement.body
+    - field.field.node.ubc_announcement.field_announcement_external_link
+    - field.field.node.ubc_announcement.field_announcement_feature_image
+    - field.field.node.ubc_announcement.field_announcement_meta_tags
+    - field.field.node.ubc_announcement.field_announcement_tags
+    - field.field.node.ubc_announcement.field_announcement_type
+    - node.type.ubc_announcement
+    - responsive_image.styles.card_focal_point
+  module:
+    - link
+    - responsive_image
+    - user
+id: node.ubc_announcement.card_image
+targetEntityType: node
+bundle: ubc_announcement
+mode: card_image
+content:
+  field_announcement_external_link:
+    weight: 0
+    label: visually_hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_announcement_feature_image:
+    type: responsive_image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      responsive_image_style: card_focal_point
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_announcement_meta_tags: true
+  field_announcement_tags: true
+  field_announcement_type: true
+  links: true

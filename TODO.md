@@ -1,11 +1,11 @@
-# UBC Config Modules - changes for Jan/2021
+# UBC Config Modules - as of Oct 21
 
 ## Disable
 - [x] Workflows (complicates and confuses editing experience, especially with node Revisions on)
 
 ## Remove
 - [x] image_widget_crop (too situation-specific and requires too much config)
-- [ ] Slideshow Paragraph (js library in use is problematic in practice, needs a rethink)
+- [x] Slideshow Paragraph (js library in use is problematic in practice, needs a rethink)
 
 ## Add
 ### Asset Library / Media settings
@@ -31,32 +31,21 @@
 ## Needed
 ### Events
 - [ ] recurring date function (eg, every wednesday during may at 6pm)
-- [ ] ongoing flag (instead of a start-end date)
+- [x] ongoing flag (instead of a start-end date)
 - [ ] Views to accomodate these with upcoming events
-- [ ] Add to Calendar module (eg Allard) with config / options
+- [x] Add to Calendar module (eg Allard) with config / options
 
 ### Custom blocks
-- [ ] Twitter Stream embed
-- [ ] Instagram embed
+- [x] Twitter Stream embed
 
 ### Image gallery library and styles
-- [ ] Vue, Tinyslider (Sauder)?
-
-### WYSIWYG
-- [ ] iFrame (ckeditor_iframe module is essentially abandoned. Do we roll our own?, Use Media type, other?)
+- [x] Vue, Tinyslider (Sauder)?
 
 ### Sitewide alerts
 - [x] start with Security implementation?
 
+### Portable Homepage Styles
+- [x] remove styling specific to HR site
+
 ## Drupal 9 compatibility
-### UBC Content Items
-- Custom module not currently D9 compatible - 19 errors, 3 warnings
-- Errors
-  - [ ] Call to deprecated method entityManager()
-  - [ ] Call to deprecated function format_date()
-  - [ ] Call to deprecated method link()
-  - [ ] Call to deprecated function drupal_set_message()
-  - [ ] Call to deprecated constant REQUEST_TIME
-- Warnings
-  - [ ] .info version requirement
-  - [ ] Class PHPUnit\Framework\TestCase not found
+- [x] complete

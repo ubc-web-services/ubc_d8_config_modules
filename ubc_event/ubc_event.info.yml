@@ -5,6 +5,7 @@ package: UBC Web Services
 dependencies:
   - drupal:address
   - drupal:datetime_range
+  - drupal:datetimehideseconds
   - drupal:field_group
   - drupal:focal_point
   - drupal:link

@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.small_icon
+    - field.field.media.svg_icon.field_media_image_1
+    - image.style.icon_small
+    - media.type.svg_icon
+  module:
+    - svg_image
+id: media.svg_icon.small_icon
+targetEntityType: media
+bundle: svg_icon
+mode: small_icon
+content:
+  field_media_image_1:
+    label: hidden
+    weight: 0
+    settings:
+      image_style: icon_small
+      image_link: ''
+      svg_render_as_image: true
+      svg_attributes:
+        width: 24
+        height: 24
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

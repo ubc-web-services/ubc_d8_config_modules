@@ -38,36 +38,69 @@
  * @ingroup themeable
  */
 #}
+{% set layout_attributes = create_attribute() %}
+{% set grid_attributes = create_attribute() %}
+{% set header_attributes = create_attribute() %}
+{% set title_attributes = create_attribute() %}
 {%
   set classes = [
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
-    'md--auto-grid',
-    paragraph.field_paragraph_group_title ? 'title-right',
-    paragraph.field_paragraph_number_per_row.value|clean_class,
-    'my-4',
+    paragraph.field_region_vertical_spacing.0.entity.field_class.value ? paragraph.field_region_vertical_spacing.0.entity.field_class.value|clean_class,
+    paragraph.field_region_vertical_spacing.1.entity.field_class.value ? paragraph.field_region_vertical_spacing.1.entity.field_class.value|clean_class,
   ]
 %}
 {%
   set title_classes = [
-    'text-ubc-blue',
-    'mb-0',
-    'w-full',
-    paragraph.field_paragraph_group_title ? 'text-right',
+    'mt-0',
+    'pb-6',
+    'h3',
+    'text-grey-700',
   ]
 %}
 {%
-  set card_title = paragraph.field_paragraph_group_title.value
+  set layout_classes = [
+    paragraph.field_paragraph_width_settings.0.entity.field_class.value ? paragraph.field_paragraph_width_settings.0.entity.field_class.value,
+    'first-child--mt-0',
+    'flow-root',
+  ]
 %}
+{%
+  set grid_classes = [
+    'grid',
+    'gap-8',
+    'grid-cols-1',
+    paragraph.field_number_per_row.0.entity.field_class.value|clean_class,
+  ]
+%}
+{%
+  set region_title = paragraph.field_paragraph_group_title.value
+%}
+
+{% if paragraph.field_paragraph_width_settings.0.entity.field_class.value is empty %}
+  {%
+    set padding_classes = [
+      'px-5',
+      'md--px-4',
+    ]
+  %}
+{% endif %}
+
 {% block paragraph %}
-  {% if paragraph.field_paragraph_group_title.value|render %}
-    <h2{{ title_attributes.addClass(title_classes) }}>{{ card_title }}</h2>
+<section{{ attributes.addClass(classes, padding_classes) }}>
+  {% if region_title|length > 0 %}
+  <header{{ header_attributes.addClass(layout_classes, padding_classes) }}>
+    <h2{{ title_attributes.addClass(title_classes) }}>{{ region_title }}</h2>
+  </header>
   {% endif %}
-  <div{{ attributes.addClass(classes) }}>
+  <div{{ layout_attributes.addClass(layout_classes, padding_classes) }}>
+    <div{{ grid_attributes.addClass(grid_classes) }}>
     {% block content %}
-      {{ content }}
+      {{ content|without('field_region_vertical_spacing', 'field_paragraph_group_title', 'field_number_per_row', 'field_paragraph_width_settings') }}
     {% endblock %}
+    </div>
   </div>
+</section>
 {% endblock paragraph %}

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: icon_large
+label: 'Icon, large'
+effects:
+  f9973a7b-6e05-4c2a-983b-ad1c5816b4e0:
+    uuid: f9973a7b-6e05-4c2a-983b-ad1c5816b4e0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 96
+      height: 96
+      anchor: center-center

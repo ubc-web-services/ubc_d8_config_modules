@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_card_link
+    - paragraphs.paragraphs_type.card_horizontal
+  module:
+    - link
+id: paragraph.card_horizontal.field_paragraph_card_link
+field_name: field_paragraph_card_link
+entity_type: paragraph
+bundle: card_horizontal
+label: 'Card Link'
+description: 'Add an external or internal link to the card. The link text will be styled as a button.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

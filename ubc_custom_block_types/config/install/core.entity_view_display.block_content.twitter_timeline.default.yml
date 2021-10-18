@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.twitter_timeline
+    - field.field.block_content.twitter_timeline.field_tweet_count
+    - field.field.block_content.twitter_timeline.field_twitter_account
+    - field.field.block_content.twitter_timeline.field_twitter_block_height
+id: block_content.twitter_timeline.default
+targetEntityType: block_content
+bundle: twitter_timeline
+mode: default
+content:
+  field_tweet_count:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: number_unformatted
+    region: content
+  field_twitter_account:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_twitter_block_height:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: number_unformatted
+    region: content
+hidden: {  }

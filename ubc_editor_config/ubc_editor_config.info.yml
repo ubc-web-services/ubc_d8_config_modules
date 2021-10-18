@@ -8,6 +8,8 @@ dependencies:
   - drupal:inline_responsive_images
   - drupal:linkit
   - ubc_ckeditor_widgets:ubc_ckeditor_widgets
+  - ubc_column_options_widget:ubc_column_options_widget
+  - ubc_color_box_widget:ubc_color_box_widget
   - ubc_image_styles:ubc_image_styles
   - ubc_media_entities:ubc_media_entities
 core: '8.x'

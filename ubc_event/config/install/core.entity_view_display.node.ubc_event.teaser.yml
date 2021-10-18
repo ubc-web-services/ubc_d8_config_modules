@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.ubc_event.field_event_category
     - field.field.node.ubc_event.field_event_date
     - field.field.node.ubc_event.field_event_image
-    - field.field.node.ubc_event.field_event_image_teaser
     - field.field.node.ubc_event.field_event_is_ongoing
     - field.field.node.ubc_event.field_event_link
     - field.field.node.ubc_event.field_event_location
@@ -15,10 +14,10 @@ dependencies:
     - field.field.node.ubc_event.field_event_meta_tags
     - field.field.node.ubc_event.field_event_private
     - field.field.node.ubc_event.field_event_tags
-    - field.field.node.ubc_event.field_event_teaser_second
     - node.type.ubc_event
   module:
     - address
+    - datetime_range
     - text
     - user
 id: node.ubc_event.teaser
@@ -29,13 +28,23 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_event_date:
+    type: daterange_default
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
   field_event_location:
     type: address_default
-    weight: 3
+    weight: 2
     region: content
     label: hidden
     settings: {  }
@@ -43,14 +52,11 @@ content:
 hidden:
   content_moderation_control: true
   field_event_category: true
-  field_event_date: true
   field_event_image: true
-  field_event_image_teaser: true
   field_event_is_ongoing: true
   field_event_link: true
   field_event_map: true
   field_event_meta_tags: true
   field_event_private: true
   field_event_tags: true
-  field_event_teaser_second: true
   links: true

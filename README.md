@@ -30,6 +30,7 @@ The custom modules included are:
 - **UBC Announcement** *[ubc_announcement]*: Provides the UBC Announcement content type and its fields, pathauto settings, workflow settings and a Tour
 - **UBC Announcement Views** *[ubc_announcement_views]*: Provides views specific to the UBC Announcement content type
 - **UBC Content Items** *[ubc_content_items]*: Provides an interface for defining and working with reusable entity types without a node view
+- **UBC Custom Block Types** *[ubc_custom_block_types]*: Provides several preconfigured custom block types
 - **UBC Date Formats** *[ubc_date_formats]*: Provides a set of commonly used date formats
 - **UBC Editor Config** *[ubc_editor_config]*: Provides a custom predefined wysiwyg format and settings
 - **UBC Editor File Entities** *[ubc_editor_file_entities]*: Provides a method of working with Media Entities and embedding them into the wysiwyg
@@ -41,13 +42,13 @@ The custom modules included are:
 - **UBC Image Styles** *[ubc_image_styles]*: Provides a common set of image styles
 - **UBC Landing Page** *[ubc_landing_page]*: Provides the UBC Landing Page content type and its fields, pathauto settings, workflow settings and a Tour
 - **UBC Landing Page Views** *[ubc_landing_page_views]*: Provides views specific to the UBC Landing Page content type
+- **UBC Media Entites** *[ubc_media_entities]*: Provides a series of preconfigured media entities
 - **UBC Page** *[ubc_page]*: Provides the UBC Page content type and its fields, pathauto settings, workflow settings and a Tour
-- **UBC Page Views** *[ubc_page_views]*: Provides views specific to the UBC Page content type
 - **UBC Paragraph Entities** *[ubc_paragraph_entities]*: Provides a common set of paragraph types, used in UBC Landing Pages
 - **UBC Profile** *[ubc_profile]*: Provides the UBC Profile content type and its fields, pathauto settings, workflow settings and a Tour
 - **UBC Profile Extend** *[ubc_profile_extend]*: Provides a sample implemention dor adding an additional field to the UBC Profile content type. This is meant to serve as a model of non-core additions to content types
 - **UBC Profile Views** *[ubc_profile_views]*: Provides views specific to the UBC Profile content type
-- **UBC Share Block** *[ubc_share_block]*: **Work in progress**. Provides a custom block type for adding share links to various social media networks
+- **UBC Taxonomy Terms** *[ubc_taxonomy_terms]*: Provides a set of admin and user facing taxonomies and terms.
 - **UBC User Roles** *[ubc_user_roles]*: Provides a set of user roles and their associated permsissions
 
 
@@ -61,19 +62,20 @@ This assumes you've installed Drupal using the Standard installation profile
 
 ### Enable contrib modules
 
-```lando drush en address, admin_toolbar_links_access_filter, admin_toolbar_tools, allowed_formats, anchor_link, antibot, auto_entitylabel, block_exclude_pages, chosen, ckeditor_a11ychecker, crop, ctools, datetime_range, devel, devel_generate, editor_advanced_link, editor_button_link, entity_reference_revisions, field_group, file_delete, focal_point, formtips, gin_toolbar, google_analytics, image_widget_crop, inline_responsive_images, linkit, linkit_media_library, maxlength, media, media_bulk_upload, media_entity_file_replace, media_library, menu_block, metatag, optional_end_date, pathauto, paragraphs, redirect, responsive_table_filter, scheduler, simple_gmap, simple_sitemap, smtp, svg_image, telephone, text_summary_options, token, twig_tweak, webform, webform_ui -y```
+```lando drush en address, admin_toolbar_links_access_filter, admin_toolbar_tools, allowed_formats, anchor_link, antibot, auto_entitylabel, block_exclude_pages, chosen, ckeditor_a11ychecker, config_ignore, crop, ctools, datetime_range, datetimehideseconds, devel, devel_generate, editor_advanced_link, editor_button_link, entity_reference_revisions, field_group, file_delete, focal_point, formtips, fullcalendar_view, gin_toolbar, google_analytics, image_widget_crop, inline_responsive_images, linkit, linkit_media_library, maxlength, media, media_bulk_upload, media_entity_file_replace, media_library, menu_block, metatag, optional_end_date, pathauto, paragraphs, redirect, responsive_table_filter, role_delegation, scheduler, simple_gmap, simple_sitemap, smtp, svg_image, telephone, text_summary_options, token, twig_tweak, webform, webform_ui -y```
 
 ### Enable custom modules for general settings
 
-```lando drush en ubc_ckeditor_widgets, ubc_chosen_style_tweaks, ubc_date_formats, ubc_editor_config, ubc_image_styles, ubc_media_entities, ubc_paragraph_entities, ubc_general_shared_config -y```
+```lando drush en ubc_ckeditor_widgets, ubc_chosen_style_tweaks, ubc_date_formats, ubc_editor_config, ubc_editor_config_simple, ubc_image_styles, ubc_media_entities, ubc_paragraph_entities, ubc_general_shared_config, ubc_column_options_widget, ubc_color_box_widget, ubc_taxonomy_terms_admin, ubc_custom_block_types -y```
 
 ### Enable custom content type modules
 
-```lando drush en ubc_announcement, ubc_homepage, ubc_event, ubc_landing_page, ubc_page, ubc_profile, ubc_taxonomy_terms_announcement, ubc_taxonomy_terms_department, ubc_taxonomy_terms_event -y```
+```lando drush en ubc_announcement, ubc_homepage, ubc_event, ubc_landing_page, ubc_page, ubc_profile, ubc_taxonomy_terms_admin, ubc_taxonomy_terms_announcement, ubc_taxonomy_terms_department, ubc_taxonomy_terms_event -y```
 
 ### Enable User Role and Views modules last, once all the pieces are in place.
 
-```lando drush en ubc_announcement_views, ubc_homepage_views, ubc_event_views, ubc_landing_page_views, ubc_profile_views, ubc_user_roles -y```
+```lando drush en ubc_announcement_views, ubc_homepage_views, ubc_event_calendar, ubc_event_views, ubc_landing_page_views, ubc_profile_views, ubc_user_roles -y```
+* note that `ubc_user_roles` currently assumes you have installed all of the modules as per the code snippet. Exclude this if you've opted not to install one or more of the UBC modules, otherwise it will fail.
 
 ### POST INSTALL
 
@@ -85,6 +87,10 @@ This assumes you've installed Drupal using the Standard installation profile
 
 - /admin/structure/types/manage/article/delete
 - /admin/structure/types/manage/page/delete
+
+#### Delete unused comment types if not going to be used:
+
+- /admin/structure/comment/manage/comment/delete
 
 #### Disable unused text formats
 

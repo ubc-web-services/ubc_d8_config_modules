@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.ubc_event.field_event_category
     - field.field.node.ubc_event.field_event_date
     - field.field.node.ubc_event.field_event_image
-    - field.field.node.ubc_event.field_event_image_teaser
     - field.field.node.ubc_event.field_event_is_ongoing
     - field.field.node.ubc_event.field_event_link
     - field.field.node.ubc_event.field_event_location
@@ -15,7 +14,6 @@ dependencies:
     - field.field.node.ubc_event.field_event_meta_tags
     - field.field.node.ubc_event.field_event_private
     - field.field.node.ubc_event.field_event_tags
-    - field.field.node.ubc_event.field_event_teaser_second
     - node.type.ubc_event
     - responsive_image.styles.hero_image
   module:
@@ -35,22 +33,6 @@ content:
     third_party_settings: {  }
     type: responsive_image
     region: content
-  field_event_image_teaser:
-    type: string
-    weight: 2
-    region: content
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  field_event_teaser_second:
-    type: string
-    weight: 1
-    region: content
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
 hidden:
   body: true
   content_moderation_control: true

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: card_vertical
+label: 'Card: Vertical'
+icon_uuid: null
+icon_default: null
+description: 'Adds a card in the vertical orientation'
+behavior_plugins: {  }

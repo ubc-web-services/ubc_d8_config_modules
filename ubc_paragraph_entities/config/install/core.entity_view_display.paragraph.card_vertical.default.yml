@@ -1,0 +1,64 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.card_vertical.field_paragraph_card_colour
+    - field.field.paragraph.card_vertical.field_paragraph_card_image
+    - field.field.paragraph.card_vertical.field_paragraph_card_link
+    - field.field.paragraph.card_vertical.field_paragraph_card_text
+    - field.field.paragraph.card_vertical.field_paragraph_card_title
+    - paragraphs.paragraphs_type.card_vertical
+    - responsive_image.styles.card
+  module:
+    - link
+    - responsive_image
+id: paragraph.card_vertical.default
+targetEntityType: paragraph
+bundle: card_vertical
+mode: default
+content:
+  field_paragraph_card_colour:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_paragraph_card_image:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: card
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+  field_paragraph_card_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_paragraph_card_text:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_paragraph_card_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

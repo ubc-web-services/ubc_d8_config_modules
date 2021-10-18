@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card_vertical
+    - field.field.node.ubc_landing_page.body
+    - field.field.node.ubc_landing_page.field_landing_custom_content
+    - field.field.node.ubc_landing_page.field_landing_feature_image
+    - field.field.node.ubc_landing_page.field_landing_meta_tags
+    - field.field.node.ubc_landing_page.field_landing_tags
+    - node.type.ubc_landing_page
+    - responsive_image.styles.card_focal_point
+  module:
+    - responsive_image
+    - text
+    - user
+id: node.ubc_landing_page.card_vertical
+targetEntityType: node
+bundle: ubc_landing_page
+mode: card_vertical
+content:
+  body:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 350
+    third_party_settings: {  }
+    type: text_summary_or_trimmed
+    region: content
+  field_landing_feature_image:
+    type: responsive_image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      responsive_image_style: card_focal_point
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  field_landing_custom_content: true
+  field_landing_meta_tags: true
+  field_landing_tags: true
+  layout_builder__layout: true
+  links: true

@@ -4,5 +4,6 @@ dependencies: {  }
 id: slideshow
 label: Slideshow
 icon_uuid: null
+icon_default: null
 description: 'Adds a set of slides'
 behavior_plugins: {  }

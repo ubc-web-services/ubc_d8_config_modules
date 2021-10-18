@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: square_focal_point_600
+label: 'Square, focal point, 600'
+effects:
+  12f169b6-e0e7-4fdf-b0ed-e6bffa8c8a89:
+    uuid: 12f169b6-e0e7-4fdf-b0ed-e6bffa8c8a89
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 600
+      crop_type: focal_point

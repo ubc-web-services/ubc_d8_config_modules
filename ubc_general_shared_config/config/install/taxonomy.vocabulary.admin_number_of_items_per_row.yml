@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'ADMIN - Number of items per row'
+vid: admin_number_of_items_per_row
+description: 'Adds settings for determining the number of items to display per row in a grid or columns layout'
+weight: 0

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: icon_small
+label: 'Icon, small'
+effects:
+  aed7f070-e2f5-44a1-965c-4d1564f3bc2b:
+    uuid: aed7f070-e2f5-44a1-965c-4d1564f3bc2b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 24
+      height: 24
+      anchor: center-center

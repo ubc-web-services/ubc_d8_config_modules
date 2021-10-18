@@ -38,20 +38,62 @@
  * @ingroup themeable
  */
 #}
+{% set caption_wrapper_attributes = create_attribute() %}
+{% set caption_attributes = create_attribute() %}
+{% set title_attributes = create_attribute() %}
 {%
-  set classes = [
+  set slide_classes = [
     'paragraph--type--' ~ paragraph.bundle|clean_class,
-    'splide__slide',
     'relative',
+    'carousel__cell',
+    'has-gradient--after',
   ]
 %}
+{%
+  set caption_wrapper_classes = [
+    'container',
+    'z-40',
+    'flex',
+    'flex-col',
+    'justify-end',
+    'mx-auto',
+    'carousel__content',
+    'absolute',
+    'inset-0',
+  ]
+%}
+{%
+  set caption_classes = [
+    'text-white',
+    'container-sm',
+    'py-8',
+    'md--py-24',
+    'px-5',
+    'md--px-4',
+  ]
+%}
+{%
+  set title_classes = [
+    'mt-0',
+    'text-3xl',
+    'text-white',
+    'md--text-7xl',
+  ]
+%}
+
 {% block paragraph %}
-  <li{{ attributes.addClass(classes) }}>
+  <article{{ attributes.addClass(slide_classes) }}>
     {% block content %}
-      {{ content.field_slide_image.0 }}
-      <div class="absolute bottom-0 p-8 text-white gradient-bottom--ubc-blue-full" style="padding: 1.5rem 10%; right:0;left:0;">
-        <h2>{{ paragraph.field_slide_title.value }}</h2
+      {% if not paragraph.field_slide_with_no_image.value %}
+        {{ content.field_slide_image.0 }}
+      {% endif %}
+      {% if not (paragraph.field_slide_title.isEmpty == true) and content.field_slide_title is defined %}
+      <div{{ caption_wrapper_attributes.addClass(caption_wrapper_classes) }}>
+        <div{{ caption_attributes.addClass(caption_classes) }}>
+          <h2{{ title_attributes.addClass(title_classes) }}>{{ paragraph.field_slide_title.value }}</h2>
+        </div>
       </div>
+      {% endif %}
     {% endblock %}
-  </li>
+  </article>
 {% endblock paragraph %}

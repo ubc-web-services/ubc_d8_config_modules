@@ -1,7 +1,7 @@
 langcode: en
 status: true
 dependencies: {  }
-name: 'ADMIN - Width Settings'
+name: 'ADMIN - Horizontal Spacing Settings'
 vid: admin_width_settings
-description: 'Adds width classes that can be selected'
+description: 'Adds horizontal spacing options'
 weight: 0
