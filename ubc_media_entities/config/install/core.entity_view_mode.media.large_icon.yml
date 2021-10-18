@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.large_icon
+label: 'Large Icon'
+targetEntityType: media
+cache: true

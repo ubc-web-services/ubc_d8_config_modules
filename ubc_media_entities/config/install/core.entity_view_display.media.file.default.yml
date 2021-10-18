@@ -2,13 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.full
-    - field.field.media.private_file.field_media_file_1
-    - media.type.private_file
-id: media.private_file.full
+    - field.field.media.file.field_media_file
+    - media.type.file
+id: media.file.default
 targetEntityType: media
-bundle: private_file
-mode: full
+bundle: file
+mode: default
 content:
   name:
     type: string
@@ -20,6 +19,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_media_file_1: true
+  field_media_file: true
   thumbnail: true
   uid: true
