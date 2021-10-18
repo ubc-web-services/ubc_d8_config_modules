@@ -6,7 +6,7 @@ dependencies:
 id: ubc_page
 label: 'UBC Pages'
 type: 'canonical_entities:node'
-pattern: '[node:menu-link:parents]/[node:title]'
+pattern: '[node:menu-link:parents:join-path]/[node:title]'
 selection_criteria:
   1c572749-f870-4d36-9080-b7fdc7e269e5:
     id: node_type
