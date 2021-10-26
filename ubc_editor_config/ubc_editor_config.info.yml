@@ -4,6 +4,7 @@ description: This module defines default configuration for Drupal's WYSIWYG, cKe
 package: UBC Web Services
 dependencies:
   - drupal:ckeditor
+  - drupal:anchor_link
   - drupal:editor_button_link
   - drupal:inline_responsive_images
   - drupal:linkit
