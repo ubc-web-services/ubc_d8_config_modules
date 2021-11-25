@@ -91,7 +91,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: h1
-          element_class: 'page-title text-ubc-blue-sea'
+          element_class: 'page-title text-ubc-blue-sea mt-0'
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
