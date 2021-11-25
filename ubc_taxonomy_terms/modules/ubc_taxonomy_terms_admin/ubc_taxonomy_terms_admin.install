@@ -12,18 +12,19 @@ function ubc_taxonomy_terms_admin_install() {
   // Background Colour Classes
   $bgvocab = 'admin_background_color_settings';
   $bgitems = array(
-    'White' => 'bg-white',
-    'Unit Primary' => 'bg-unit-primary',
-    'Unit Secondary' => 'bg-unit-secondary',
-    'Unit Tertiary' => 'bg-unit-tertiary',
-    'Unit Accent' => 'bg-unit-accent',
-    'Light Grey' => 'bg-grey-100',
-    'UBC Blue' => 'bg-ubc-blue',
-    'UBC Blue: Sea' => 'bg-ubc-blue-sea',
-    'UBC Blue: Cobalt' => 'bg-ubc-blue-cobalt',
-    'UBC Blue: Neptune' => 'bg-ubc-blue-neptune',
-    'UBC Blue: Cornflower' => 'bg-ubc-blue-cornflower',
-    'UBC Blue: Polar' => 'bg-ubc-blue-polar',
+    'White' => 'bg-white bg-light',
+    'Unit Primary' => 'bg-unit-primary bg-dark',
+    'Unit Secondary' => 'bg-unit-secondary bg-dark',
+    'Unit Tertiary' => 'bg-unit-tertiary bg-light',
+    'Unit Accent' => 'bg-unit-accent bg-light',
+    'Light Grey' => 'bg-grey-100 bg-light',
+    'UBC Blue' => 'bg-ubc-blue bg-dark',
+    'UBC Blue: Sea' => 'bg-ubc-blue-sea bg-dark',
+    'UBC Blue: Cobalt' => 'bg-ubc-blue-cobalt bg-dark',
+    'UBC Blue: Neptune' => 'bg-ubc-blue-neptune bg-light',
+    'UBC Blue: Cornflower' => 'bg-ubc-blue-cornflower bg-light',
+    'UBC Blue: Polar' => 'bg-ubc-blue-polar bg-light',
+    'UBC Blue: Frost' => 'bg-ubc-blue-frost bg-light',
     'None' => 'no-style',
   );
   foreach ($bgitems as $key => $value) {
