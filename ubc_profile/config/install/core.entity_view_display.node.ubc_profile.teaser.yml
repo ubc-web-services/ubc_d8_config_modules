@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.ubc_profile.field_profile_meta_tags
     - field.field.node.ubc_profile.field_profile_office
     - field.field.node.ubc_profile.field_profile_phone
+    - field.field.node.ubc_profile.field_profile_pronouns
     - field.field.node.ubc_profile.field_profile_tags
     - node.type.ubc_profile
   module:
@@ -63,5 +64,6 @@ hidden:
   field_profile_last_name: true
   field_profile_meta_tags: true
   field_profile_office: true
+  field_profile_pronouns: true
   field_profile_tags: true
   links: true
