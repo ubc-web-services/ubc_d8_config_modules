@@ -27,6 +27,7 @@ To work with the modules as intended, you will typically follow this worflow:
 
 The custom modules included are:
 
+- **UBC Alert** *[ubc_alert]*: Provides a custom Alert Banner entity and its fields, as well as the view to create the block that it outputs to.
 - **UBC Announcement** *[ubc_announcement]*: Provides the UBC Announcement content type and its fields, pathauto settings, workflow settings and a Tour
 - **UBC Announcement Views** *[ubc_announcement_views]*: Provides views specific to the UBC Announcement content type
 - **UBC Content Items** *[ubc_content_items]*: Provides an interface for defining and working with reusable entity types without a node view
