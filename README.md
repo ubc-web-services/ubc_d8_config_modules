@@ -74,7 +74,7 @@ This assumes you've installed Drupal using the Standard installation profile
 
 ### Enable User Role and Views modules last, once all the pieces are in place.
 
-```lando drush en ubc_announcement_views, ubc_homepage_views, ubc_event_calendar, ubc_event_views, ubc_landing_page_views, ubc_profile_views, ubc_user_roles -y```
+```lando drush en ubc_alert ubc_announcement_views, ubc_homepage_views, ubc_event_calendar, ubc_event_views, ubc_landing_page_views, ubc_profile_views, ubc_user_roles -y```
 * note that `ubc_user_roles` currently assumes you have installed all of the modules as per the code snippet. Exclude this if you've opted not to install one or more of the UBC modules, otherwise it will fail.
 
 ### POST INSTALL
