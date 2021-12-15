@@ -3,65 +3,52 @@
 /**
  * Implements HOOK_theme_suggestions_HOOK_alter
  */
-function ubc_paragraph_entities_theme_suggestions_paragraph_alter(&$suggestions, $variables){
-  $entity = $variables['elements']['#paragraph'];
+function ubc_paragraph_entities_theme_suggestions_paragraph_alter(&$suggestions, array $variables) {
+  $suggestions = array();
+  $paragraph = $variables['elements']['#paragraph'];
   $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
-  $type = $entity->getType();
+  $type = $paragraph->getType();
 
+  $suggestions[] = 'ubc_paragraph__' . $sanitized_view_mode;
   $suggestions[] = 'ubc_paragraph__' . $type;
   $suggestions[] = 'ubc_paragraph__' . $type . '__' . $sanitized_view_mode;
+  return $suggestions;
 }
 
 /**
- * Implments HOOK_theme()
- *
- * Register a template for each paragraph and field type
- *
+ * Implements hook_theme().
  */
-function ubc_paragraph_entities_theme($existing, $type, $theme, $path){
-  $theme_templates = [];
-  $paragraph_types = ubc_paragraph_entities_get_paragraph_types();
-
-  // Register custom Paragraph bundle templates
-  foreach ($paragraph_types as $type){
-    $theme_templates['ubc_paragraph__' . $type] = [
+function ubc_paragraph_entities_theme($existing, $type, $theme, $path) {
+  return [
+    'ubc_paragraph__card_group' => [
       'base hook' => 'paragraph'
-    ];
-  }
-  // Register custom Paragraph bundle template fallback
-  $theme_templates['ubc_paragraph'] = [
-    'base hook' => 'paragraph'
+    ],
+    'ubc_paragraph__card_horizontal' => [
+      'base hook' => 'paragraph'
+    ],
+    'ubc_paragraph__card_vertical' => [
+      'base hook' => 'paragraph'
+    ],
+    'ubc_paragraph__feature_image' => [
+      'base hook' => 'paragraph'
+    ],
+    'ubc_paragraph__icon_card' => [
+      'base hook' => 'paragraph'
+    ],
+    'ubc_paragraph__image_card' => [
+      'base hook' => 'paragraph'
+    ],
+    'ubc_paragraph__slide' => [
+      'base hook' => 'paragraph'
+    ],
+    'ubc_paragraph__slideshow' => [
+      'base hook' => 'paragraph'
+    ],
+    'ubc_paragraph__tabcordion' => [
+      'base hook' => 'paragraph'
+    ],
+    'ubc_paragraph__text' => [
+      'base hook' => 'paragraph'
+    ],
   ];
-  return $theme_templates;
-}
-
-/**
- * Implements HOOK_theme_registry_alter()
- *
- */
-function ubc_paragraph_entities_theme_registry_alter(&$theme_registry) {
-  $module_path = drupal_get_path('module', 'ubc_paragraph_entities') . '/templates';
-  $template_objects = drupal_find_theme_templates($theme_registry, '.html.twig', $module_path);
-  $paragraph_types = ubc_paragraph_entities_get_paragraph_types();
-  //$field_types = ubc_paragraph_entities_get_field_types();
-
-  // 1. Loop through the paragraph types
-  // 2. Check if each paragraph exists in the `$template_objects` array
-  // 3. If it doesn't exist, remove it from the registry so we don't get any errors
-  foreach ($paragraph_types as $type){
-    $template = 'ubc_paragraph__' . $type;
-    if(!isset($template_objects[$template])){
-      unset($theme_registry['ubc_paragraph__' . $type]);
-    }
-  }
-}
-
-/**
- * Helper function to get a list of paragraph types by machine name
- *
- * @return array
- */
-function ubc_paragraph_entities_get_paragraph_types(){
-  $paragraph_bundles = \Drupal::service('entity_type.bundle.info')->getBundleInfo('paragraph');
-  return array_keys($paragraph_bundles);
 }
