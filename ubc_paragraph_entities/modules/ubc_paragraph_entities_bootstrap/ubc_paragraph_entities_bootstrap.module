@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * Implements HOOK_theme_suggestions_HOOK_alter
+ */
+function ubc_paragraph_entities_bootstrap_theme_suggestions_paragraph_alter(&$suggestions, array $variables) {
+  $suggestions = array();
+  $paragraph = $variables['elements']['#paragraph'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+  $type = $paragraph->getType();
+
+  $suggestions[] = 'ubc_paragraph__' . $sanitized_view_mode;
+  $suggestions[] = 'ubc_paragraph_bootstrap__' . $sanitized_view_mode;
+  $suggestions[] = 'ubc_paragraph__' . $type;
+  $suggestions[] = 'ubc_paragraph_bootstrap__' . $type;
+  $suggestions[] = 'ubc_paragraph__' . $type . '__' . $sanitized_view_mode;
+  $suggestions[] = 'ubc_paragraph_bootstrap__' . $type . '__' . $sanitized_view_mode;
+
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ubc_paragraph_entities_bootstrap_theme($existing, $type, $theme, $path) {
+  return [
+    'ubc_paragraph_bootstrap__tabcordion' => [
+      'base hook' => 'paragraph'
+    ],
+    'ubc_paragraph_bootstrap__slideshow' => [
+      'base hook' => 'paragraph'
+    ],
+  ];
+}

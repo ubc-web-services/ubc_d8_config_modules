@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.ubc_profile.field_profile_meta_tags
     - field.field.node.ubc_profile.field_profile_office
     - field.field.node.ubc_profile.field_profile_phone
+    - field.field.node.ubc_profile.field_profile_pronouns
     - field.field.node.ubc_profile.field_profile_tags
     - image.style.square_400
     - node.type.ubc_profile
@@ -100,6 +101,14 @@ content:
       title: ''
     third_party_settings: {  }
     type: telephone_link
+    region: content
+  field_profile_pronouns:
+    weight: 12
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_profile_tags:
     weight: 11

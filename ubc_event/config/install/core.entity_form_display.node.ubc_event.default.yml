@@ -72,14 +72,14 @@ content:
       rows: 9
       placeholder: ''
       summary_rows: 3
-      show_summary: false
+      show_summary: true
     third_party_settings:
       maxlength:
         maxlength_js: null
         maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
-        maxlength_js_summary: 250
+        maxlength_js_summary: 160
         maxlength_js_label_summary: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
-        maxlength_js_enforce: false
+        maxlength_js_enforce: true
         maxlength_js_truncate_html: false
       allowed_formats:
         hide_help: '0'

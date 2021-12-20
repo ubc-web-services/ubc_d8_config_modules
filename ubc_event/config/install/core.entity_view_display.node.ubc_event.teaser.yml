@@ -27,9 +27,10 @@ mode: teaser
 content:
   body:
     label: hidden
-    type: text_default
+    type: text_summary_or_trimmed
     weight: 0
-    settings: {  }
+    settings:
+      trim_length: 350
     third_party_settings: {  }
     region: content
   field_event_date:
@@ -38,9 +39,9 @@ content:
     region: content
     label: hidden
     settings:
-      separator: '-'
-      format_type: medium
       timezone_override: ''
+      format_type: date_readable
+      separator: '-'
     third_party_settings: {  }
   field_event_location:
     type: address_default

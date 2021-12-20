@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_pronouns
+    - node.type.ubc_profile
+id: node.ubc_profile.field_profile_pronouns
+field_name: field_profile_pronouns
+entity_type: node
+bundle: ubc_profile
+label: 'Preferred Pronouns'
+description: 'Format as <strong>(He, Him, His)</strong>, including opening and closing brackets.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

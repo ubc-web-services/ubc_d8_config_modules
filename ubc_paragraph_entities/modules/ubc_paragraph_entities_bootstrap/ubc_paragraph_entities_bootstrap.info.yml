@@ -1,0 +1,8 @@
+name: UBC Paragraph Entities - Bootstrap
+type: module
+description: This module adds custom templates to paragraph entities that replicate Bootstrap 5 markup.
+package: UBC Web Services
+dependencies:
+  - ubc_paragraph_entities:ubc_paragraph_entities
+core: '8.x'
+core_version_requirement: ^8 || ^9
