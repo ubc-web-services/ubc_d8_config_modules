@@ -42,7 +42,7 @@
 
 {% set layout_attributes = create_attribute() %}
 {%
-  set classes = [
+  set newclasses = [
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
@@ -68,7 +68,7 @@
 {% endif %}
 
 {% block paragraph %}
-<div{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(newclasses) }}>
   <div{{ layout_attributes.addClass(layout_classes, padding_classes) }}>
     <nav class="tabs tabcordion__tabs">
       <ul class="nav nav-tabs tabcordion__links" role="tablist">
