@@ -29,20 +29,74 @@
     'js-dismiss',
   ]
 %}
+{%
+  set wrapperClasses = [
+    'container',
+    'relative',
+    'flex',
+    'items-center',
+    'px-4',
+    'mx-auto',
+    'sm--px-0',
+  ]
+%}
+{%
+  set buttonClasses = [
+    'absolute',
+    'top-0',
+    'right-0',
+    'px-4',
+    'py-3',
+    'leading-none',
+    'text-black',
+    'close',
+    'hover--bg-white-transparent',
+    'hover--no-underline',
+    'hover--text-black',
+    'message__close',
+    'js-dismiss__trigger',
+  ]
+%}
+{%
+  set iconClasses = [
+    'flex-none',
+    'inline-block',
+    'w-12',
+    'h-12',
+    'mr-4',
+    'xl--w-20',
+    'xl--h-20',
+    'text-ubc-blue',
+    'xl--mr-8',
+  ]
+%}
+{%
+  set titleClasses = [
+    'mt-0',
+    'message__title',
+    'h4',
+  ]
+%}
+{%
+  set contentClasses = [
+    'message__content',
+    'first-child--mt-0',
+  ]
+%}
 {% set card_icon = content.field_alert_icon['#items'].entity.field_id.value %}
 <div{{ attributes.addClass(classes) }} role="status" aria-live="polite">
-  <div class="container relative flex items-center px-4 mx-auto sm--px-0">
-    <button class="absolute top-0 right-0 px-4 py-3 leading-none text-black close hover--bg-white-transparent hover--no-underline hover--text-black js-dismiss__trigger" data-dismiss="message">×</button>
+  <div{{ attributes.addClass(wrapperClasses) }}>
+    <button{{ attributes.addClass(buttonClasses) }} data-dismiss="message">×</button>
     {% if not (content_item_entity.field_alert_icon.isEmpty == true) and content.field_alert_icon is defined %}
-    <svg role="presentation" class="flex-none inline-block w-12 h-12 mr-4 xl--w-20 xl--h-20 text-ubc-blue xl--mr-8">
+    <svg{{ attributes.addClass(iconClasses) }} role="presentation">
       <use xlink:href="#{{ card_icon }}"></use>
     </svg>
     {% endif %}
     <div class="py-2">
       {% if not (content_item_entity.field_alert_title.isEmpty == true) and content.field_alert_title is defined %}
-        <h2 class="mt-0 message__title h4">{{ content.field_alert_title }}</h2>
+        <h2{{ attributes.addClass(titleClasses) }}>{{ content.field_alert_title }}</h2>
       {% endif %}
-      <div class="message__content first-child--mt-0">{{ content.field_alert_message.0 }}</div>
+      <div{{ attributes.addClass(contentClasses) }}>{{ content.field_alert_message.0 }}</div>
     </div>
   </div>
 </div>
