@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 53b0dc52-fd87-4416-9511-a125677b0ad5
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: paragraph_icon.png
+  uri:
+    -
+      value: 'public://2021-11/paragraph_icon.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 21487
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1637695454

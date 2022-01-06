@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 54f29d60-20d0-45b8-b492-dfc48fa5cbe4
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 'Capo Testa, Sardinia.jpg'
+  uri:
+    -
+      value: 'public://card-images/2021-11/Capo Testa, Sardinia.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 705186
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1637703533

@@ -1,0 +1,13 @@
+name: UBC Demo Content
+type: module
+description: This module adds demonstration content for UBC content types.
+package: UBC Web Services
+dependencies:
+  - drupal:default_content
+  - ubc_announcement_views:ubc_announcement_views
+  - ubc_event_views:ubc_event_views
+  - ubc_landing_page_views:ubc_landing_page_views
+  - ubc_page:ubc_page
+  - ubc_paragraph_entities:ubc_paragraph_entities
+core: '8.x'
+core_version_requirement: ^8 || ^9

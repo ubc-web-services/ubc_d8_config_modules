@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: bdea4e4c-0dfa-4e56-9839-cb3f484ce630
+  bundle: admin_postion_settings
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Text Bottom Left'
+  weight:
+    -
+      value: 0
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /admin-postion-settings/text-bottom-left
+      langcode: en
+      pathauto: 1
+  field_class:
+    -
+      value: 'mt-auto text-left'

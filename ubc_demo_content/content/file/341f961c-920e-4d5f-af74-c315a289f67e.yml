@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 341f961c-920e-4d5f-af74-c315a289f67e
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 'El Arco de Cabo San Lucas (Lands End), Mexico.jpg'
+  uri:
+    -
+      value: 'public://card-images/2021-11/El Arco de Cabo San Lucas (Lands End), Mexico.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 632227
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1637703583

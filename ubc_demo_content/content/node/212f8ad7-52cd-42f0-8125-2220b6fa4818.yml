@@ -1,0 +1,1061 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+  bundle: ubc_landing_page
+  default_langcode: en
+  depends:
+    bfa77349-1b8c-4d15-9c63-833cb9ceb475: taxonomy_term
+    adc03c01-23c8-443e-af16-bf82c2d77e67: taxonomy_term
+    561f5347-bbba-4f87-b712-801137a0516e: file
+    212f8ad7-52cd-42f0-8125-2220b6fa4818: node
+    0860bc8b-4526-4055-b66d-2399a5e9e2ae: taxonomy_term
+    55ed6496-3ed6-4564-b10d-b925daf2be55: file
+    2949312a-8612-4690-8459-138f60e35fc8: taxonomy_term
+    54f29d60-20d0-45b8-b492-dfc48fa5cbe4: file
+    93e8a855-caa7-466d-a547-2e29ceec73e0: taxonomy_term
+    341f961c-920e-4d5f-af74-c315a289f67e: file
+    80b6b429-f755-4134-837a-4defa68a62f3: taxonomy_term
+    2e0bde03-a03d-4947-a769-0d5da7488384: taxonomy_term
+    d40ca612-f00e-4a6d-82c4-f3957ba3406a: taxonomy_term
+    f2285824-06ba-4421-816e-6331962d6f6c: taxonomy_term
+    524647f3-a4d6-4d9a-82e8-08811c3834bf: file
+    48665abd-ea95-44fc-b095-c8d573f78f03: taxonomy_term
+    0128df65-d952-40a4-9415-f9cc3cd8af91: file
+    c7291afc-902f-49d2-877d-c4e53a9850b0: taxonomy_term
+    12797433-63f8-44b6-87db-84759e43fae4: file
+    df56aa17-1072-4dc1-9ca1-6241599565e5: taxonomy_term
+    0a0c1188-2e5e-45e2-b363-36c1f15b6817: taxonomy_term
+    2a426644-a873-4231-a4b4-b56ac40f9de0: file
+    e1bce679-be1c-4100-95b1-6ccdbfeb2f70: taxonomy_term
+    3226dad2-df56-4b06-882f-4f4f54564842: file
+    115e218e-197f-4114-ace1-50564e668bf3: taxonomy_term
+    71d2a65d-a8ec-41f6-a8a9-9354411f0127: file
+    96214a89-454e-4d4d-931c-35656cd321e8: taxonomy_term
+    5137f869-be12-42d1-9239-d582e8c6714d: file
+    11890922-2039-448c-8608-73e8c9f9c4e3: taxonomy_term
+    cc43892f-da11-4962-ae0e-688b6a4d398b: media
+    3e63a79a-c8b0-4f56-bfdb-0e26893c4149: media
+    a9574be7-2db3-4226-a4da-e6343ebf20c0: media
+    e8b4415e-3c64-43ef-a4d8-24764ef5c8e4: media
+    027ec2f7-44ac-4ef7-b36d-7a949d1a8963: media
+    a602b850-39be-401f-8ee7-037903ecd27a: taxonomy_term
+    bb15a3e9-86e3-4b0a-9689-7346cd1bd28b: file
+    bdea4e4c-0dfa-4e56-9839-cb3f484ce630: taxonomy_term
+    4e82a7e5-34d6-435c-8f23-7ed625a7d170: file
+    52ca3238-6aa2-4688-887b-648db4712d00: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Paragraph Options'
+  created:
+    -
+      value: 1637695946
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /editing-demo/paragraph-options
+      langcode: en
+      pathauto: 1
+  field_landing_custom_content:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: d54c0cdf-c1cc-4a22-940a-17eacfb24dd9
+          bundle: card_group
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1637697678
+          behavior_settings:
+            -
+              value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_number_per_row:
+            -
+              entity: bfa77349-1b8c-4d15-9c63-833cb9ceb475
+          field_paragraph_card:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: abea731a-8b34-4c07-ae36-460998fb2f0a
+                  bundle: card_horizontal
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637697707
+                  behavior_settings:
+                    -
+                      value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
+                  field_paragraph_card_colour:
+                    -
+                      entity: adc03c01-23c8-443e-af16-bf82c2d77e67
+                  field_paragraph_card_image:
+                    -
+                      entity: 561f5347-bbba-4f87-b712-801137a0516e
+                      alt: Alaska
+                      title: ''
+                      width: 1920
+                      height: 1200
+                  field_paragraph_card_link:
+                    -
+                      target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+                      title: 'See More'
+                      options: {  }
+                  field_paragraph_card_text:
+                    -
+                      value: 'You can enter description text here'
+                  field_paragraph_card_title:
+                    -
+                      value: 'Demo Title 1 - Cobalt Background'
+                  field_show_image_on_right:
+                    -
+                      value: false
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: a998a4ba-3e11-43de-9eed-3f08a089edd3
+                  bundle: card_horizontal
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637703401
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_paragraph_card_colour:
+                    -
+                      entity: 0860bc8b-4526-4055-b66d-2399a5e9e2ae
+                  field_paragraph_card_image:
+                    -
+                      entity: 55ed6496-3ed6-4564-b10d-b925daf2be55
+                      alt: 'St. Mary''s Lake, Kalispell, Montana, USA'
+                      title: ''
+                      width: 1920
+                      height: 1080
+                  field_paragraph_card_link:
+                    -
+                      target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+                      title: 'See More'
+                      options: {  }
+                  field_paragraph_card_text:
+                    -
+                      value: 'You can enter description text here'
+                  field_paragraph_card_title:
+                    -
+                      value: 'Demo Title 2 - Sea Background'
+                  field_show_image_on_right:
+                    -
+                      value: false
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 269a9290-7745-4d5d-81b1-345384e6daf2
+                  bundle: card_horizontal
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637703485
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_paragraph_card_colour:
+                    -
+                      entity: 2949312a-8612-4690-8459-138f60e35fc8
+                  field_paragraph_card_image:
+                    -
+                      entity: 54f29d60-20d0-45b8-b492-dfc48fa5cbe4
+                      alt: 'Capo Testa, Sardinia'
+                      title: ''
+                      width: 1920
+                      height: 1080
+                  field_paragraph_card_link:
+                    -
+                      target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+                      title: 'See More'
+                      options: {  }
+                  field_paragraph_card_text:
+                    -
+                      value: 'You can enter description text here'
+                  field_paragraph_card_title:
+                    -
+                      value: 'Demo Title 3 - Neptune Background'
+                  field_show_image_on_right:
+                    -
+                      value: true
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: b2e3167c-8bbd-4524-8f82-4dede83d2bef
+                  bundle: card_horizontal
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637703558
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_paragraph_card_colour:
+                    -
+                      entity: 93e8a855-caa7-466d-a547-2e29ceec73e0
+                  field_paragraph_card_image:
+                    -
+                      entity: 341f961c-920e-4d5f-af74-c315a289f67e
+                      alt: 'El Arco de Cabo San Lucas (Lands End), Mexico'
+                      title: ''
+                      width: 1920
+                      height: 1080
+                  field_paragraph_card_link:
+                    -
+                      target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+                      title: 'See More'
+                      options: {  }
+                  field_paragraph_card_text:
+                    -
+                      value: 'You can enter description text here'
+                  field_paragraph_card_title:
+                    -
+                      value: 'Demo Title 4 - Polar Background'
+                  field_show_image_on_right:
+                    -
+                      value: true
+          field_paragraph_group_title:
+            -
+              value: 'Card Groups 2-Across, Horizontal Cards'
+          field_paragraph_title_right:
+            -
+              value: false
+          field_paragraph_width_settings:
+            -
+              entity: 80b6b429-f755-4134-837a-4defa68a62f3
+          field_region_vertical_spacing:
+            -
+              entity: 2e0bde03-a03d-4947-a769-0d5da7488384
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: f893ad36-02d8-4f3e-977c-c4dcb9e03847
+          bundle: card_group
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1637703647
+          behavior_settings:
+            -
+              value: {  }
+          field_number_per_row:
+            -
+              entity: d40ca612-f00e-4a6d-82c4-f3957ba3406a
+          field_paragraph_card:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: d5b0f452-293c-4043-b342-e9c2c460b19f
+                  bundle: card_vertical
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637703670
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_paragraph_card_colour:
+                    -
+                      entity: f2285824-06ba-4421-816e-6331962d6f6c
+                  field_paragraph_card_image:
+                    -
+                      entity: 524647f3-a4d6-4d9a-82e8-08811c3834bf
+                      alt: 'Nairobi, Kenya'
+                      title: ''
+                      width: 1920
+                      height: 1080
+                  field_paragraph_card_link:
+                    -
+                      target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+                      title: 'See More'
+                      options: {  }
+                  field_paragraph_card_text:
+                    -
+                      value: 'You can enter description text here'
+                  field_paragraph_card_title:
+                    -
+                      value: 'Demo Title 1 - Cornflower Background'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 68dcdbdc-6007-401d-b9a3-e2673c0a7980
+                  bundle: card_vertical
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637703748
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_paragraph_card_colour:
+                    -
+                      entity: 48665abd-ea95-44fc-b095-c8d573f78f03
+                  field_paragraph_card_image:
+                    -
+                      entity: 0128df65-d952-40a4-9415-f9cc3cd8af91
+                      alt: 'Al-Khazneh, Petra, Jordan'
+                      title: ''
+                      width: 1920
+                      height: 1080
+                  field_paragraph_card_link:
+                    -
+                      target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+                      title: 'See More'
+                      options: {  }
+                  field_paragraph_card_text:
+                    -
+                      value: 'You can enter description text here'
+                  field_paragraph_card_title:
+                    -
+                      value: 'Demo Title 2 - UBC Blue Background'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: b86937ba-a8c6-4d47-8b56-1e32af314800
+                  bundle: card_vertical
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637703798
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_paragraph_card_colour:
+                    -
+                      entity: c7291afc-902f-49d2-877d-c4e53a9850b0
+                  field_paragraph_card_image:
+                    -
+                      entity: 12797433-63f8-44b6-87db-84759e43fae4
+                      alt: 'Paris, France'
+                      title: ''
+                      width: 1920
+                      height: 1080
+                  field_paragraph_card_link:
+                    -
+                      target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+                      title: 'See More'
+                      options: {  }
+                  field_paragraph_card_text:
+                    -
+                      value: 'You can enter description text here'
+                  field_paragraph_card_title:
+                    -
+                      value: 'Demo Title 3 - Light Grey Background'
+          field_paragraph_group_title:
+            -
+              value: 'Card Groups 3-Across, Vertical Cards'
+          field_paragraph_title_right:
+            -
+              value: false
+          field_paragraph_width_settings:
+            -
+              entity: df56aa17-1072-4dc1-9ca1-6241599565e5
+          field_region_vertical_spacing:
+            -
+              entity: 2e0bde03-a03d-4947-a769-0d5da7488384
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 263c7a93-9261-4766-8f6d-7f4a40c2e619
+          bundle: card_group
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1637696529
+          behavior_settings:
+            -
+              value: {  }
+          field_number_per_row:
+            -
+              entity: 0a0c1188-2e5e-45e2-b363-36c1f15b6817
+          field_paragraph_card:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: d2314715-601a-41c7-adcb-9960123ea5c3
+                  bundle: image_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637696559
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_paragraph_card_image:
+                    -
+                      entity: 2a426644-a873-4231-a4b4-b56ac40f9de0
+                      alt: 'Angel Falls, Venezuela'
+                      title: ''
+                      width: 1920
+                      height: 1080
+                  field_paragraph_card_link:
+                    -
+                      target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+                      title: 'See More'
+                      options: {  }
+                  field_paragraph_card_title:
+                    -
+                      value: 'Demo Title 1 - Text Bottom Center'
+                  field_paragraph_position_setting:
+                    -
+                      entity: e1bce679-be1c-4100-95b1-6ccdbfeb2f70
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 130bec18-783e-4e92-9bb9-1dbea4190769
+                  bundle: image_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637696627
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_paragraph_card_image:
+                    -
+                      entity: 3226dad2-df56-4b06-882f-4f4f54564842
+                      alt: 'Castello Aragonese d''Ischia, Naples, Italy'
+                      title: ''
+                      width: 1920
+                      height: 1080
+                  field_paragraph_card_link:
+                    -
+                      target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+                      title: 'See More'
+                      options: {  }
+                  field_paragraph_card_title:
+                    -
+                      value: 'Demo Title 2 - Text Middle Center'
+                  field_paragraph_position_setting:
+                    -
+                      entity: 115e218e-197f-4114-ace1-50564e668bf3
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: ef8db7b1-00a6-4dc2-9e1f-3e374455f4fc
+                  bundle: image_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637696672
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_paragraph_card_image:
+                    -
+                      entity: 71d2a65d-a8ec-41f6-a8a9-9354411f0127
+                      alt: 'Five Colored Ponds, Huanglong National Scenic Reserve, Songpan, Sichuan'
+                      title: ''
+                      width: 1920
+                      height: 1080
+                  field_paragraph_card_link:
+                    -
+                      target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+                      title: 'See More'
+                      options: {  }
+                  field_paragraph_card_title:
+                    -
+                      value: 'Demo Title 3 - Text Top Right'
+                  field_paragraph_position_setting:
+                    -
+                      entity: 96214a89-454e-4d4d-931c-35656cd321e8
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 99be52f3-c127-4bfc-be5f-e1f914f6d102
+                  bundle: image_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637697313
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_paragraph_card_image:
+                    -
+                      entity: 5137f869-be12-42d1-9239-d582e8c6714d
+                      alt: 'Lake Superior Provincial Park - Ontario'
+                      title: ''
+                      width: 1920
+                      height: 1080
+                  field_paragraph_card_link:
+                    -
+                      target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+                      title: 'See More'
+                      options: {  }
+                  field_paragraph_card_title:
+                    -
+                      value: 'Demo Title 4 - Text Bottom Center'
+                  field_paragraph_position_setting:
+                    -
+                      entity: e1bce679-be1c-4100-95b1-6ccdbfeb2f70
+          field_paragraph_group_title:
+            -
+              value: 'Card Groups 4-Across, Image Cards'
+          field_paragraph_title_right:
+            -
+              value: false
+          field_paragraph_width_settings:
+            -
+              entity: 80b6b429-f755-4134-837a-4defa68a62f3
+          field_region_vertical_spacing:
+            -
+              entity: 2e0bde03-a03d-4947-a769-0d5da7488384
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 06b87267-f753-48e9-8309-8d7a441546d6
+          bundle: card_group
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1637695968
+          behavior_settings:
+            -
+              value: {  }
+          field_number_per_row:
+            -
+              entity: 11890922-2039-448c-8608-73e8c9f9c4e3
+          field_paragraph_card:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 81f1869b-aff2-42aa-acb6-9a1bf9e0018d
+                  bundle: icon_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637696010
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_svg_icon:
+                    -
+                      entity: cc43892f-da11-4962-ae0e-688b6a4d398b
+                  field_paragraph_icon_card_link:
+                    -
+                      target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+                      title: 'See More'
+                      options: {  }
+                  field_paragraph_icon_card_text:
+                    -
+                      value: 'You can enter description text here'
+                  field_paragraph_icon_card_title:
+                    -
+                      value: 'Demo Title 1'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 243ab904-e03c-4717-8625-d7f8d8710d51
+                  bundle: icon_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637696472
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_svg_icon:
+                    -
+                      entity: 3e63a79a-c8b0-4f56-bfdb-0e26893c4149
+                  field_paragraph_icon_card_link:
+                    -
+                      target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+                      title: 'See More'
+                      options: {  }
+                  field_paragraph_icon_card_text:
+                    -
+                      value: 'You can enter description text here'
+                  field_paragraph_icon_card_title:
+                    -
+                      value: 'Demo Title 2'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: f794f345-b041-4eea-8077-b87fb2cff4e7
+                  bundle: icon_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637697457
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_svg_icon:
+                    -
+                      entity: a9574be7-2db3-4226-a4da-e6343ebf20c0
+                  field_paragraph_icon_card_link:
+                    -
+                      target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+                      title: 'See More'
+                      options: {  }
+                  field_paragraph_icon_card_text:
+                    -
+                      value: 'You can enter description text here'
+                  field_paragraph_icon_card_title:
+                    -
+                      value: 'Demo Title 3'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 582ea04f-76b6-4922-9c79-5bb3bde95fac
+                  bundle: icon_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637697579
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_svg_icon:
+                    -
+                      entity: e8b4415e-3c64-43ef-a4d8-24764ef5c8e4
+                  field_paragraph_icon_card_link:
+                    -
+                      target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+                      title: 'See More'
+                      options: {  }
+                  field_paragraph_icon_card_text:
+                    -
+                      value: 'You can enter description text here'
+                  field_paragraph_icon_card_title:
+                    -
+                      value: 'Demo Title 4'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 6249711d-19f6-4245-ad1d-62b29a733d65
+                  bundle: icon_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637697607
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_svg_icon:
+                    -
+                      entity: 027ec2f7-44ac-4ef7-b36d-7a949d1a8963
+                  field_paragraph_icon_card_link:
+                    -
+                      target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+                      title: 'See More'
+                      options: {  }
+                  field_paragraph_icon_card_text:
+                    -
+                      value: 'You can enter description text here'
+                  field_paragraph_icon_card_title:
+                    -
+                      value: 'Demo Title 5'
+          field_paragraph_group_title:
+            -
+              value: 'Card Groups 5-Across, Icon Cards'
+          field_paragraph_title_right:
+            -
+              value: false
+          field_paragraph_width_settings:
+            -
+              entity: 80b6b429-f755-4134-837a-4defa68a62f3
+          field_region_vertical_spacing:
+            -
+              entity: 2e0bde03-a03d-4947-a769-0d5da7488384
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 410e60fd-0d57-4270-af27-74ad2da33035
+          bundle: text
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1637706640
+          behavior_settings:
+            -
+              value: {  }
+          field_paragraph_card_colour:
+            -
+              entity: a602b850-39be-401f-8ee7-037903ecd27a
+          field_paragraph_text:
+            -
+              value: "<h2>Featurette</h2>\r\n"
+              format: filtered_text
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 3490cecb-fe5b-4e8e-bd29-9d572f5c402d
+          bundle: feature_image
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1637704621
+          behavior_settings:
+            -
+              value: {  }
+          field_paragraph_feature_caption:
+            -
+              value: 'You can enter caption text here'
+          field_paragraph_feature_image:
+            -
+              entity: bb15a3e9-86e3-4b0a-9689-7346cd1bd28b
+              alt: 'Ferrari Dino Concept Car'
+              title: ''
+              width: 2500
+              height: 1500
+          field_paragraph_feature_link:
+            -
+              target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+              title: 'See More'
+              options: {  }
+          field_paragraph_feature_title:
+            -
+              value: 'Demo Title 1 - Text Bottom Left'
+          field_paragraph_position_setting:
+            -
+              entity: bdea4e4c-0dfa-4e56-9839-cb3f484ce630
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 720291bf-fc4d-40ea-a734-9d64a87220d6
+          bundle: feature_image
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1637704717
+          behavior_settings:
+            -
+              value: {  }
+          field_paragraph_feature_caption:
+            -
+              value: 'You can enter caption text here'
+          field_paragraph_feature_image:
+            -
+              entity: 4e82a7e5-34d6-435c-8f23-7ed625a7d170
+              alt: 'Chevy Corvette 1972'
+              title: ''
+              width: 1600
+              height: 1200
+          field_paragraph_feature_link:
+            -
+              target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
+              title: 'See More'
+              options: {  }
+          field_paragraph_feature_title:
+            -
+              value: 'Demo Title 2 - Text Top Right'
+          field_paragraph_position_setting:
+            -
+              entity: 96214a89-454e-4d4d-931c-35656cd321e8
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 347ac08f-2fe1-4da2-b974-1ed2bccc22a4
+          bundle: text
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1637706651
+          behavior_settings:
+            -
+              value: {  }
+          field_paragraph_card_colour:
+            -
+              entity: a602b850-39be-401f-8ee7-037903ecd27a
+          field_paragraph_text:
+            -
+              value: "<h2>Tabcordion</h2>\r\n"
+              format: filtered_text
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 6e8edf9a-6915-4e0b-bde6-fced885aa2a8
+          bundle: tabcordion
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1637704776
+          behavior_settings:
+            -
+              value: {  }
+          field_paragraph_tab:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 618ab99b-d529-4444-9b63-e18ec1e8e395
+                  bundle: tab
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637704776
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_paragraph_tab_content:
+                    -
+                      value: "<p>You can enter full WYSIWYG content here.</p>\r\n"
+                      format: filtered_text
+                  field_paragraph_tab_title:
+                    -
+                      value: 'Tab 1'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 06341cd3-344c-4e63-a30c-f5c88c980fab
+                  bundle: tab
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637704824
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_paragraph_tab_content:
+                    -
+                      value: "<p>You can enter full WYSIWYG content here</p>\r\n"
+                      format: filtered_text
+                  field_paragraph_tab_title:
+                    -
+                      value: 'Tab 2'
+          field_region_vertical_spacing:
+            -
+              entity: 2e0bde03-a03d-4947-a769-0d5da7488384
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: d81022b7-c51d-4858-9039-f087c1e40ad5
+          bundle: text
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1637706696
+          behavior_settings:
+            -
+              value: {  }
+          field_paragraph_card_colour:
+            -
+              entity: a602b850-39be-401f-8ee7-037903ecd27a
+          field_paragraph_text:
+            -
+              value: "<h2>Text</h2>\r\n"
+              format: filtered_text
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 59244960-db1c-4c29-83d6-93d6cb185153
+          bundle: text
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1637704840
+          behavior_settings:
+            -
+              value: {  }
+          field_paragraph_card_colour:
+            -
+              entity: 48665abd-ea95-44fc-b095-c8d573f78f03
+          field_paragraph_text:
+            -
+              value: "<p><span class=\"text-white\">You can enter full WYSIWYG content here</span></p>\r\n"
+              format: filtered_text
+          field_region_vertical_spacing:
+            -
+              entity: 52ca3238-6aa2-4688-887b-648db4712d00

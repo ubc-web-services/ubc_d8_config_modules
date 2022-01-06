@@ -1,0 +1,180 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 55625bc7-22ec-4fb4-8de2-ca67fc6be338
+  bundle: ubc_landing_page
+  default_langcode: en
+  depends:
+    d40ca612-f00e-4a6d-82c4-f3957ba3406a: taxonomy_term
+    a28f01ec-477a-44dd-9881-5a9b4976c103: media
+    41e5baef-e601-4306-b8b8-44ef63c7f810: node
+    50b387a8-54bc-40d2-8db2-988c4deaecbc: media
+    debff5f8-cfcc-4012-9751-e2508dee5593: media
+    fcf1bd79-b608-4d75-98dd-63ac54f2bb73: file
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Editing Demonstration'
+  created:
+    -
+      value: 1637691719
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /editing-demonstration
+      langcode: en
+      pathauto: 1
+  body:
+    -
+      value: "<h4>You can see our display options here:</h4>\r\n"
+      format: filtered_text
+      summary: ''
+  field_landing_custom_content:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 46264026-bc8c-4dfb-b89d-cd0eac5b117d
+          bundle: card_group
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1637691850
+          behavior_settings:
+            -
+              value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_number_per_row:
+            -
+              entity: d40ca612-f00e-4a6d-82c4-f3957ba3406a
+          field_paragraph_card:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 56086e35-8f83-46ab-b38b-733550fb8465
+                  bundle: icon_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637691866
+                  behavior_settings:
+                    -
+                      value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
+                  field_card_svg_icon:
+                    -
+                      entity: a28f01ec-477a-44dd-9881-5a9b4976c103
+                  field_paragraph_icon_card_link:
+                    -
+                      target_uuid: 41e5baef-e601-4306-b8b8-44ef63c7f810
+                      title: 'See Typography Options'
+                      options: {  }
+                  field_paragraph_icon_card_title:
+                    -
+                      value: Typography
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 10b2cbb9-5d59-46a4-a284-ba47fb6eb47b
+                  bundle: icon_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637695521
+                  behavior_settings:
+                    -
+                      value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
+                  field_card_svg_icon:
+                    -
+                      entity: 50b387a8-54bc-40d2-8db2-988c4deaecbc
+                  field_paragraph_icon_card_link:
+                    -
+                      target_uuid: 41e5baef-e601-4306-b8b8-44ef63c7f810
+                      title: 'See Paragraph Options'
+                      options: {  }
+                  field_paragraph_icon_card_title:
+                    -
+                      value: Paragraphs
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 9f4cc152-eb7f-4ef0-84fd-ff2520130f89
+                  bundle: icon_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1637695562
+                  behavior_settings:
+                    -
+                      value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
+                  field_card_svg_icon:
+                    -
+                      entity: debff5f8-cfcc-4012-9751-e2508dee5593
+                  field_paragraph_icon_card_link:
+                    -
+                      target_uuid: 41e5baef-e601-4306-b8b8-44ef63c7f810
+                      title: 'See WYSIWYG Tools'
+                      options: {  }
+                  field_paragraph_icon_card_title:
+                    -
+                      value: WYSIWYG
+          field_paragraph_title_right:
+            -
+              value: false
+  field_landing_feature_image:
+    -
+      entity: fcf1bd79-b608-4d75-98dd-63ac54f2bb73
+      alt: 'pretty landscape'
+      title: ''
+      width: 1920
+      height: 1080

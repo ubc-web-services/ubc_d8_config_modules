@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: cc43892f-da11-4962-ae0e-688b6a4d398b
+  bundle: svg_icon
+  default_langcode: en
+  depends:
+    ea3ae454-f3c1-4093-896b-0e9dd73e5c03: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: it-icon-3.svg
+  created:
+    -
+      value: 1637696390
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image_1:
+    -
+      entity: ea3ae454-f3c1-4093-896b-0e9dd73e5c03
+      alt: 'IT Icon'
+      title: ''
+      width: 400
+      height: 400

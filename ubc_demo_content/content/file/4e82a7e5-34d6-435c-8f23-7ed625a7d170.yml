@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 4e82a7e5-34d6-435c-8f23-7ed625a7d170
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 'Dream Car1.jpg'
+  uri:
+    -
+      value: 'public://feature-images/2021-11/Dream Car1.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 675692
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1637704735

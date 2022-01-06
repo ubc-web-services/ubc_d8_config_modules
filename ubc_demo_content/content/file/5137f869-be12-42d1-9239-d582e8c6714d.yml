@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 5137f869-be12-42d1-9239-d582e8c6714d
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 'Lake Superior Provincial Park - Ontario.jpg'
+  uri:
+    -
+      value: 'public://card-images/2021-11/Lake Superior Provincial Park - Ontario.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 514922
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1637697382

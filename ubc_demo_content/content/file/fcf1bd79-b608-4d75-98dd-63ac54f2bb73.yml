@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: fcf1bd79-b608-4d75-98dd-63ac54f2bb73
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 'Ao Phang Nga National Park - Phang Nga Bay, Thailand.jpg'
+  uri:
+    -
+      value: 'public://feature-images/2021-11/Ao Phang Nga National Park - Phang Nga Bay, Thailand.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 647283
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1637691760

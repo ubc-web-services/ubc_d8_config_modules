@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: ea3ae454-f3c1-4093-896b-0e9dd73e5c03
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: it-icon-3.svg
+  uri:
+    -
+      value: 'public://2021-11/it-icon-3.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 76857
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1637696390

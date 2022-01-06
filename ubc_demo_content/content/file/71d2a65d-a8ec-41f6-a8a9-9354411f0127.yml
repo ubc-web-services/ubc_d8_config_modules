@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 71d2a65d-a8ec-41f6-a8a9-9354411f0127
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 'Five Colored Ponds, Huanglong National Scenic Reserve, Songpan, Sichuan.jpg'
+  uri:
+    -
+      value: 'public://card-images/2021-11/Five Colored Ponds, Huanglong National Scenic Reserve, Songpan, Sichuan.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 1871604
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1637696710
