@@ -21,7 +21,7 @@ _meta:
     f2285824-06ba-4421-816e-6331962d6f6c: taxonomy_term
     524647f3-a4d6-4d9a-82e8-08811c3834bf: file
     48665abd-ea95-44fc-b095-c8d573f78f03: taxonomy_term
-    0128df65-d952-40a4-9415-f9cc3cd8af91: file
+    580528b9-f73c-43d9-b719-fc235291ed18: file
     c7291afc-902f-49d2-877d-c4e53a9850b0: taxonomy_term
     12797433-63f8-44b6-87db-84759e43fae4: file
     df56aa17-1072-4dc1-9ca1-6241599565e5: taxonomy_term
@@ -93,9 +93,6 @@ default:
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
-            -
-              value: true
           field_number_per_row:
             -
               entity: bfa77349-1b8c-4d15-9c63-833cb9ceb475
@@ -118,9 +115,6 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  revision_translation_affected:
-                    -
-                      value: true
                   field_paragraph_card_colour:
                     -
                       entity: adc03c01-23c8-443e-af16-bf82c2d77e67
@@ -301,6 +295,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          revision_translation_affected:
+            -
+              value: true
           field_number_per_row:
             -
               entity: d40ca612-f00e-4a6d-82c4-f3957ba3406a
@@ -362,16 +359,19 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_paragraph_card_colour:
                     -
                       entity: 48665abd-ea95-44fc-b095-c8d573f78f03
                   field_paragraph_card_image:
                     -
-                      entity: 0128df65-d952-40a4-9415-f9cc3cd8af91
-                      alt: 'Al-Khazneh, Petra, Jordan'
+                      entity: 580528b9-f73c-43d9-b719-fc235291ed18
+                      alt: blossoms
                       title: ''
-                      width: 1920
-                      height: 1080
+                      width: 2048
+                      height: 1363
                   field_paragraph_card_link:
                     -
                       target_uuid: 212f8ad7-52cd-42f0-8125-2220b6fa4818
