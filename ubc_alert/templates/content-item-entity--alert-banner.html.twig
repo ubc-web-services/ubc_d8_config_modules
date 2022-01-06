@@ -15,6 +15,11 @@
  * @ingroup themeable
  */
 #}
+{% set wrapperClasses = create_attribute() %}
+{% set buttonClasses = create_attribute() %}
+{% set iconClasses = create_attribute() %}
+{% set titleClasses = create_attribute() %}
+{% set contentClasses = create_attribute() %}
 {% set alertStyle = content.field_alert_type['#items'].getString() %}
 {%
   set classes = [
