@@ -15,11 +15,11 @@
  * @ingroup themeable
  */
 #}
-{% set wrapperClasses = create_attribute() %}
-{% set buttonClasses = create_attribute() %}
-{% set iconClasses = create_attribute() %}
-{% set titleClasses = create_attribute() %}
-{% set contentClasses = create_attribute() %}
+{% set wrapper_attributes = create_attribute() %}
+{% set button_attributes = create_attribute() %}
+{% set icon_attributes = create_attribute() %}
+{% set title_attributes = create_attribute() %}
+{% set content_attributes = create_attribute() %}
 {% set alertStyle = content.field_alert_type['#items'].getString() %}
 {%
   set classes = [
@@ -90,18 +90,18 @@
 %}
 {% set card_icon = content.field_alert_icon['#items'].entity.field_id.value %}
 <div{{ attributes.addClass(classes) }} role="status" aria-live="polite">
-  <div{{ attributes.addClass(wrapperClasses) }}>
-    <button{{ attributes.addClass(buttonClasses) }} data-dismiss="message">×</button>
+  <div{{ wrapper_attributes.addClass(wrapperClasses) }}>
+    <button{{ button_attributes.addClass(buttonClasses) }} data-dismiss="message">×</button>
     {% if not (content_item_entity.field_alert_icon.isEmpty == true) and content.field_alert_icon is defined %}
-    <svg{{ attributes.addClass(iconClasses) }} role="presentation">
+    <svg{{ icon_attributes.addClass(iconClasses) }} role="presentation">
       <use xlink:href="#{{ card_icon }}"></use>
     </svg>
     {% endif %}
     <div class="py-2">
       {% if not (content_item_entity.field_alert_title.isEmpty == true) and content.field_alert_title is defined %}
-        <h2{{ attributes.addClass(titleClasses) }}>{{ content.field_alert_title }}</h2>
+        <h2{{ title_attributes.addClass(titleClasses) }}>{{ content.field_alert_title }}</h2>
       {% endif %}
-      <div{{ attributes.addClass(contentClasses) }}>{{ content.field_alert_message.0 }}</div>
+      <div{{ content_attributes.addClass(contentClasses) }}>{{ content.field_alert_message.0 }}</div>
     </div>
   </div>
 </div>
