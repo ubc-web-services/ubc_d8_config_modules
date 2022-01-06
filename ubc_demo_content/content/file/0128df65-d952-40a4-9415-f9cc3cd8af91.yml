@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 0128df65-d952-40a4-9415-f9cc3cd8af91
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 'Al-Khazneh (Arabic الخزنة‎; The Treasury), Petra, Jordan.jpg'
+  uri:
+    -
+      value: 'public://2021-11/Al-Khazneh (Arabic الخزنة‎; The Treasury), Petra, Jordan.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 711756
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1637703770

@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: adc03c01-23c8-443e-af16-bf82c2d77e67
+  bundle: admin_background_color_settings
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'UBC Blue: Cobalt'
+  weight:
+    -
+      value: 4
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /admin-background-color-settings/ubc-blue-cobalt
+      langcode: en
+      pathauto: 1
+  field_class:
+    -
+      value: 'bg-ubc-blue-cobalt bg-dark'

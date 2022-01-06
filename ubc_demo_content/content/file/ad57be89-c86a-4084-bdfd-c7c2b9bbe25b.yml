@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: ad57be89-c86a-4084-bdfd-c7c2b9bbe25b
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: it-icon-32242.svg
+  uri:
+    -
+      value: 'public://2021-11/it-icon-32242.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 42239
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1637697535

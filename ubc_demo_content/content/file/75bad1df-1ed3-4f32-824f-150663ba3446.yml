@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 75bad1df-1ed3-4f32-824f-150663ba3446
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 'Lake Superior, North Shore - Minnesota.jpg'
+  uri:
+    -
+      value: 'public://feature-images/2021-11/Lake Superior, North Shore - Minnesota.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 666836
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1637711578

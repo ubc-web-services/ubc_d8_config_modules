@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 12797433-63f8-44b6-87db-84759e43fae4
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 'Paris, France.jpg'
+  uri:
+    -
+      value: 'public://2021-11/Paris, France.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 701229
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1637703961

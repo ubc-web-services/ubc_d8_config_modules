@@ -1,0 +1,66 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 76533441-7d2f-4d8a-9510-a27258935a49
+  bundle: ubc_announcement
+  default_langcode: en
+  depends:
+    301329c8-5dab-4199-855a-cbfc5ef2314c: file
+    e09d4256-a749-4a4b-a09c-765dc611b860: taxonomy_term
+    b154256e-044a-4669-a315-9c0ec0daf19f: taxonomy_term
+    5e1952ea-5c2e-4fb5-b101-d2bd60694384: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'News Article 5 with Mid-Length Title: Suspendisse felis sem, ornare eu imperdiet rhoncus, accumsan vitae justo.'
+  created:
+    -
+      value: 1637711153
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /news/november-11-2021/news-article-5-mid-length-title-suspendisse-felis-sem-ornare-eu-imperdiet
+      langcode: en
+      pathauto: 1
+  body:
+    -
+      value: "<p>Brief summary here that has to be manually entered since there is no node view.</p>\r\n"
+      format: filtered_text
+      summary: ''
+  field_announcement_external_link:
+    -
+      uri: 'https://google.ca'
+      title: 'Read Article'
+      options: {  }
+  field_announcement_feature_image:
+    -
+      entity: 301329c8-5dab-4199-855a-cbfc5ef2314c
+      alt: 'Lotus Lake, Khao Sam Roi Yot National Park, Thailand'
+      title: ''
+      width: 1920
+      height: 1200
+  field_announcement_tags:
+    -
+      entity: e09d4256-a749-4a4b-a09c-765dc611b860
+    -
+      entity: b154256e-044a-4669-a315-9c0ec0daf19f
+  field_announcement_type:
+    -
+      entity: 5e1952ea-5c2e-4fb5-b101-d2bd60694384

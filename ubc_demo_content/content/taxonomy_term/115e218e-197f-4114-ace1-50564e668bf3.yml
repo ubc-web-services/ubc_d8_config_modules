@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 115e218e-197f-4114-ace1-50564e668bf3
+  bundle: admin_postion_settings
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Text Middle Center'
+  weight:
+    -
+      value: 0
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /admin-postion-settings/text-middle-center
+      langcode: en
+      pathauto: 1
+  field_class:
+    -
+      value: 'place-content-center text-center'

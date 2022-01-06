@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: e9f8bae9-35e1-4ca3-aada-03b69b38ecf8
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 'Tea Fields - Cameron Highland, Malaysia.jpg'
+  uri:
+    -
+      value: 'public://feature-images/2021-11/Tea Fields - Cameron Highland, Malaysia.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 686936
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1637710272

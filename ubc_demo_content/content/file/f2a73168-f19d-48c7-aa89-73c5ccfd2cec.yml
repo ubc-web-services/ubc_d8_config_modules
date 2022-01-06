@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: f2a73168-f19d-48c7-aa89-73c5ccfd2cec
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 'Lake Eibsee, Bavaria, Germany.jpg'
+  uri:
+    -
+      value: 'public://feature-images/2021-11/Lake Eibsee, Bavaria, Germany.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 398418
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1637709816
