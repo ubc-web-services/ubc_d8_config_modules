@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * Implements HOOK_theme_suggestions_HOOK_alter
+ */
+function ubc_alert_theme_suggestions_content_item_alter(&$suggestions, array $variables) {
+  $suggestions = array();
+  $content_item = $variables['elements']['#content_item'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+  $type = $content_item->getType();
+
+  $suggestions[] = 'content_item_entity__' . $sanitized_view_mode;
+  $suggestions[] = 'content_item_entity__' . $type;
+  $suggestions[] = 'content_item_entity__' . $type . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ubc_alert_theme($existing, $type, $theme, $path) {
+  return [
+    'content_item_entity__alert_banner' => [
+      'base hook' => 'content_item_entity'
+    ],
+  ];
+}
