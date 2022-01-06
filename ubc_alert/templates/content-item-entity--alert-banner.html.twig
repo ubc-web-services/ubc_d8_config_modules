@@ -26,12 +26,13 @@
     'shadow-lg',
     'my-0',
     'p-0',
+    'js-dismiss',
   ]
 %}
 {% set card_icon = content.field_alert_icon['#items'].entity.field_id.value %}
 <div{{ attributes.addClass(classes) }} role="status" aria-live="polite">
   <div class="container relative flex items-center px-4 mx-auto sm--px-0">
-    <button class="absolute top-0 right-0 px-4 py-3 leading-none text-black close hover--bg-white-transparent hover--no-underline hover--text-black" data-dismiss="message">×</button>
+    <button class="absolute top-0 right-0 px-4 py-3 leading-none text-black close hover--bg-white-transparent hover--no-underline hover--text-black js-dismiss__trigger" data-dismiss="message">×</button>
     {% if not (content_item_entity.field_alert_icon.isEmpty == true) and content.field_alert_icon is defined %}
     <svg role="presentation" class="flex-none inline-block w-12 h-12 mr-4 xl--w-20 xl--h-20 text-ubc-blue xl--mr-8">
       <use xlink:href="#{{ card_icon }}"></use>
@@ -39,9 +40,9 @@
     {% endif %}
     <div class="py-2">
       {% if not (content_item_entity.field_alert_title.isEmpty == true) and content.field_alert_title is defined %}
-        <h2 class="mt-2 h4">{{ content.field_alert_title }}</h2>
+        <h2 class="mt-0 message__title h4">{{ content.field_alert_title }}</h2>
       {% endif %}
-      {{ content.field_alert_message }}
+      <div class="message__content first-child--mt-0">{{ content.field_alert_message.0 }}</div>
     </div>
   </div>
 </div>
