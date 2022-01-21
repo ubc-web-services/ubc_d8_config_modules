@@ -4,15 +4,12 @@
  * Implements HOOK_theme_suggestions_HOOK_alter
  */
 function ubc_paragraph_entities_theme_suggestions_paragraph_alter(&$suggestions, array $variables) {
-  $suggestions = array();
   $paragraph = $variables['elements']['#paragraph'];
   $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
-  $type = $paragraph->getType();
 
   $suggestions[] = 'ubc_paragraph__' . $sanitized_view_mode;
-  $suggestions[] = 'ubc_paragraph__' . $type;
-  $suggestions[] = 'ubc_paragraph__' . $type . '__' . $sanitized_view_mode;
-  return $suggestions;
+  $suggestions[] = 'ubc_paragraph__' . $paragraph->bundle();
+  $suggestions[] = 'ubc_paragraph__' . $paragraph->bundle() . '__' . $sanitized_view_mode;
 }
 
 /**
