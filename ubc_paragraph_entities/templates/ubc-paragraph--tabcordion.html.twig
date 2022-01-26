@@ -38,6 +38,7 @@
  * @ingroup themeable
  */
 #}
+
 {% set layout_attributes = create_attribute() %}
 {%
   set classes = [
@@ -66,22 +67,83 @@
 
 {% block paragraph %}
 <div{{ attributes.addClass(classes) }}>
-  <tabs{{ layout_attributes.addClass(layout_classes, padding_classes) }}>
-  {% for key, value in paragraph.field_paragraph_tab.value %}
-    {% set tabid = paragraph.field_paragraph_tab[key].entity.id() %}
-    {% set tabtitle = paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_title.value %}
-    {% set tabcontent = paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_content.value|check_markup(paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_content.format) %}
+  {% if clf_vue %}
+    <tabs{{ layout_attributes.addClass(layout_classes, padding_classes) }}>
+    {% for key, value in paragraph.field_paragraph_tab.value %}
+      {% set tabid = paragraph.field_paragraph_tab[key].entity.id() %}
+      {% set tabtitle = paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_title.value %}
+      {% set tabcontent = paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_content.value|check_markup(paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_content.format) %}
 
-    {% if key == 0 %}
-    <tab name="{{ tabtitle }}" class="flow-root text-formatted" :selected="true">
-      {{ tabcontent }}
-    </tab>
-    {% else %}
-    <tab name="{{ tabtitle }}" class="flow-root text-formatted">
-      {{ tabcontent }}
-    </tab>
-    {% endif %}
-  {% endfor %}
-  </tabs>
+      {% if key == 0 %}
+      <tab name="{{ tabtitle }}" class="flow-root text-formatted" :selected="true">
+        {{ tabcontent }}
+      </tab>
+      {% else %}
+      <tab name="{{ tabtitle }}" class="flow-root text-formatted">
+        {{ tabcontent }}
+      </tab>
+      {% endif %}
+    {% endfor %}
+    </tabs>
+  {% else %}
+    <div{{ layout_attributes.addClass(layout_classes, padding_classes) }}>
+      <ul class="nav nav-tabs tabcordion__links" role="tablist">
+        {% for key, value in paragraph.field_paragraph_tab.value %}
+          {% set tabid = paragraph.field_paragraph_tab[key].entity.id() %}
+          {% set tabtitle = paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_title.value %}
+
+          {% if key == 0 %}
+            <li class="nav-item tabcordion__tab" role="presentation">
+              <button id="tab-{{ tabid }}" data-bs-target="#pane-{{ tabid }}" class="nav-link active" data-bs-toggle="tab" role="tab" type="button" aria-controls="tab-{{ tabid }}" aria-selected="true">{{ tabtitle }}</button>
+            </li>
+          {% else %}
+            <li class="nav-item tabcordion__tab">
+              <button id="tab-{{ tabid }}" data-bs-target="#pane-{{ tabid }}" class="nav-link" data-bs-toggle="tab" role="tab" type="button" aria-controls="tab-{{ tabid }}" aria-selected="false">{{ tabtitle }}</button>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+      <div class="tab-content">
+        {% for key, value in paragraph.field_paragraph_tab.value %}
+          {% set tabid = paragraph.field_paragraph_tab[key].entity.id() %}
+          {% set tabtitle = paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_title.value %}
+          {% set tabcontent = paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_content.value|check_markup(paragraph.field_paragraph_tab[key].entity.field_paragraph_tab_content.format) %}
+
+          {% if key == 0 %}
+          <div id="pane-{{ tabid }}" class="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-{{ tabid }}">
+            <div class="card-header" role="tab" id="heading-{{ tabid }}">
+              <h5 class="my-0">
+                <button class="tabcordion__heading" data-bs-toggle="collapse" data-bs-target="#collapse-{{ tabid }}" aria-expanded="false" aria-controls="collapse-{{ tabid }}" type="button">
+                  {{ tabtitle }}
+                </button>
+              </h5>
+            </div>
+            <div id="collapse-{{ tabid }}" class="collapse show fade tabcordion__content" data-parent="#content" role="tabpanel" aria-labelledby="heading-{{ tabid }}">
+              <div class="flow-root text-formatted">
+                {{ tabcontent }}
+              </div>
+            </div>
+          </div>
+          {% else %}
+          <div id="pane-{{ tabid }}" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-{{ tabid }}">
+            <div class="card-header" role="tab" id="heading-{{ tabid }}">
+              <h5 class="my-0">
+                <button class="collapsed tabcordion__heading" data-bs-toggle="collapse" data-bs-target="#collapse-{{ tabid }}" aria-expanded="false" aria-controls="collapse-{{ tabid }}" type="button">
+                  {{ tabtitle }}
+                </button>
+              </h5>
+            </div>
+            <div id="collapse-{{ tabid }}" class="collapse fade tabcordion__content" data-parent="#content" role="tabpanel" aria-labelledby="heading-{{ tabid }}">
+              <div class="flow-root text-formatted">
+                {{ tabcontent }}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
 </div>
 {% endblock paragraph %}
