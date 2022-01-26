@@ -89,12 +89,21 @@
   </header>
   {% endif %}
   <div{{ layout_attributes.addClass(layout_classes) }}>
-    <tiny-slider speed="200" items="1" slide-by="page"
-      mouse-drag center auto-width gutter="0" edge-padding="0">
-      {% block content %}
-        {{ content.field_slide }}
-      {% endblock %}
-    </tiny-slider>
+    {% if clf_vue %}
+      <tiny-slider speed="200" items="1" slide-by="page"
+        mouse-drag center auto-width gutter="0" edge-padding="0">
+        {% block content %}
+          {{ content.field_slide }}
+        {% endblock %}
+      </tiny-slider>
+    {% else %}
+      {{ attach_library('kraken/tiny-slider') }}
+      <div class="slideshow">
+        {% block content %}
+          {{ content.field_slide }}
+        {% endblock %}
+      </div>
+    {% endif %}
   </div>
 </section>
 {% endblock paragraph %}
