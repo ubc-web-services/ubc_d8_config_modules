@@ -12,7 +12,7 @@ id: paragraph.tabcordion.field_region_vertical_spacing
 field_name: field_region_vertical_spacing
 entity_type: paragraph
 bundle: tabcordion
-label: 'Region Vertical Spacing'
+label: 'Region Spacing'
 description: 'Add up to two classes - <strong>one</strong> for <em>margin</em> and <strong>one</strong> for <em>padding</em>. Adding two padding or two margin classes will lead to inconsistent results.'
 required: false
 translatable: false

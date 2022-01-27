@@ -118,10 +118,14 @@ function ubc_taxonomy_terms_admin_install() {
   // Vertical Spacing Classes
   $vspacevocab = 'admin_vertical_spacing_settings';
   $vspaceitems = array(
-    'Loose' => 'py-16',
-    'None' => 'py-0',
-    'Normal' => 'py-12',
-    'Tight' => 'py-6',
+    'Margin: Normal' => 'my-12',
+    'Margin: Small' => 'my-6',
+    'Margin: Large' => 'my-16',
+    'Margin: None' => 'my-0',
+    'Padding: Normal' => 'py-12',
+    'Padding: Small' => 'py-6',
+    'Padding: Large' => 'py-16',
+    'Padding: None' => 'py-0',
   );
   foreach ($vspaceitems as $key => $value) {
     $term = Term::create(array(
@@ -156,20 +160,9 @@ function ubc_taxonomy_terms_admin_install() {
 /**
  * Implements hook_uninstall().
  *
- * Our content types will live on in the Drupal installation, even after this
- * module is uninstalled. This is a good thing, since it allows the user to
- * make decisions about their fate. Therefore we should give the user the
- * option of deleting them.
- *
- * Since we told Drupal that our ubc_taxonomy_terms_admin is locked, we now have
- * to tell it to unlock.
- *
  * @ingroup ubc_taxonomy_terms_admin
  */
 /* function ubc_taxonomy_terms_admin_uninstall() {
-  $locked = Drupal::state()->get('node.type.locked');
-  unset($locked['ubc_taxonomy_terms_admin']);
-  Drupal::state()->set('node.type.locked', $locked);
 }
  */
 
@@ -178,31 +171,7 @@ function ubc_taxonomy_terms_admin_install() {
  * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
  * https://www.jeffgeerling.com/blog/2017/add-set-taxonomy-terms-custom-drupal-modules-update-hook
  */
-function ubc_taxonomy_terms_admin_update_8001() {
+/*
+function ubc_taxonomy_terms_admin_update_9002() {
 }
-
-/**
- * ADD tags.
- * https://www.jeffgeerling.com/blog/2017/add-set-taxonomy-terms-custom-drupal-modules-update-hook
- */
-/* function ubc_taxonomy_terms_admin_update_8002() {
-  $vocab = 'admin_background_color_settings';
-  $items = [
-    'White',
-    'Light Grey',
-    'UBC Blue',
-    'UBC Blue: Sea',
-    'UBC Blue: Cobalt',
-    'UBC Blue: Neptune',
-    'UBC Blue: Cornflower',
-    'UBC Blue: Polar',
-  ];
-  foreach ($items as $item) {
-    $term = Term::create(array(
-      'parent' => array(),
-      'name' => $item,
-      'vid' => $vocab,
-      //'field_class' => [$url],
-    ))->save();
-  }
-} */
+*/
