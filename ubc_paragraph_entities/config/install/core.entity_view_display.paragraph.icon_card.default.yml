@@ -3,15 +3,17 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.icon_card.field_card_svg_icon
+    - field.field.paragraph.icon_card.field_paragraph_card_colour
     - field.field.paragraph.icon_card.field_paragraph_icon_card_link
     - field.field.paragraph.icon_card.field_paragraph_icon_card_text
     - field.field.paragraph.icon_card.field_paragraph_icon_card_title
+    - field.field.paragraph.icon_card.field_paragraph_icon_layout
     - paragraphs.paragraphs_type.icon_card
+  module:
+    - link
   enforced:
     module:
       - ubc_paragraph_entities
-  module:
-    - link
 id: paragraph.icon_card.default
 targetEntityType: paragraph
 bundle: icon_card
@@ -19,15 +21,23 @@ mode: default
 content:
   field_card_svg_icon:
     type: entity_reference_entity_view
-    weight: 0
     label: hidden
     settings:
       view_mode: large_icon
       link: false
     third_party_settings: {  }
+    weight: 0
+    region: content
+  field_paragraph_card_colour:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
     region: content
   field_paragraph_icon_card_link:
-    weight: 1
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -36,21 +46,29 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 1
     region: content
   field_paragraph_icon_card_text:
-    weight: 3
+    type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 3
     region: content
   field_paragraph_icon_card_title:
-    weight: 2
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 2
+    region: content
+  field_paragraph_icon_layout:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 5
     region: content
 hidden: {  }
