@@ -5,6 +5,7 @@ package: UBC Web Services
 dependencies:
   - drupal:entity_reference_revisions
   - drupal:field_group
+  - drupal:focal_point
   - drupal:image
   - drupal:link
   - drupal:node

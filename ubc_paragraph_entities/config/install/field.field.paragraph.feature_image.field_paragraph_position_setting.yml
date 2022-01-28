@@ -9,7 +9,7 @@ id: paragraph.feature_image.field_paragraph_position_setting
 field_name: field_paragraph_position_setting
 entity_type: paragraph
 bundle: feature_image
-label: 'Featurette Position'
+label: 'Featurette Text Position'
 description: 'Choose where the title and link should appear over top of the image (if used).'
 required: true
 translatable: false

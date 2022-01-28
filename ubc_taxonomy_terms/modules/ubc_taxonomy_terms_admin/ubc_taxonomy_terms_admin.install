@@ -77,6 +77,22 @@ function ubc_taxonomy_terms_admin_install() {
     ))->save();
   }
 
+    // Icon Position Classes
+    $iconpositionvocab = 'admin_icon_position';
+    $iconpositionitems = array(
+      'Icon Top' => 'flex-col',
+      'Icon Left' => 'flex-row',
+      'Icon Right' => 'flex-row-reverse',
+    );
+    foreach ($iconpositionitems as $key => $value) {
+      $term = Term::create(array(
+        'parent' => array(),
+        'name' =>$key,
+        'vid' => $iconpositionvocab,
+        'field_class' => $value,
+      ))->save();
+    }
+
   // Text Position Classes
   $textvocab = 'admin_postion_settings';
   $textitems = array(

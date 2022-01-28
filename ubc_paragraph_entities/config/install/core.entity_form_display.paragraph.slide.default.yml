@@ -8,7 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.slide
   module:
     - maxlength
-    - svg_image
+    - focal_point
 id: paragraph.slide.default
 targetEntityType: paragraph
 bundle: slide
@@ -18,9 +18,11 @@ content:
     weight: 0
     settings:
       progress_indicator: throbber
-      preview_image_style: thumbnail
+      preview_image_style: medium
+      preview_link: true
+      offsets: '50,50'
     third_party_settings: {  }
-    type: image_image
+    type: image_focal_point
     region: content
   field_slide_title:
     type: string_textfield

@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_icon_layout
+    - paragraphs.paragraphs_type.icon_card
+    - taxonomy.vocabulary.admin_icon_position
+  content:
+    - 'taxonomy_term:admin_icon_position:e3eca253-d3e4-4a59-9692-c4403e2c5ffe'
+id: paragraph.icon_card.field_paragraph_icon_layout
+field_name: field_paragraph_icon_layout
+entity_type: paragraph
+bundle: icon_card
+label: 'Icon Layout'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: e3eca253-d3e4-4a59-9692-c4403e2c5ffe
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      admin_icon_position: admin_icon_position
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
