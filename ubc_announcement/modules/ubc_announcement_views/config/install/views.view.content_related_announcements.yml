@@ -58,7 +58,7 @@ display:
       style:
         type: html_list
         options:
-          row_class: 'mb-8 md--mb-0 md--w-1/2 lg--w-1/4'
+          row_class: 'mb-8 md--mb-0 md--w-half lg--w-one-quarter'
           default_row_class: false
           uses_fields: false
           type: ul
