@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_region_vertical_spacing
+    - paragraphs.paragraphs_type.feature_image
+    - taxonomy.vocabulary.admin_vertical_spacing_settings
+id: paragraph.feature_image.field_region_vertical_spacing
+field_name: field_region_vertical_spacing
+entity_type: paragraph
+bundle: feature_image
+label: 'Region Vertical Spacing'
+description: 'Add up to two classes - <strong>one</strong> for <em>margin</em> and <strong>one</strong> for <em>padding</em>. Adding two padding or two margin classes will lead to inconsistent results.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      admin_vertical_spacing_settings: admin_vertical_spacing_settings
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
