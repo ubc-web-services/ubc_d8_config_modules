@@ -10,6 +10,7 @@ dependencies:
   - drupal:paragraphs
   - drupal:responsive_image
   - drupal:taxonomy
+  - drupal:text_summary_options
   - drupal:tour
   - drupal:toolbar
   - ubc_paragraph_entities:ubc_paragraph_entities
