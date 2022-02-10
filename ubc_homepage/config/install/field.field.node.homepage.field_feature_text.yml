@@ -9,10 +9,7 @@ dependencies:
     - text
 third_party_settings:
   allowed_formats:
-    simple: simple
-    filtered_text: '0'
-    restricted_html: '0'
-    plain_text: '0'
+    - simple
 id: node.homepage.field_feature_text
 field_name: field_feature_text
 entity_type: node

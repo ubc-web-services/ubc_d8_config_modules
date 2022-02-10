@@ -11,6 +11,7 @@ dependencies:
   - drupal:responsive_image
   - drupal:taxonomy
   - drupal:toolbar
+  - ubc_editor_config_simple:ubc_editor_config_simple
   - ubc_image_styles:ubc_image_styles
   - ubc_paragraph_entities:ubc_paragraph_entities
 core: '8.x'
