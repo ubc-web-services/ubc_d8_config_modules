@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: date_readable_w_dow
+label: 'Date: readable w dow'
+locked: false
+pattern: 'l, F j, Y'
