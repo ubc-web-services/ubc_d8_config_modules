@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: eyNKH_n9RKeSGOOL3DCx2NFKKb3GGw4ZFRnPvSektj0
 id: date_readable_w_time
 label: 'Date: readable w time'
 locked: false
