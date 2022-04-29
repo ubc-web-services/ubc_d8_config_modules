@@ -58,7 +58,12 @@ settings:
         -
           name: Widgets
           items:
+            - accordiontoggle
             - accordion
+            - card-horizontal
+            - card-one
+            - card-two
+            - card-three
         -
           name: Tools
           items:
