@@ -16,3 +16,70 @@ function ubc_paragraph_entities_update_8001() {
   return 'The Full Width Image entity has been updated.';
 }
 */
+
+
+/**
+ * Update configuration from file.
+ * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
+ */
+ /**
+ * Update 9001 - add missing scheduling options.
+ */
+function ubc_paragraph_entities_update_9001() {
+  $config = \Drupal::service('config.factory');
+  $config_path = getPath('module', 'ubc_paragraph_entities') . '/config/install/field.storage.paragraph.field_background_colour.yml';
+  $data = Yaml::parse(file_get_contents($config_path));
+  $config->getEditable('field.storage.paragraph.field_background_colour')
+    ->setData($data)
+    ->save(TRUE);
+
+  $config_path2 = getPath('module', 'ubc_paragraph_entities') . '/config/install/field.field.paragraph.card_group.field_background_colour.yml';
+  $data2 = Yaml::parse(file_get_contents($config_path2));
+  $config->getEditable('field.field.paragraph.card_group.field_background_colour')
+    ->setData($data2)
+    ->save(TRUE);
+
+  $config->getEditable('core.entity_form_display.paragraph.card_group.default')
+    ->set('dependencies.config', [
+      'field.field.paragraph.card_group.field_background_colour',
+      'field.field.paragraph.card_group.field_number_per_row',
+      'field.field.paragraph.card_group.field_paragraph_card',
+      'field.field.paragraph.card_group.field_paragraph_group_title',
+      'field.field.paragraph.card_group.field_paragraph_title_right',
+      'field.field.paragraph.card_group.field_paragraph_width_settings',
+      'field.field.paragraph.card_group.field_region_vertical_spacing',
+      'paragraphs.paragraphs_type.card_group',
+    ])
+    ->set('content.field_background_colour', [
+      'type' => 'options_select',
+      'weight' => '0',
+      'region' => ' content',
+      'settings' => [],
+      'third_party_settings' => [],
+    ])
+    ->save();
+
+    $config->getEditable('core.entity_view_display.paragraph.card_group.default')
+    ->set('dependencies.config', [
+      'field.field.paragraph.card_group.field_background_colour',
+      'field.field.paragraph.card_group.field_number_per_row',
+      'field.field.paragraph.card_group.field_paragraph_card',
+      'field.field.paragraph.card_group.field_paragraph_group_title',
+      'field.field.paragraph.card_group.field_paragraph_title_right',
+      'field.field.paragraph.card_group.field_paragraph_width_settings',
+      'field.field.paragraph.card_group.field_region_vertical_spacing',
+      'paragraphs.paragraphs_type.card_group',
+    ])
+    ->set('content.field_background_colour', [
+      'type' => 'entity_reference_label',
+      'label' => 'hidden',
+      'weight' => '0',
+      'region' => ' content',
+      'settings' => [
+        'link' => '',
+      ],
+      'third_party_settings' => [],
+    ])
+    ->save();
+    return 'Background Colour options added to Paragraph Card Group.';
+}
