@@ -48,6 +48,7 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
+    paragraph.field_background_colour.0.entity.field_class.value ? paragraph.field_background_colour.0.entity.field_class.value|clean_class,
     paragraph.field_region_vertical_spacing.0.entity.field_class.value ? paragraph.field_region_vertical_spacing.0.entity.field_class.value|clean_class,
     paragraph.field_region_vertical_spacing.1.entity.field_class.value ? paragraph.field_region_vertical_spacing.1.entity.field_class.value|clean_class,
   ]
@@ -97,7 +98,7 @@
   <div{{ layout_attributes.addClass(layout_classes, padding_classes) }}>
     <div{{ grid_attributes.addClass(grid_classes) }}>
     {% block content %}
-      {{ content|without('field_region_vertical_spacing', 'field_paragraph_group_title', 'field_number_per_row', 'field_paragraph_width_settings') }}
+      {{ content|without('field_region_vertical_spacing', 'field_paragraph_group_title', 'field_number_per_row', 'field_paragraph_width_settings', 'field_background_colour') }}
     {% endblock %}
     </div>
   </div>

@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_colour
+    - paragraphs.paragraphs_type.card_group
+    - taxonomy.vocabulary.admin_background_color_settings
+  content:
+    - 'taxonomy_term:admin_background_color_settings:ab47ba82-9c74-4396-86bc-378457f29232'
+id: paragraph.card_group.field_background_colour
+field_name: field_background_colour
+entity_type: paragraph
+bundle: card_group
+label: 'Background Colour'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: ab47ba82-9c74-4396-86bc-378457f29232
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      admin_background_color_settings: admin_background_color_settings
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
