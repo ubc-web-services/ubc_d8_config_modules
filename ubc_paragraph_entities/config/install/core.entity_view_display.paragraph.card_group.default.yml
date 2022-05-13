@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.card_group.field_background_colour
     - field.field.paragraph.card_group.field_number_per_row
     - field.field.paragraph.card_group.field_paragraph_card
     - field.field.paragraph.card_group.field_paragraph_group_title
@@ -9,56 +10,64 @@ dependencies:
     - field.field.paragraph.card_group.field_paragraph_width_settings
     - field.field.paragraph.card_group.field_region_vertical_spacing
     - paragraphs.paragraphs_type.card_group
+  module:
+    - entity_reference_revisions
   enforced:
     module:
       - ubc_paragraph_entities
-  module:
-    - entity_reference_revisions
 id: paragraph.card_group.default
 targetEntityType: paragraph
 bundle: card_group
 mode: default
 content:
-  field_number_per_row:
-    weight: 4
+  field_background_colour:
+    type: entity_reference_label
     label: hidden
     settings:
       link: false
     third_party_settings: {  }
+    weight: 5
+    region: content
+  field_number_per_row:
     type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
     region: content
   field_paragraph_card:
     type: entity_reference_revisions_entity_view
-    weight: 0
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 0
     region: content
   field_paragraph_group_title:
     type: string
-    weight: 3
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 3
+    region: content
   field_paragraph_width_settings:
-    weight: 1
+    type: entity_reference_label
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 1
     region: content
   field_region_vertical_spacing:
-    weight: 2
+    type: entity_reference_label
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 2
     region: content
 hidden:
   field_paragraph_title_right: true
