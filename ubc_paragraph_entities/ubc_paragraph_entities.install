@@ -1,40 +1,25 @@
 <?php
 
-/**
- * Update configuration from file.
- * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
- */
-/*
-function ubc_paragraph_entities_update_8001() {
-  $config_path = drupal_get_path('module', 'ubc_paragraph_entities') . '/config/install/core.entity_form_display.paragraph.full_width_image.default.yml';
-  $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
-  \Drupal::configFactory()
-    ->getEditable('core.entity_form_display.paragraph.full_width_image.default.yml')
-    ->setData($data)
-    ->save(TRUE);
-
-  return 'The Full Width Image entity has been updated.';
-}
-*/
-
+use Symfony\Component\Yaml\Yaml;
 
 /**
  * Update configuration from file.
  * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
  */
  /**
- * Update 9001 - add missing scheduling options.
+ * Update 9001 - add additional card group colour options.
  */
+
 function ubc_paragraph_entities_update_9001() {
   $config = \Drupal::service('config.factory');
-  $config_path = getPath('module', 'ubc_paragraph_entities') . '/config/install/field.storage.paragraph.field_background_colour.yml';
-  $data = Yaml::parse(file_get_contents($config_path));
+  $config_path = \Drupal::service('module_handler')->getModule('ubc_paragraph_entities')->getPath() . '/config/install/field.storage.paragraph.field_background_colour.yml';
+  $data = Yaml::parseFile($config_path);
   $config->getEditable('field.storage.paragraph.field_background_colour')
     ->setData($data)
     ->save(TRUE);
 
-  $config_path2 = getPath('module', 'ubc_paragraph_entities') . '/config/install/field.field.paragraph.card_group.field_background_colour.yml';
-  $data2 = Yaml::parse(file_get_contents($config_path2));
+  $config_path2 = \Drupal::service('module_handler')->getModule('ubc_paragraph_entities')->getPath() .'/config/install/field.field.paragraph.card_group.field_background_colour.yml';
+  $data2 = Yaml::parseFile($config_path2);
   $config->getEditable('field.field.paragraph.card_group.field_background_colour')
     ->setData($data2)
     ->save(TRUE);
