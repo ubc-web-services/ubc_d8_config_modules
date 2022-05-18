@@ -16,12 +16,12 @@ function ubc_paragraph_entities_update_9029() {
   $config = \Drupal::service('config.factory');
   $config_path = \Drupal::service('module_handler')->getModule('ubc_paragraph_entities')->getPath() . '/config/install/field.storage.paragraph.field_background_colour.yml';
   $data = Yaml::parseFile($config_path);
-  if (!FieldStorageConfig::loadByName($data['paragraph'], $data['field_background_colour'])) {
+  if (!FieldStorageConfig::loadByName($data['entity_type'], $data['field_name'])) {
     FieldStorageConfig::create($data)->save();
   }
   $config_path2 = \Drupal::service('module_handler')->getModule('ubc_paragraph_entities')->getPath() .'/config/install/field.field.paragraph.card_group.field_background_colour.yml';
   $data2 = Yaml::parseFile($config_path2);
-  if (!FieldConfig::loadByName($data2['paragraph'], $data2['card_group'], $data2['field_background_colour'])) {
+  if (!FieldConfig::loadByName($data2['entity_type'], $data2['bundle'], $data2['field_name'])) {
     FieldConfig::create($data2)->save();
   }
 
