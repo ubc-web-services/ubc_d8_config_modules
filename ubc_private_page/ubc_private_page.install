@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * Implements hook_install().
+ *
+ * @ingroup ubc_private_page
+ */
+function ubc_private_page_install() {
+}
+
+/**
+ * Implements hook_uninstall().
+ *
+ * @ingroup ubc_private_page
+ */
+function ubc_private_page_uninstall() {
+}
+
+ /**
+ * Update 9001 - sample update.
+ */
+ /*
+function ubc_private_page_update_9001() {
+}
+*/

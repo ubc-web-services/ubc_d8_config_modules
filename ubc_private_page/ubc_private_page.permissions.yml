@@ -1,0 +1,4 @@
+view private pages:
+  title: 'View Private Pages'
+  description: 'View Private Page nodes.'
+  restrict access: TRUE
