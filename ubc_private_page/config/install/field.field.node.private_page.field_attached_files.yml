@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attached_files
+    - node.type.private_page
+  module:
+    - file
+id: node.private_page.field_attached_files
+field_name: field_attached_files
+entity_type: node
+bundle: private_page
+label: 'Attached Files'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf docx doc'
+  max_filesize: ''
+  description_field: false
+field_type: file

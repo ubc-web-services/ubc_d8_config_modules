@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: private-pages
+label: 'Private Pages'
+description: ''
+locked: false
