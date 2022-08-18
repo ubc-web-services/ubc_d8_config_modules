@@ -10,9 +10,9 @@ use Drupal\Core\Entity\EntityInterface;
 function ubc_private_page_node_access(EntityInterface $entity, $operation, AccountInterface $account) {
     // Checks for private node type when viewing node.
     $type = $entity->bundle();
-    if ($operation === 'view') {
+    if ($operation === 'view' && $type === 'private_page') {
         if ($account
-        ->hasPermission('view private pages') && $type === 'private_page') {
+        ->hasPermission('view private pages')) {
             return AccessResult::allowed();
         }
         else {
