@@ -9,6 +9,7 @@ dependencies:
   - drupal:node
   - drupal:paragraphs
   - drupal:responsive_image
+  - drupal:simple_sitemap
   - drupal:taxonomy
   - drupal:toolbar
   - ubc_editor_config_simple:ubc_editor_config_simple
