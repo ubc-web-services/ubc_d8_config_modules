@@ -6,6 +6,7 @@ dependencies:
   - drupal:field_group
   - drupal:metatag
   - drupal:node
+  - drupal:simple_sitemap
   - drupal:tour
   - drupal:toolbar
 core: '8.x'

@@ -9,6 +9,7 @@ dependencies:
   - drupal:node
   - drupal:paragraphs
   - drupal:responsive_image
+  - drupal:simple_sitemap
   - drupal:taxonomy
   - drupal:text_summary_options
   - drupal:tour

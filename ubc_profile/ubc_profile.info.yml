@@ -10,6 +10,7 @@ dependencies:
   - drupal:pathauto
   - drupal:responsive_image
   - drupal:simple_gmap
+  - drupal:simple_sitemap
   - drupal:telephone
   - drupal:taxonomy
   - drupal:tour
