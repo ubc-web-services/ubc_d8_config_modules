@@ -45,7 +45,7 @@
  * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
  */
 function ubc_user_roles_update_8001() {
-  $config_path = drupal_get_path('module', 'ubc_user_roles') . '/config/install/user.role.content_creator.yml';
+  $config_path = \Drupal::service('extension.list.module')->getPath('ubc_user_roles') . '/config/install/user.role.content_creator.yml';
   $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
   \Drupal::configFactory()
     ->getEditable('user.role.content_creator.yml')

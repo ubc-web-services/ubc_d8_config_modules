@@ -45,7 +45,7 @@ function ubc_landing_page_uninstall() {
  * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
  */
 function ubc_landing_page_update_8001() {
-  $config_path = drupal_get_path('module', 'ubc_landing_page') . '/config/install/core.entity_form_display.node.ubc_landing_page.default.yml';
+  $config_path = \Drupal::service('extension.list.module')->getPath('ubc_landing_page') . '/config/install/core.entity_form_display.node.ubc_landing_page.default.yml';
   $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
   \Drupal::configFactory()
     ->getEditable('core.entity_form_display.node.ubc_landing_page.default.yml')

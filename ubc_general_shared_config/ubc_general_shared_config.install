@@ -45,7 +45,7 @@
  * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
  */
 function ubc_general_shared_config_update_8001() {
-  $config_path = drupal_get_path('module', 'ubc_general_shared_config') . '/config/install/pathauto.pattern.taxonomy_terms.yml';
+  $config_path = \Drupal::service('extension.list.module')->getPath('ubc_general_shared_config') . '/config/install/pathauto.pattern.taxonomy_terms.yml';
   $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
   \Drupal::configFactory()
     ->getEditable('pathauto.pattern.taxonomy_terms.yml')

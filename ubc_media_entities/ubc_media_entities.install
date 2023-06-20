@@ -7,7 +7,7 @@
  */
  /*
 function ubc_media_entities_update_8001() {
-  $config_path = drupal_get_path('module', 'ubc_media_entities') . '/config/install/core.entity_form_display.media.private_file.default.yml';
+  $config_path = \Drupal::service('extension.list.module')->getPath('ubc_media_entities') . '/config/install/core.entity_form_display.media.private_file.default.yml';
   $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
   \Drupal::configFactory()
     ->getEditable('core.entity_form_display.media.private_file.default.yml')
