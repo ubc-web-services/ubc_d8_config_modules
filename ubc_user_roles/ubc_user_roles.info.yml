@@ -10,5 +10,4 @@ dependencies:
   - ubc_landing_page:ubc_landing_page
   - ubc_page:ubc_page
   - ubc_profile:ubc_profile
-core: '8.x'
-core_version_requirement: ^8 || ^9
+ccore_version_requirement: ^9 || ^10

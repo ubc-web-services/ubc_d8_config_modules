@@ -13,5 +13,4 @@ dependencies:
   - ubc_color_box_widget:ubc_color_box_widget
   - ubc_image_styles:ubc_image_styles
   - ubc_media_entities:ubc_media_entities
-core: '8.x'
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^10
