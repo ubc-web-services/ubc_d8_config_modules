@@ -46,7 +46,7 @@
  */
  /*
 function ubc_custom_block_types_update_8001() {
-  $config_path = drupal_get_path('module', 'ubc_custom_block_types') . '/config/install/pathauto.pattern.taxonomy_terms.yml';
+  $config_path = \Drupal::service('extension.list.module')->getPath('ubc_custom_block_types') . '/config/install/pathauto.pattern.taxonomy_terms.yml';
   $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
   \Drupal::configFactory()
     ->getEditable('pathauto.pattern.taxonomy_terms.yml')

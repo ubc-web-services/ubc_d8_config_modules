@@ -31,7 +31,7 @@ function ubc_landing_page_views_uninstall() {
  */
  /*
 function ubc_landing_page_views_update_8001() {
-  $config_path = drupal_get_path('module', 'ubc_landing_page_views') . '/config/install/views.view.announcements.yml';
+  $config_path = \Drupal::service('extension.list.module')->getPath('ubc_landing_page_views') . '/config/install/views.view.announcements.yml';
   $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
   \Drupal::configFactory()
     ->getEditable('views.view.announcements.yml')

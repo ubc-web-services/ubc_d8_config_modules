@@ -7,7 +7,7 @@
  */
  /*
 function ubc_alert_update_8001() {
-  $config_path = drupal_get_path('module', 'ubc_alert') . '/config/install/core.entity_form_display.node.announcement.default.yml';
+  $config_path = \Drupal::service('extension.list.module')->getPath('ubc_alert') . '/config/install/core.entity_form_display.node.announcement.default.yml';
   $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
   \Drupal::configFactory()
     ->getEditable('core.entity_form_display.node.announcement.default.yml')
