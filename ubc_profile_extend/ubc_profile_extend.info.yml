@@ -4,5 +4,4 @@ description: This module extends the custom Profile content type and its fields.
 package: UBC Web Services
 dependencies:
   - ubc_profile:ubc_profile
-core: '8.x'
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^10
