@@ -7,7 +7,7 @@ dependencies:
   - drupal:anchor_link
   - drupal:editor_button_link
   - drupal:linkit
-  - d10compat_inline_responsive_images:d10compat_inline_responsive_images
+  - d10compat_inline_responsive_images:inline_responsive_images
   - ubc_ckeditor_widgets:ubc_ckeditor_widgets
   - ubc_column_options_widget:ubc_column_options_widget
   - ubc_color_box_widget:ubc_color_box_widget
