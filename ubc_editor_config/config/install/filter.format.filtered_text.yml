@@ -11,7 +11,7 @@ dependencies:
       - ubc_editor_config
   module:
     - editor_button_link
-    - inline_responsive_images
+    - d10compat_inline_responsive_images
     - linkit
     - media
     - responsive_table_filter
@@ -49,7 +49,7 @@ filters:
       filter_url_length: 72
   filter_imagestyle:
     id: filter_imagestyle
-    provider: inline_responsive_images
+    provider: d10compat_inline_responsive_images
     status: false
     weight: -41
     settings:
@@ -85,7 +85,7 @@ filters:
       image_style_wide: '0'
   filter_responsive_image_style:
     id: filter_responsive_image_style
-    provider: inline_responsive_images
+    provider: d10compat_inline_responsive_images
     status: true
     weight: -44
     settings:
