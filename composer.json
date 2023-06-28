@@ -3,7 +3,6 @@
   "description": "Custom UBC Drupal8 Modules",
   "type": "drupal-module",
   "require": {
-    "ubc-web-services/d10compat_inline_responsive_images": "^2.3@dev",
-    "ubc-web-services/ubc_ckeditor_widgets": "^3.0@beta"
+    "ubc-web-services/ubc_ckeditor_widgets": "^3.1"
   }
 }
