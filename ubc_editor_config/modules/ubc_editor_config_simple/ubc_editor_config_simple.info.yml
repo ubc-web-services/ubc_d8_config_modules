@@ -4,6 +4,5 @@ description: This module defines a simple configuration for Drupal's WYSIWYG, cK
 package: UBC Web Services
 dependencies:
   - drupal:ckeditor
-  - drupal:editor_button_link
   - drupal:linkit
 core_version_requirement: ^9 || ^10
