@@ -1,0 +1,12 @@
+create terms in department_or_unit:
+  title: 'Department or Unit: Create terms'
+  description: ''
+  restrict access: TRUE
+delete terms in department_or_unit:
+  title: 'Department or Unit: Delete terms'
+  description: ''
+  restrict access: TRUE
+edit terms in department_or_unit:
+  title: 'Department or Unit: Edit terms'
+  description: ''
+  restrict access: TRUE

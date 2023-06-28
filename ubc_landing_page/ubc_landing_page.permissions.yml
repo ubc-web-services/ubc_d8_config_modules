@@ -1,36 +1,32 @@
-view private pages:
-  title: 'View Private Pages'
-  description: 'View Private Page nodes.'
-  restrict access: TRUE
-create private_page content:
-  title: 'Private Page: Create new content'
+create ubc_landing_page content:
+  title: 'Landing Page: Create new content'
   description: ''
   restrict access: TRUE
-delete any private_page content:
-  title: 'Private Page: Delete any content'
+delete any ubc_landing_page content:
+  title: 'Landing Page: Delete any content'
   description: ''
   restrict access: TRUE
-delete own private_page content:
-  title: 'Private Page: Delete own content'
+delete own ubc_landing_page content:
+  title: 'Landing Page: Delete own content'
   description: 'Note that anonymous users with this permission are able to delete any content created by any anonymous user.'
   restrict access: TRUE
-delete private_page revisions:
-  title: 'Private Page: Delete revisions'
+delete ubc_landing_page revisions:
+  title: 'Landing Page: Delete revisions'
   description: 'To delete a revision, you also need permission to delete the content item.'
   restrict access: TRUE
-edit any private_page content:
-  title: 'Private Page: Edit any content'
+edit any ubc_landing_page content:
+  title: 'Landing Page: Edit any content'
   description: ''
   restrict access: TRUE
-edit own private_page content:
-  title: 'Private Page: Edit own content'
+edit own ubc_landing_page content:
+  title: 'Landing Page: Edit own content'
   description: 'Note that anonymous users with this permission are able to edit any content created by any anonymous user.'
   restrict access: TRUE
-revert private_page revisions:
-  title: 'Private Page: Revert revisions'
+revert ubc_landing_page revisions:
+  title: 'Landing Page: Revert revisions'
   description: 'To revert a revision, you also need permission to edit the content item.'
   restrict access: TRUE
-view private_page revisions:
-  title: 'Private Page: View revisions'
+view ubc_landing_page revisions:
+  title: 'Landing Page: View revisions'
   description: 'To view a revision, you also need permission to view the content item.'
   restrict access: TRUE
