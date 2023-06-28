@@ -3,7 +3,6 @@ type: module
 description: This module defines default configuration for Drupal's WYSIWYG, cKeditor.
 package: UBC Web Services
 dependencies:
-  - drupal:ckeditor
   - drupal:linkit
   - ubc_ckeditor_widgets:ubc_ckeditor_widgets
   - ubc_image_styles:ubc_image_styles
