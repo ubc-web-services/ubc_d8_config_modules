@@ -1,0 +1,60 @@
+create file media:
+  title: 'File: Create new media'
+  description: ''
+  restrict access: TRUE
+create private_file media:
+  title: 'Private File: Create new media'
+  description: ''
+  restrict access: TRUE
+create svg_icon media:
+  title: 'Svg Icon: Create new media'
+  description: ''
+  restrict access: TRUE
+delete any file media:
+  title: 'File: Delete any media'
+  description: ''
+  restrict access: TRUE
+delete any private_file media:
+  title: 'Private File: Delete any media'
+  description: ''
+  restrict access: TRUE
+delete any svg_icon media:
+  title: 'Svg Icon: Delete any media'
+  description: ''
+  restrict access: TRUE
+delete own file media:
+  title: 'File: Delete own media'
+  description: ''
+  restrict access: TRUE
+delete own private_file media:
+  title: 'Private File: Delete own media'
+  description: ''
+  restrict access: TRUE
+delete own svg_icon media:
+  title: 'Svg Icon: Delete own media'
+  description: ''
+  restrict access: TRUE
+edit any file media:
+  title: 'File: Edit any media'
+  description: ''
+  restrict access: TRUE
+edit any private_file media:
+  title: 'Private File: Edit any media'
+  description: ''
+  restrict access: TRUE
+edit any svg_icon media:
+  title: 'Svg Icon: Edit any media'
+  description: ''
+  restrict access: TRUE
+edit own file media:
+  title: 'File: Edit own media'
+  description: ''
+  restrict access: TRUE
+edit own private_file media:
+  title: 'Private File: Edit own media'
+  description: ''
+  restrict access: TRUE
+edit own svg_icon media:
+  title: 'Svg Icon: Edit own media'
+  description: ''
+  restrict access: TRUE

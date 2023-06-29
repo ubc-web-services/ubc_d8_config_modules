@@ -10,8 +10,6 @@ dependencies:
     module:
       - ubc_editor_config
   module:
-    - editor_button_link
-    - inline_responsive_images
     - linkit
     - media
     - responsive_table_filter
@@ -47,53 +45,6 @@ filters:
     weight: -45
     settings:
       filter_url_length: 72
-  filter_imagestyle:
-    id: filter_imagestyle
-    provider: inline_responsive_images
-    status: false
-    weight: -41
-    settings:
-      image_style_card_300x150: '0'
-      image_style_card_480x240: '0'
-      image_style_card_600x300: '0'
-      image_style_card_780x390: '0'
-      image_style_card_focal_point_lg: '0'
-      image_style_card_focal_point_sm: '0'
-      image_style_crop_thumbnail: '0'
-      image_style_hero_focal_point_1300: '0'
-      image_style_hero_focal_point_2600: '0'
-      image_style_hero_focal_point_325: '0'
-      image_style_hero_focal_point_650: '0'
-      image_style_hero_focal_point_970: '0'
-      image_style_icon_large: '0'
-      image_style_icon_small: '0'
-      image_style_large: '0'
-      image_style_linkit_result_thumbnail: '0'
-      image_style_max_1300x1300: '0'
-      image_style_max_2600x2600: '0'
-      image_style_max_325x325: '0'
-      image_style_max_640w: '0'
-      image_style_max_650x650: '0'
-      image_style_max_970x970: '0'
-      image_style_media_library: '0'
-      image_style_medium: '0'
-      image_style_square_200: '0'
-      image_style_square_400: '0'
-      image_style_square_600: '0'
-      image_style_square_focal_point_600: '0'
-      image_style_thumbnail: '0'
-      image_style_wide: '0'
-  filter_responsive_image_style:
-    id: filter_responsive_image_style
-    provider: inline_responsive_images
-    status: true
-    weight: -44
-    settings:
-      responsive_style_card: '1'
-      responsive_style_card_focal_point: '0'
-      responsive_style_hero_image: '0'
-      responsive_style_narrow: '1'
-      responsive_style_wide: '1'
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter
@@ -125,15 +76,6 @@ filters:
     weight: 0
     settings:
       title: true
-  editor_button_link_filter:
-    id: editor_button_link_filter
-    provider: editor_button_link
-    status: true
-    weight: 1
-    settings:
-      button_link_options: "|No Style\r\nunit-button|Unit Button\r\nunit-button unit-button--block|Full width Unit Button\r\n"
-      button_link_size_options: "|Text Normal\r\ntext-xs unit-button--text-xs|Text Extra Small\r\ntext-sm unit-button--text-sm|Text Small\r\ntext-lg unit-button--text-lg|Text Large\r\ntext-xl unit-button--text-xl|Text XLarge\r\ntext-2xl unit-button--text-2xl| Text XXLarge"
-      button_link_style_options: "|Default Style\r\nunit-button--light|Light Button\r\nunit-button--dark|Dark Button\r\nunit-button--simple|Simple Button\r\nunit-button--transparent|Transparent Button"
   media_embed:
     id: media_embed
     provider: media

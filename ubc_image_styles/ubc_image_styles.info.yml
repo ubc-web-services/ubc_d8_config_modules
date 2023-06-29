@@ -6,5 +6,4 @@ dependencies:
   - drupal:breakpoint
   - drupal:focal_point
   - drupal:responsive_image
-  - inline_responsive_images:inline_responsive_images
 core_version_requirement: ^9 || ^10

@@ -24,7 +24,6 @@ settings:
           items:
             - DrupalLink
             - DrupalUnlink
-            - Anchor
         -
           name: Lists
           items:
@@ -50,10 +49,6 @@ settings:
           items:
             - HorizontalRule
             - Table
-            - column-two-options-widget
-            - column-three-options-widget
-            - column-four-options-widget
-            - color-box-widget
             - DrupalMediaLibrary
         -
           name: Widgets
@@ -67,7 +62,6 @@ settings:
         -
           name: Tools
           items:
-            - A11ychecker
             - Undo
             - Redo
             - PasteText
@@ -81,7 +75,7 @@ settings:
     language:
       language_list: un
     stylescombo:
-      styles: "p.text-hug|Text Hug (remove top spacing)\r\np.text-lead.text-ubc-blue-sea|Lead Text\r\np.text-sm|Text: small\r\np.font-serif|Serif font\r\nspan.text-uppercase|Uppercase Text\r\nspan.text-lowercase|Lowercase Text\r\nspan.font-semibold|Semibold Text\r\nspan.text-grey-700|Grey Text\r\nspan.text-white|White Text\r\np.text-grey-700.text-uppercase.text-sm|Attribution, Footnote Text\r\nul.list-inline|List: inline\r\nul.list-bordered|List: bordered\r\nul.list-checked|List: checked\r\nol.list-inline|Ordered List: inline\r\nol.list-bordered|Ordered List: bordered\r\nol.list-checked|Ordered List: checked\r\ntable.table--plain|Table: plain\r\ntable.table--condensed |Table: condensed\r\ntable.table--striped |Table: striped\r\ntable.table--hover |Table: stripe on hover\r\ntd.w-half|Column width: 1/2\r\ntd.w-one-third|Column width: 1/3\r\ntd.w-one-quarter|Column width: 1/4\r\ntd.w-one-fifth|Column width: 1/5\r\ntd.w-one-sixth|Column width: 1/6"
+      styles: "p.text-hug|Text Hug (remove top spacing)\r\np.text-lead.text-ubc-blue-sea|Lead Text\r\np.text-sm|Text: small\r\np.font-serif|Serif font\r\nspan.text-uppercase|Uppercase Text\r\nspan.text-lowercase|Lowercase Text\r\nspan.font-semibold|Semibold Text\r\nspan.text-grey-700|Grey Text\r\nspan.text-white|White Text\r\np.text-grey-700.text-uppercase.text-sm|Attribution, Footnote Text\r\nul.list-inline|List: inline\r\nul.list-bordered|List: bordered\r\nul.list-checked|List: checked\r\nol.list-inline|Ordered List: inline\r\nol.list-bordered|Ordered List: bordered\r\nol.list-checked|Ordered List: checked"
 image_upload:
   status: true
   scheme: public

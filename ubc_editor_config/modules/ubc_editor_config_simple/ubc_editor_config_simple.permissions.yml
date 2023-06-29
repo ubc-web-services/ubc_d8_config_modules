@@ -1,0 +1,4 @@
+use text format simple:
+  title: 'Use the Simple text format'
+  description: 'Use the Simple Text format'
+  restrict access: TRUE

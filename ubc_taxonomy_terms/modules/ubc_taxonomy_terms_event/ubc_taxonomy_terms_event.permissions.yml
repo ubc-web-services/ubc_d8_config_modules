@@ -1,0 +1,12 @@
+create terms in event_category:
+  title: 'Event Category: Create terms'
+  description: ''
+  restrict access: TRUE
+delete terms in event_category:
+  title: 'Event Category: Delete terms'
+  description: ''
+  restrict access: TRUE
+edit terms in event_category:
+  title: 'Event Category: Edit terms'
+  description: ''
+  restrict access: TRUE
