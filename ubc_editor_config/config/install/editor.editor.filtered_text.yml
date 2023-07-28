@@ -3,84 +3,204 @@ status: true
 dependencies:
   config:
     - filter.format.filtered_text
-  enforced:
-    module:
-      - ubc_editor_config
   module:
-    - ckeditor
+    - ckeditor5
 format: filtered_text
-editor: ckeditor
+editor: ckeditor5
 settings:
   toolbar:
-    rows:
-      -
-        -
-          name: Formatting
-          items:
-            - Bold
-            - Italic
-        -
-          name: Links
-          items:
-            - DrupalLink
-            - DrupalUnlink
-        -
-          name: Lists
-          items:
-            - BulletedList
-            - NumberedList
-            - Outdent
-            - Indent
-            - JustifyLeft
-            - JustifyCenter
-            - JustifyRight
-        -
-          name: Style
-          items:
-            - Format
-            - Styles
-            - Blockquote
-            - Strike
-            - Superscript
-            - Subscript
-            - RemoveFormat
-        -
-          name: Layout
-          items:
-            - HorizontalRule
-            - Table
-            - DrupalMediaLibrary
-        -
-          name: Widgets
-          items:
-            - accordiontoggle
-            - accordion
-            - card-horizontal
-            - card-one
-            - card-two
-            - card-three
-        -
-          name: Tools
-          items:
-            - Undo
-            - Redo
-            - PasteText
-            - Maximize
-            - ShowBlocks
-            - Source
+    items:
+      - bold
+      - italic
+      - '|'
+      - link
+      - anchor
+      - '|'
+      - bulletedList
+      - numberedList
+      - outdent
+      - indent
+      - specialCharacters
+      - superscript
+      - subscript
+      - strikethrough
+      - alignment
+      - '|'
+      - blockQuote
+      - drupalInsertImage
+      - drupalMedia
+      - horizontalLine
+      - insertTable
+      - '-'
+      - heading
+      - style
+      - '|'
+      - UbcColorBox
+      - UbcColumnsTwo
+      - UbcColumnsThree
+      - UbcColumnsFour
+      - UbcAccordionToggle
+      - UbcAccordion
+      - '|'
+      - UbcCardHorizontal
+      - UbcCardVerticalOne
+      - UbcCardVerticalTwo
+      - UbcCardVerticalThree
+      - '|'
+      - undo
+      - redo
+      - Fullscreen
+      - sourceEditing
   plugins:
-    drupallink:
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Text Hug (remove top spacing)'
+          element: '<p class="text-hug">'
+        -
+          label: 'Lead Text'
+          element: '<p class="text-lead text-ubc-blue-sea">'
+        -
+          label: 'Text: small'
+          element: '<p class="text-sm">'
+        -
+          label: 'Serif font'
+          element: '<p class="font-serif">'
+        -
+          label: 'Uppercase Text'
+          element: '<span class="text-uppercase">'
+        -
+          label: 'Lowercase Text'
+          element: '<span class="text-lowercase">'
+        -
+          label: 'Semibold Text'
+          element: '<span class="font-semibold">'
+        -
+          label: 'Grey Text'
+          element: '<span class="text-grey-700">'
+        -
+          label: 'White Text'
+          element: '<span class="text-white">'
+        -
+          label: 'Attribution, Footnote Text'
+          element: '<p class="text-grey-700 text-uppercase text-sm">'
+        -
+          label: 'List: inline'
+          element: '<ul class="list-inline">'
+        -
+          label: 'List: bordered'
+          element: '<ul class="list-bordered">'
+        -
+          label: 'List: checked'
+          element: '<ul class="list-checked">'
+        -
+          label: 'Ordered List: inline'
+          element: '<ol class="list-inline">'
+        -
+          label: 'Ordered List: bordered'
+          element: '<ol class="list-bordered">'
+        -
+          label: 'Ordered List: checked'
+          element: '<ol class="list-checked">'
+        -
+          label: 'Unit Button'
+          element: '<a class="unit-button">'
+        -
+          label: 'Light Button'
+          element: '<a class="unit-button unit-button--light">'
+        -
+          label: 'Dark Button'
+          element: '<a class="unit-button unit-button--dark">'
+        -
+          label: 'Simple Button'
+          element: '<a class="unit-button unit-button--simple">'
+        -
+          label: 'Outline Button'
+          element: '<a class="unit-button unit-button--outline">'
+        -
+          label: 'Transparent Button'
+          element: '<a class="unit-button unit-button--transparent">'
+        -
+          label: 'Full-width Button'
+          element: '<a class="unit-button unit-button--block">'
+        -
+          label: 'Extra Small Button'
+          element: '<a class="unit-button text-xs unit-button--text-xs">'
+        -
+          label: 'Small Button'
+          element: '<a class="unit-button text-sm unit-button--text-sm">'
+        -
+          label: 'Large Button'
+          element: '<a class="unit-button text-lg unit-button--text-lg">'
+        -
+          label: 'XLarge Button'
+          element: '<a class="unit-button text-xl unit-button--text-xl">'
+        -
+          label: 'XXLarge Button'
+          element: '<a class="unit-button text-2xl unit-button--text-2xl">'
+    ckeditor5_sourceEditing:
+      allowed_tags:
+        - '<cite>'
+        - '<dd>'
+        - '<dl>'
+        - '<dt>'
+        - '<kbd>'
+        - '<samp>'
+        - '<strike>'
+        - '<drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title class>'
+        - '<iframe longdesc name scrolling src title align height frameborder width>'
+        - '<img src srcset alt title data-*>'
+        - '<svg viewbox aria-* class>'
+        - '<use xlink:href>'
+        - '<span class="text-* font-*">'
+        - '<a hreflang class id name data-* aria-*>'
+        - '<blockquote cite class="blockquote-* p-* px-* py-*">'
+        - '<drupal-media title class>'
+        - '<h2 id>'
+        - '<h3 id class>'
+        - '<h4 id class>'
+        - '<h5 id class>'
+        - '<h6 id class>'
+        - '<ol type class="list-*">'
+        - '<p class="text-* mt-* uppercase">'
+        - '<td class="w-*">'
+        - '<ul type class="list-*">'
+        - '<table class="table-*">'
+        - '<div aria-*>'
+        - '<button data-* class="widget-* unit-* text-*">'
+    ckeditor5_list:
+      reversed: true
+      startIndex: true
+    ckeditor5_alignment:
+      enabled_alignments:
+        - left
+        - center
+        - right
+        - justify
+    ckeditor5_imageResize:
+      allow_resize: true
+    media_media:
+      allow_view_mode_override: true
+    editor_advanced_link_link:
+      enabled_attributes:
+        - id
+        - rel
+        - target
+    linkit_extension:
       linkit_enabled: true
       linkit_profile: default
-    language:
-      language_list: un
-    stylescombo:
-      styles: "p.text-hug|Text Hug (remove top spacing)\r\np.text-lead.text-ubc-blue-sea|Lead Text\r\np.text-sm|Text: small\r\np.font-serif|Serif font\r\nspan.text-uppercase|Uppercase Text\r\nspan.text-lowercase|Lowercase Text\r\nspan.font-semibold|Semibold Text\r\nspan.text-grey-700|Grey Text\r\nspan.text-white|White Text\r\np.text-grey-700.text-uppercase.text-sm|Attribution, Footnote Text\r\nul.list-inline|List: inline\r\nul.list-bordered|List: bordered\r\nul.list-checked|List: checked\r\nol.list-inline|Ordered List: inline\r\nol.list-bordered|Ordered List: bordered\r\nol.list-checked|Ordered List: checked"
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: null
-    height: null
+    width: 0
+    height: 0

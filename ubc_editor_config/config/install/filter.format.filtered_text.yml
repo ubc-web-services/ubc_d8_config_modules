@@ -6,13 +6,14 @@ dependencies:
     - core.entity_view_mode.media.narrow
     - core.entity_view_mode.media.small_icon
     - core.entity_view_mode.media.square
-  enforced:
-    module:
-      - ubc_editor_config
   module:
+    - editor
     - linkit
     - media
     - responsive_table_filter
+  enforced:
+    module:
+      - ubc_editor_config
 name: 'Filtered Text'
 format: filtered_text
 weight: -20
@@ -35,7 +36,7 @@ filters:
     status: true
     weight: -50
     settings:
-      allowed_html: '<a name href id hreflang data-* target aria-* class=""> <blockquote cite class="blockquote-* p-* px-* py-*"> <br> <caption> <cite> <code> <dd> <dl> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title class=""> <drupal-media data-entity-type data-entity-uuid alt data-align data-caption data-view-mode title class=""> <dt> <em> <h2 id> <h3 id class=""> <h4 id class=""> <h5 id class=""> <h6 id class=""> <hr> <iframe longdesc name scrolling src title align height frameborder width> <img src srcset alt title data-*> <kbd> <li> <ol start type class="list-* list-inline list-bordered list-checked"> <p class="text-* mt-* uppercase text-hug text-lead text-ubc-blue-sea text-sm font-serif text-grey-700 text-uppercase"> <samp> <strike> <strong> <sub> <sup> <svg viewBox aria-* class=""> <tbody> <td colspan class="w-* w-half w-one-third w-one-quarter w-one-fifth w-one-sixth"> <tfoot> <th> <thead> <tr> <u> <use xlink:href> <ul type class="list-* list-inline list-bordered list-checked"> <span class="text-* font-* text-uppercase text-lowercase font-semibold text-grey-700 text-white"> <table class="table-* table--plain table--condensed table--striped table--hover "> <s> <div aria-* hidden class="accordion accordion--* accordion__* align-* bg-* card card--* card__* clearfix col-md-* columns--* fa fa-* first-* flex flex-* md--flex-* group hover--* js-* min-* my-* object-* p-* row second-* text-* third-* ubc-card ubc-card__* ubc-card--* unit-* widget-* widget-column-options widget-columns-2 widget--md--grid widget-region-one widget-region-two widget-columns-3 widget-region-three widget-region-four widget-color-box widget-content first-child--mt-0 widget-accordion js-reveal__parent js-reveal__trigger accordion__trigger js-reveal__target accordion__content widget-card--horizontal widget-card first-image ubc-card__media ubc-card__content_wrapper first-content ubc-card__content first-footer ubc-card__actions card--one widget-card! card--three md--flex-1 second-image second-content second-footer third-image third-content third-footer widget-card!card--two!md--flex-grid"> <button data-* data-state class="widget-* unit-* text-* widget-expandcollapse">'
+      allowed_html: '<a id target rel class="ck-anchor unit-button unit-button--light unit-button--dark unit-button--simple unit-button--outline unit-button--transparent unit-button--block text-xs unit-button--text-xs text-sm unit-button--text-sm text-lg unit-button--text-lg text-xl unit-button--text-xl text-2xl unit-button--text-2xl" name hreflang data-* aria-* href> <br> <p class="text-hug text-lead text-ubc-blue-sea text-sm font-serif text-grey-700 text-uppercase text-* mt-* uppercase text-align-left text-align-center text-align-right text-align-justify"> <h2 id class="card__title text-align-left text-align-center text-align-right text-align-justify"> <h3 id class> <h4 id class> <h5 id class> <h6 id class> <span class="text-uppercase text-lowercase font-semibold text-grey-700 text-white text-* font-*"> <ul class="list-inline list-bordered list-checked list-*" type> <ol class="list-inline list-bordered list-checked list-*" type reversed start> <cite> <dd> <dl> <dt> <kbd> <samp> <strike> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title class> <iframe longdesc name scrolling src title align height frameborder width> <img src srcset alt title data-* height width> <svg viewbox aria-* class> <use xlink:href> <blockquote cite class="blockquote-* p-* px-* py-*"> <drupal-media title class data-entity-type data-entity-uuid alt data-view-mode data-caption data-align> <td class="w-* w-half w-one-third w-one-quarter w-one-fifth w-one-sixth" rowspan colspan> <table class="table-* table--plain table--condensed table--striped table--hover"> <div aria-* class hidden data-*> <button data-* class="widget-* unit-* text-* text-xs widget-expandcollapse unit-button"> <strong> <em> <s> <sub> <sup> <li> <hr> <tr> <th rowspan colspan class="w-half w-one-third w-one-quarter w-one-fifth w-one-sixth"> <thead> <tbody> <tfoot> <caption> <figure class="responsive-figure-table" aria-live>'
       filter_html_help: false
       filter_html_nofollow: true
   filter_url:
@@ -48,7 +49,7 @@ filters:
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter
-    status: false
+    status: true
     weight: -40
     settings: {  }
   filter_autop:
@@ -83,18 +84,18 @@ filters:
     weight: 100
     settings:
       default_view_mode: full
-      allowed_media_types:
-        file: file
-        image: image
-        private_file: private_file
-        remote_video: remote_video
-        svg_icon: svg_icon
       allowed_view_modes:
         default: default
         full: full
         narrow: narrow
         small_icon: small_icon
         square: square
+      allowed_media_types:
+        file: file
+        image: image
+        private_file: private_file
+        remote_video: remote_video
+        svg_icon: svg_icon
   filter_responsive_table:
     id: filter_responsive_table
     provider: responsive_table_filter
@@ -103,3 +104,9 @@ filters:
     settings:
       wrapper_element: figure
       wrapper_classes: responsive-figure-table
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: 0
+    settings: {  }

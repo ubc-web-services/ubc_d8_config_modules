@@ -3,7 +3,6 @@ status: true
 dependencies:
   module:
     - linkit
-    - media
 name: Simple
 format: simple
 weight: 0
@@ -21,7 +20,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a name href id hreflang data-* target aria-* class=""> <br> <button data-* class="widget-* unit-* text-*"> <em> <strong> <code> <ul type> <ol start type> <li> <h2 id> <h3 id class=""> <h4 id class=""> <h5 id class=""> <h6 id class=""> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title class="">'
+      allowed_html: '<br> <p> <button data-* class="widget-* unit-* text-*"> <h2 id> <h3 id class> <h4 id class> <h5 id class> <h6 id class> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title class> <a hreflang class id name data-* aria-* href target="_blank" rel> <ul type> <ol type reversed start> <strong> <em> <li>'
       filter_html_help: true
       filter_html_nofollow: false
   linkit:
@@ -31,12 +30,3 @@ filters:
     weight: 0
     settings:
       title: true
-  media_embed:
-    id: media_embed
-    provider: media
-    status: false
-    weight: 100
-    settings:
-      default_view_mode: default
-      allowed_media_types: {  }
-      allowed_view_modes: {  }
