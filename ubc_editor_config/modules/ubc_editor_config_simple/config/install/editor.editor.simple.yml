@@ -4,40 +4,45 @@ dependencies:
   config:
     - filter.format.simple
   module:
-    - ckeditor
+    - ckeditor5
 format: simple
-editor: ckeditor
+editor: ckeditor5
 settings:
   toolbar:
-    rows:
-      -
-        -
-          name: Formatting
-          items:
-            - Bold
-            - Italic
-        -
-          name: Links
-          items:
-            - DrupalLink
-            - DrupalUnlink
-        -
-          name: Lists
-          items:
-            - BulletedList
-            - NumberedList
-        -
-          name: Tools
-          items:
-            - Source
+    items:
+      - bold
+      - italic
+      - '|'
+      - link
+      - '|'
+      - bulletedList
+      - numberedList
+      - '|'
+      - sourceEditing
   plugins:
-    drupallink:
+    ckeditor5_sourceEditing:
+      allowed_tags:
+        - '<button data-* class="widget-* unit-* text-*">'
+        - '<h2 id>'
+        - '<h3 id class>'
+        - '<h4 id class>'
+        - '<h5 id class>'
+        - '<h6 id class>'
+        - '<drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title class>'
+        - '<a hreflang class id name data-* aria-*>'
+        - '<ul type>'
+        - '<ol type>'
+    ckeditor5_list:
+      reversed: true
+      startIndex: true
+    editor_advanced_link_link:
+      enabled_attributes:
+        - id
+        - rel
+        - target
+    linkit_extension:
       linkit_enabled: true
       linkit_profile: default
-    language:
-      language_list: un
-    stylescombo:
-      styles: ''
 image_upload:
   status: false
   scheme: public
