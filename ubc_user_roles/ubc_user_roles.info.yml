@@ -3,6 +3,7 @@ type: module
 description: This module defines User Roles and permissions configuration.
 package: UBC Web Services
 dependencies:
+  - drupal:media_bulk_upload_dropzonejs
   - ubc_announcement:ubc_announcement
   - ubc_media_entities:ubc_media_entities
   - ubc_event:ubc_event
