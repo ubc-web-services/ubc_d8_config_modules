@@ -1,6 +1,41 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - taxonomy.vocabulary.tags
+  module:
+    - block
+    - contextual
+    - dropzonejs
+    - file
+    - file_delete
+    - google_analytics
+    - media
+    - media_bulk_upload
+    - metatag
+    - node
+    - path
+    - redirect
+    - role_delegation
+    - scheduler
+    - system
+    - taxonomy
+    - toolbar
+    - tour
+    - ubc_announcement
+    - ubc_editor_config
+    - ubc_event
+    - ubc_homepage
+    - ubc_landing_page
+    - ubc_media_entities
+    - ubc_page
+    - ubc_profile
+    - ubc_taxonomy_terms_department
+    - ubc_taxonomy_terms_event
+    - webform
 id: editor
 label: Editor
 weight: -7
