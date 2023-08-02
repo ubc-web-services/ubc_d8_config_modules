@@ -44,7 +44,7 @@
  * Update configuration from file.
  * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
  */
-function ubc_general_shared_config_update_8001() {
+/* function ubc_general_shared_config_update_8001() {
   $config_path = \Drupal::service('extension.list.module')->getPath('ubc_general_shared_config') . '/config/install/pathauto.pattern.taxonomy_terms.yml';
   $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
   \Drupal::configFactory()
@@ -53,12 +53,12 @@ function ubc_general_shared_config_update_8001() {
     ->save(TRUE);
 
   return 'The Taxonomy path has been updated.';
-}
+} */
 
 /**
  * Update pathauto config.
  */
-function ubc_general_shared_config_update_8002() {
+/* function ubc_general_shared_config_update_8002() {
   // Load all pattern configuration entities.
   foreach (\Drupal::configFactory()->listAll('pathauto.pattern.') as $pattern_config_name) {
     $pattern_config = \Drupal::configFactory()->getEditable($pattern_config_name);
@@ -76,5 +76,5 @@ function ubc_general_shared_config_update_8002() {
       }
     }
   }
-}
+} */
 

@@ -44,7 +44,7 @@ function ubc_page_uninstall() {
  * Update configuration from file.
  * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
  */
-function ubc_page_update_8001() {
+/* function ubc_page_update_8001() {
   $config_path = \Drupal::service('extension.list.module')->getPath('ubc_page') . '/config/install/core.entity_form_display.node.ubc_page.default.yml';
   $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
   \Drupal::configFactory()
@@ -54,3 +54,4 @@ function ubc_page_update_8001() {
 
   return 'The Page has been updated.';
 }
+ */
