@@ -44,7 +44,7 @@ function ubc_event_uninstall() {
  * Update configuration from file.
  * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
  */
-function ubc_event_update_8001() {
+/* function ubc_event_update_8001() {
   $config_path = \Drupal::service('extension.list.module')->getPath('ubc_event') . '/config/install/core.entity_form_display.node.ubc_event.default.yml';
   $data = \Symfony\Component\Yaml\Yaml::parse($config_path);
   \Drupal::configFactory()
@@ -53,4 +53,4 @@ function ubc_event_update_8001() {
     ->save(TRUE);
 
   return 'The Event has been updated.';
-}
+} */

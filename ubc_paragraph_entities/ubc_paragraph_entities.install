@@ -8,65 +8,9 @@ use \Symfony\Component\Yaml\Yaml;
  * Update configuration from file.
  */
  /**
- * Update 9029 - add additional card group colour options.
+ * Update 9029 - REMOVED
  */
 
 function ubc_paragraph_entities_update_9029() {
-  // if the field doesn't exist, create it
-  $config = \Drupal::service('config.factory');
-  $config_path = \Drupal::service('module_handler')->getModule('ubc_paragraph_entities')->getPath() . '/config/install/field.storage.paragraph.field_background_colour.yml';
-  $data = Yaml::parseFile($config_path);
-  if (!FieldStorageConfig::loadByName($data['entity_type'], $data['field_name'])) {
-    FieldStorageConfig::create($data)->save();
-  }
-  $config_path2 = \Drupal::service('module_handler')->getModule('ubc_paragraph_entities')->getPath() .'/config/install/field.field.paragraph.card_group.field_background_colour.yml';
-  $data2 = Yaml::parseFile($config_path2);
-  if (!FieldConfig::loadByName($data2['entity_type'], $data2['bundle'], $data2['field_name'])) {
-    FieldConfig::create($data2)->save();
-  }
 
-  // then update the card group form and view mode
-  $config->getEditable('core.entity_form_display.paragraph.card_group.default')
-    ->set('dependencies.config', [
-      'field.field.paragraph.card_group.field_background_colour',
-      'field.field.paragraph.card_group.field_number_per_row',
-      'field.field.paragraph.card_group.field_paragraph_card',
-      'field.field.paragraph.card_group.field_paragraph_group_title',
-      'field.field.paragraph.card_group.field_paragraph_title_right',
-      'field.field.paragraph.card_group.field_paragraph_width_settings',
-      'field.field.paragraph.card_group.field_region_vertical_spacing',
-      'paragraphs.paragraphs_type.card_group',
-    ])
-    ->set('content.field_background_colour', [
-      'type' => 'options_select',
-      'weight' => '0',
-      'region' => ' content',
-      'settings' => [],
-      'third_party_settings' => [],
-    ])
-    ->save();
-
-    $config->getEditable('core.entity_view_display.paragraph.card_group.default')
-    ->set('dependencies.config', [
-      'field.field.paragraph.card_group.field_background_colour',
-      'field.field.paragraph.card_group.field_number_per_row',
-      'field.field.paragraph.card_group.field_paragraph_card',
-      'field.field.paragraph.card_group.field_paragraph_group_title',
-      'field.field.paragraph.card_group.field_paragraph_title_right',
-      'field.field.paragraph.card_group.field_paragraph_width_settings',
-      'field.field.paragraph.card_group.field_region_vertical_spacing',
-      'paragraphs.paragraphs_type.card_group',
-    ])
-    ->set('content.field_background_colour', [
-      'type' => 'entity_reference_label',
-      'label' => 'hidden',
-      'weight' => '0',
-      'region' => ' content',
-      'settings' => [
-        'link' => '',
-      ],
-      'third_party_settings' => [],
-    ])
-    ->save();
-    return 'Background Colour options added to Paragraph Card Group.';
 }
