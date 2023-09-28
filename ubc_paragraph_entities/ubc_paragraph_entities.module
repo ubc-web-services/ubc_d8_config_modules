@@ -17,6 +17,10 @@ function ubc_paragraph_entities_theme_suggestions_paragraph_alter(&$suggestions,
  */
 function ubc_paragraph_entities_theme($existing, $type, $theme, $path) {
   return [
+    // added back in as suggestion only
+    'ubc_paragraph__card' => [
+      'base hook' => 'paragraph'
+    ],
     'ubc_paragraph__card_group' => [
       'base hook' => 'paragraph'
     ],
