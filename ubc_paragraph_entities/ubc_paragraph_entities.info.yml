@@ -20,4 +20,4 @@ dependencies:
   - ubc_image_styles:ubc_image_styles
   - ubc_media_entities:ubc_media_entities
   - ubc_taxonomy_terms_admin:ubc_taxonomy_terms_admin
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10
