@@ -1,0 +1,35 @@
+<?php
+
+use Drupal\Core\StreamWrapper\StreamWrapperManager;
+use Drupal\user\Entity\Role;
+
+/**
+ * Implements hook_file_download().
+ * https://www.chapterthree.com/blog/drupal-8-9-media-entities-private-files-and-broken-access-control
+ */
+function ubc_media_entities_file_download($uri) {
+  # Check if the file is coming from the private stream wrapper
+  if (StreamWrapperManager::getScheme($uri) == 'private') {
+
+    # 1: Block anonymous users.
+    if (Drupal::currentUser()->isAnonymous()) {
+      return -1;
+    }
+
+    # 2: The user does not have the permission "access private files".
+    if (!\Drupal::currentUser()->hasPermission('access private files')) {
+      return -1;
+    }
+  }
+
+  return NULL;
+}
+
+/**
+ * Implements hook_post_update_() to add permission to view private files
+ */
+function ubc_media_entities_post_update_grant_private_file_permission() {
+  $role_object = Role::load('authenticated');
+  $role_object->grantPermission('access private files');
+  $role_object->save();
+}
