@@ -1,6 +1,6 @@
 # Drupal 10 config modules for UBC
 
-This set of modules is used to create some general shared configuration between Drupal 8 websites.
+This set of modules is used to create some general shared configuration between Drupal 10 websites.
 
 ## References
 
