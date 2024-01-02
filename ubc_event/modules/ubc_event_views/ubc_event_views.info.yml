@@ -4,4 +4,4 @@ description: This module adds prebuilt views to the Event content type.
 package: UBC Web Services
 dependencies:
   - ubc_event:ubc_event
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10

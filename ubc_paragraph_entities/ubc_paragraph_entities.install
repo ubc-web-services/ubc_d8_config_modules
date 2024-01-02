@@ -11,6 +11,6 @@ use \Symfony\Component\Yaml\Yaml;
  * Update 9029 - REMOVED
  */
 
-function ubc_paragraph_entities_update_9029() {
+/* function ubc_paragraph_entities_update_9029() {
 
-}
+} */

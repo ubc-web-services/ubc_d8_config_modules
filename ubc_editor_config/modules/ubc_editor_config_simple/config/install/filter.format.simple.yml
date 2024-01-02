@@ -30,3 +30,9 @@ filters:
     weight: 0
     settings:
       title: true
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: false
+    weight: 1
+    settings: {  }

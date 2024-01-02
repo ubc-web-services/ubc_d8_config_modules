@@ -6,6 +6,16 @@
  * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
  */
 
-function ubc_editor_config_update_8001() {
+/* function ubc_editor_config_update_10001() {
 
+<<<<<<< Updated upstream
 }
+=======
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('filter.format.filtered_text');
+  $config->set('module', ['editor', 'editor_button_link', 'inline_responsive_images', 'linkit']);
+  $config->save(TRUE);
+
+  return 'The Filtered Text format no longer declares entity_embed as a dependency.';
+} */
+>>>>>>> Stashed changes
