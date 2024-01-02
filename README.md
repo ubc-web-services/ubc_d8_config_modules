@@ -1,4 +1,4 @@
-# Drupal 8 config modules for UBC
+# Drupal 10 config modules for UBC
 
 This set of modules is used to create some general shared configuration between Drupal 8 websites.
 
@@ -15,7 +15,7 @@ Collectively, these are something like a less locked-in Installation Profile. In
 These modules are instead a collection that can be used individually or as a whole to provide a sensible set of default configuration specific to Web Service's needs.
 
 To work with the modules as intended, you will typically follow this worflow:
-- [ ] Install Drupal 8 using the Standard installation Profile
+- [ ] Install Drupal 10 using the Standard installation Profile
 - [ ] Install and enable UBC specific themes
 - [ ] Install and enable a common set of contributed modules / dependencies
 - [ ] Install and enable some of the low level modules from this repo that provide general and shared settings
@@ -47,7 +47,6 @@ The custom modules included are:
 - **UBC Page** *[ubc_page]*: Provides the UBC Page content type and its fields, pathauto settings, workflow settings and a Tour
 - **UBC Paragraph Entities** *[ubc_paragraph_entities]*: Provides a common set of paragraph types, used in UBC Landing Pages
 - **UBC Profile** *[ubc_profile]*: Provides the UBC Profile content type and its fields, pathauto settings, workflow settings and a Tour
-- **UBC Profile Extend** *[ubc_profile_extend]*: Provides a sample implemention dor adding an additional field to the UBC Profile content type. This is meant to serve as a model of non-core additions to content types
 - **UBC Profile Views** *[ubc_profile_views]*: Provides views specific to the UBC Profile content type
 - **UBC Taxonomy Terms** *[ubc_taxonomy_terms]*: Provides a set of admin and user facing taxonomies and terms.
 - **UBC User Roles** *[ubc_user_roles]*: Provides a set of user roles and their associated permsissions
@@ -63,11 +62,11 @@ This assumes you've installed Drupal using the Standard installation profile
 
 ### Enable contrib modules
 
-```lando drush en address, admin_toolbar_links_access_filter, admin_toolbar_tools, allowed_formats, anchor_link, antibot, auto_entitylabel, block_exclude_pages, chosen, ckeditor_a11ychecker, config_ignore, crop, ctools, datetime_range, datetimehideseconds, devel, devel_generate, editor_advanced_link, editor_button_link, entity_reference_revisions, field_group, file_delete, focal_point, formtips, fullcalendar_view, gin_toolbar, google_analytics, image_widget_crop, inline_responsive_images, linkit, linkit_media_library, maxlength, media, media_bulk_upload, media_entity_file_replace, media_library, menu_block, metatag, optional_end_date, pathauto, paragraphs, redirect, responsive_table_filter, role_delegation, scheduler, simple_gmap, simple_sitemap, smtp, svg_image, telephone, text_summary_options, token, twig_tweak, webform, webform_ui -y```
+```lando drush en address, admin_toolbar_links_access_filter, admin_toolbar_tools, allowed_formats, antibot, auto_entitylabel, block_exclude_pages, chosen, config_ignore, crop, ctools, datetime_range, datetimehideseconds, devel, devel_generate, editor_advanced_link, entity_reference_revisions, field_group, file_delete, focal_point, formtips, fullcalendar_view, gin_toolbar, google_analytics, image_widget_crop, linkit, linkit_media_library, maxlength, media, media_bulk_upload, media_entity_file_replace, media_library, menu_block, metatag, optional_end_date, pathauto, paragraphs, redirect, responsive_table_filter, role_delegation, scheduler, simple_gmap, simple_sitemap, smtp, svg_image, telephone, text_summary_options, token, twig_tweak, webform, webform_ui -y```
 
 ### Enable custom modules for general settings
 
-```lando drush en ubc_ckeditor_widgets, ubc_chosen_style_tweaks, ubc_date_formats, ubc_editor_config, ubc_editor_config_simple, ubc_image_styles, ubc_media_entities, ubc_paragraph_entities, ubc_general_shared_config, ubc_column_options_widget, ubc_color_box_widget, ubc_taxonomy_terms_admin, ubc_custom_block_types -y```
+```lando drush en ubc_ckeditor_widgets, ubc_date_formats, ubc_editor_config, ubc_editor_config_simple, ubc_image_styles, ubc_media_entities, ubc_paragraph_entities, ubc_general_shared_config, ubc_taxonomy_terms_admin, ubc_custom_block_types -y```
 
 ### Enable custom content type modules
 
@@ -99,4 +98,4 @@ This assumes you've installed Drupal using the Standard installation profile
 
 #### Uninstall some infrequently used modules (need to delete Article and Comment types first)
 
-```lando drush pmu color, comment -y```
+```lando drush pmu comment -y```
