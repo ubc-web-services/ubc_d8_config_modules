@@ -20,6 +20,9 @@ settings:
       - '|'
       - sourceEditing
   plugins:
+    ckeditor5_list:
+      reversed: true
+      startIndex: true
     ckeditor5_sourceEditing:
       allowed_tags:
         - '<button data-* class="widget-* unit-* text-*">'
@@ -32,9 +35,6 @@ settings:
         - '<a hreflang class id name data-* aria-*>'
         - '<ul type>'
         - '<ol type>'
-    ckeditor5_list:
-      reversed: true
-      startIndex: true
     editor_advanced_link_link:
       enabled_attributes:
         - id

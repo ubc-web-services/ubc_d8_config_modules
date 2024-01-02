@@ -14,7 +14,6 @@ settings:
       - italic
       - '|'
       - link
-      - anchor
       - '|'
       - bulletedList
       - numberedList
@@ -52,6 +51,12 @@ settings:
       - Fullscreen
       - sourceEditing
   plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
     ckeditor5_heading:
       enabled_headings:
         - heading2
@@ -59,6 +64,20 @@ settings:
         - heading4
         - heading5
         - heading6
+    ckeditor5_imageResize:
+      allow_resize: true
+    ckeditor5_list:
+      reversed: true
+      startIndex: true
+    ckeditor5_sourceEditing:
+      allowed_tags:
+        - '<cite>'
+        - '<a hreflang class id name data-* aria-*>'
+        - '<blockquote cite>'
+        - '<span class>'
+        - '<ul type>'
+        - '<ol type>'
+        - '<iframe allowfullscreen frameborder height max-width src class>'
     ckeditor5_style:
       styles:
         -
@@ -101,6 +120,9 @@ settings:
           label: 'List: checked'
           element: '<ul class="list-checked">'
         -
+          label: 'List: buttons'
+          element: '<ul class="button-list">'
+        -
           label: 'Ordered List: inline'
           element: '<ol class="list-inline">'
         -
@@ -110,8 +132,29 @@ settings:
           label: 'Ordered List: checked'
           element: '<ol class="list-checked">'
         -
+          label: 'Ordered List: buttons'
+          element: '<ol class="button-list">'
+        -
           label: 'Unit Button'
           element: '<a class="unit-button">'
+        -
+          label: 'Full width Unit Button'
+          element: '<a class="unit-button unit-button--block">'
+        -
+          label: 'Text Extra Small'
+          element: '<a class="unit-button text-xs unit-button--text-xs">'
+        -
+          label: 'Text Small'
+          element: '<a class="unit-button text-sm unit-button--text-sm">'
+        -
+          label: 'Text Large'
+          element: '<a class="unit-button text-lg unit-button--text-lg">'
+        -
+          label: 'Text XLarge'
+          element: '<a class="unit-button text-xl unit-button--text-xl">'
+        -
+          label: 'Text XXLarge'
+          element: '<a class="unit-button text-2xl unit-button--text-2xl">'
         -
           label: 'Light Button'
           element: '<a class="unit-button unit-button--light">'
@@ -128,66 +171,11 @@ settings:
           label: 'Transparent Button'
           element: '<a class="unit-button unit-button--transparent">'
         -
-          label: 'Full-width Button'
-          element: '<a class="unit-button unit-button--block">'
+          label: 'Simple Button'
+          element: '<a class="unit-button unit-button--simple">'
         -
-          label: 'Extra Small Button'
-          element: '<a class="unit-button text-xs unit-button--text-xs">'
-        -
-          label: 'Small Button'
-          element: '<a class="unit-button text-sm unit-button--text-sm">'
-        -
-          label: 'Large Button'
-          element: '<a class="unit-button text-lg unit-button--text-lg">'
-        -
-          label: 'XLarge Button'
-          element: '<a class="unit-button text-xl unit-button--text-xl">'
-        -
-          label: 'XXLarge Button'
-          element: '<a class="unit-button text-2xl unit-button--text-2xl">'
-    ckeditor5_sourceEditing:
-      allowed_tags:
-        - '<cite>'
-        - '<dd>'
-        - '<dl>'
-        - '<dt>'
-        - '<kbd>'
-        - '<samp>'
-        - '<strike>'
-        - '<drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title class>'
-        - '<iframe longdesc name scrolling src title align height frameborder width>'
-        - '<img src srcset alt title data-*>'
-        - '<svg viewbox aria-* class>'
-        - '<use xlink:href>'
-        - '<span class="text-* font-*">'
-        - '<a hreflang class id name data-* aria-*>'
-        - '<blockquote cite class="blockquote-* p-* px-* py-*">'
-        - '<drupal-media title class>'
-        - '<h2 id>'
-        - '<h3 id class>'
-        - '<h4 id class>'
-        - '<h5 id class>'
-        - '<h6 id class>'
-        - '<ol type class="list-*">'
-        - '<p class="text-* mt-* uppercase">'
-        - '<td class="w-*">'
-        - '<ul type class="list-*">'
-        - '<table class="table-*">'
-        - '<div aria-*>'
-        - '<button data-* class="widget-* unit-* text-*">'
-    ckeditor5_list:
-      reversed: true
-      startIndex: true
-    ckeditor5_alignment:
-      enabled_alignments:
-        - left
-        - center
-        - right
-        - justify
-    ckeditor5_imageResize:
-      allow_resize: true
-    media_media:
-      allow_view_mode_override: true
+          label: 'Hidden Anchor'
+          element: '<a class="anchor-invisible sr-only">'
     editor_advanced_link_link:
       enabled_attributes:
         - id
@@ -196,6 +184,8 @@ settings:
     linkit_extension:
       linkit_enabled: true
       linkit_profile: default
+    media_media:
+      allow_view_mode_override: true
 image_upload:
   status: true
   scheme: public
