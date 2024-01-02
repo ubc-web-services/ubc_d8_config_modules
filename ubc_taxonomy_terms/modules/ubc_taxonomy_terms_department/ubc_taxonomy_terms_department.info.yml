@@ -4,4 +4,4 @@ description: This module creates taxonomy terms for the Department or Unit taxon
 package: UBC Web Services
 dependencies:
   - ubc_general_shared_config:ubc_general_shared_config
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10

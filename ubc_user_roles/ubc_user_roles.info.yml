@@ -14,4 +14,4 @@ dependencies:
   - ubc_profile:ubc_profile
   - ubc_taxonomy_terms_department:ubc_taxonomy_terms_department
   - ubc_taxonomy_terms_event:ubc_taxonomy_terms_event
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10

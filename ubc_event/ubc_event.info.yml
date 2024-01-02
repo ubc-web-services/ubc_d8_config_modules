@@ -24,4 +24,4 @@ dependencies:
   - drupal:tour
   - ubc_date_formats:ubc_date_formats
   - ubc_image_styles:ubc_image_styles
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10

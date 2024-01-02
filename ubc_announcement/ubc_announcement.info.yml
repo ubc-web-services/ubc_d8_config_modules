@@ -18,4 +18,4 @@ dependencies:
   - drupal:toolbar
   - ubc_image_styles:ubc_image_styles
   - ubc_taxonomy_terms_announcement:ubc_taxonomy_terms_announcement
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10
