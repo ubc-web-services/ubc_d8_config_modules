@@ -1,56 +1,39 @@
 <?php
 
 /**
- * Implements HOOK_theme_suggestions_HOOK_alter
- */
-/* function ubc_paragraph_entities_theme_suggestions_paragraph_alter(&$suggestions, array $variables) {
-  $paragraph = $variables['elements']['#paragraph'];
-  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
-
-  $suggestions[] = 'ubc_paragraph__' . $sanitized_view_mode;
-  $suggestions[] = 'ubc_paragraph__' . $paragraph->bundle();
-  $suggestions[] = 'ubc_paragraph__' . $paragraph->bundle() . '__' . $sanitized_view_mode;
-} */
-
-/**
  * Implements hook_theme().
  */
-/* function ubc_paragraph_entities_theme($existing, $type, $theme, $path) {
+function ubc_paragraph_entities_theme($existing, $type, $theme, $path) {
   return [
-    // added back in as suggestion only
-    'ubc_paragraph__card' => [
+    'paragraph__card_group' => [
       'base hook' => 'paragraph'
     ],
-    'ubc_paragraph__card_group' => [
+    'paragraph__card_horizontal' => [
       'base hook' => 'paragraph'
     ],
-    'ubc_paragraph__card_horizontal' => [
+    'paragraph__card_vertical' => [
       'base hook' => 'paragraph'
     ],
-    'ubc_paragraph__card_vertical' => [
+    'paragraph__feature_image' => [
       'base hook' => 'paragraph'
     ],
-    'ubc_paragraph__feature_image' => [
+    'paragraph__icon_card' => [
       'base hook' => 'paragraph'
     ],
-    'ubc_paragraph__icon_card' => [
+    'paragraph__image_card' => [
       'base hook' => 'paragraph'
     ],
-    'ubc_paragraph__image_card' => [
+    'paragraph__slide' => [
       'base hook' => 'paragraph'
     ],
-    'ubc_paragraph__slide' => [
+    'paragraph__slideshow' => [
       'base hook' => 'paragraph'
     ],
-    'ubc_paragraph__slideshow' => [
+    'paragraph__tabcordion' => [
       'base hook' => 'paragraph'
     ],
-    'ubc_paragraph__tabcordion' => [
-      'base hook' => 'paragraph'
-    ],
-    'ubc_paragraph__text' => [
+    'paragraph__text' => [
       'base hook' => 'paragraph'
     ],
   ];
 }
- */
