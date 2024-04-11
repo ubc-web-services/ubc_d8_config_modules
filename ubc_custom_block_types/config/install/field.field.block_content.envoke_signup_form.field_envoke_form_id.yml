@@ -1,0 +1,19 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.envoke_signup_form
+    - field.storage.block_content.field_envoke_form_id
+id: block_content.envoke_signup_form.field_envoke_form_id
+field_name: field_envoke_form_id
+entity_type: block_content
+bundle: envoke_signup_form
+label: 'Envoke form ID'
+description: 'Remove "nvkEmbed" to get Envoke form ID. For example, for &lt;div id="nvkEmbedwrswr175860ew3ew324erqsdf28d2b" class="nvkEmbed"&gt; the Envoke form ID would be "wrswr175860ew3ew324erqsdf28d2b".'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

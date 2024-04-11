@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.envoke_signup_form
+    - field.field.block_content.envoke_signup_form.field_envoke_form_id
+id: block_content.envoke_signup_form.default
+targetEntityType: block_content
+bundle: envoke_signup_form
+mode: default
+content:
+  field_envoke_form_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

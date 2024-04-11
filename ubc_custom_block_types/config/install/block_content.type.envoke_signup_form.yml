@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: envoke_signup_form
+label: 'Envoke Signup Form'
+revision: 0
+description: 'Adds an Envoke newsletter signup from the provided form ID.'
