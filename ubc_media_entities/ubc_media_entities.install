@@ -2,6 +2,68 @@
 
 
 /**
+ * Implements hook_install().
+ *
+ * @ingroup ubc_media_entities
+ */
+function ubc_media_entities_install() {
+  $config = \Drupal::service('config.factory');
+  // alter preexisting media view mode when installing
+  $config->getEditable('core.entity_view_display.media.remote_video.default')
+    ->set('dependencies.config', [
+      'field.field.media.remote_video.field_media_oembed_video',
+      'image.style.video_thumbnail',
+      'media.type.remote_video',
+    ])
+    ->set('dependencies.module', [
+      'media',
+      'svg_image',
+    ])
+    ->set('content', [
+      'field_media_oembed_video' => [
+        'type' => 'oembed',
+        'label' => 'hidden',
+        'weight' => '0',
+        'region' => 'content',
+        'third_party_settings' => [],
+        'settings' => [
+          'max_width' => '900',
+          'max_height' => '506',
+          'loading' => [
+            'attribute' => 'lazy',
+          ],
+        ],
+      ],
+      'thumbnail' => [
+        'type' => 'image',
+        'label' => 'hidden',
+        'weight' => '1',
+        'region' => 'content',
+        'third_party_settings' => [],
+        'settings' => [
+          'image_link' => '',
+          'image_style' => 'video_thumbnail',
+          'image_loading' => [
+            'attribute' => 'lazy',
+          ],
+          'svg_attributes' => [
+            'width' => null,
+            'height' => null,
+          ],
+          'svg_render_as_image' => true,
+        ],
+      ],
+    ])
+    ->set('hidden', [
+      'created' => true,
+      'name' => true,
+      'uid' => true,
+    ])
+    ->save();
+}
+
+
+/**
  * Update configuration from file.
  * https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8
  */
