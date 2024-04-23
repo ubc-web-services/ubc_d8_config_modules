@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: card_focal_point_xl
+label: 'Card, focal point, xl'
+effects:
+  6e3afed2-f98e-4eea-9b7a-e8b220af77b1:
+    uuid: 6e3afed2-f98e-4eea-9b7a-e8b220af77b1
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 970
+      height: 843
+      crop_type: focal_point
