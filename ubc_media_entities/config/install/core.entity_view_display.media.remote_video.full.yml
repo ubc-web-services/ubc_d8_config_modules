@@ -4,29 +4,32 @@ dependencies:
   config:
     - core.entity_view_mode.media.full
     - field.field.media.remote_video.field_media_oembed_video
+    - image.style.video_thumbnail
     - media.type.remote_video
   module:
     - field_group
     - media
+    - svg_image
 third_party_settings:
   field_group:
     group_wrapper:
       children:
+        - thumbnail
         - field_media_oembed_video
+      label: Wrapper
       parent_name: ''
-      weight: 20
+      region: hidden
+      weight: 4
       format_type: html_element
       format_settings:
-        label: Wrapper
+        classes: media-embed-letterbox
+        id: ''
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: media-embed-letterbox
-      label: Wrapper
 id: media.remote_video.full
 targetEntityType: media
 bundle: remote_video
@@ -34,15 +37,31 @@ mode: full
 content:
   field_media_oembed_video:
     type: oembed
-    weight: 0
     label: hidden
     settings:
       max_width: 900
-      max_height: 508
+      max_height: 506
+      loading:
+        attribute: lazy
     third_party_settings: {  }
+    weight: 0
+    region: content
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: video_thumbnail
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   created: true
   name: true
-  thumbnail: true
   uid: true
