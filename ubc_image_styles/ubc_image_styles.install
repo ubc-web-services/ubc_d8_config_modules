@@ -1,5 +1,37 @@
 <?php
 
+/**
+ * Implements hook_install().
+ *
+ * @ingroup ubc_image_styles
+ */
+function ubc_image_styles_install() {
+  $config = \Drupal::service('config.factory');
+  // alter preexisting responsive image style when installing
+  $config->getEditable('responsive_image.styles.wide')
+    ->set('dependencies.config', [
+      'image.style.max_1300x1300',
+      'image.style.max_2600x2600',
+      'image.style.max_970x970',
+    ])
+    ->set('image_style_mappings', [
+      '0' => [
+        'image_mapping_type' => 'sizes',
+        'breakpoint_id' => 'responsive_image.viewport_sizing',
+        'multiplier' => '1x',
+        'image_mapping' => [
+          'sizes' => '(min-width: 1290px) 1290px, 100vw',
+          'sizes_image_styles' => [
+            'max_1300x1300',
+            'max_2600x2600',
+            'max_970x970',
+          ],
+        ],
+      ],
+    ])
+    ->set('fallback_image_style', 'max_970x970')
+    ->save();
+}
 
 /**
  * Update configuration from file.
