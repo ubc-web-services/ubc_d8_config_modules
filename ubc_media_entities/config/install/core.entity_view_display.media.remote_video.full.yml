@@ -7,29 +7,8 @@ dependencies:
     - image.style.video_thumbnail
     - media.type.remote_video
   module:
-    - field_group
     - media
     - svg_image
-third_party_settings:
-  field_group:
-    group_wrapper:
-      children:
-        - thumbnail
-        - field_media_oembed_video
-      label: Wrapper
-      parent_name: ''
-      region: hidden
-      weight: 4
-      format_type: html_element
-      format_settings:
-        classes: media-embed-letterbox
-        id: ''
-        element: div
-        show_label: false
-        label_element: h3
-        attributes: ''
-        effect: none
-        speed: fast
 id: media.remote_video.full
 targetEntityType: media
 bundle: remote_video
