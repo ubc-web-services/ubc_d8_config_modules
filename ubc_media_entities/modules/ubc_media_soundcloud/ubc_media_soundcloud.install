@@ -1,0 +1,10 @@
+<?php
+
+
+/**
+ * Implements hook_install().
+ *
+ * @ingroup ubc_media_soundcloud
+ */
+function ubc_media_soundcloud_install() {
+}

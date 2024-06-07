@@ -1,0 +1,8 @@
+name: UBC Media Soundcloud Configuration
+type: module
+description: This module defines the soundcloud entity configuration.
+package: UBC Web Services
+dependencies:
+  - drupal:media
+  - drupal:media_entity_soundcloud
+core_version_requirement: ^10

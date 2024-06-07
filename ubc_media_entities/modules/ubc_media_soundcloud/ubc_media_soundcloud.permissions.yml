@@ -1,0 +1,24 @@
+access soundcloud media:
+  title: 'Access soundcloud media'
+  description: 'View privately stored files from their direct URL path'
+  restrict access: TRUE
+create soundcloud media:
+  title: 'Soundcloud: Create new media'
+  description: ''
+  restrict access: TRUE
+delete any soundcloud media:
+  title: 'Soundcloud: Delete any media'
+  description: ''
+  restrict access: TRUE
+delete own soundcloud media:
+  title: 'Soundcloud: Delete own media'
+  description: ''
+  restrict access: TRUE
+edit any soundcloud media:
+  title: 'Soundcloud: Edit any media'
+  description: ''
+  restrict access: TRUE
+edit own soundcloud media:
+  title: 'Soundcloud: Edit own media'
+  description: ''
+  restrict access: TRUE
