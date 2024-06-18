@@ -2,6 +2,20 @@
 
 use Drupal\Core\StreamWrapper\StreamWrapperManager;
 use Drupal\user\Entity\Role;
+use Drupal\Core\Config\FileStorage;
+
+/**
+ * Helper function to import single config file.
+ *
+ * @param string $config_name
+ *   The name of the config item to import from the config sync folder.
+ */
+function ubc_media_entities_import_single_config($config_name) {
+  $config_path = \Drupal::service('extension.list.module')->getPath('ubc_media_entities') . '/config/install/';
+  $source = new FileStorage($config_path);
+  $config_storage = \Drupal::service('config.storage');
+  $config_storage->write($config_name, $source->read($config_name));
+}
 
 /**
  * Implements hook_file_download().
@@ -55,25 +69,6 @@ function ubc_media_entities_post_update_10001() {
  * Add an Original Image view mode for image media
  */
 function ubc_media_entities_post_update_10002() {
-  $config = \Drupal::service('config.factory');
-  $uuid = \Drupal::service('uuid')->generate();
-  $uuid2 = \Drupal::service('uuid')->generate();
-  // create new view mode
-  $config_id = 'core.entity_view_mode.media.original';
-  $config_path = \Drupal::service('extension.list.module')->getPath('ubc_media_entities') . '/config/install/' . $config_id .'.yml';
-  $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
-  $config->getEditable($config_id)->setData($data)->save(TRUE);
-  // create and add the uuid
-  $config->getEditable($config_id)
-    ->set('uuid', $uuid)
-    ->save();
-  // assign values to new view mode
-  $config_id = 'core.entity_view_display.media.image.original';
-  $config_path = \Drupal::service('extension.list.module')->getPath('ubc_media_entities') . '/config/install/' . $config_id .'.yml';
-  $data = \Symfony\Component\Yaml\Yaml::parseFile($config_path);
-  $config->getEditable($config_id)->setData($data)->save(TRUE);
-  // create and add the uuid
-  $config->getEditable($config_id)
-    ->set('uuid', $uuid2)
-    ->save();
+  ubc_media_entities_import_single_config('core.entity_view_mode.media.original');
+  ubc_media_entities_import_single_config('core.entity_view_display.media.image.original');
 }
