@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.media.full
     - core.entity_view_mode.media.narrow
     - core.entity_view_mode.media.small_icon
+    - core.entity_view_mode.media.original
     - core.entity_view_mode.media.square
   module:
     - editor
@@ -89,6 +90,7 @@ filters:
         full: full
         narrow: narrow
         small_icon: small_icon
+        original: original
         square: square
       allowed_media_types:
         file: file
