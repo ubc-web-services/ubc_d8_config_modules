@@ -21,7 +21,6 @@ dependencies:
   - drupal:taxonomy
   - drupal:text_summary_options
   - drupal:toolbar
-  - drupal:tour
   - ubc_date_formats:ubc_date_formats
   - ubc_image_styles:ubc_image_styles
 core_version_requirement: ^10

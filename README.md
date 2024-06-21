@@ -28,25 +28,25 @@ To work with the modules as intended, you will typically follow this worflow:
 The custom modules included are:
 
 - **UBC Alert** *[ubc_alert]*: Provides a custom Alert Banner entity and its fields, as well as the view to create the block that it outputs to.
-- **UBC Announcement** *[ubc_announcement]*: Provides the UBC Announcement content type and its fields, pathauto settings, workflow settings and a Tour
+- **UBC Announcement** *[ubc_announcement]*: Provides the UBC Announcement content type and its fields, pathauto settings
 - **UBC Announcement Views** *[ubc_announcement_views]*: Provides views specific to the UBC Announcement content type
 - **UBC Content Items** *[ubc_content_items]*: Provides an interface for defining and working with reusable entity types without a node view
 - **UBC Custom Block Types** *[ubc_custom_block_types]*: Provides several preconfigured custom block types
 - **UBC Date Formats** *[ubc_date_formats]*: Provides a set of commonly used date formats
 - **UBC Editor Config** *[ubc_editor_config]*: Provides a custom predefined wysiwyg format and settings
 - **UBC Editor File Entities** *[ubc_editor_file_entities]*: Provides a method of working with Media Entities and embedding them into the wysiwyg
-- **UBC Event** *[ubc_event]*: Provides the UBC Event content type and its fields, pathauto settings, workflow settings and a Tour
+- **UBC Event** *[ubc_event]*: Provides the UBC Event content type and its fields, pathauto settings
 - **UBC Event Views** *[ubc_event_views]*: Provides views specific to the UBC Event content type
 - **UBC General Shared Config** *[ubc_general_shared_config]*: Provides definitions for shared taxonomies, view modes, views and blocks
 - **UBC Homepage** *[ubc_homepage]*: Provides the Homepage content type and its fields, pathauto settings, and workflow settings
 - **UBC Homepage Views** *[ubc_homepage_views]*: Provides views specific to the Homepage content type
 - **UBC Image Styles** *[ubc_image_styles]*: Provides a common set of image styles
-- **UBC Landing Page** *[ubc_landing_page]*: Provides the UBC Landing Page content type and its fields, pathauto settings, workflow settings and a Tour
+- **UBC Landing Page** *[ubc_landing_page]*: Provides the UBC Landing Page content type and its fields, pathauto settings
 - **UBC Landing Page Views** *[ubc_landing_page_views]*: Provides views specific to the UBC Landing Page content type
 - **UBC Media Entites** *[ubc_media_entities]*: Provides a series of preconfigured media entities
-- **UBC Page** *[ubc_page]*: Provides the UBC Page content type and its fields, pathauto settings, workflow settings and a Tour
+- **UBC Page** *[ubc_page]*: Provides the UBC Page content type and its fields, pathauto settings
 - **UBC Paragraph Entities** *[ubc_paragraph_entities]*: Provides a common set of paragraph types, used in UBC Landing Pages
-- **UBC Profile** *[ubc_profile]*: Provides the UBC Profile content type and its fields, pathauto settings, workflow settings and a Tour
+- **UBC Profile** *[ubc_profile]*: Provides the UBC Profile content type and its fields, pathauto settings
 - **UBC Profile Views** *[ubc_profile_views]*: Provides views specific to the UBC Profile content type
 - **UBC Taxonomy Terms** *[ubc_taxonomy_terms]*: Provides a set of admin and user facing taxonomies and terms.
 - **UBC User Roles** *[ubc_user_roles]*: Provides a set of user roles and their associated permsissions

@@ -14,7 +14,6 @@ dependencies:
   - drupal:responsive_image
   - drupal:taxonomy
   - drupal:text
-  - drupal:tour
   - drupal:toolbar
   - drupal:twig_tweak
   - ubc_image_styles:ubc_image_styles

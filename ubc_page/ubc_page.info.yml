@@ -7,6 +7,5 @@ dependencies:
   - drupal:metatag
   - drupal:node
   - drupal:simple_sitemap
-  - drupal:tour
   - drupal:toolbar
 core_version_requirement: ^10

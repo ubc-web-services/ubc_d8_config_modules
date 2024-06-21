@@ -13,7 +13,6 @@ dependencies:
   - drupal:simple_sitemap
   - drupal:telephone
   - drupal:taxonomy
-  - drupal:tour
   - drupal:toolbar
   - ubc_image_styles:ubc_image_styles
 core_version_requirement: ^10

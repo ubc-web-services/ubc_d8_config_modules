@@ -12,7 +12,6 @@ dependencies:
   - drupal:simple_sitemap
   - drupal:taxonomy
   - drupal:text_summary_options
-  - drupal:tour
   - drupal:toolbar
   - ubc_paragraph_entities:ubc_paragraph_entities
   - ubc_image_styles:ubc_image_styles
