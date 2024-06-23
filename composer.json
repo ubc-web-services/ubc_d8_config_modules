@@ -3,6 +3,6 @@
   "description": "Custom UBC Drupal 10 Modules",
   "type": "drupal-module",
   "require": {
-    "ubc-web-services/ubc_ckeditor_widgets": "^3.1"
+    "ubc-web-services/ubc_ckeditor_widgets": "^3"
   }
 }
