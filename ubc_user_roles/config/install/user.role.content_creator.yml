@@ -16,7 +16,6 @@ dependencies:
     - system
     - taxonomy
     - toolbar
-    - tour
     - ubc_announcement
     - ubc_editor_config
     - ubc_event
@@ -36,7 +35,6 @@ permissions:
   - 'access media overview'
   - 'access site in maintenance mode'
   - 'access toolbar'
-  - 'access tour'
   - 'create file media'
   - 'create image media'
   - 'create private_file media'

@@ -23,7 +23,6 @@ dependencies:
     - system
     - taxonomy
     - toolbar
-    - tour
     - ubc_announcement
     - ubc_editor_config
     - ubc_event
@@ -49,7 +48,6 @@ permissions:
   - 'access site in maintenance mode'
   - 'access taxonomy overview'
   - 'access toolbar'
-  - 'access tour'
   - 'administer blocks'
   - 'administer google analytics'
   - 'administer menu'
