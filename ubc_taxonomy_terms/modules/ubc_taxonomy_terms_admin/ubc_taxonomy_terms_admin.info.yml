@@ -1,7 +1,5 @@
-name: UBC Taxonomy Terms - Admin
+name: UBC Taxonomy Terms - Admin (deprecated)
 type: module
-description: This module creates taxonomy terms used for admin settings, as they are not captured via configuration management.
+description: This module has been deprecated and can be safely uninstalled. It will be removed in the next version.
 package: UBC Web Services
-dependencies:
-  - ubc_general_shared_config:ubc_general_shared_config
-core_version_requirement: ^10
+core_version_requirement: ^10.3

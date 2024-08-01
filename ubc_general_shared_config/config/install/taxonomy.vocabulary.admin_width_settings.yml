@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'ADMIN - Horizontal Spacing Settings'
-vid: admin_width_settings
-description: 'Adds horizontal spacing options'
-weight: 0

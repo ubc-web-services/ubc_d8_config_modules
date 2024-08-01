@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'ADMIN - Spacing Settings'
-vid: admin_vertical_spacing_settings
-description: 'Adds spacing options'
-weight: 0

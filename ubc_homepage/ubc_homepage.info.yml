@@ -1,18 +1,5 @@
-name: UBC Homepage Content Type
+name: UBC Homepage Content Type (deprecated)
 type: module
-description: This module defines a custom Homepage content type and its fields.
+description: This module has been deprecated and can be safely uninstalled. It will be removed in the next version.
 package: UBC Web Services
-dependencies:
-  - drupal:field_group
-  - drupal:focal_point
-  - drupal:metatag
-  - drupal:node
-  - drupal:paragraphs
-  - drupal:responsive_image
-  - drupal:simple_sitemap
-  - drupal:taxonomy
-  - drupal:toolbar
-  - ubc_editor_config_simple:ubc_editor_config_simple
-  - ubc_image_styles:ubc_image_styles
-  - ubc_paragraph_entities:ubc_paragraph_entities
-core_version_requirement: ^10
+core_version_requirement: ^10.3
