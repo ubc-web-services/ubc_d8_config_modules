@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - node
-id: node.card_image
-label: 'Card: Image'
-targetEntityType: node
-cache: true

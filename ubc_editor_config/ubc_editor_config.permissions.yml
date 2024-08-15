@@ -1,4 +1,0 @@
-use text format filtered_text:
-  title: 'Use the Filtered text format'
-  description: 'Use the Filtered Text format'
-  restrict access: TRUE

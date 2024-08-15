@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - node
-id: node.custom_content
-label: 'Custom Content'
-targetEntityType: node
-cache: true
