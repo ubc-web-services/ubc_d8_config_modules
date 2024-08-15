@@ -2,20 +2,6 @@
 
 use Drupal\Core\StreamWrapper\StreamWrapperManager;
 use Drupal\user\Entity\Role;
-use Drupal\Core\Config\FileStorage;
-
-/**
- * Helper function to import single config file.
- *
- * @param string $config_name
- *   The name of the config item to import from the config sync folder.
- */
-function ubc_media_entities_import_single_config($config_name) {
-  $config_path = \Drupal::service('extension.list.module')->getPath('ubc_media_entities') . '/config/install/';
-  $source = new FileStorage($config_path);
-  $config_storage = \Drupal::service('config.storage');
-  $config_storage->write($config_name, $source->read($config_name));
-}
 
 /**
  * Implements hook_file_download().
@@ -35,7 +21,6 @@ function ubc_media_entities_file_download($uri) {
       return -1;
     }
   }
-
   return NULL;
 }
 
@@ -47,28 +32,4 @@ function ubc_media_entities_post_update_grant_private_file_permission() {
   $role_object = Role::load('authenticated');
   $role_object->grantPermission('access private files');
   $role_object->save();
-}
-
-/**
- * Implements hook_post_update_()
- * Update wide and narrow view modes to use lazy loading
- */
-function ubc_media_entities_post_update_10001() {
-  $config = \Drupal::service('config.factory');
-  // alter preexisting media view mode when installing
-  $config->getEditable('core.entity_view_display.media.image.full')
-    ->set('content.field_media_image.settings.image_loading.attribute', 'lazy')
-    ->save();
-  $config->getEditable('core.entity_view_display.media.image.narrow')
-    ->set('content.field_media_image.settings.image_loading.attribute', 'lazy')
-    ->save();
-}
-
-/**
- * Implements hook_post_update_()
- * Add an Original Image view mode for image media
- */
-function ubc_media_entities_post_update_10002() {
-  ubc_media_entities_import_single_config('core.entity_view_mode.media.original');
-  ubc_media_entities_import_single_config('core.entity_view_display.media.image.original');
 }
