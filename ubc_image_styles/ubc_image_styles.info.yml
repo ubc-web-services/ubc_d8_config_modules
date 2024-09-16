@@ -1,5 +1,0 @@
-name: UBC Image Styles (To be deprecated)
-type: module
-description: This module has been deprecated and replaced by <a href="https://www.drupal.org/project/distributions_recipes">Drupal Recipes</a>. Before removing entirely, you will need to edit your active config and remove `ubc_image_styles` from the `enforced` key of the `responsive_image.styles.card.yml` configuration file, associated image styles, and any other instances you find. Once that has been done, it can be safely removed.
-package: UBC Web Services
-core_version_requirement: ^10.3

@@ -1,5 +1,0 @@
-name: UBC User Role Configuration (deprecated)
-type: module
-description: This module has been deprecated and replaced by <a href="https://www.drupal.org/project/distributions_recipes">Drupal Recipes</a>. It can be safely uninstalled and will be removed in the next version.
-package: UBC Web Services
-core_version_requirement: ^10.3
