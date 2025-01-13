@@ -20,26 +20,16 @@ class MediaAccessControlHandler extends CoreMediaAccessControlHandler
     {
         // Check if the operation is 'view'.
         if ($operation === 'view') {
-            // Example: Restrict 'view' based on media type and a custom permission.
+            // Dynamically check permission based on media type.
             $media_type = $entity->bundle();
-            if ($account->hasPermission("view $media_type media")) {
-                return AccessResult::allowed();
-            }
-            else {
-                return AccessResult::forbidden();
-            }
+            $permission = "view $media_type media";
+
+            // Grant access if the user has the permission.
+            return AccessResult::allowedIfHasPermission($account, $permission);
         }
 
-        // For other operations, fall back to the parent handler.
+        // Fallback to parent handler for other operations.
         return parent::checkAccess($entity, $operation, $account);
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    protected function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = null)
-    {
-        // Allow creation of media if the user has a specific permission.
-        return AccessResult::allowedIfHasPermission($account, "create $entity_bundle media");
-    }
 }
