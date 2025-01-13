@@ -26,6 +26,29 @@ function ubc_media_entities_file_download($uri) {
 }
 
 /**
+ * Implements hook_permission().
+ */
+function ubc_media_entities_permission() {
+  $permissions = [];
+  $media_types = \Drupal::entityTypeManager()->getStorage('media_type')->loadMultiple();
+
+  foreach ($media_types as $media_type) {
+    $type_id = $media_type->id();
+    $type_label = $media_type->label();
+
+    // Create 'view' permission for the media type.
+    $permissions["view $type_id media"] = [
+      'title' => t('View @type media', ['@type' => $type_label]),
+      'description' => t('Allows users to view media of type @type.', ['@type' => $type_label]),
+      'restrict access' => TRUE,
+    ];
+
+  }
+
+  return $permissions;
+}
+
+/**
  * Implements hook_entity_type_alter().
  */
 function ubc_media_entities_entity_type_alter(array &$entity_types) {
@@ -44,13 +67,37 @@ function ubc_media_entities_post_update_grant_private_file_permission() {
   $role_object->save();
 }
 
+/**
+ * Implements hook_post_update_()
+ * Add anonymous permissions to media
+ */
+/* function ubc_media_entities_post_update_grant_anonymous_permissions() {
+  $role_object = Role::load('authenticated');
+  $role_object->grantPermission('view audio media');
+  $role_object->grantPermission('view document media');
+  $role_object->grantPermission('view file media');
+  //$role_object->grantPermission('view ics_file media');
+  $role_object->grantPermission('view image media');
+  $role_object->grantPermission('view remote_video media');
+  $role_object->grantPermission('view svg_icon media');
+  $role_object->grantPermission('view video media');
+  $role_object->save();
+} */
 
 /**
  * Implements hook_post_update_()
- * Add permission to view private_file media
+ * Add authenticated permissions to media
  */
-function ubc_media_entities_post_update_grant_private_media_permission() {
+/* function ubc_media_entities_post_update_grant_authenticated_permissions() {
   $role_object = Role::load('authenticated');
+  $role_object->grantPermission('view audio media');
+  $role_object->grantPermission('view document media');
+  $role_object->grantPermission('view file media');
+  //$role_object->grantPermission('view ics_file media');
+  $role_object->grantPermission('view image media');
   $role_object->grantPermission('view private_file media');
+  $role_object->grantPermission('view remote_video media');
+  $role_object->grantPermission('view svg_icon media');
+  $role_object->grantPermission('view video media');
   $role_object->save();
-}
+} */
