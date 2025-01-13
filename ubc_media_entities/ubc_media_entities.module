@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\StreamWrapper\StreamWrapperManager;
 use Drupal\user\Entity\Role;
 
@@ -25,11 +26,31 @@ function ubc_media_entities_file_download($uri) {
 }
 
 /**
+ * Implements hook_entity_type_alter().
+ */
+function ubc_media_entities_entity_type_alter(array &$entity_types) {
+  if (isset($entity_types['media'])) {
+    $entity_types['media']->setHandlerClass('access', 'Drupal\ubc_media_entities\MediaAccessControlHandler');
+  }
+}
+
+/**
  * Implements hook_post_update_()
  * Add permission to view private files
  */
 function ubc_media_entities_post_update_grant_private_file_permission() {
   $role_object = Role::load('authenticated');
   $role_object->grantPermission('access private files');
+  $role_object->save();
+}
+
+
+/**
+ * Implements hook_post_update_()
+ * Add permission to view private_file media
+ */
+function ubc_media_entities_post_update_grant_private_media_permission() {
+  $role_object = Role::load('authenticated');
+  $role_object->grantPermission('view private_file media');
   $role_object->save();
 }
