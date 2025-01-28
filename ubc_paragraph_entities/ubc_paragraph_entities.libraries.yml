@@ -1,4 +1,4 @@
-ubc_paragraph_entities_library:
+tabcordion_anchor:
   version: 1.x
   js:
     js/tabcordion_anchor.js: {}

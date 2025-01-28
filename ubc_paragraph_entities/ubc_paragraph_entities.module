@@ -37,10 +37,3 @@ function ubc_paragraph_entities_theme($existing, $type, $theme, $path) {
     ],
   ];
 }
-
-/**
- * Implements hook_page_attachments().
- */
-function ubc_paragraph_entities_page_attachments(array &$attachments) {
-  $attachments['#attached']['library'][] = 'ubc_paragraph_entities/ubc_paragraph_entities_library';
-}
