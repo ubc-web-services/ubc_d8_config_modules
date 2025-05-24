@@ -4,4 +4,4 @@ description: This module alters media entity configuration.
 package: UBC Web Services
 dependencies:
   - drupal:media
-core_version_requirement: ^10.3
+core_version_requirement: '>=10'
