@@ -8,6 +8,7 @@ use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Url;
 use Drupal\ubc_content_items\Entity\ContentItemEntityInterface;
+use Drupal\Core\Entity\RevisionableStorageInterface;
 
 /**
  * Class ContentItemEntityController.
@@ -26,7 +27,11 @@ class ContentItemEntityController extends ControllerBase implements ContainerInj
    *   An array suitable for drupal_render().
    */
   public function revisionShow($content_item_entity_revision) {
-    $content_item_entity = \Drupal::service('entity_type.manager')->getStorage('content_item_entity')->loadRevision($content_item_entity_revision);
+    $storage = \Drupal::service('entity_type.manager')->getStorage('content_item_entity');
+    if (!$storage instanceof RevisionableStorageInterface) {
+      throw new \LogicException('Storage for content_item_entity must implement RevisionableStorageInterface.');
+    }
+    $content_item_entity = $storage->loadRevision($content_item_entity_revision);
     $view_builder = \Drupal::service('entity_type.manager')->getViewBuilder('content_item_entity');
 
     return $view_builder->view($content_item_entity);
@@ -42,7 +47,11 @@ class ContentItemEntityController extends ControllerBase implements ContainerInj
    *   The page title.
    */
   public function revisionPageTitle($content_item_entity_revision) {
-    $content_item_entity = \Drupal::service('entity_type.manager')->getStorage('content_item_entity')->loadRevision($content_item_entity_revision);
+    $storage = \Drupal::service('entity_type.manager')->getStorage('content_item_entity');
+    if (!$storage instanceof RevisionableStorageInterface) {
+      throw new \LogicException('Storage for content_item_entity must implement RevisionableStorageInterface.');
+    }
+    $content_item_entity = $storage->loadRevision($content_item_entity_revision);
     return $this->t('Revision of %title from %date', ['%title' => $content_item_entity->label(), '%date' => \Drupal::service('date.formatter')->format($content_item_entity->getRevisionCreationTime())]);
   }
 
@@ -61,7 +70,11 @@ class ContentItemEntityController extends ControllerBase implements ContainerInj
     $langname = $content_item_entity->language()->getName();
     $languages = $content_item_entity->getTranslationLanguages();
     $has_translations = (count($languages) > 1);
-    $content_item_entity_storage = \Drupal::service('entity_type.manager')->getStorage('content_item_entity');
+    $storage = \Drupal::service('entity_type.manager')->getStorage('content_item_entity');
+    if (!$storage instanceof RevisionableStorageInterface) {
+      throw new \LogicException('Storage for content_item_entity must implement RevisionableStorageInterface.');
+    }
+    $content_item_entity_storage = $storage;
 
     $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', ['@langname' => $langname, '%title' => $content_item_entity->label()]) : $this->t('Revisions for %title', ['%title' => $content_item_entity->label()]);
     $header = [$this->t('Revision'), $this->t('Operations')];
@@ -102,7 +115,7 @@ class ContentItemEntityController extends ControllerBase implements ContainerInj
             '#template' => '{% trans %}{{ date }} by {{ username }}{% endtrans %}{% if message %}<p class="revision-log">{{ message }}</p>{% endif %}',
             '#context' => [
               'date' => $link,
-              'username' => \Drupal::service('renderer')->renderPlain($username),
+              'username' => \Drupal::service('renderer')->renderInIsolation($username),
               'message' => ['#markup' => $revision->getRevisionLogMessage(), '#allowed_tags' => Xss::getHtmlTagList()],
             ],
           ],

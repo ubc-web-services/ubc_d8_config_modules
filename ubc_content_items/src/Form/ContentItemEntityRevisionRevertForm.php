@@ -4,6 +4,7 @@ namespace Drupal\ubc_content_items\Form;
 
 use Drupal\Core\Datetime\DateFormatterInterface;
 use Drupal\Core\Entity\EntityStorageInterface;
+use Drupal\Core\Entity\RevisionableStorageInterface;
 use Drupal\Core\Form\ConfirmFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
@@ -101,6 +102,9 @@ class ContentItemEntityRevisionRevertForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state, $content_item_entity_revision = NULL) {
+    if (!$this->ContentItemEntityStorage instanceof RevisionableStorageInterface) {
+      throw new \LogicException('The content_item_entity storage must implement RevisionableStorageInterface.');
+    }
     $this->revision = $this->ContentItemEntityStorage->loadRevision($content_item_entity_revision);
     $form = parent::buildForm($form, $form_state);
 

@@ -94,6 +94,9 @@ class ContentItemEntityRevisionDeleteForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state, $content_item_entity_revision = NULL) {
+    if (!$this->ContentItemEntityStorage instanceof \Drupal\Core\Entity\RevisionableStorageInterface) {
+      throw new \LogicException('The content_item_entity storage must implement RevisionableStorageInterface.');
+    }
     $this->revision = $this->ContentItemEntityStorage->loadRevision($content_item_entity_revision);
     $form = parent::buildForm($form, $form_state);
 
@@ -104,18 +107,21 @@ class ContentItemEntityRevisionDeleteForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    if (!$this->ContentItemEntityStorage instanceof \Drupal\Core\Entity\RevisionableStorageInterface) {
+      throw new \LogicException('The content_item_entity storage must implement RevisionableStorageInterface.');
+    }
     $this->ContentItemEntityStorage->deleteRevision($this->revision->getRevisionId());
 
     $this->logger('content')->notice('Content Item: deleted %title revision %revision.', ['%title' => $this->revision->label(), '%revision' => $this->revision->getRevisionId()]);
     $this->messenger()->addStatus(t('Revision from %revision-date of Content Item %title has been deleted.', ['%revision-date' => \Drupal::service('date.formatter')->format($this->revision->getRevisionCreationTime()), '%title' => $this->revision->label()]));
     $form_state->setRedirect(
       'entity.content_item_entity.canonical',
-       ['content_item_entity' => $this->revision->id()]
+      ['content_item_entity' => $this->revision->id()]
     );
     if ($this->connection->query('SELECT COUNT(DISTINCT vid) FROM {content_item_entity_field_revision} WHERE id = :id', [':id' => $this->revision->id()])->fetchField() > 1) {
       $form_state->setRedirect(
         'entity.content_item_entity.version_history',
-         ['content_item_entity' => $this->revision->id()]
+        ['content_item_entity' => $this->revision->id()]
       );
     }
   }
