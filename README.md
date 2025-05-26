@@ -1,4 +1,4 @@
-# Drupal 10 config modules for UBC
+# Drupal 11 config modules for UBC
 
 This set of modules is used to mange some general shared configuration between Drupal 10 websites.
 
