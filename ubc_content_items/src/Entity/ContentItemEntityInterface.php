@@ -3,8 +3,8 @@
 namespace Drupal\ubc_content_items\Entity;
 
 use Drupal\Core\Entity\ContentEntityInterface;
-use Drupal\Core\Entity\RevisionLogInterface;
 use Drupal\Core\Entity\EntityChangedInterface;
+use Drupal\Core\Entity\RevisionLogInterface;
 use Drupal\user\EntityOwnerInterface;
 
 /**
@@ -68,7 +68,7 @@ interface ContentItemEntityInterface extends ContentEntityInterface, RevisionLog
    * Sets the published status of a Content Item.
    *
    * @param bool $published
-   *   TRUE to set this Content Item to published, FALSE to set it to unpublished.
+   *   TRUE sets this Content Item to published, FALSE sets it to unpublished.
    *
    * @return \Drupal\ubc_content_items\Entity\ContentItemEntityInterface
    *   The called Content Item entity.

@@ -4,6 +4,7 @@ namespace Drupal\ubc_content_items\Form;
 
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Entity\EntityStorageInterface;
+use Drupal\Core\Entity\RevisionableStorageInterface;
 use Drupal\Core\Form\ConfirmFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
@@ -29,7 +30,7 @@ class ContentItemEntityRevisionDeleteForm extends ConfirmFormBase {
    *
    * @var \Drupal\Core\Entity\EntityStorageInterface
    */
-  protected $ContentItemEntityStorage;
+  protected $contentItemEntityStorage;
 
   /**
    * The database connection.
@@ -47,7 +48,7 @@ class ContentItemEntityRevisionDeleteForm extends ConfirmFormBase {
    *   The database connection.
    */
   public function __construct(EntityStorageInterface $entity_storage, Connection $connection) {
-    $this->ContentItemEntityStorage = $entity_storage;
+    $this->contentItemEntityStorage = $entity_storage;
     $this->connection = $connection;
   }
 
@@ -94,10 +95,10 @@ class ContentItemEntityRevisionDeleteForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state, $content_item_entity_revision = NULL) {
-    if (!$this->ContentItemEntityStorage instanceof \Drupal\Core\Entity\RevisionableStorageInterface) {
+    if (!$this->contentItemEntityStorage instanceof RevisionableStorageInterface) {
       throw new \LogicException('The content_item_entity storage must implement RevisionableStorageInterface.');
     }
-    $this->revision = $this->ContentItemEntityStorage->loadRevision($content_item_entity_revision);
+    $this->revision = $this->contentItemEntityStorage->loadRevision($content_item_entity_revision);
     $form = parent::buildForm($form, $form_state);
 
     return $form;
@@ -107,13 +108,19 @@ class ContentItemEntityRevisionDeleteForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    if (!$this->ContentItemEntityStorage instanceof \Drupal\Core\Entity\RevisionableStorageInterface) {
+    if (!$this->contentItemEntityStorage instanceof RevisionableStorageInterface) {
       throw new \LogicException('The content_item_entity storage must implement RevisionableStorageInterface.');
     }
-    $this->ContentItemEntityStorage->deleteRevision($this->revision->getRevisionId());
+    $this->contentItemEntityStorage->deleteRevision($this->revision->getRevisionId());
 
-    $this->logger('content')->notice('Content Item: deleted %title revision %revision.', ['%title' => $this->revision->label(), '%revision' => $this->revision->getRevisionId()]);
-    $this->messenger()->addStatus(t('Revision from %revision-date of Content Item %title has been deleted.', ['%revision-date' => \Drupal::service('date.formatter')->format($this->revision->getRevisionCreationTime()), '%title' => $this->revision->label()]));
+    $this->logger('content')->notice('Content Item: deleted %title revision %revision.', [
+      '%title' => $this->revision->label(),
+      '%revision' => $this->revision->getRevisionId(),
+    ]);
+    $this->messenger()->addStatus(t('Revision from %revision-date of Content Item %title has been deleted.', [
+      '%revision-date' => \Drupal::service('date.formatter')->format($this->revision->getRevisionCreationTime()),
+      '%title' => $this->revision->label(),
+    ]));
     $form_state->setRedirect(
       'entity.content_item_entity.canonical',
       ['content_item_entity' => $this->revision->id()]

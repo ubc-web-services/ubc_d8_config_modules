@@ -26,7 +26,7 @@ class ContentItemEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /* @var $entity \Drupal\ubc_content_items\Entity\ContentItemEntity */
+    /** @var \Drupal\ubc_content_items\Entity\ContentItemEntity $entity */
     $row['id'] = $entity->id();
     $row['name'] = Link::createFromRoute(
       $entity->label(),

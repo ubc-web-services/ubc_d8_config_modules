@@ -2,12 +2,12 @@
 
 namespace Drupal\ubc_content_items\Entity;
 
+use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityStorageInterface;
-use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Entity\RevisionableContentEntityBase;
 use Drupal\Core\Entity\RevisionableInterface;
-use Drupal\Core\Entity\EntityChangedTrait;
-use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\user\UserInterface;
 
 /**
@@ -120,8 +120,8 @@ class ContentItemEntity extends RevisionableContentEntityBase implements Content
       }
     }
 
-    // If no revision author has been set explicitly, make the content_item_entity owner the
-    // revision author.
+    // If no revision author has been set explicitly, make the
+    // content_item_entity owner the revision author.
     if (!$this->getRevisionUser()) {
       $this->setRevisionUserId($this->getOwnerId());
     }
