@@ -1,5 +1,5 @@
 name: 'UBC Content Items'
 type: module
 description: 'A module to provide custom content entities.'
-core_version_requirement: ^10
+core_version_requirement: '>=10'
 package: 'UBC Web Services'

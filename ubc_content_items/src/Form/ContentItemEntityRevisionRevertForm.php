@@ -4,6 +4,7 @@ namespace Drupal\ubc_content_items\Form;
 
 use Drupal\Core\Datetime\DateFormatterInterface;
 use Drupal\Core\Entity\EntityStorageInterface;
+use Drupal\Core\Entity\RevisionableStorageInterface;
 use Drupal\Core\Form\ConfirmFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
@@ -30,7 +31,7 @@ class ContentItemEntityRevisionRevertForm extends ConfirmFormBase {
    *
    * @var \Drupal\Core\Entity\EntityStorageInterface
    */
-  protected $ContentItemEntityStorage;
+  protected $contentItemEntityStorage;
 
   /**
    * The date formatter service.
@@ -48,7 +49,7 @@ class ContentItemEntityRevisionRevertForm extends ConfirmFormBase {
    *   The date formatter service.
    */
   public function __construct(EntityStorageInterface $entity_storage, DateFormatterInterface $date_formatter) {
-    $this->ContentItemEntityStorage = $entity_storage;
+    $this->contentItemEntityStorage = $entity_storage;
     $this->dateFormatter = $date_formatter;
   }
 
@@ -101,7 +102,10 @@ class ContentItemEntityRevisionRevertForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state, $content_item_entity_revision = NULL) {
-    $this->revision = $this->ContentItemEntityStorage->loadRevision($content_item_entity_revision);
+    if (!$this->contentItemEntityStorage instanceof RevisionableStorageInterface) {
+      throw new \LogicException('The content_item_entity storage must implement RevisionableStorageInterface.');
+    }
+    $this->revision = $this->contentItemEntityStorage->loadRevision($content_item_entity_revision);
     $form = parent::buildForm($form, $form_state);
 
     return $form;
@@ -119,8 +123,14 @@ class ContentItemEntityRevisionRevertForm extends ConfirmFormBase {
     $this->revision->revision_log = t('Copy of the revision from %date.', ['%date' => $this->dateFormatter->format($original_revision_timestamp)]);
     $this->revision->save();
 
-    $this->logger('content')->notice('Content Item: reverted %title revision %revision.', ['%title' => $this->revision->label(), '%revision' => $this->revision->getRevisionId()]);
-    $this->messenger()->addStatus(t('Content Item %title has been reverted to the revision from %revision-date.', ['%title' => $this->revision->label(), '%revision-date' => $this->dateFormatter->format($original_revision_timestamp)]));
+    $this->logger('content')->notice('Content Item: reverted %title revision %revision.', [
+      '%title' => $this->revision->label(),
+      '%revision' => $this->revision->getRevisionId(),
+    ]);
+    $this->messenger()->addStatus(t('Content Item %title has been reverted to the revision from %revision-date.', [
+      '%title' => $this->revision->label(),
+      '%revision-date' => $this->dateFormatter->format($original_revision_timestamp),
+    ]));
     $form_state->setRedirect(
       'entity.content_item_entity.version_history',
       ['content_item_entity' => $this->revision->id()]

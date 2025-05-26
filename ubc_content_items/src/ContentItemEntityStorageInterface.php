@@ -3,8 +3,8 @@
 namespace Drupal\ubc_content_items;
 
 use Drupal\Core\Entity\ContentEntityStorageInterface;
-use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Language\LanguageInterface;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\ubc_content_items\Entity\ContentItemEntityInterface;
 
 /**

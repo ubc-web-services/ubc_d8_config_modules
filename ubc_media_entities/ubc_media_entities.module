@@ -1,23 +1,28 @@
 <?php
 
-use Drupal\Core\Entity\EntityTypeInterface;
+/**
+ * @file
+ * Contains ubc_media_entities.module.
+ */
+
 use Drupal\Core\StreamWrapper\StreamWrapperManager;
 use Drupal\user\Entity\Role;
 
 /**
  * Implements hook_file_download().
- * https://www.chapterthree.com/blog/drupal-8-9-media-entities-private-files-and-broken-access-control
+ *
+ * See https://www.chapterthree.com/blog/drupal-8-9-media-entities-private-files-and-broken-access-control.
  */
 function ubc_media_entities_file_download($uri) {
-  # Check if the file is coming from the private stream wrapper
+  // Check if the file is coming from the private stream wrapper.
   if (StreamWrapperManager::getScheme($uri) == 'private') {
 
-    # 1: Block anonymous users.
+    // 1: Block anonymous users.
     if (\Drupal::currentUser()->isAnonymous()) {
       return -1;
     }
 
-    # 2: The user does not have the permission "access private files".
+    // 2: The user does not have the permission "access private files".
     if (!\Drupal::currentUser()->hasPermission('access private files')) {
       return -1;
     }
@@ -58,46 +63,12 @@ function ubc_media_entities_entity_type_alter(array &$entity_types) {
 }
 
 /**
- * Implements hook_post_update_()
- * Add permission to view private files
+ * Implements hook_post_update_().
+ *
+ * Add permission to view private files.
  */
 function ubc_media_entities_post_update_grant_private_file_permission() {
   $role_object = Role::load('authenticated');
   $role_object->grantPermission('access private files');
   $role_object->save();
 }
-
-/**
- * Implements hook_post_update_()
- * Add anonymous permissions to media
- */
-/* function ubc_media_entities_post_update_grant_anonymous_permissions() {
-  $role_object = Role::load('authenticated');
-  $role_object->grantPermission('view audio media');
-  $role_object->grantPermission('view document media');
-  $role_object->grantPermission('view file media');
-  //$role_object->grantPermission('view ics_file media');
-  $role_object->grantPermission('view image media');
-  $role_object->grantPermission('view remote_video media');
-  $role_object->grantPermission('view svg_icon media');
-  $role_object->grantPermission('view video media');
-  $role_object->save();
-} */
-
-/**
- * Implements hook_post_update_()
- * Add authenticated permissions to media
- */
-/* function ubc_media_entities_post_update_grant_authenticated_permissions() {
-  $role_object = Role::load('authenticated');
-  $role_object->grantPermission('view audio media');
-  $role_object->grantPermission('view document media');
-  $role_object->grantPermission('view file media');
-  //$role_object->grantPermission('view ics_file media');
-  $role_object->grantPermission('view image media');
-  $role_object->grantPermission('view private_file media');
-  $role_object->grantPermission('view remote_video media');
-  $role_object->grantPermission('view svg_icon media');
-  $role_object->grantPermission('view video media');
-  $role_object->save();
-} */

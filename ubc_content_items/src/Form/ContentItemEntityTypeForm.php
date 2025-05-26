@@ -6,7 +6,9 @@ use Drupal\Core\Entity\EntityForm;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Class ContentItemEntityTypeForm.
+ * Form controller for Content Item Type forms.
+ *
+ * @ingroup ubc_content_items
  */
 class ContentItemEntityTypeForm extends EntityForm {
 

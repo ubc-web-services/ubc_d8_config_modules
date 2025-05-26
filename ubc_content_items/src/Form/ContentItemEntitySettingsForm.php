@@ -6,7 +6,7 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Class ContentItemEntitySettingsForm.
+ * Settings form for Content Item entities. Manage field settings here.
  *
  * @ingroup ubc_content_items
  */

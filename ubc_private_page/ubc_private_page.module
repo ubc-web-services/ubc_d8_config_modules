@@ -1,23 +1,28 @@
 <?php
-use Drupal\Core\Access\AccessResult;
-use Drupal\Core\Session\AccountInterface;
-use Drupal\Core\Entity\EntityInterface;
 
-/*
- * Implements hook_ENTITY_TYPE_access().
+/**
+ * @file
+ * Contains ubc_private_page.module.
  */
 
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Session\AccountInterface;
+
+/**
+ * Implements hook_ENTITY_TYPE_access().
+ */
 function ubc_private_page_node_access(EntityInterface $entity, $operation, AccountInterface $account) {
-    // Checks for private node type when viewing node.
-    $type = $entity->bundle();
-    if ($operation === 'view' && $type === 'private_page') {
-        if ($account
-        ->hasPermission('view private pages')) {
-            return AccessResult::allowed();
-        }
-        else {
-            return AccessResult::forbidden();
-        }
+  // Checks for private node type when viewing node.
+  $type = $entity->bundle();
+  if ($operation === 'view' && $type === 'private_page') {
+    if ($account
+      ->hasPermission('view private pages')) {
+      return AccessResult::allowed();
     }
-    return AccessResult::neutral();
+    else {
+      return AccessResult::forbidden();
+    }
+  }
+  return AccessResult::neutral();
 }

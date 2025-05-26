@@ -2,10 +2,11 @@
 
 namespace Drupal\ubc_content_items\Controller;
 
-use Drupal\Core\Link;
 use Drupal\Component\Utility\Xss;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
+use Drupal\Core\Entity\RevisionableStorageInterface;
+use Drupal\Core\Link;
 use Drupal\Core\Url;
 use Drupal\ubc_content_items\Entity\ContentItemEntityInterface;
 
@@ -26,7 +27,11 @@ class ContentItemEntityController extends ControllerBase implements ContainerInj
    *   An array suitable for drupal_render().
    */
   public function revisionShow($content_item_entity_revision) {
-    $content_item_entity = \Drupal::service('entity_type.manager')->getStorage('content_item_entity')->loadRevision($content_item_entity_revision);
+    $storage = \Drupal::service('entity_type.manager')->getStorage('content_item_entity');
+    if (!$storage instanceof RevisionableStorageInterface) {
+      throw new \LogicException('Storage for content_item_entity must implement RevisionableStorageInterface.');
+    }
+    $content_item_entity = $storage->loadRevision($content_item_entity_revision);
     $view_builder = \Drupal::service('entity_type.manager')->getViewBuilder('content_item_entity');
 
     return $view_builder->view($content_item_entity);
@@ -42,8 +47,15 @@ class ContentItemEntityController extends ControllerBase implements ContainerInj
    *   The page title.
    */
   public function revisionPageTitle($content_item_entity_revision) {
-    $content_item_entity = \Drupal::service('entity_type.manager')->getStorage('content_item_entity')->loadRevision($content_item_entity_revision);
-    return $this->t('Revision of %title from %date', ['%title' => $content_item_entity->label(), '%date' => \Drupal::service('date.formatter')->format($content_item_entity->getRevisionCreationTime())]);
+    $storage = \Drupal::service('entity_type.manager')->getStorage('content_item_entity');
+    if (!$storage instanceof RevisionableStorageInterface) {
+      throw new \LogicException('Storage for content_item_entity must implement RevisionableStorageInterface.');
+    }
+    $content_item_entity = $storage->loadRevision($content_item_entity_revision);
+    return $this->t('Revision of %title from %date', [
+      '%title' => $content_item_entity->label(),
+      '%date' => \Drupal::service('date.formatter')->format($content_item_entity->getRevisionCreationTime()),
+    ]);
   }
 
   /**
@@ -61,9 +73,19 @@ class ContentItemEntityController extends ControllerBase implements ContainerInj
     $langname = $content_item_entity->language()->getName();
     $languages = $content_item_entity->getTranslationLanguages();
     $has_translations = (count($languages) > 1);
-    $content_item_entity_storage = \Drupal::service('entity_type.manager')->getStorage('content_item_entity');
+    $storage = \Drupal::service('entity_type.manager')->getStorage('content_item_entity');
+    if (!$storage instanceof RevisionableStorageInterface) {
+      throw new \LogicException('Storage for content_item_entity must implement RevisionableStorageInterface.');
+    }
+    $content_item_entity_storage = $storage;
 
-    $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', ['@langname' => $langname, '%title' => $content_item_entity->label()]) : $this->t('Revisions for %title', ['%title' => $content_item_entity->label()]);
+    $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', [
+      '@langname' => $langname,
+      '%title' => $content_item_entity->label(),
+    ]) : $this->t('Revisions for %title',
+    [
+      '%title' => $content_item_entity->label(),
+    ]);
     $header = [$this->t('Revision'), $this->t('Operations')];
 
     $revert_permission = (($account->hasPermission("revert all content item revisions") || $account->hasPermission('administer content item entities')));
@@ -88,8 +110,12 @@ class ContentItemEntityController extends ControllerBase implements ContainerInj
 
         // Use revision link to link to revisions that are not active.
         $date = \Drupal::service('date.formatter')->format($revision->getRevisionCreationTime(), 'short');
+
         if ($vid != $content_item_entity->getRevisionId()) {
-          $link = Link::fromTextAndUrl($date, new Url('entity.content_item_entity.revision', ['content_item_entity' => $content_item_entity->id(), 'content_item_entity_revision' => $vid]));
+          $link = Link::fromTextAndUrl($date, new Url('entity.content_item_entity.revision', [
+            'content_item_entity' => $content_item_entity->id(),
+            'content_item_entity_revision' => $vid,
+          ]))->toString();
         }
         else {
           $link = $content_item_entity->toLink($date)->toString();
@@ -102,8 +128,11 @@ class ContentItemEntityController extends ControllerBase implements ContainerInj
             '#template' => '{% trans %}{{ date }} by {{ username }}{% endtrans %}{% if message %}<p class="revision-log">{{ message }}</p>{% endif %}',
             '#context' => [
               'date' => $link,
-              'username' => \Drupal::service('renderer')->renderPlain($username),
-              'message' => ['#markup' => $revision->getRevisionLogMessage(), '#allowed_tags' => Xss::getHtmlTagList()],
+              'username' => \Drupal::service('renderer')->renderInIsolation($username),
+              'message' => [
+                '#markup' => $revision->getRevisionLogMessage(),
+                '#allowed_tags' => Xss::getHtmlTagList(),
+              ],
             ],
           ],
         ];
@@ -128,15 +157,25 @@ class ContentItemEntityController extends ControllerBase implements ContainerInj
             $links['revert'] = [
               'title' => $this->t('Revert'),
               'url' => $has_translations ?
-              Url::fromRoute('entity.content_item_entity.translation_revert', ['content_item_entity' => $content_item_entity->id(), 'content_item_entity_revision' => $vid, 'langcode' => $langcode]) :
-              Url::fromRoute('entity.content_item_entity.revision_revert', ['content_item_entity' => $content_item_entity->id(), 'content_item_entity_revision' => $vid]),
+              Url::fromRoute('entity.content_item_entity.translation_revert', [
+                'content_item_entity' => $content_item_entity->id(),
+                'content_item_entity_revision' => $vid,
+                'langcode' => $langcode,
+              ]) :
+              Url::fromRoute('entity.content_item_entity.revision_revert', [
+                'content_item_entity' => $content_item_entity->id(),
+                'content_item_entity_revision' => $vid,
+              ]),
             ];
           }
 
           if ($delete_permission) {
             $links['delete'] = [
               'title' => $this->t('Delete'),
-              'url' => Url::fromRoute('entity.content_item_entity.revision_delete', ['content_item_entity' => $content_item_entity->id(), 'content_item_entity_revision' => $vid]),
+              'url' => Url::fromRoute('entity.content_item_entity.revision_delete', [
+                'content_item_entity' => $content_item_entity->id(),
+                'content_item_entity_revision' => $vid,
+              ]),
             ];
           }
 
