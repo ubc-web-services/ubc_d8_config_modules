@@ -25,11 +25,17 @@ class PermissionProvider {
       $type_id = $media_type->id();
       $type_label = $media_type->label();
 
+      $restrictAccess = TRUE;
+      if (false === stripos($type_label, "private")) {
+        // not 'Private File' so no permission warning needed
+        $restrictAccess = FALSE;
+      }
+
       // Add 'view' permission for the media type.
       $permissions["view $type_id media"] = [
         'title' => t('View @type media', ['@type' => $type_label]),
         'description' => t('Allows users to view media of type @type.', ['@type' => $type_label]),
-        'restrict access' => TRUE,
+        'restrict access' => $restrictAccess,
       ];
 
     }
