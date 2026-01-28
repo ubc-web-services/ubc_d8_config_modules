@@ -1,0 +1,7 @@
+tabcordion_anchor:
+  version: 1.x
+  js:
+    js/tabcordion_anchor.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
