@@ -49,18 +49,14 @@ class ContentItemEntityTypeForm extends EntityForm {
     $content_item_entity_type = $this->entity;
     $status = $content_item_entity_type->save();
 
-    switch ($status) {
-      case SAVED_NEW:
-        $this->messenger()->addStatus($this->t('Created the %label Content Item type.', [
-          '%label' => $content_item_entity_type->label(),
-        ]));
-        break;
-
-      default:
-        $this->messenger()->addStatus($this->t('Saved the %label Content Item type.', [
-          '%label' => $content_item_entity_type->label(),
-        ]));
-    }
+    match ($status) {
+      SAVED_NEW => $this->messenger()->addStatus($this->t('Created the %label Content Item type.', [
+        '%label' => $content_item_entity_type->label(),
+      ])),
+    default => $this->messenger()->addStatus($this->t('Saved the %label Content Item type.', [
+      '%label' => $content_item_entity_type->label(),
+      ])),
+    };
     $form_state->setRedirectUrl($content_item_entity_type->toUrl('collection'));
   }
 

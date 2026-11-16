@@ -8,8 +8,9 @@ use Drupal\Tests\BrowserTestBase;
 /**
  * Simple test to ensure that main page loads with module enabled.
  *
- * @group ubc_content_items
  */
+#[\PHPUnit\Framework\Attributes\Group('ubc_content_items')]
+#[\PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses]
 class LoadTest extends BrowserTestBase {
 
   /**
@@ -38,7 +39,7 @@ class LoadTest extends BrowserTestBase {
   /**
    * Tests that the home page loads with a 200 response.
    */
-  public function testLoad() {
+  public function testLoad(): void {
     $this->drupalGet(Url::fromRoute('<front>'));
     $this->assertSession()->statusCodeEquals(200);
   }
