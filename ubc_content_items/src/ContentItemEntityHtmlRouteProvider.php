@@ -111,7 +111,7 @@ class ContentItemEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
       $route = new Route($entity_type->getLinkTemplate('revision_revert'));
       $route
         ->setDefaults([
-          '_form' => '\Drupal\ubc_content_items\Form\ContentItemEntityRevisionRevertForm',
+          '_form' => \Drupal\ubc_content_items\Form\ContentItemEntityRevisionRevertForm::class,
           '_title' => 'Revert to earlier revision',
         ])
         ->setRequirement('_permission', 'revert all content item revisions')
@@ -135,7 +135,7 @@ class ContentItemEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
       $route = new Route($entity_type->getLinkTemplate('revision_delete'));
       $route
         ->setDefaults([
-          '_form' => '\Drupal\ubc_content_items\Form\ContentItemEntityRevisionDeleteForm',
+          '_form' => \Drupal\ubc_content_items\Form\ContentItemEntityRevisionDeleteForm::class,
           '_title' => 'Delete earlier revision',
         ])
         ->setRequirement('_permission', 'delete all content item revisions')
@@ -159,7 +159,7 @@ class ContentItemEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
       $route = new Route($entity_type->getLinkTemplate('translation_revert'));
       $route
         ->setDefaults([
-          '_form' => '\Drupal\ubc_content_items\Form\ContentItemEntityRevisionRevertTranslationForm',
+          '_form' => \Drupal\ubc_content_items\Form\ContentItemEntityRevisionRevertTranslationForm::class,
           '_title' => 'Revert to earlier revision of a translation',
         ])
         ->setRequirement('_permission', 'revert all content item revisions')
@@ -183,7 +183,7 @@ class ContentItemEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
       $route = new Route("/admin/structure/{$entity_type->id()}/settings");
       $route
         ->setDefaults([
-          '_form' => 'Drupal\ubc_content_items\Form\ContentItemEntitySettingsForm',
+          '_form' => \Drupal\ubc_content_items\Form\ContentItemEntitySettingsForm::class,
           '_title' => "{$entity_type->getLabel()} settings",
         ])
         ->setRequirement('_permission', $entity_type->getAdminPermission())

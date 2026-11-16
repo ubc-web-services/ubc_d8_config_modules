@@ -53,18 +53,15 @@ class ContentItemEntityForm extends ContentEntityForm {
 
     $status = parent::save($form, $form_state);
 
-    switch ($status) {
-      case SAVED_NEW:
-        $this->messenger()->addStatus($this->t('Created the %label Content Item.', [
-          '%label' => $entity->label(),
-        ]));
-        break;
+    match ($status) {
+      SAVED_NEW => $this->messenger()->addStatus($this->t('Created the %label Content Item.', [
+        '%label' => $entity->label(),
+      ])),
+      default => $this->messenger()->addStatus($this->t('Saved the %label Content Item.', [
+        '%label' => $entity->label(),
+      ])),
+    };
 
-      default:
-        $this->messenger()->addStatus($this->t('Saved the %label Content Item.', [
-          '%label' => $entity->label(),
-        ]));
-    }
     $form_state->setRedirect('entity.content_item_entity.canonical', ['content_item_entity' => $entity->id()]);
   }
 

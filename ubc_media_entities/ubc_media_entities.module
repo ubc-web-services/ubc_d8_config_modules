@@ -55,8 +55,9 @@ function ubc_media_entities_permission() {
 
 /**
  * Implements hook_entity_type_alter().
+ * @param array<string, mixed> $entity_types
  */
-function ubc_media_entities_entity_type_alter(array &$entity_types) {
+function ubc_media_entities_entity_type_alter(array &$entity_types): void {
   if (isset($entity_types['media'])) {
     $entity_types['media']->setHandlerClass('access', 'Drupal\ubc_media_entities\MediaAccessControlHandler');
   }
@@ -67,7 +68,7 @@ function ubc_media_entities_entity_type_alter(array &$entity_types) {
  *
  * Add permission to view private files.
  */
-function ubc_media_entities_post_update_grant_private_file_permission() {
+function ubc_media_entities_post_update_grant_private_file_permission(): void {
   $role_object = Role::load('authenticated');
   $role_object->grantPermission('access private files');
   $role_object->save();

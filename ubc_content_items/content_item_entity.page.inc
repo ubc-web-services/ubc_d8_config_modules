@@ -14,12 +14,12 @@ use Drupal\Core\Render\Element;
  *
  * Default template: content_item_entity.html.twig.
  *
- * @param array $variables
+ * @param array<string, mixed> $variables
  *   An associative array containing:
  *   - elements: An associative array containing the user information and any
  *   - attributes: HTML attributes for the containing element.
  */
-function template_preprocess_content_item_entity(array &$variables) {
+function template_preprocess_content_item_entity(array &$variables): void {
   // Fetch ContentItemEntity Entity Object.
   $content_item_entity = $variables['elements']['#content_item_entity'];
 
